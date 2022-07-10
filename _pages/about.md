@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+<img src="{{ site.baseurl }}/images/cloudnativelinz-banner.png">
+
 If you believe that Cloud Native is the future of IT then you are at the right place.
 
 Our goal with the group is to help the Cloud Native community to grow even more and bring together people that inspire, support, and challenge each other sharing from the basics to the most advanced topics.
