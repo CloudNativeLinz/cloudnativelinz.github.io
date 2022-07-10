@@ -16,6 +16,8 @@ jekyll serve --livereload
 
 The preview is now available via http://127.0.0.1:4000/
 
+The setup of codespaces was inspired by this [blog post](https://garethbrown.net/2022/07/01/maintaining-a-blog-with-jekyll-github-pages-codespaces) - kudos!
+
 ## Local development without Codespaces
 
 Probably there are some dependencies that you'd need to check to run the static web generator Jekyll locally. If you want to contribute to this readme to fill in the blanks here, you are most welcome!
