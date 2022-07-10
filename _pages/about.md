@@ -4,26 +4,17 @@ title: About
 permalink: /about/
 ---
 
-[Reverie](https://github.com/amitmerchant1990/reverie) is a Jekyll theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for [my blog](https://www.amitmerchant.com).
+If you believe that Cloud Native is the future of IT then you are at the right place.
 
-This is a plug-and-play Jekyll theme which you can use on GitHub Pages without even setting up a local environment.
+Our goal with the group is to help the Cloud Native community to grow even more and bring together people that inspire, support, and challenge each other sharing from the basics to the most advanced topics.
 
-## Features
+There are hundreds of open source projects within the [Cloud Native Computing Foundation Landscape](https://landscape.cncf.io/), and this group is open to everyone that is interested in those projects, no matter if you are a newbie or an expert, you are invited to join, learn and share from others experience and become part of this awesome community.
 
-- Command-line free fork-first workflow, using GitHub.com to create, customize and post to your blog
-- Fully responsive and mobile optimized base theme
-- Sass/Coffeescript support using Jekyll 2.0
-- Free hosting on your GitHub Pages user site
-- All the SEO goodies comes in-built
-- Markdown blogging
-- Syntax highlighting using Pygments
-    - [Dracula syntax theme](https://draculatheme.com/) included
-- Disqus commenting
-- Google Analytics integration
-- Fuzzy search across blog posts
-- Pagination of posts works out-of-the-box.
-- Categorize posts out-of-the box
-- RSS Feed
-- In-built sitemap
 
-Learn more about it [here](https://github.com/amitmerchant1990/reverie) on how to get started.
+
+If you would like to give a talk or sponsor an event, [please fill out our form](https://forms.gle/9GPboKs4T5Yboq5c8) and we will get in touch with you.
+
+
+
+All events of the Cloud Native Computing Linz group follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). Our primary goal is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.
+
