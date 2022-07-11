@@ -86,7 +86,7 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-redirect-from
+  - jekyll-redirect-from # https://stackoverflow.com/questions/31166747/jekyll-default-page
 
 include: ['_pages']
 
