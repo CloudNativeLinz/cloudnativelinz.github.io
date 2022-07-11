@@ -13,12 +13,22 @@ or via auto reload in the browser
 ```
 jekyll serve --livereload
 ```
+on windows the following option might be needed for auto reload
+```
+ jekyll serve --livereload --force_polling
+```
 
 The preview is now available via http://127.0.0.1:4000/
 
 The setup of codespaces was inspired by this [blog post](https://garethbrown.net/2022/07/01/maintaining-a-blog-with-jekyll-github-pages-codespaces) - kudos!
 
-## Local development without Codespaces
+## Local development with Dev Container
+
+- Docker Desktop
+- VS Code + Extension: Name: [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+
+## Local development without Dev Container
 
 Probably there are some dependencies that you'd need to check to run the static web generator Jekyll locally. If you want to contribute to this readme to fill in the blanks here, you are most welcome!
 
