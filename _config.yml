@@ -6,7 +6,7 @@
 name: Cloud Native Linz
 
 # Name of the author
-author: 
+author: Jürgen
 
 # Short bio or description (displayed in the header)
 description: Cloud Native Computing Community of Linz, Austria
@@ -48,8 +48,8 @@ google_analytics:
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
-url: http://www.amitmerchant.com/reverie
-enforce_ssl: https://www.amitmerchant.com/reverie
+url: http://cloudnativelinz.github.io
+enforce_ssl: https://cloudnativelinz.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
