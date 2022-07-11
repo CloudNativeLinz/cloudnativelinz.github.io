@@ -2,7 +2,7 @@
 
 ## Development using Codespaces
 
-It is easiest to use codespaces since all tooling is already installed in the dev-container.
+It is easiest to use [codespaces](https://github.com/features/codespaces) since all tooling is already installed in the dev-container.
 
 Open via the Github UI and once you have launched the codespaces, run a development session via:
 
