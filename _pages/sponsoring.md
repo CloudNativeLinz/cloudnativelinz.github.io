@@ -18,7 +18,13 @@ We are running our meetup in our spare time and we don't get paid for doing this
 
 | What you'll get | What we'll get | 
 | --- | --- |
-| • 3 minute slot in the beginning to present<br>or<br>• we present 1-3 slides for you | • 200 € |
+| • 3 minute slot in the beginning to present<br>or<br>• we present 1-3 slides for you | • 300 € |
+
+### Long time support
+
+We are happy to establish long time relationships with sponsors (not more than 3). If you are interested, please feel free to reach out anytime.
+
+### Other options
 
 We are happy to discuss further options, feel free to reach out anytime!
 
