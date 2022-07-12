@@ -18,4 +18,6 @@ If you would like to give a talk or sponsor an event, [please fill out our form]
 
 All events of the Cloud Native Computing Linz group follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). Our primary goal is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.
 
+Find us (and join us!) on our official home at [community.cncf.io](https://community.cncf.io/linz/) and on [meetup.com](https://www.meetup.com/Cloud-Native-Computing-Linz/).
+
 We usually meet at the third or fourth Tuesday of a month.
