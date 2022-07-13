@@ -22,11 +22,11 @@ We are running our meetup in our spare time and we don't get paid for doing this
 
 ### Long time support
 
-We are happy to establish long time relationships with sponsors (not more than 3). If you are interested, please feel free to reach out anytime.
+We are happy to establish long time relationships with sponsors (not more than 3). If you are interested, please feel free [to reach out]({{ site.baseurl }}/team) anytime.
 
 ### Other options
 
-We are happy to discuss further options, feel free to reach out anytime!
+We are happy to discuss further options, feel free [to reach out]({{ site.baseurl }}/team) anytime!
 
 
 

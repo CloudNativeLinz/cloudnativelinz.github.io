@@ -26,4 +26,4 @@ text goes here
 
 Jürgen is the Developer Engagement Lead for Microsoft Austria. He has been working in the industry in the roles of a developer, researcher, product manager, and evangelist in the last 10 years+. Jürgen is a maintainer of the [Keptn](https://keptn.sh) open-source project and loves to share his experience with the community. You can find some [useful links on Jürgens personal website](https://jetzlstorfer.github.io). He is the co-organizer of the Cloud-Native Computing Linz meetup.
 
-
+Reach out to Jürgen via [Twitter @jetzlstorfer](https://twitter.com/jetzlstorfer) or [LinkedIn](https://www.linkedin.com/in/juergenetzlstorfer/).
