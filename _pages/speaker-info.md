@@ -29,7 +29,4 @@ Here you'll find a typical agenda for our meetups so you have a good understandi
 - 18h45 Break
 - 19h00 Second speaker (talk + Q&A)
 - 19h45 Networking 
-
-
-
-
+- End time depending on the venue
