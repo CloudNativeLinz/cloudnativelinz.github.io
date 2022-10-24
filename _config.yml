@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Cloud Native Linz
+name: Cloud Native Computing Linz
 
 # Name of the author
 author: Jürgen
@@ -28,7 +28,7 @@ footer-links:
   instagram:
   linkedin: 
   pinterest:
-  rss: rss
+  rss: 
   twitter: CloudNativeLinz
   stackoverflow: 
   youtube: channel/UCmSELZztLD8TeEEKSKWFp-A # channel/<your_long_string> or user/<user-name>
