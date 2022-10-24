@@ -19,7 +19,7 @@ Please find the slides from our dear speakers for your convenience.
         const filedata = await fileresponse.json();
         htmlString += '<ul>';
         for  (let file of filedata) {
-            let mypath = file.path.substring(7); // remove the "slides" from folder structure as it is duplicated
+            let mypath = file.path
             htmlString += `<li><a href="${mypath}">${file.name}</a></li>`;
         }
         htmlString += '</ul>';
