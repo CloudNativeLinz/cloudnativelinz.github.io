@@ -24,6 +24,7 @@ Please provide us the following information as soon as we have agreed on your sp
 
 Here you'll find a typical agenda for our meetups so you have a good understanding what to expect. However, we are flexible to react on last minute changes.
 
+- 17h30 Doors open
 - 18h00 Opening by meetup co-organizers (Juliano + Jürgen)
 - 18h10 First speaker (talk + Q&A)
 - 18h45 Break
