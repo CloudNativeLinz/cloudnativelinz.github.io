@@ -33,4 +33,5 @@ Please find the slides from our dear speakers for your convenience.
 
 <div id="slidecontent"></div>
 
-Note: The list above is rendered directly from the [contents on GitHub](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/master/slides). In case there is any issue, please have a look at the repo itself.
+
+Note: The list above is rendered directly from the [contents on GitHub](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides). In case there is any issue, please have a look at the repo itself.
