@@ -14,9 +14,9 @@ Below you'll find some information on how to best prepare and what we'll need to
 ## Provide needed information
 
 Please provide us the following information as soon as we have agreed on your speaking slot at one of our meetups:
-- Title of the talk
-- Short abstract
+- Title of the talk + short abstract
 - Your name + role
+- Profile picture 
 - Short bio (if you want to have this included on our pages)
 - Social media handles (we do our best to always link/mention you in our own social media postings)
 
