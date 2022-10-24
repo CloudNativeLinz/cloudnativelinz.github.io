@@ -5,6 +5,7 @@ permalink: /slides
 ---
 
 Please find the slides from our dear speakers for your convenience. 
+Note: We respect that not all speakers want to share their slides. Please reach out to them personally if you want to ask them for more resources. If you want to upload resources to be listed on this page, please [add them here](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides) and submit a PR.
 
 
 <script>
@@ -34,4 +35,4 @@ Please find the slides from our dear speakers for your convenience.
 <div id="slidecontent">Slides loading...</div>
 
 
-Note: The list above is rendered directly from the [contents on GitHub](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides). In case there is any issue, please have a look at the repo itself.
+Note: The list above is rendered directly from the [contents on GitHub](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides). In case there is any issue, please have a look [at the repo itself](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides).
