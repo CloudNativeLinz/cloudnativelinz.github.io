@@ -1,4 +1,6 @@
-# Cloud Native Linz - cloudnativelinz.github.io
+# Cloud Native Meetup Linz Website - cloudnativelinz.github.io
+
+![GitHub last commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)
 
 ## Development using Codespaces
 
