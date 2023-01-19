@@ -50,6 +50,7 @@ We are happy to discuss further options, feel free [to reach out]({{ site.baseur
 | [14. Cloud Native Computing Linz Meetup - April 19, 2022](https://www.meetup.com/cloud-native-computing-linz/events/284847987/) | 23 | | | in person only |
 | [15. Cloud Native Computing Linz Meetup - May 31, 2022](https://www.meetup.com/cloud-native-computing-linz/events/285775843/) | 20 | | | in person only | 
 | [16. Cloud Native Computing Linz Meetup - June 28, 2022](https://www.meetup.com/cloud-native-computing-linz/events/286504906/) | 17 | | | in person only | 
-
-
+| [17. Cloud Native Computing Linz Meetup - OCtober 18, 2022](https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/) | TBD | | | in person only | 
+| [18. Cloud Native Computing Linz Meetup - November 22, 2022](https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/) |  | 38 | | in person only | 
+| [19. Cloud Native Computing Linz Meetup - Jan 17, 2023](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/) |  | 35 | | in person only | 
 
