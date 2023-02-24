@@ -1,7 +1,14 @@
-# Cloud Native Meetup Linz Website - cloudnativelinz.github.io
+# Cloud Native Meetup Linz Website
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)
-![GitHub contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fcloudnativelinz.github.io)![GitHub contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)
+![Twitter Follow](https://img.shields.io/twitter/follow/cloudnativelinz?style=social)
+
+## Visit the website
+
+Find the website here: https://cloudnativelinz.github.io.
+
+For RSVP and registration please visit the [CNCF.io community](https://community.cncf.io/linz/) or [meetup page](https://www.meetup.com/Cloud-Native-Linz/)
 
 ## Development using Codespaces
 
