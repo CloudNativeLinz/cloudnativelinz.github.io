@@ -14,3 +14,6 @@ As we use the following **online platforms** to organize our meetups, please joi
   👩‍💻 **[Join here](https://community.cncf.io/linz/)**! 👨‍💻
 - For broader reach, we also have a [meetup.com page](https://www.meetup.com/Cloud-Native-Computing-Linz/) which we are planning to retire soon. You are welcome to join here as well, but please consider the CNCF.io page as the first choice.
 
+## Join our community!
+
+{% include cncf-meetup-join.html %}
