@@ -21,3 +21,12 @@ All events of the Cloud Native Computing Linz group follow the [CNCF Code of Con
 **Find us** (and **join us!**) on our **official home at [community.cncf.io](https://community.cncf.io/linz/)** and on [meetup.com](https://www.meetup.com/Cloud-Native-Computing-Linz/).
 
 We **usually meet at the third or fourth Tuesday of a month**.
+
+## Join us!
+
+<table width="100%" border="0">
+<tr>
+  <td width="50%"><a href="https://community.cncf.io/linz/"><img src="../images/cncf-community-groups.svg" width="90%"></a></td>
+  <td width="50%"><a href="https://www.meetup.com/Cloud-Native-Computing-Linz/"><img src="../images/meetup-logo.png" width="90%"></a></td>
+</tr>
+</table>
