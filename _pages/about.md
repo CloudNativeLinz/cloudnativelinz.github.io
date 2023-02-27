@@ -27,11 +27,11 @@ We **usually meet at the third or fourth Tuesday of a month**.
 <table width="100%" style="border:0;">
 <tr style="border:0;">
   <td style="vertical-align:middle;width:50%;text-align:center;border:0;">
-    <a href="https://community.cncf.io/linz/"><img src="../images/cncf-community-groups.svg" width="90%"></a>
+    <a href="https://community.cncf.io/linz/"><img src="../images/cncf-community-groups.svg" width="90%"></a><br><strong>(official)</strong>
   </td>
 
   <td style="vertical-align:middle;width:50%;text-align:center;border:0;">
-    <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/"><img src="../images/meetup-logo.png" width="90%"></a>
+    <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/"><img src="../images/meetup-logo.png" width="80%"></a>
   </td>
 </tr>
 </table>
