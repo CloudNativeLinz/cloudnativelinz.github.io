@@ -34,6 +34,8 @@ footer-links:
   youtube: channel/UCmSELZztLD8TeEEKSKWFp-A # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
   playconsole:
+  meetup: Cloud-Native-Computing-Linz
+  cncf: linz
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
