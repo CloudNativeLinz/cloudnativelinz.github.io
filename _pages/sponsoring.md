@@ -54,4 +54,5 @@ We are happy to discuss further options, feel free [to reach out]({{ site.baseur
 | [18. Cloud Native Computing Linz Meetup - November 22, 2022](https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/) |  | 38 | | in person only | 
 | [19. Cloud Native Computing Linz Meetup - Jan 17, 2023](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/) |  | 35 | | in person only | 
 | [Cloud Native Linz, Feb 21 - Kubernetes Alternatives](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/) |  | 45 | | in person only | 
+| [Cloud Native Linz, March 28 - Crossplane Usecases](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/) |  | 43 | | in person only | 
 
