@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Slides
+title: Slides & Content
 permalink: /slides
 ---
 
@@ -36,3 +36,6 @@ Note: We respect that not all speakers want to share their slides. Please reach 
 
 
 Note: The list above is rendered directly from the [contents on GitHub](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides). In case there is any issue, please have a look [at the repo itself](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/slides).
+
+
+{% include twitter-feed.html %}
