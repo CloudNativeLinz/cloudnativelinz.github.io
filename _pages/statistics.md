@@ -33,3 +33,5 @@ permalink: /statistics/
 | [Cloud Native Linz, April 18 - Hagenberg Edition](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/) |  | 35 | | in person only | 
 | [Cloud Native Linz, May 30 - CertOps and K8sGPT](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/) |  | 25 | | in person only |
 | [Cloud Native Linz, June 27 - GitOps & Terraform and a Guide to OpenTelemetry](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/) |  | 52 | | in person only |
+| Cloud Native Linz, September |  | 37 | | in person only |
+
