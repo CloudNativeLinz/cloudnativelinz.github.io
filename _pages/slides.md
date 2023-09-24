@@ -14,7 +14,7 @@ Note: We respect that not all speakers want to share their slides. Please reach 
         const folderdata = await folderresponse.json();
         let htmlString = '<ul>';
         
-        for (let folder of folderdata) {
+        for (let folder of folderdata.reverse()) {
             htmlString += `<li><strong>Meetup date: ${folder.name}</strong></li>`;
             const fileresponse = await fetch('https://api.github.com/repos/CloudNativeLinz/cloudnativelinz.github.io/contents/slides/'+folder.name);
             const filedata = await fileresponse.json();
