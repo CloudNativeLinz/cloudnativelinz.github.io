@@ -12,7 +12,9 @@ The meetup group is organized by two co-organizers, Juliano and Jürgen.
 <img src="{{ site.baseurl }}/images/juliano.jpg" width="200">
 </div>
 
-Juliano is Senior Software Engineer at Dynatrace Austria, working with all cloud related topics. In the last couple of years mainly focused in OpenTelemetry, he also has experience with Kubernetes, Helm, Containers, Jenkins and so on. Juliano is one of the maintainers of the CNCF project [OpenTelemetry Community Demo](https://github.com/open-telemetry/opentelemetry-demo), which is a microservice-based distributed system intended to illustrate the implementation of OpenTelemetry in a near real-world environment. He believes in the power of the community and this is why he joined forces with Jürgen to build the Cloud Native Computing Linz meetup. You can find more about him in his [LinkedIn profile](https://www.linkedin.com/in/julianocosta89/), where he is happy to connect with everyone.
+Juliano Costa is a software engineer/developer advocate born and raised in Brazil who loves learning new things. In the last couple of years he has put his efforts into cloud technologies and got super excited about it, which made him start a Cloud Native Community Group together with a colleague in Linz (Austria), where he lives now. Besides that he is also a maintainer of the [OpenTelemetry Demo](https://github.com/open-telemetry/opentelemetry-demo). When he is not working with k8s and OpenTelemetry, he is probably spending some time with his wife and his newly deployed baby.
+
+You can find more about him in his [LinkedIn profile](https://www.linkedin.com/in/julianocosta89/), where he is happy to connect with everyone.
 
 <div style="clear:both;"></div>
 
