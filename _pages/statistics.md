@@ -39,3 +39,5 @@ permalink: /statistics/
 | 28 | [Cloud Native Linz - January 24 - Cloud Adventure and Cloud Native Sustainability](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/) |  | 31 | in person only |
 | 29 | [Cloud Native Linz - February 27 - Access Control and Platforms with Devs in Mind](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/) |  | 39 | in person only |
 | 30 | [Cloud Native Linz - March 26 - K8s Journey and a Multi-Layer K8s Security System](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/) |  | 40 | in person only |
+| 31 | [Cloud Native Linz - April 23 - Secure K8s Deployment and API Management in Azure](https://www.meetup.com/cloud-native-linz/events/298076702/) |  | 22 | in person only |
+| 32 | [Cloud Native Linz - June] 25 - Inspecting Running Containers & Observability on the Edge](https://www.meetup.com/cloud-native-linz/events/300982876/) |  | 22 | in person only | 
