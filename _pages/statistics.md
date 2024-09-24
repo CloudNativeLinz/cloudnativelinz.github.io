@@ -41,3 +41,4 @@ permalink: /statistics/
 | 30 | [Cloud Native Linz - March 26 - K8s Journey and a Multi-Layer K8s Security System](https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/) |  | 40 | in person only |
 | 31 | [Cloud Native Linz - April 23 - Secure K8s Deployment and API Management in Azure](https://www.meetup.com/cloud-native-linz/events/298076702/) |  | 22 | in person only |
 | 32 | [Cloud Native Linz - June 25 - Inspecting Running Containers & Observability on the Edge](https://www.meetup.com/cloud-native-linz/events/300982876/) |  | 22 | in person only | 
+| 33 | [Cloud Native Linz - September 18 - OpenTelemetry Errors](https://www.meetup.com/cloud-native-linz/events/302570761/) |  | 18 (remote only) | [Adriana Villela & Reese Lee - Dude, Where’s My Error?](https://www.youtube.com/watch?v=nl7BaeAcv3g) | 
