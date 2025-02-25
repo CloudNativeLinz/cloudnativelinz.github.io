@@ -43,3 +43,5 @@ permalink: /statistics/
 | 32 | [Cloud Native Linz - June 25 - Inspecting Running Containers & Observability on the Edge](https://www.meetup.com/cloud-native-linz/events/300982876/) |  | 22 | in person only | 
 | 33 | [Cloud Native Linz - September 18 - OpenTelemetry Errors](https://www.meetup.com/cloud-native-linz/events/302570761/) |  | 22 (remote only) | [Adriana Villela & Reese Lee - Dude, Where’s My Error?](https://www.youtube.com/watch?v=nl7BaeAcv3g) | 
 | 34 | [Cloud Native Linz - October 21 - Beyond k8s and OpenSource Metrics](https://www.meetup.com/cloud-native-linz/events/303406885/) |  | 27 | in person only | 
+| 35 | [Cloud Native Linz - November 19 - Cloud-Native Harmony & Backstage Techdocs](https://www.meetup.com/cloud-native-computing-linz/events/302568919/) |  | 22 | in person only | 
+| 36 | [Cloud Native Linz - January 15 - Containerized Builds & Beesting](https://www.meetup.com/cloud-native-linz/events/304003701/) |  | 33 | in person only | 
