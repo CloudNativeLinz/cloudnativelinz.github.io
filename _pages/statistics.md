@@ -6,6 +6,21 @@ permalink: /statistics/
 
 ### Statistics
 
+<style>
+  .date-label {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 8px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    font-size: 0.8em;
+  }
+  .center-cell {
+    text-align: center; /* Center align text horizontally */
+    vertical-align: middle; /* Center align text vertically */
+  }
+</style>
+
 <table>
   <thead>
     <tr>
@@ -20,9 +35,12 @@ permalink: /statistics/
     {% for event in site.data.events %}
     <tr>
       <td>{{ event.id }}</td>
-      <td><a href="{{ event.event_link }}">{{ event.edition }}</a></td>
-      <td>{{ event.registrations }}</td>
-      <td>{{ event.participants }}</td>
+      <td>
+        <span class="date-label">{{ event.date }}</span><br>
+        <a href="{{ event.event_link }}">{{ event.edition }}</a>
+      </td>
+      <td class="center-cell">{{ event.registrations }}</td>
+      <td class="center-cell">{{ event.participants }}</td>
       <td>
         {% if event.recording.size == 0 %}
           In person only
