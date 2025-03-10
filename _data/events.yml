@@ -332,3 +332,10 @@
       link: "https://www.youtube.com/watch?v=1mlVzss8bHE"
     - title: "37.2 - Damjan Gjurovski - Designing Zero Trust Systems"
       link: "https://www.youtube.com/watch?v=YV5U2mcohTk"
+
+- id: 38
+  edition: "Cloud Native Linz - Laravel in K8s and Shell Scripting"
+  date: "2025-03-18"
+  event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
+  registrations: ""
+  recording: []

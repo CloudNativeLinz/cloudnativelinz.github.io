@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Statistics
+title: Events
 permalink: /statistics/
 ---
-
-### Statistics
 
 <style>
   .date-label {
@@ -21,6 +19,37 @@ permalink: /statistics/
   }
 </style>
 
+{% assign upcoming_events = false %}
+{% for event in site.data.events %}
+  {% assign event_date = event.date | date: "%Y-%m-%d" %}
+  {% assign today = site.time | date: "%Y-%m-%d" %}
+  {% if event_date > today %}
+    {% assign upcoming_events = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% if upcoming_events %}
+### Upcoming Events
+<table width="100%">
+  {% for event in site.data.events %}
+    {% assign event_date = event.date | date: "%Y-%m-%d" %}
+    {% assign today = site.time | date: "%Y-%m-%d" %}
+    {% if event_date > today %}
+      <tr>
+        <td>
+          <span class="date-label">{{ event.date }}</span><br>
+          <a href="{{ event.event_link }}">{{ event.edition }}</a>
+        </td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% endif %}
+
+
+### Statistics of past events
+
 <table>
   <thead>
     <tr>
@@ -33,6 +62,12 @@ permalink: /statistics/
   </thead>
   <tbody>
     {% for event in site.data.events %}
+      
+    {% assign event_date = event.date | date: "%Y-%m-%d" %}
+    {% assign today = site.time | date: "%Y-%m-%d" %}
+  
+    {% if event_date < today %}
+
     <tr>
       <td>{{ event.id }}</td>
       <td>
@@ -58,6 +93,7 @@ permalink: /statistics/
         {% endif %}
       </td>
     </tr>
+    {% endif %}
     {% endfor %}
   </tbody>
 </table>
