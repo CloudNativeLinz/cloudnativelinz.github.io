@@ -2,7 +2,6 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fcloudnativelinz.github.io)![GitHub contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)
-[![Twitter Follow](https://img.shields.io/twitter/follow/cloudnativelinz?style=social)](https://twitter.com/cloudnativelinz)
 
 ## Visit the website
 
