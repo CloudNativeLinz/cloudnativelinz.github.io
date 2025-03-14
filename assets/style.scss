@@ -256,6 +256,78 @@ p > img {
     clear: both;
 }
 
+// Forms
+.input__wrapper {
+  position: relative;
+  padding: 16px 0 0;
+  margin-top: 10px;
+}
+
+.input__field {
+  border: 0;
+  border-bottom: 1px solid $gray;
+  outline: 0;
+  padding: 8px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  font-size: 16px;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .input__label {
+    cursor: text;
+    top: 20px;
+    font-size: 16px; 
+  }
+}
+
+.input__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: $gray;
+  font-size: 10px; 
+}
+
+.input__field:focus {
+  ~ .input__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: $blue;
+    font-weight: bold;   
+    font-size: 10px; 
+  }
+  border-width: 3px;
+  border-color: $blue;
+}
+
+/* reset input */
+.input__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+button {
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+  color: $blue;
+  border: 1px solid $blue;
+  padding: 6px 16px;
+  margin: 24px;
+  font-size: 18px;
+}
+
+button:hover{
+  background-color: $blue;
+  color: $white;
+}
+
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/

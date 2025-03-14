@@ -1,0 +1,21 @@
+<script src="{{ site.baseurl }}/assets/scripts/generate-random-numbers.js"></script>
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <div style="display: flex; flex-direction: row; gap: 24px;">
+    <div class="input__wrapper field">
+        <input type="number" class="input__field" placeholder="⬇️ Minimum Value" name="min" id='min' required />
+        <label for="min" class="input__label">⬇️ Minimum Value</label>
+      </div>
+
+      <div class="input__wrapper field">
+        <input type="number" class="input__field" placeholder="⬆️ Maximum Value" name="max" id='max' required />
+        <label for="max" class="input__label">⬆️ Maximum Value</label>
+      </div>
+    </div>
+      <div class="input__wrapper field">
+        <input type="number" class="input__field" placeholder="🔁 Spins" name="spins" id='spins' required />
+        <label for="spins" class="input__label">🔁 Spins</label>
+      </div>
+    <button onclick="generateRandomNumbers()">🎲 Generate</button>
+    <strong id="result-header"></strong>
+    <p id="result"></p>
+</div>
