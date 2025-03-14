@@ -25,6 +25,3 @@ We **usually meet at the third or fourth Tuesday of a month**.
 ## Join our community!
 
 {% include cncf-meetup-join.html %}
-
-
-{% include twitter-feed.html %}
