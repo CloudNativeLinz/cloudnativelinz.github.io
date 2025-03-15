@@ -1208,6 +1208,43 @@ Modules - reusable parts of our design
   }
 }
 
+.accordion-header {
+  background: #007acc;
+  color: #fff;
+  padding: 6px;
+  margin-bottom: 0;
+}
+
+.accordion-content {
+  display: block;
+  padding: 6px;
+  border: 1px solid #007acc;
+  border-top: none;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-item .slide-title {
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.accordion-item .slide-speaker {
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 0;
+}
+
+.accordion-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
