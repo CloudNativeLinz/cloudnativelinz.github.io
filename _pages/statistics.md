@@ -30,16 +30,20 @@ permalink: /statistics/
 {% endfor %}
 
 {% if upcoming_events %}
-### Upcoming Events
-<table width="100%">
+### Upcoming events
+<table width="100%" style="border: 5px solid #ccc; border-collapse: collapse;">
   {% for event in site.data.events %}
     {% assign event_date = event.date | date: "%Y-%m-%d" %}
     {% assign today = site.time | date: "%Y-%m-%d" %}
     {% if event_date > today %}
       <tr>
         <td>
-          <span class="date-label">{{ event.date }}</span><br>
-          <a href="{{ event.event_link }}">{{ event.edition }}</a>
+          <span class="date-label">{{ event.date }}
+          {% if !event.host || event.host != "" %}
+          - hosted by {{ event.host }}
+          {% endif %}
+          </span><br>
+          <strong><a href="{{ event.event_link }}">{{ event.edition }}</a></strong>
         </td>
       </tr>
     {% endif %}

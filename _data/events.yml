@@ -1,6 +1,7 @@
 - id: 1
   edition: "1. Cloud Native Computing Linz Meetup"
   date: "2020-09-29"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273245544/"
   registrations: 54
   participants: "not tracked for the first editions of the meetup"
@@ -11,6 +12,7 @@
 - id: 2
   edition: "2. Cloud Native Computing Linz Meetup"
   date: "2020-10-27"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273726815/"
   registrations: 41
   participants: ""
@@ -21,6 +23,7 @@
 - id: 3
   edition: "3. Cloud Native Computing Linz Meetup"
   date: "2020-11-24"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/274417589/"
   registrations: 50
   participants: ""
@@ -31,6 +34,7 @@
 - id: 4
   edition: "4. Cloud Native Computing Linz Meetup"
   date: "2021-01-26"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/275600776/"
   registrations: 43
   participants: ""
@@ -43,6 +47,7 @@
 - id: 5
   edition: "5. Cloud Native Computing Linz Meetup"
   date: "2021-02-23"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276236712/"
   registrations: 30
   participants: ""
@@ -55,6 +60,7 @@
 - id: 6
   edition: "6. Cloud Native Computing Linz Meetup"
   date: "2021-03-30"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276718585/"
   registrations: 36
   participants: ""
@@ -67,6 +73,7 @@
 - id: 7
   edition: "7. Cloud Native Computing Linz Meetup"
   date: "2021-04-27"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/277569639/"
   registrations: 42
   participants: ""
@@ -77,6 +84,7 @@
 - id: 8
   edition: "8. Cloud Native Computing Linz Meetup"
   date: "2021-05-25"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278104169/"
   registrations: 27
   participants: ""
@@ -87,6 +95,7 @@
 - id: 9
   edition: "9. Cloud Native Computing Linz Meetup"
   date: "2021-06-29"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278914758/"
   registrations: 15
   participants: ""
@@ -97,6 +106,7 @@
 - id: 10
   edition: "10. Cloud Native Computing Linz Meetup"
   date: "2021-09-28"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/280749046/"
   registrations: 20
   participants: ""
@@ -107,6 +117,7 @@
 - id: 11
   edition: "11. IN PERSON - Cloud Native Computing Linz Meetup"
   date: "2021-10-19"
+  host: "Dynatrace"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/281064988/"
   registrations: 36
   participants: ""
@@ -117,6 +128,7 @@
 - id: 12
   edition: "12. Cloud Native Computing Linz Meetup"
   date: "2022-02-23"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/283691539/"
   note: "starting from here we are using both meetup.com and cncf.io"
   registrations: 12
@@ -128,6 +140,7 @@
 - id: 13
   edition: "13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Linz)"
   date: "2022-03-30"
+  host: "smec"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284662219/"
   registrations: "20 (combined)"
   participants: ""
@@ -136,6 +149,7 @@
 - id: 14
   edition: "14. Cloud Native Computing Linz Meetup"
   date: "2022-04-19"
+  host: "hello again"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284847987/"
   registrations: 23
   participants: ""
@@ -144,6 +158,7 @@
 - id: 15
   edition: "15. Cloud Native Computing Linz Meetup"
   date: "2022-05-31"
+  host: "netcetera"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/285775843/"
   registrations: 20
   participants: ""
@@ -152,6 +167,7 @@
 - id: 16
   edition: "16. Cloud Native Computing Linz Meetup"
   date: "2022-06-28"
+  host: "Dynatrace"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/286504906/"
   registrations: 17
   participants: ""
@@ -160,6 +176,7 @@
 - id: 17
   edition: "17. Cloud Native Computing Linz Meetup"
   date: "2022-10-18"
+  host: "Cloudflight"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/"
   registrations: "~20"
   participants: ""
@@ -168,6 +185,7 @@
 - id: 18
   edition: "18. Cloud Native Computing Linz Meetup"
   date: "2022-11-22"
+  host: "Tractive"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/"
   registrations: ""
   participants: "38"
@@ -176,6 +194,7 @@
 - id: 19
   edition: "19. Cloud Native Computing Linz Meetup"
   date: "2023-01-17"
+  host: "Startrampe"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/"
   registrations: ""
   participants: "35"
@@ -184,6 +203,7 @@
 - id: 20
   edition: "Cloud Native Linz - Kubernetes Alternatives"
   date: "2023-02-21"
+  host: "Usersnap"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/"
   registrations: ""
   participants: "45"
@@ -192,6 +212,7 @@
 - id: 21
   edition: "Cloud Native Linz - Crossplane Usecases"
   date: "2023-03-28"
+  host: "Dynatrace"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/"
   registrations: ""
   participants: "43"
@@ -200,6 +221,7 @@
 - id: 22
   edition: "Cloud Native Linz - Hagenberg Edition"
   date: "2023-04-18"
+  host: "Porsche Informatik"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/"
   registrations: ""
   participants: "35"
@@ -208,6 +230,7 @@
 - id: 23
   edition: "Cloud Native Linz - CertOps and K8sGPT"
   date: "2023-05-30"
+  host: "Cloudflight"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/"
   registrations: ""
   participants: "25"
@@ -216,6 +239,7 @@
 - id: 24
   edition: "Cloud Native Linz - GitOps & Terraform and a Guide to OpenTelemetry"
   date: "2023-06-27"
+  host: "Runtastic"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/"
   registrations: ""
   participants: "52"
@@ -224,6 +248,7 @@
 - id: 25
   edition: "Cloud Native Linz - Migration to Cloud Native & The Power of Operators"
   date: "2023-09-19"
+  host: "netcetera"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/"
   registrations: ""
   participants: "37"
@@ -232,6 +257,7 @@
 - id: 26
   edition: "Cloud Native Linz - Testing K8s Operators & OpenTelemetry for Logs"
   date: "2023-10-18"
+  host: "eww IT and TEL"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/"
   registrations: ""
   participants: "27"
@@ -240,6 +266,7 @@
 - id: 27
   edition: "Cloud Native Linz - GitOps and Testing Cloud Environments"
   date: "2023-11-21"
+  host: "MIC"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/"
   registrations: ""
   participants: "41"
@@ -248,6 +275,7 @@
 - id: 28
   edition: "Cloud Native Linz - Cloud Adventure and Cloud Native Sustainability"
   date: "2024-01-24"
+  host: "karriere.at"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/"
   registrations: ""
   participants: "31"
@@ -256,6 +284,7 @@
 - id: 29
   edition: "Cloud Native Linz - Access Control and Platforms with Devs in Mind"
   date: "2024-02-27"
+  host: "Gepardec"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/"
   registrations: ""
   participants: "39"
@@ -264,6 +293,7 @@
 - id: 30
   edition: "Cloud Native Linz - K8s Journey and a Multi-Layer K8s Security System"
   date: "2024-03-26"
+  host: "Runtastic"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/"
   registrations: ""
   participants: "40"
@@ -274,6 +304,7 @@
 - id: 31
   edition: "Cloud Native Linz - Secure K8s Deployment and API Management in Azure"
   date: "2024-04-23"
+  host: "Public Cloud Group"
   event_link: "https://www.meetup.com/cloud-native-linz/events/298076702/"
   registrations: ""
   participants: "22"
@@ -282,6 +313,7 @@
 - id: 32
   edition: "Cloud Native Linz - Inspecting Running Containers & Observability on the Edge"
   date: "2024-06-25"
+  host: "Cloudflight"
   event_link: "https://www.meetup.com/cloud-native-linz/events/300982876/"
   registrations: ""
   participants: "22"
@@ -290,6 +322,7 @@
 - id: 33
   edition: "Cloud Native Linz - OpenTelemetry Errors"
   date: "2024-09-18"
+  host: "online"
   event_link: "https://www.meetup.com/cloud-native-linz/events/302570761/"
   registrations: ""
   participants: "22 (remote only)"
@@ -300,6 +333,7 @@
 - id: 34
   edition: "Cloud Native Linz - Beyond k8s and OpenSource Metrics"
   date: "2024-10-21"
+  host: "Dynatrace"
   event_link: "https://www.meetup.com/cloud-native-linz/events/303406885/"
   registrations: ""
   participants: "27"
@@ -308,6 +342,7 @@
 - id: 35
   edition: "Cloud Native Linz - Cloud-Native Harmony & Backstage Techdocs"
   date: "2024-11-19"
+  host: "cloudxcelerate"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/302568919/"
   registrations: ""
   participants: "22"
@@ -316,6 +351,7 @@
 - id: 36
   edition: "Cloud Native Linz - Containerized Builds & Beesting"
   date: "2025-01-15"
+  host: "Public Cloud Group"
   event_link: "https://www.meetup.com/cloud-native-linz/events/304003701/"
   registrations: ""
   participants: "33"
@@ -324,6 +360,7 @@
 - id: 37
   edition: "Cloud Native Linz - Auto-updates in the CI/CD and Zero Trust Systems"
   date: "2025-02-25"
+  host: "Gepardec"
   event_link: "https://www.meetup.com/cloud-native-linz/events/304124258/"
   registrations: ""
   participants: "34"
@@ -336,6 +373,7 @@
 - id: 38
   edition: "Cloud Native Linz - Laravel in K8s and Shell Scripting"
   date: "2025-03-18"
+  host: "karriere.at"
   event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
   registrations: ""
   recording: []
