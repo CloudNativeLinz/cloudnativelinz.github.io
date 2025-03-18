@@ -377,3 +377,13 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
   registrations: ""
   recording: []
+
+- id: 39
+  edition: "Cloud Native Linz - TBD"
+  date: "2025-04-29"
+  host: "tractive"
+  event_link: ""
+  registrations: ""
+  participants: ""
+  recording: []
+

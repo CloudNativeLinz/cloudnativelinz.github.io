@@ -8,6 +8,9 @@ FORCE_POLLING_FLAG = --force_polling
 # Default target
 all: serve
 
+# Helper for Juergen ;)
+run: serve-livereload
+
 # Serve the site
 serve:
 	$(JEKYLL_CMD)
