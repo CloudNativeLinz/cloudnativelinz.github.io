@@ -67,7 +67,7 @@ permalink: /events/
           {% else %}
             <span class="date-label">{{ event.date }}</span>
           {% endif %}
-          {% if !event.host || event.host != "" %}
+          {% if event.host != nil and event.host != "" %}
             <span class="host-label">hosted by {{ event.host }}</span>
           {% endif %}
           <br>
