@@ -376,12 +376,22 @@
   host: "karriere.at"
   event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
   registrations: ""
+  participants: "29"
   recording: []
 
 - id: 39
   edition: "Cloud Native Linz - TBD"
   date: "2025-04-29"
   host: "tractive"
+  event_link: ""
+  registrations: ""
+  participants: ""
+  recording: []
+
+- id: 40
+  edition: "Cloud Native Linz - TBD"
+  date: "2025-05-20"
+  host: "Cloudflight"
   event_link: ""
   registrations: ""
   participants: ""
