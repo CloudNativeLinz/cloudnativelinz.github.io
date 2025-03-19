@@ -1246,6 +1246,14 @@ Modules - reusable parts of our design
   padding-left: 0;
 }
 
+.speaker-name {
+  color: #727171fb;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: -20px;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
