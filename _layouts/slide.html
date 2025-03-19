@@ -2,9 +2,18 @@
 layout: default
 ---
 
+<style>
+  /* Override the default styles for the slide layout */
+  #main.container {
+    max-width: 1000px;
+  }
+
+</style>
+
 <h1>{{ page.title }}</h1>
 <div class="speaker-name">{{ page.speaker }}</div>
 
-<object data="{{ page.filename }}" width="100%" height="500" type="application/pdf"></object>
-
+<object data="{{ page.filename }}" width="100%" height="600" type="application/pdf"></object>
+<center>
 <p><a href="/slides">Back to Slides</a></p>
+</center>
