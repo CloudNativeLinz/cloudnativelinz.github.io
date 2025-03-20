@@ -1,5 +1,6 @@
-{% assign slides_by_month = site.slides | group_by_exp:"slide", "slide.date | date: '%Y-%m'" %}
-{% assign sorted_groups = slides_by_month | sort: "name" | reverse %}
+{% assign events_with_slides = site.data.events | where_exp: "event", "event.slides != nil" %}
+{% assign events_by_month = events_with_slides | group_by_exp: "event", "event.date | date: '%Y-%m'" %}
+{% assign sorted_groups = events_by_month | sort: "name" | reverse %}
 <div class="accordion">
   {% for group in sorted_groups %}
     <div class="accordion-item">
@@ -8,13 +9,18 @@
       </h2>
       <div class="accordion-content">
         <ul>
-          {% for slide in group.items %}
-            <li>
-              <a href="{{ slide.url }}" class="slide-title">{{ slide.title }}</a>
-              {% if slide.speaker %}
-                <p class="slide-speaker">{{ slide.speaker }}</p>
-              {% endif %}
-            </li>
+          {% for event in group.items %}
+            {% for slide in event.slides %}
+              <li>
+                <a href="{{ slide.url }}" class="slide-title">{{ slide.title }}</a>
+                {% if slide.speaker %}
+                  <p class="slide-speaker">{{ slide.speaker }}</p>
+                {% endif %}
+                {% if slide.file %}
+                  <a href="{{ slide.file }}" class="slide-download">(Download PDF)</a>
+                {% endif %}
+              </li>
+            {% endfor %}
           {% endfor %}
         </ul>
       </div>

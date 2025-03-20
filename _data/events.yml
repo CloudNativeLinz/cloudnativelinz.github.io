@@ -145,6 +145,11 @@
   registrations: "20 (combined)"
   participants: ""
   recording: []
+  slides:
+    - title: "Java on Azure"
+      url: "/slides/2022-03-java-on-azure-ed-burns"
+      speaker: "Ed Burns"
+      file: "slides/2022-03/java-on-azure-ed-burns.pdf"
 
 - id: 14
   edition: "14. Cloud Native Computing Linz Meetup"
@@ -181,6 +186,16 @@
   registrations: "~20"
   participants: ""
   recording: []
+  slides:
+    - title: "Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
+      url: "/slides/2022-10-Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
+      speaker: "Martin Strigl"
+      file: "/slides/2022-10/Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together.pdf"
+    - title: "Kong's Service Connectivity Platform"
+      url: "/slides/2022-10-Cloud Native Meetup - Marco Marquez"
+      speaker: "Marco Marquez"
+      file: "/slides/2022-10/Cloud Native Meetup - Marco Marquez.pdf"
+
 
 - id: 18
   edition: "18. Cloud Native Computing Linz Meetup"
@@ -190,6 +205,11 @@
   registrations: ""
   participants: "38"
   recording: []
+  slides:
+    - title: "Secure DevOps Environment"
+      url: "/slides/2022-11-CNCF-Linz-Secure-DevOps-Environment"
+      speaker: "Christian Köberl"
+      file: "/slides/2022-11/CNCF-Linz-Secure-DevOps-Environment.pdf"
 
 - id: 19
   edition: "19. Cloud Native Computing Linz Meetup"
@@ -199,6 +219,15 @@
   registrations: ""
   participants: "35"
   recording: []
+  slides:
+    - title: "Instrumenting Tyk API Gateway with OpenTelemetry"
+      url: "/slides/2023-01-CNCLinz-Tyk-opentelemetry lessons learned"
+      speaker: "Sonja Chevre"
+      file: "/slides/2023-01/CNCLinz-Tyk-opentelemetry lessons learned.pdf"
+    - title: "Don't deploy into the DARK! DORA Metrics: automatically, for all your k8s workloads!"
+      url: "/slides/2023-01-CNCFLinz_DORAMetrics_with_Keptn"
+      speaker: "Andreas Grabner"
+      file: "/slides/2023-01/CNCFLinz_DORAMetrics_with_Keptn.pdf"
 
 - id: 20
   edition: "Cloud Native Linz - Kubernetes Alternatives"
@@ -208,6 +237,11 @@
   registrations: ""
   participants: "45"
   recording: []
+  slides:
+    - title: "Kubernetes Alternatives"
+      url: "/slides/2023-02-Need something simpler than Kubernetes"
+      speaker: "Martin Ahrer"
+      file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
 
 - id: 21
   edition: "Cloud Native Linz - Crossplane Usecases"
@@ -217,6 +251,16 @@
   registrations: ""
   participants: "43"
   recording: []
+  slides:
+    - title: "Crossplane & GitOps: A perfect match?"
+      url: "/slides/2023-03-CrossplaneAndGitOps"
+      speaker: "Katharina Sick"
+      file: "/slides/2023-03/CrossplaneAndGitOps.pdf"
+    - title: "Kubernetes as a universal controlplane: An Introduction into Crossplane"
+      url: "slides/2023-03-K8sAsUniversalControlplane"
+      speaker: "David Hondl"
+      file: "/slides/2023-03/K8sAsUniversalControlplane.pdf"
+
 
 - id: 22
   edition: "Cloud Native Linz - Hagenberg Edition"
@@ -226,6 +270,11 @@
   registrations: ""
   participants: "35"
   recording: []
+  slides:
+    - title: "Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
+      url: "/slides/2023-04-Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
+      speaker: "Carolin Schuntermann"
+      file: "/slides/2023-04/Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik.pdf"
 
 - id: 23
   edition: "Cloud Native Linz - CertOps and K8sGPT"
@@ -235,6 +284,15 @@
   registrations: ""
   participants: "25"
   recording: []
+  slides:
+    - title: "CertOps: Certificate Lifecycle Management done Cloud Native"
+      url: "/slides/2023-05-CertOps-Certificate-Lifecycle-Management-done-Cloud-Native"
+      speaker: "Martin Strigl"
+      file: "/slides/2023-05/CertOps-Certificate-Lifecycle-Management-done-Cloud-Native.pdf"
+    - title: "Leveraging AI to Troubleshoot Kubernetes with K8sGPT"
+      url: "/slides/2023-05-K8sGPT - Linz"
+      speaker: "Thomas Schuetz"
+      file: "/slides/2023-05/K8sGPT - Linz.pdf"
 
 - id: 24
   edition: "Cloud Native Linz - GitOps & Terraform and a Guide to OpenTelemetry"
@@ -244,6 +302,15 @@
   registrations: ""
   participants: "52"
   recording: []
+  slides:
+    - title: "GitOps and Terraform"
+      url: "/slides/2023-06-GitOps and Terraform"
+      speaker: "Alexander Lackner"
+      file: "/slides/2023-06/GitOps and Terraform.pdf"
+    - title: "Distributed Tracing and OpenTelemetry"
+      url: "/slides/2023-06-Distributed Tracing and OpenTelemetry"
+      speaker: "Daniel Khan"
+      file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
 
 - id: 25
   edition: "Cloud Native Linz - Migration to Cloud Native & The Power of Operators"
@@ -253,6 +320,11 @@
   registrations: ""
   participants: "37"
   recording: []
+  slides:
+    - title: "Scaling Observability - Dynatrace Operator"
+      url: "/slides/2023-09-Scaling Observability - Dynatrace Operator"
+      speaker: "Christoph Müllner"
+      file: "/slides/2023-09/Scaling Observability - Dynatrace Operator.pdf"
 
 - id: 26
   edition: "Cloud Native Linz - Testing K8s Operators & OpenTelemetry for Logs"
@@ -280,6 +352,15 @@
   registrations: ""
   participants: "31"
   recording: []
+  slides:
+    - title: "Cloud Adventure"
+      url: "/slides/2024-01-Cloud-Native-Meetup-Slides-karriereat"
+      speaker: "Georg Buchgeher"
+      file: "/slides/2024-01/Cloud-Native-Meetup-Slides-karriereat.pdf"
+    - title: "Green Software"
+      url: "/slides/2024-01-green-software-whizus"
+      speaker: "Erik Auer"
+      file: "/slides/2024-01/green-software-whizus.pdf"
 
 - id: 29
   edition: "Cloud Native Linz - Access Control and Platforms with Devs in Mind"
@@ -300,6 +381,11 @@
   recording:
     - title: "30.2 CNCLinz - Daniel Drack - Implementing a Multi-Layer k8s Security System with SUSE NeuVector"
       link: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
+  slides:
+    - title: "A Tale of ROSEs and Containers: Our Kubernetes Journey"
+      url: "/slides/2024-03-Kubernetes Story"
+      speaker: "Alexander Lackner & Armin Deliomini"
+      file: "slides/2024-03/Kubernetes Story.pdf"
 
 - id: 31
   edition: "Cloud Native Linz - Secure K8s Deployment and API Management in Azure"
@@ -309,7 +395,12 @@
   registrations: ""
   participants: "22"
   recording: []
-
+  slides:
+    - title: "How to securely deploy Kubernetes on Azure"
+      url: "slides/2024-04-PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+      speaker: "Marcel Tober & Andreas Wimmersberger"
+      file: "slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+  
 - id: 32
   edition: "Cloud Native Linz - Inspecting Running Containers & Observability on the Edge"
   date: "2024-06-25"
@@ -318,6 +409,15 @@
   registrations: ""
   participants: "22"
   recording: []
+  slides:
+    - title: "Inspecting running containers"
+      url: "/slides/2024-06-Inspecting and Manipulating Running Containers"
+      speaker: "Martin Strigl"
+      file: "/slides/2024-06/Inspecting and Manipulating Running Containers.pdf"
+    - title: "Observability at the Edge: Envoy Distributed Tracing with OpenTelemetry"
+      url: "/slides/2024-06-envoy-distributed-tracing-with-opentelemetry"
+      speaker: "João Grassi"
+      file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
 
 - id: 33
   edition: "Cloud Native Linz - OpenTelemetry Errors"
@@ -329,6 +429,11 @@
   recording:
     - title: "Adriana Villela & Reese Lee - Dude, Where’s My Error?"
       link: "https://www.youtube.com/watch?v=nl7BaeAcv3g"
+  slides:
+    - title: "Dude, Where's My Error? How OTel Records Errors, and Why it Does Like That"
+      url: "/slides/2024-09-Dude, Where's My Error__ How OTel Records Errors.pdf"
+      speaker: "Adriana Villela & Reese Lee"
+      file: "/slides/2024-09/Dude, Where's My Error__ How OTel Records Errors.pdf"
 
 - id: 34
   edition: "Cloud Native Linz - Beyond k8s and OpenSource Metrics"
@@ -338,6 +443,11 @@
   registrations: ""
   participants: "27"
   recording: []
+  slides:
+    - title: "Open-Source Metrics Primer"
+      url: "/slides/2024-10-OpenTelemetryMetricsPrimer-2024-10"
+      speaker: "Georg Pirklbauer"
+      file: "/slides/2024-10/OpenTelemetryMetricsPrimer-2024-10.pdf"
 
 - id: 35
   edition: "Cloud Native Linz - Cloud-Native Harmony & Backstage Techdocs"
@@ -347,6 +457,12 @@
   registrations: ""
   participants: "22"
   recording: []
+  slides: 
+    - title: "From IT Ops to Cloud-Native Harmony"
+      url: "/slides/2024-11-ITOpsToCloudNativeHarmony_19112024"
+      speaker: "Alexander Höllwart & Michael “Obi” Obernberger"
+      file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
+
 
 - id: 36
   edition: "Cloud Native Linz - Containerized Builds & Beesting"
@@ -356,6 +472,16 @@
   registrations: ""
   participants: "33"
   recording: []
+  slides:
+    - title: "A closer look at Docker BuildKit and Buildx"
+      url: "/slides/2025-01-PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx"
+      speaker: "Sophia Zehethofer"
+      file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
+    - title: "Beesting Can't touch this"
+      url: "/slides/2025-01-beesting_cant_touch_this"
+      speaker: "Patrick Pichler"
+      file: "/slides/2025-01/beesting_cant_touch_this.pdf"
+    
 
 - id: 37
   edition: "Cloud Native Linz - Auto-updates in the CI/CD and Zero Trust Systems"
@@ -369,6 +495,11 @@
       link: "https://www.youtube.com/watch?v=1mlVzss8bHE"
     - title: "37.2 - Damjan Gjurovski - Designing Zero Trust Systems"
       link: "https://www.youtube.com/watch?v=YV5U2mcohTk"
+  slides:
+    - title: "Designing Zero Trust Systems"
+      url: "/slides/2025-02-Designing_Zero_Trust_Systems"
+      speaker: "Damjan Gjurovski"
+      file: "/slides/2025-02/Designing_Zero_Trust_Systems.pdf"
 
 - id: 38
   edition: "Cloud Native Linz - Laravel in K8s and Shell Scripting"
@@ -378,6 +509,15 @@
   registrations: ""
   participants: "29"
   recording: []
+  slides:
+    - title: "Laravel in Kubernetes"
+      url: "/slides/2025-03-laravel_in_k8s_huber"
+      speaker: "Sebastian Huber"
+      file: "/slides/2025-03/laravel_in_k8s_huber.pdf"
+    - title: "You Suck at Shell Scripting"
+      url: "/slides/2025-03-You_Suck_at_Shell_Scripting"
+      speaker: "Florian Arthofer"
+      file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
 
 - id: 39
   edition: "Cloud Native Linz - TBD"
