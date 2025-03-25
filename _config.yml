@@ -63,7 +63,7 @@ baseurl: ""
 # !! You don't need to change any of the configuration flags below !!
 #
 
-permalink: /:title/
+permalink: pretty
 
 # The release of Jekyll Now that you're using
 version: v3.0.0
@@ -88,12 +88,26 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag
   - jekyll-redirect-from # https://stackoverflow.com/questions/31166747/jekyll-default-page
+  - jekyll-datapage-generator
 
 include: ['_pages']
 
 collections:
   slides:
     output: true
+
+page_gen:
+  - data: 'events'
+    # The directory where the generated pages will be created
+    dir: 'meetups/meetup'
+    # The template to use for the generated pages
+    template: 'event'
+    # name of the collection
+    name: 'edition'
+  
+
+
+
 
 # Exclude these files from your production _site
 exclude:
