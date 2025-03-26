@@ -204,7 +204,6 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/"
   registrations: ""
   participants: "38"
-  recording: []
   slides:
     - title: "Secure DevOps Environment"
       url: "/slides/2022-11-CNCF-Linz-Secure-DevOps-Environment"
@@ -218,14 +217,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/"
   registrations: ""
   participants: "35"
-  recording: []
-  slides:
+  talks:
     - title: "Instrumenting Tyk API Gateway with OpenTelemetry"
-      url: "/slides/2023-01-CNCLinz-Tyk-opentelemetry lessons learned"
       speaker: "Sonja Chevre"
       file: "/slides/2023-01/CNCLinz-Tyk-opentelemetry lessons learned.pdf"
     - title: "Don't deploy into the DARK! DORA Metrics: automatically, for all your k8s workloads!"
-      url: "/slides/2023-01-CNCFLinz_DORAMetrics_with_Keptn"
       speaker: "Andreas Grabner"
       file: "/slides/2023-01/CNCFLinz_DORAMetrics_with_Keptn.pdf"
 
@@ -236,10 +232,10 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/"
   registrations: ""
   participants: "45"
-  recording: []
   slides:
+    - title: "Serverless container workloads beyond K8s"
+      speaker: "Martin Sereinig"
     - title: "Kubernetes Alternatives"
-      url: "/slides/2023-02-Need something simpler than Kubernetes"
       speaker: "Martin Ahrer"
       file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
 
@@ -250,14 +246,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/"
   registrations: ""
   participants: "43"
-  recording: []
-  slides:
+  talks:
     - title: "Crossplane & GitOps: A perfect match?"
-      url: "/slides/2023-03-CrossplaneAndGitOps"
       speaker: "Katharina Sick"
       file: "/slides/2023-03/CrossplaneAndGitOps.pdf"
     - title: "Kubernetes as a universal controlplane: An Introduction into Crossplane"
-      url: "slides/2023-03-K8sAsUniversalControlplane"
       speaker: "David Hondl"
       file: "/slides/2023-03/K8sAsUniversalControlplane.pdf"
 
@@ -269,12 +262,12 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/"
   registrations: ""
   participants: "35"
-  recording: []
-  slides:
+  talks:
     - title: "Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
-      url: "/slides/2023-04-Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
       speaker: "Carolin Schuntermann"
       file: "/slides/2023-04/Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik.pdf"
+    - title: "Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered Productivity Duo"
+      speaker: "Jürgen Etzlstorfer"
 
 - id: 23
   title: "Cloud Native Linz - CertOps and K8sGPT"
@@ -283,14 +276,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/"
   registrations: ""
   participants: "25"
-  recording: []
-  slides:
+  talks:
     - title: "CertOps: Certificate Lifecycle Management done Cloud Native"
-      url: "/slides/2023-05-CertOps-Certificate-Lifecycle-Management-done-Cloud-Native"
       speaker: "Martin Strigl"
       file: "/slides/2023-05/CertOps-Certificate-Lifecycle-Management-done-Cloud-Native.pdf"
     - title: "Leveraging AI to Troubleshoot Kubernetes with K8sGPT"
-      url: "/slides/2023-05-K8sGPT - Linz"
       speaker: "Thomas Schuetz"
       file: "/slides/2023-05/K8sGPT - Linz.pdf"
 
@@ -301,14 +291,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/"
   registrations: ""
   participants: "52"
-  recording: []
-  slides:
+  talks:
     - title: "GitOps and Terraform"
-      url: "/slides/2023-06-GitOps and Terraform"
       speaker: "Alexander Lackner"
       file: "/slides/2023-06/GitOps and Terraform.pdf"
     - title: "Distributed Tracing and OpenTelemetry"
-      url: "/slides/2023-06-Distributed Tracing and OpenTelemetry"
       speaker: "Daniel Khan"
       file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
 
@@ -319,12 +306,12 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/"
   registrations: ""
   participants: "37"
-  recording: []
-  slides:
+  talks:
     - title: "Scaling Observability - Dynatrace Operator"
-      url: "/slides/2023-09-Scaling Observability - Dynatrace Operator"
       speaker: "Christoph Müllner"
       file: "/slides/2023-09/Scaling Observability - Dynatrace Operator.pdf"
+    - title: "Migration of on-prem payment systems to a Cloud Native Environments"
+      speaker: "Markus Adelsberger & Georg Mayrhauser"
 
 - id: 26
   title: "Cloud Native Linz - Testing K8s Operators & OpenTelemetry for Logs"
@@ -333,8 +320,12 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/"
   registrations: ""
   participants: "27"
-  recording: []
-  
+  talks: 
+    - title: "Test and evolve your Kubernetes Operators"
+      speaker: "Riccardo Capraro"
+    - title: "OpenTelemetry for Logging"
+      speaker: "Philipp Krenn"
+
 
 - id: 27
   title: "Cloud Native Linz - GitOps and Testing Cloud Environments"
