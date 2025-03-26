@@ -5,9 +5,13 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273245544/"
   registrations: 54
   participants: "not tracked for the first editions of the meetup"
-  recording:
-    - title: "1. CNCLinz - Donovan Brown + Matthias Steinbauer"
-      link: "https://www.youtube.com/watch?v=xzB5Al18aao"
+  talks:
+    - title: "Digital Transformation (from on-premises to the cloud)"
+      speaker: "Donovan Brown"
+      recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
+    - title: "Serverless on the AWS Cloud, Challenges Beyond the Toy Problems"
+      speaker: "Matthias Steinbauer"
+      recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
 
 - id: 2
   title: "2. Cloud Native Computing Linz Meetup"
@@ -16,9 +20,13 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273726815/"
   registrations: 41
   participants: ""
-  recording:
-    - title: "2. CNCLinz - Denis Jannot & János Pásztor"
-      link: "https://www.youtube.com/watch?v=MQKfZdsHC9s"
+  talks:
+    - title: "The challenges of exposing and connecting microservices"
+      speaker: "Denis Jannot"
+      recording: "https://www.youtube.com/watch?v=MQKfZdsHC9s"
+    - title: "Custom Autoscaling with Prometheus, Grafana, and a little bit of code"
+      speaker: "János Pásztor"
+      recording: "https://www.youtube.com/watch?v=MQKfZdsHC9s"
 
 - id: 3
   title: "3. Cloud Native Computing Linz Meetup"
@@ -27,9 +35,14 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/274417589/"
   registrations: 50
   participants: ""
-  recording:
-    - title: "3. CNCLinz - KubeOne for Beginners & Kubernetes certifications"
-      link: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
+  talks:
+    - title: "KubeOne for Beginners"
+      speaker: "Malte Menkhoff"
+      recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
+    - title: "Kubernetes certifications: How to prepare and get it done"
+      speaker: "Juliano Costa and Yuri Oliveira"
+      recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
+
 
 - id: 4
   title: "4. Cloud Native Computing Linz Meetup"
@@ -38,11 +51,13 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/275600776/"
   registrations: 43
   participants: ""
-  recording:
-    - title: "4.1 CNCLinz - Oded Keret - Remote debugging challenges in Kubernetes"
-      link: "https://www.youtube.com/watch?v=dZXL51xaMew"
-    - title: "4.2 CNCLinz - Dimitrij Klesev - When the destination is not what you expect to be or MITM in k8s"
-      link: "https://www.youtube.com/watch?v=qD5XQdf7w5k"
+  talks:
+    - title: "Remote debugging challenges in Kubernetes"
+      speaker: "Oded Keret"
+      recording: "https://www.youtube.com/watch?v=dZXL51xaMew"
+    - title: "When the destination is not what you expect to be or MITM in k8s"
+      speaker: "Dimitrij Klesev"
+      recording: "https://www.youtube.com/watch?v=qD5XQdf7w5k"
 
 - id: 5
   title: "5. Cloud Native Computing Linz Meetup"
@@ -51,11 +66,13 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276236712/"
   registrations: 30
   participants: ""
-  recording:
-    - title: "5.1 CNCLinz - Karthik S - Observability & Declarative Hypothesis in Chaos Engineering"
-      link: "https://www.youtube.com/watch?v=3Jr4kNkgTpw"
-    - title: "5.2 CNCLinz - Michael Aufreiter - Can I write a platform in the cloud as a single person?"
-      link: "https://www.youtube.com/watch?v=iYrVBlplRd4"
+  talks:
+    - title: "Observability & Declarative Hypothesis in Chaos Engineering"
+      speaker: "Karthik S"
+      recording: "https://www.youtube.com/watch?v=3Jr4kNkgTpw"
+    - title: "Can I write a platform in the cloud as a single person?"
+      speaker: "Michael Aufreiter"
+      recording: "https://www.youtube.com/watch?v=iYrVBlplRd4"
 
 - id: 6
   title: "6. Cloud Native Computing Linz Meetup"
@@ -64,11 +81,13 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276718585/"
   registrations: 36
   participants: ""
-  recording:
-    - title: "6.1 CNCLinz - Matt Jarvis - Continuous Security - Building Security into your Pipelines"
-      link: "https://www.youtube.com/watch?v=BTFH1jYV9qI"
-    - title: "6.2 CNCLinz - Rainer Stropek - Cloud Security Beyond Technology"
-      link: "https://www.youtube.com/watch?v=8jbWGxgoKJQ"
+  talks:
+    - title: "Continuous Security - Building Security into your Pipelines"
+      speaker: "Matt Jarvis"
+      recording: "https://www.youtube.com/watch?v=BTFH1jYV9qI"
+    - title: "Cloud Security Beyond Technology"
+      speaker: "Rainer Stropek"
+      recording: "https://www.youtube.com/watch?v=8jbWGxgoKJQ"
 
 - id: 7
   title: "7. Cloud Native Computing Linz Meetup"
@@ -77,9 +96,10 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/277569639/"
   registrations: 42
   participants: ""
-  recording:
-    - title: "7. CNCLinz - Juraci Paixão Kröhling - All you need to know about OpenTelemetry"
-      link: "https://www.youtube.com/watch?v=bh0v6k6eLRw"
+  talks:
+    - title: "All you need to know about OpenTelemetry"
+      speaker: "Juraci Paixão Kröhling"
+      recording: "https://www.youtube.com/watch?v=bh0v6k6eLRw"
 
 - id: 8
   title: "8. Cloud Native Computing Linz Meetup"
@@ -88,9 +108,10 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278104169/"
   registrations: 27
   participants: ""
-  recording:
-    - title: "8. CNCLinz - Moritz Wanzenböck - Cloud-Native Storage: What it can and can't (yet) do"
-      link: "https://www.youtube.com/watch?v=DXffA0IgZyc"
+  talks:
+    - title: "Cloud-Native Storage: What it can and can't (yet) do"
+      speaker: "Moritz Wanzenböck"
+      recording: "https://www.youtube.com/watch?v=DXffA0IgZyc"
 
 - id: 9
   title: "9. Cloud Native Computing Linz Meetup"
@@ -99,9 +120,10 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278914758/"
   registrations: 15
   participants: ""
-  recording:
+  talks:
     - title: "9. CNCLinz - Charles Pretzer - Service Mesh Principles: Observability through Telemetry with Linkerd"
-      link: "https://www.youtube.com/watch?v=XeXcgz5stMo"
+      speaker: "Charles Pretzer"
+      recording: "https://www.youtube.com/watch?v=XeXcgz5stMo"
 
 - id: 10
   title: "10. Cloud Native Computing Linz Meetup"
@@ -110,9 +132,10 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/280749046/"
   registrations: 20
   participants: ""
-  recording:
-    - title: "10. CNCLinz - Lars Wolff - Automatically optimize cloud-native systems for fun and profit"
-      link: "https://www.youtube.com/watch?v=0WEts9WLhoc"
+  talks:
+    - title: "Automatically optimize cloud-native systems for fun and profit"
+      speaker: "Lars Wolff"
+      recording: "https://www.youtube.com/watch?v=0WEts9WLhoc"
 
 - id: 11
   title: "11. IN PERSON - Cloud Native Computing Linz Meetup"
@@ -121,9 +144,12 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/281064988/"
   registrations: 36
   participants: ""
-  recording:
-    - title: "11. CNCLinz - Philipp Weckerle - The 1001 serverless options of Microsoft Azure"
-      link: "https://www.youtube.com/watch?v=81Tg--7GIFI"
+  talks:
+    - title: "The 1001 serverless options of Microsoft Azure"
+      speaker: "Philipp Weckerle"
+      recording: "https://www.youtube.com/watch?v=81Tg--7GIFI"
+    - title: "Cloud-native delivery with Keptn"
+      speaker: "Jürgen Etzlstorfer"
 
 - id: 12
   title: "12. Cloud Native Computing Linz Meetup"
@@ -133,9 +159,10 @@
   note: "starting from here we are using both meetup.com and cncf.io"
   registrations: 12
   participants: ""
-  recording:
-    - title: "12. CNCLinz - Alexandre Menezes & Yuri Oliveira Sá - A Tour of Operator-SDK"
-      link: "https://www.youtube.com/watch?v=39XqltavUW0"
+  talks:
+    - title: "A Tour of Operator-SDK"
+      speaker: "Alexandre Menezes & Yuri Oliveira Sá"
+      recording: "https://www.youtube.com/watch?v=39XqltavUW0"
 
 - id: 13
   title: "13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Linz)"
@@ -144,10 +171,8 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284662219/"
   registrations: "20 (combined)"
   participants: ""
-  recording: []
-  slides:
+  talks:
     - title: "Java on Azure"
-      url: "/slides/2022-03-java-on-azure-ed-burns"
       speaker: "Ed Burns"
       file: "slides/2022-03/java-on-azure-ed-burns.pdf"
 
@@ -158,7 +183,11 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284847987/"
   registrations: 23
   participants: ""
-  recording: []
+  talks:
+    - title: "The art of scaling without scaling your DevOps-Team"
+      speaker: "Michael Schöndorfer"
+    - title: "The 7 deadly sins in Kubernetes"
+      speaker: "Hubert Ströbitzer"
 
 - id: 15
   title: "15. Cloud Native Computing Linz Meetup"
@@ -167,7 +196,11 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/285775843/"
   registrations: 20
   participants: ""
-  recording: []
+  talks:
+    - title: "How deploying feature branches opened the door to more scalability"
+      speaker: "Markus Adelsberger"
+    - title: "From Command Line to GitOps - how we transformed our infrastructure"
+      speaker: "Thomas Einwaller"
 
 - id: 16
   title: "16. Cloud Native Computing Linz Meetup"
@@ -176,7 +209,11 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/286504906/"
   registrations: 17
   participants: ""
-  recording: []
+  talks:
+    - title: "Policy as Code - an introduction to Open Policy Agent"
+      speaker: "Anders Eknert"
+    - title: "ClickOps over GitOps"
+      speaker: "Laszlo Fogas"
 
 - id: 17
   title: "17. Cloud Native Computing Linz Meetup"
@@ -185,14 +222,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/"
   registrations: "~20"
   participants: ""
-  recording: []
-  slides:
+  talks:
     - title: "Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
-      url: "/slides/2022-10-Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
       speaker: "Martin Strigl"
       file: "/slides/2022-10/Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together.pdf"
     - title: "Kong's Service Connectivity Platform"
-      url: "/slides/2022-10-Cloud Native Meetup - Marco Marquez"
       speaker: "Marco Marquez"
       file: "/slides/2022-10/Cloud Native Meetup - Marco Marquez.pdf"
 
@@ -204,11 +238,13 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/"
   registrations: ""
   participants: "38"
-  slides:
+  talks:
+    - title: "How to build fault resistant services with infrastructure automation?"
+      speaker: "Stefan Burgholzer"
     - title: "Secure DevOps Environment"
-      url: "/slides/2022-11-CNCF-Linz-Secure-DevOps-Environment"
       speaker: "Christian Köberl"
       file: "/slides/2022-11/CNCF-Linz-Secure-DevOps-Environment.pdf"
+
 
 - id: 19
   title: "19. Cloud Native Computing Linz Meetup"
