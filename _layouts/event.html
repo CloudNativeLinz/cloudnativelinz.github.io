@@ -2,7 +2,25 @@
 layout: default
 ---
 
-<h1>{{ page.edition }}</h1>
-
-
+<h1>{{ page.title }}</h1>
 <h2>{{ page.date }}</h2>
+<h2>{{ page.host }}</h2>
+
+<h3>{{ page.event_link }}</h3>
+
+{% if page.talks %}
+  <h2>Speakers</h2>
+  <ul>
+    {% for talk in page.talks %}
+      <li>{{ talk.title }} - {{ talk.speaker }}</li>
+      {% if talk.file %}
+        <object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
+        <a href="{{ talk.file }}">(Download PDF)</a>
+      {% endif %}
+      {% if talk.recording %}
+        <a href="{{ talk.recording }}">(Watch Recording)</a>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
+

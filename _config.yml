@@ -103,7 +103,7 @@ page_gen:
     # The template to use for the generated pages
     template: 'event'
     # name of the collection
-    name: 'edition'
+    name: 'title'
   
 
 

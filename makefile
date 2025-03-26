@@ -15,6 +15,13 @@ run: serve-livereload
 serve:
 	$(JEKYLL_CMD)
 
+clean:
+	@echo "Cleaning up..."
+	@rm -rf _site
+	@rm -rf .jekyll-cache
+	@rm -rf .sass-cache
+	@rm -rf vendor/bundle
+
 # Serve the site with live reload
 serve-livereload:
 	$(JEKYLL_CMD) $(LIVERELOAD_FLAG)
