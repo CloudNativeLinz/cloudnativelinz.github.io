@@ -92,17 +92,10 @@ plugins:
 
 include: ['_pages']
 
-collections:
-  slides:
-    output: true
-
 page_gen:
   - data: 'events'
-    # The directory where the generated pages will be created
     dir: 'meetups/meetup'
-    # The template to use for the generated pages
     template: 'event'
-    # name of the collection
     name: 'title'
   
 

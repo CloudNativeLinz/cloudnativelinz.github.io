@@ -334,6 +334,7 @@
   registrations: ""
   participants: "27"
   recording: []
+  
 
 - id: 27
   title: "Cloud Native Linz - GitOps and Testing Cloud Environments"
@@ -342,7 +343,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/"
   registrations: ""
   participants: "41"
-  recording: []
+  talks:
+    - title: "Automating Legacy System Management with GitOps: A Journey from On-Premises to Kubernetes"
+      speaker: "Michael Skledar"
+    - title: "Taming and Testing the Cloud Environment from localhost to cncf.io"
+      speaker: "Anca Ghenade"
 
 - id: 28
   title: "Cloud Native Linz - Cloud Adventure and Cloud Native Sustainability"
@@ -351,14 +356,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/"
   registrations: ""
   participants: "31"
-  recording: []
-  slides:
+  talks:
     - title: "Cloud Adventure"
-      url: "/slides/2024-01-Cloud-Native-Meetup-Slides-karriereat"
       speaker: "Georg Buchgeher"
       file: "/slides/2024-01/Cloud-Native-Meetup-Slides-karriereat.pdf"
     - title: "Green Software"
-      url: "/slides/2024-01-green-software-whizus"
       speaker: "Erik Auer"
       file: "/slides/2024-01/green-software-whizus.pdf"
 
@@ -369,7 +371,11 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/"
   registrations: ""
   participants: "39"
-  recording: []
+  talks: 
+    - title: "Pathways, Not Pitfalls: Building Platforms With Developers in Mind"
+      speaker: "Katharina Sick"
+    - title: "An Open-Source approach to Multi-tenant Label-based Access control"
+      speaker: "Constantin Winkler"
 
 - id: 30
   title: "Cloud Native Linz - K8s Journey and a Multi-Layer K8s Security System"
@@ -378,14 +384,13 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/"
   registrations: ""
   participants: "40"
-  recording:
-    - title: "30.2 CNCLinz - Daniel Drack - Implementing a Multi-Layer k8s Security System with SUSE NeuVector"
-      link: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
-  slides:
+  talks:
     - title: "A Tale of ROSEs and Containers: Our Kubernetes Journey"
-      url: "/slides/2024-03-Kubernetes Story"
       speaker: "Alexander Lackner & Armin Deliomini"
       file: "slides/2024-03/Kubernetes Story.pdf"
+    - title: "Implementing a Multi-Layer Kubernetes Security System with SUSE NeuVector"
+      speaker: "Daniel Drack"
+      recording: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
 
 - id: 31
   title: "Cloud Native Linz - Secure K8s Deployment and API Management in Azure"
@@ -394,12 +399,13 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/298076702/"
   registrations: ""
   participants: "22"
-  recording: []
-  slides:
+  talks:
     - title: "How to securely deploy Kubernetes on Azure"
       url: "slides/2024-04-PCG_AT_Talk_CNCF_Secure_AKS.pdf"
       speaker: "Marcel Tober & Andreas Wimmersberger"
       file: "slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+    - title: "Transforming diverse system landscapes into sustainable API products with Azure API Management"
+      speaker: "Tobias Berei"
   
 - id: 32
   title: "Cloud Native Linz - Inspecting Running Containers & Observability on the Edge"
@@ -408,14 +414,11 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/300982876/"
   registrations: ""
   participants: "22"
-  recording: []
-  slides:
+  talks:
     - title: "Inspecting running containers"
-      url: "/slides/2024-06-Inspecting and Manipulating Running Containers"
       speaker: "Martin Strigl"
       file: "/slides/2024-06/Inspecting and Manipulating Running Containers.pdf"
     - title: "Observability at the Edge: Envoy Distributed Tracing with OpenTelemetry"
-      url: "/slides/2024-06-envoy-distributed-tracing-with-opentelemetry"
       speaker: "João Grassi"
       file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
 
@@ -425,15 +428,12 @@
   host: "online"
   event_link: "https://www.meetup.com/cloud-native-linz/events/302570761/"
   registrations: ""
-  participants: "22 (remote only)"
-  recording:
-    - title: "Adriana Villela & Reese Lee - Dude, Where’s My Error?"
-      link: "https://www.youtube.com/watch?v=nl7BaeAcv3g"
-  slides:
+  participants: "22 (remote only)"      
+  talks:
     - title: "Dude, Where's My Error? How OTel Records Errors, and Why it Does Like That"
-      url: "/slides/2024-09-Dude, Where's My Error__ How OTel Records Errors.pdf"
       speaker: "Adriana Villela & Reese Lee"
       file: "/slides/2024-09/Dude, Where's My Error__ How OTel Records Errors.pdf"
+      recording: "https://www.youtube.com/watch?v=nl7BaeAcv3g"
 
 - id: 34
   title: "Cloud Native Linz - Beyond k8s and OpenSource Metrics"
@@ -443,11 +443,12 @@
   registrations: ""
   participants: "27"
   recording: []
-  slides:
+  talks:
     - title: "Open-Source Metrics Primer"
-      url: "/slides/2024-10-OpenTelemetryMetricsPrimer-2024-10"
       speaker: "Georg Pirklbauer"
       file: "/slides/2024-10/OpenTelemetryMetricsPrimer-2024-10.pdf"
+    - title: "Beyond Kubernetes: Integrating Backstage for a Seamless Developer Experience"
+      speaker: "Philipp Bergsmann"
 
 - id: 35
   title: "Cloud Native Linz - Cloud-Native Harmony & Backstage Techdocs"
@@ -457,11 +458,13 @@
   registrations: ""
   participants: "22"
   recording: []
-  slides: 
+  talks: 
     - title: "From IT Ops to Cloud-Native Harmony"
       url: "/slides/2024-11-ITOpsToCloudNativeHarmony_19112024"
       speaker: "Alexander Höllwart & Michael “Obi” Obernberger"
       file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
+    - title: "Backstage Techdocs"
+      speaker: "Sebastian Poxhofer"
 
 
 - id: 36
@@ -472,13 +475,11 @@
   registrations: ""
   participants: "33"
   recording: []
-  slides:
+  talks:
     - title: "A closer look at Docker BuildKit and Buildx"
-      url: "/slides/2025-01-PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx"
       speaker: "Sophia Zehethofer"
       file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
     - title: "Beesting Can't touch this"
-      url: "/slides/2025-01-beesting_cant_touch_this"
       speaker: "Patrick Pichler"
       file: "/slides/2025-01/beesting_cant_touch_this.pdf"
     
