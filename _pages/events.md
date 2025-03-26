@@ -1,47 +1,8 @@
 ---
 layout: page
 title: Events
-permalink: /events/
+permalink: events/
 ---
-
-<style>
-  .date-label {
-    display: inline-block;
-    padding: 2px 8px;
-    margin-right: 8px;
-    background-color: #f0f0f0;
-    border-radius: 12px;
-    font-size: 0.8em;
-  }
-  .center-cell {
-    text-align: center; /* Center align text horizontally */
-    vertical-align: middle; /* Center align text vertically */
-  }
-  .today-event {
-    background-color: #e6f3ff;
-    border-left: 4px solid #0066cc;
-    padding: 10px;
-    margin: 5px 0;
-  }
-  .today-label {
-    display: inline-block;
-    padding: 2px 8px;
-    margin-right: 8px;
-    background-color: #0066cc;
-    color: white;
-    border-radius: 12px;
-    font-size: 0.8em;
-    font-weight: bold;
-  }
-  .host-label {
-    display: inline-block;
-    padding: 2px 8px;
-    margin-right: 8px;
-    background-color: #f0f0f0;
-    border-radius: 12px;
-    font-size: 0.8em;
-  }
-</style>
 
 {% assign upcoming_events = false %}
 {% for event in site.data.events %}
@@ -63,15 +24,20 @@ permalink: /events/
       <tr {% if event_date == today %}class="today-event"{% endif %}>
         <td>
           {% if event_date == today %}
-            <span class="today-label">TODAY</span>
+            <span class="label">TODAY</span>
           {% else %}
-            <span class="date-label">{{ event.date }}</span>
+            <span class="label">{{ event.date }}</span>
           {% endif %}
           {% if event.host != nil and event.host != "" %}
-            <span class="host-label">hosted by {{ event.host }}</span>
+            <span class="label">hosted by {{ event.host }}</span>
           {% endif %}
           <br>
-          <strong><a href="{{ event.event_link }}">{{ event.edition }}</a></strong>
+        {% if event.event_link != nil and event.event_link != "" %}
+            <strong><a href="{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a></strong>
+          {% else %}
+            <strong>{{ event.title }}</strong>
+          {% endif %}
+
         </td>
       </tr>
     {% endif %}
@@ -80,52 +46,34 @@ permalink: /events/
 {% endif %}
 
 
-### Statistics of past events
+## Past Events
 
-<table>
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Edition</th>
-      <th>Registrations</th>
-      <th>Participants</th>
-      <th>Recordings</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for event in site.data.events %}
-      
-    {% assign event_date = event.date | date: "%Y-%m-%d" %}
-    {% assign today = site.time | date: "%Y-%m-%d" %}
+<table width="100%" style="border: 5px solid #ccc; border-collapse: collapse;">
+{% for event in site.data.events reversed %}
+
+ {% assign event_date = event.date | date: "%Y-%m-%d" %}
+ {% assign today = site.time | date: "%Y-%m-%d" %}
   
-    {% if event_date < today %}
+ {% if event_date < today %}
 
-    <tr>
-      <td>{{ event.id }}</td>
-      <td>
-        <span class="date-label">{{ event.date }}</span><br>
-        <a href="{{ event.event_link }}">{{ event.edition }}</a>
-      </td>
-      <td class="center-cell">{{ event.registrations }}</td>
-      <td class="center-cell">{{ event.participants }}</td>
-      <td>
-        {% if event.recording.size == 0 %}
-          In person only
-        {% else %}
-          {% for recording in event.recording %}
-            {% if recording.link %}
-              <a href="{{ recording.link }}">{{ recording.title }}</a><br>
-            {% else %}
-              {{ recording.title }}<br>
-            {% endif %}
-            {% if forloop.last == false %}
-              <br>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      </td>
-    </tr>
+
+  <tr>
+        <td>
+          {% if event_date == today %}
+            <span class="today-label">TODAY</span>
+          {% else %}
+            <span class="label">{{ event.date }}</span>
+          {% endif %}
+          {% if event.host != nil and event.host != "" %}
+            <span class="label">hosted by {{ event.host }}</span>
+          {% endif %}
+          <br>
+          <strong><a href="{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a></strong>
+        </td>
+      </tr>
+
+
     {% endif %}
-    {% endfor %}
-  </tbody>
+
+{% endfor %}
 </table>

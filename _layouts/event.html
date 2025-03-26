@@ -2,25 +2,34 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<h2>{{ page.date }}</h2>
-<h2>{{ page.host }}</h2>
+<h1>{{ page.title  | remove: 'Cloud Native Linz - '  }}</h1>
+<center>
+<span class="label">{{ page.date }}</span>
+<span class="label">hosted by {{ page.host }}</span>
+<span class="label"><a href="{{ page.event_link }}">registration link</a></span>
+{% if page.participants != nil and page.participants != empty %} 
+<span class="label">participants: {{ page.participants }}</span>
+{% endif %}
+{% if page.registrations != nil and page.registrations != empty %} 
+<span class="label">registrations: {{ page.registrations }}</span>
+{% endif %}
+</center>
 
-<h3>{{ page.event_link }}</h3>
 
 {% if page.talks %}
-  <h2>Speakers</h2>
-  <ul>
+  <h2>Talks</h2>
     {% for talk in page.talks %}
-      <li>{{ talk.title }} - {{ talk.speaker }}</li>
+    <div class="talkdetails">
+      <strong>{{ talk.title }}</strong> <span class="label">by {{ talk.speaker }}</span>
       {% if talk.file %}
-        <object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
-        <a href="{{ talk.file }}">(Download PDF)</a>
+        <br><br><object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
+      {% else %}
+        <br><br>The speaker has not provided the slides (yet).
       {% endif %}
       {% if talk.recording %}
-        <a href="{{ talk.recording }}">(Watch Recording)</a>
+        <br><iframe width="560" height="315" src="https://www.youtube.com/embed/xzB5Al18aao?si=D1qTY6_zXcnZx0iY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       {% endif %}
+    </div>
     {% endfor %}
-  </ul>
 {% endif %}
 

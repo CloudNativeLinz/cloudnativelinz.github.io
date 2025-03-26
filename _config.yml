@@ -94,7 +94,7 @@ include: ['_pages']
 
 page_gen:
   - data: 'events'
-    dir: 'meetups/meetup'
+    dir: 'events/meetup'
     template: 'event'
     name: 'title'
   
