@@ -2,7 +2,15 @@
 layout: default
 ---
 
-<h1>{{ page.title  | remove: 'Cloud Native Linz - '  }}</h1>
+<style>
+  /* Override the default styles for the slide layout */
+  #main.container {
+    max-width: 960px;
+  }
+
+</style>
+
+<h1>{{ page.title }}</h1>
 <center>
 <span class="label">{{ page.date }}</span>
 <span class="label">hosted by {{ page.host }}</span>
@@ -29,7 +37,9 @@ layout: default
       {% if talk.recording %}
         {% assign rec = talk.recording | split: 'v=' %}
         {% assign video_id = rec[1] %} 
+        <center>
         <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
       {% endif %}
     </div>
     {% endfor %}

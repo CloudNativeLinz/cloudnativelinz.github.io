@@ -15,7 +15,7 @@ permalink: events/
 {% endfor %}
 
 {% if upcoming_events %}
-### Upcoming events
+## Upcoming events
 <table width="100%" style="border: 5px solid #ccc; border-collapse: collapse;">
   {% for event in site.data.events %}
     {% assign event_date = event.date | date: "%Y-%m-%d" %}

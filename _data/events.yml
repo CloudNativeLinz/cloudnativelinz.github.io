@@ -262,7 +262,7 @@
       file: "/slides/2023-01/CNCFLinz_DORAMetrics_with_Keptn.pdf"
 
 - id: 20
-  title: "Cloud Native Linz - Kubernetes Alternatives"
+  title: "Kubernetes Alternatives"
   date: "2023-02-21"
   host: "Usersnap"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/"
@@ -276,7 +276,7 @@
       file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
 
 - id: 21
-  title: "Cloud Native Linz - Crossplane Usecases"
+  title: "Crossplane Usecases"
   date: "2023-03-28"
   host: "Dynatrace"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/"
@@ -292,7 +292,7 @@
 
 
 - id: 22
-  title: "Cloud Native Linz - Hagenberg Edition"
+  title: "Hagenberg Edition"
   date: "2023-04-18"
   host: "Porsche Informatik"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/"
@@ -306,7 +306,7 @@
       speaker: "Jürgen Etzlstorfer"
 
 - id: 23
-  title: "Cloud Native Linz - CertOps and K8sGPT"
+  title: "CertOps and K8sGPT"
   date: "2023-05-30"
   host: "Cloudflight"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/"
@@ -321,7 +321,7 @@
       file: "/slides/2023-05/K8sGPT - Linz.pdf"
 
 - id: 24
-  title: "Cloud Native Linz - GitOps & Terraform and a Guide to OpenTelemetry"
+  title: "GitOps & Terraform and a Guide to OpenTelemetry"
   date: "2023-06-27"
   host: "Runtastic"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/"
@@ -336,7 +336,7 @@
       file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
 
 - id: 25
-  title: "Cloud Native Linz - Migration to Cloud Native & The Power of Operators"
+  title: "Migration to Cloud Native & The Power of Operators"
   date: "2023-09-19"
   host: "netcetera"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/"
@@ -350,7 +350,7 @@
       speaker: "Markus Adelsberger & Georg Mayrhauser"
 
 - id: 26
-  title: "Cloud Native Linz - Testing K8s Operators & OpenTelemetry for Logs"
+  title: "Testing K8s Operators & OpenTelemetry for Logs"
   date: "2023-10-18"
   host: "eww IT and TEL"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/"
@@ -364,7 +364,7 @@
 
 
 - id: 27
-  title: "Cloud Native Linz - GitOps and Testing Cloud Environments"
+  title: "GitOps and Testing Cloud Environments"
   date: "2023-11-21"
   host: "MIC"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/"
@@ -377,7 +377,7 @@
       speaker: "Anca Ghenade"
 
 - id: 28
-  title: "Cloud Native Linz - Cloud Adventure and Cloud Native Sustainability"
+  title: "Cloud Adventure and Cloud Native Sustainability"
   date: "2024-01-24"
   host: "karriere.at"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/"
@@ -392,7 +392,7 @@
       file: "/slides/2024-01/green-software-whizus.pdf"
 
 - id: 29
-  title: "Cloud Native Linz - Access Control and Platforms with Devs in Mind"
+  title: "Access Control and Platforms with Devs in Mind"
   date: "2024-02-27"
   host: "Gepardec"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/"
@@ -405,7 +405,7 @@
       speaker: "Constantin Winkler"
 
 - id: 30
-  title: "Cloud Native Linz - K8s Journey and a Multi-Layer K8s Security System"
+  title: "K8s Journey and a Multi-Layer K8s Security System"
   date: "2024-03-26"
   host: "Runtastic"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/"
@@ -420,7 +420,7 @@
       recording: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
 
 - id: 31
-  title: "Cloud Native Linz - Secure K8s Deployment and API Management in Azure"
+  title: "Secure K8s Deployment and API Management in Azure"
   date: "2024-04-23"
   host: "Public Cloud Group"
   event_link: "https://www.meetup.com/cloud-native-linz/events/298076702/"
@@ -435,7 +435,7 @@
       speaker: "Tobias Berei"
   
 - id: 32
-  title: "Cloud Native Linz - Inspecting Running Containers & Observability on the Edge"
+  title: "Inspecting Running Containers & Observability on the Edge"
   date: "2024-06-25"
   host: "Cloudflight"
   event_link: "https://www.meetup.com/cloud-native-linz/events/300982876/"
@@ -450,7 +450,7 @@
       file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
 
 - id: 33
-  title: "Cloud Native Linz - OpenTelemetry Errors"
+  title: "OpenTelemetry Errors"
   date: "2024-09-18"
   host: "online"
   event_link: "https://www.meetup.com/cloud-native-linz/events/302570761/"
@@ -463,7 +463,7 @@
       recording: "https://www.youtube.com/watch?v=nl7BaeAcv3g"
 
 - id: 34
-  title: "Cloud Native Linz - Beyond k8s and OpenSource Metrics"
+  title: "Beyond k8s and OpenSource Metrics"
   date: "2024-10-21"
   host: "Dynatrace"
   event_link: "https://www.meetup.com/cloud-native-linz/events/303406885/"
@@ -477,7 +477,7 @@
       speaker: "Philipp Bergsmann"
 
 - id: 35
-  title: "Cloud Native Linz - Cloud-Native Harmony & Backstage Techdocs"
+  title: "Cloud-Native Harmony & Backstage Techdocs"
   date: "2024-11-19"
   host: "cloudxcelerate"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/302568919/"
@@ -493,7 +493,7 @@
 
 
 - id: 36
-  title: "Cloud Native Linz - Containerized Builds & Beesting"
+  title: "Containerized Builds & Beesting"
   date: "2025-01-15"
   host: "Public Cloud Group"
   event_link: "https://www.meetup.com/cloud-native-linz/events/304003701/"
@@ -509,7 +509,7 @@
     
 
 - id: 37
-  title: "Cloud Native Linz - Auto-updates in the CI/CD and Zero Trust Systems"
+  title: "Auto-updates in the CI/CD and Zero Trust Systems"
   date: "2025-02-25"
   host: "Gepardec"
   event_link: "https://www.meetup.com/cloud-native-linz/events/304124258/"
@@ -527,7 +527,7 @@
 
 
 - id: 38
-  title: "Cloud Native Linz - Laravel in K8s and Shell Scripting"
+  title: "Laravel in K8s and Shell Scripting"
   date: "2025-03-18"
   host: "karriere.at"
   event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
@@ -544,7 +544,7 @@
       file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
 
 - id: 39
-  title: "Cloud Native Linz - April 2025 edition"
+  title: "April 2025 edition"
   date: "2025-04-29"
   host: "tractive"
   event_link: ""
@@ -552,7 +552,7 @@
   participants: ""
 
 - id: 40
-  title: "Cloud Native Linz - May 2025 edition"
+  title: "May 2025 edition"
   date: "2025-05-20"
   host: "Cloudflight"
   event_link: ""
