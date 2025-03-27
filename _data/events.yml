@@ -148,7 +148,7 @@
     - title: "The 1001 serverless options of Microsoft Azure"
       speaker: "Philipp Weckerle"
       recording: "https://www.youtube.com/watch?v=81Tg--7GIFI"
-    - title: "Cloud-native delivery with Keptn"
+    - title: "[canceled] Cloud-native delivery with Keptn"
       speaker: "Jürgen Etzlstorfer"
 
 - id: 12
@@ -469,7 +469,6 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/303406885/"
   registrations: ""
   participants: "27"
-  recording: []
   talks:
     - title: "Open-Source Metrics Primer"
       speaker: "Georg Pirklbauer"
@@ -484,7 +483,6 @@
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/302568919/"
   registrations: ""
   participants: "22"
-  recording: []
   talks: 
     - title: "From IT Ops to Cloud-Native Harmony"
       url: "/slides/2024-11-ITOpsToCloudNativeHarmony_19112024"
@@ -501,7 +499,6 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/304003701/"
   registrations: ""
   participants: "33"
-  recording: []
   talks:
     - title: "A closer look at Docker BuildKit and Buildx"
       speaker: "Sophia Zehethofer"
@@ -536,7 +533,6 @@
   event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
   registrations: ""
   participants: "29"
-  recording: []
   talks:
     - title: "Laravel in Kubernetes"
       url: "/slides/2025-03-laravel_in_k8s_huber"
@@ -548,20 +544,18 @@
       file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
 
 - id: 39
-  title: "Cloud Native Linz - TBD"
+  title: "Cloud Native Linz - April 2025 edition"
   date: "2025-04-29"
   host: "tractive"
   event_link: ""
   registrations: ""
   participants: ""
-  recording: []
 
 - id: 40
-  title: "Cloud Native Linz - TBD"
+  title: "Cloud Native Linz - May 2025 edition"
   date: "2025-05-20"
   host: "Cloudflight"
   event_link: ""
   registrations: ""
   participants: ""
-  recording: []
 

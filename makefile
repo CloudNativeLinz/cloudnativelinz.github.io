@@ -30,4 +30,9 @@ serve-livereload:
 serve-windows:
 	$(JEKYLL_CMD) $(LIVERELOAD_FLAG) $(FORCE_POLLING_FLAG)
 
+install:
+	@echo "Installing dependencies..."
+	@bundle install
+	@bundle exec jekyll build
+
 .PHONY: all serve serve-livereload serve-windows
