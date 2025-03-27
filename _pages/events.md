@@ -31,6 +31,9 @@ permalink: events/
           {% if event.host != nil and event.host != "" %}
             <span class="label">hosted by {{ event.host }}</span>
           {% endif %}
+          {% if event.event_link == nil or event.event_link == "" %}
+            <span class="label">registration not yet open</span>
+          {% endif %}
           <br>
         {% if event.event_link != nil and event.event_link != "" %}
             <strong><a href="{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a></strong>
