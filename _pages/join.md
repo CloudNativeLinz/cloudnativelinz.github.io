@@ -8,7 +8,7 @@ This community is all about people 👨‍💻👩‍💻 that ❤️ cloud-nati
 
 We **usually meet on the third or forth Tuesday of the month** somewhere in Linz. If you have a location that you want to provide or if you want to speak - [please reach out to us](https://forms.gle/9GPboKs4T5Yboq5c8)!
 
-As we use the following **online platforms** to organize our meetups, please join them to stay up-to-date with upcoming events!
+As we use the following **online platforms** to organize our meetups, please join them to stay up-to-date with upcoming [events](/events)!
 
 - Our [**official home as a chapter in the CNCF**](https://community.cncf.io/linz/) is on the CNCF community page.<br> 
   👩‍💻 **[Join here](https://community.cncf.io/linz/)**! 👨‍💻
