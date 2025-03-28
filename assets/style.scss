@@ -1254,6 +1254,42 @@ Modules - reusable parts of our design
   margin-top: -20px;
 }
 
+.label {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 8px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  font-size: 0.8em;
+}
+.today-label {
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 8px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.center-cell {
+  text-align: center; /* Center align text horizontally */
+  vertical-align: middle; /* Center align text vertically */
+}
+.today-event {
+  background-color: #e6f3ff;
+  border-left: 4px solid #0066cc;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.talkdetails {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px 0;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";

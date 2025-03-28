@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<style>
+  /* Override the default styles for the slide layout */
+  #main.container {
+    max-width: 960px;
+  }
+
+</style>
+
+<h1>{{ page.title }}</h1>
+<center>
+<span class="label">{{ page.date }}</span>
+<span class="label">hosted by {{ page.host }}</span>
+<span class="label"><a href="{{ page.event_link }}">registration link</a></span>
+{% if page.participants != nil and page.participants != empty %} 
+<span class="label">participants: {{ page.participants }}</span>
+{% endif %}
+{% if page.registrations != nil and page.registrations != empty %} 
+<span class="label">registrations: {{ page.registrations }}</span>
+{% endif %}
+</center>
+
+
+{% if page.talks %}
+  <h2>Talks</h2>
+    {% for talk in page.talks %}
+    <div class="talkdetails">
+      <strong>{{ talk.title }}</strong> <span class="label">by {{ talk.speaker }}</span>
+      {% if talk.file %}
+        <br><br><object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
+      {% else %}
+        <br><br>The speaker has not provided the slides (yet).
+      {% endif %}
+      {% if talk.recording %}
+        {% assign rec = talk.recording | split: 'v=' %}
+        {% assign video_id = rec[1] %} 
+        <center>
+        <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+      {% endif %}
+    </div>
+    {% endfor %}
+{% endif %}
+
