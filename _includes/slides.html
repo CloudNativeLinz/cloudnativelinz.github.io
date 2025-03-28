@@ -1,0 +1,23 @@
+{% assign slides_by_month = site.slides | group_by_exp:"slide", "slide.date | date: '%Y-%m'" %}
+{% assign sorted_groups = slides_by_month | sort: "name" | reverse %}
+<div class="accordion">
+  {% for group in sorted_groups %}
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        {{ group.name | append: '-01' | date: '%B %Y' }}
+      </h2>
+      <div class="accordion-content">
+        <ul>
+          {% for slide in group.items %}
+            <li>
+              <a href="{{ slide.url }}" class="slide-title">{{ slide.title }}</a>
+              {% if slide.speaker %}
+                <p class="slide-speaker">{{ slide.speaker }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</div>
