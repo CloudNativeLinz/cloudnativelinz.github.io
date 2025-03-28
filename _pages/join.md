@@ -4,7 +4,7 @@ title: Join us!
 permalink: /join/
 ---
 
-This community is all about people 👨‍💻👩‍💻, although we ❤️ cloud-native technologies! Therefore we welcome everyone to join our community!
+This community is all about people 👨‍💻👩‍💻 that ❤️ cloud-native technologies! Therefore we welcome everyone to join our community!
 
 We **usually meet on the third or forth Tuesday of the month** somewhere in Linz. If you have a location that you want to provide or if you want to speak - [please reach out to us](https://forms.gle/9GPboKs4T5Yboq5c8)!
 
