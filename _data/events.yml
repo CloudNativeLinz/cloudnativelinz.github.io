@@ -174,7 +174,7 @@
   talks:
     - title: "Java on Azure"
       speaker: "Ed Burns"
-      file: "slides/2022-03/java-on-azure-ed-burns.pdf"
+      file: "/slides/2022-03/java-on-azure-ed-burns.pdf"
 
 - id: 14
   title: "14. Cloud Native Computing Linz Meetup"
@@ -268,7 +268,7 @@
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/"
   registrations: ""
   participants: "45"
-  slides:
+  talks:
     - title: "Serverless container workloads beyond K8s"
       speaker: "Martin Sereinig"
     - title: "Kubernetes Alternatives"
@@ -401,8 +401,10 @@
   talks: 
     - title: "Pathways, Not Pitfalls: Building Platforms With Developers in Mind"
       speaker: "Katharina Sick"
+      recording: "https://www.youtube.com/watch?v=-naCMU4-jG4"
     - title: "An Open-Source approach to Multi-tenant Label-based Access control"
       speaker: "Constantin Winkler"
+      recording: "https://www.youtube.com/watch?v=4yNZTnj-71I"
 
 - id: 30
   title: "K8s Journey and a Multi-Layer K8s Security System"
@@ -414,7 +416,7 @@
   talks:
     - title: "A Tale of ROSEs and Containers: Our Kubernetes Journey"
       speaker: "Alexander Lackner & Armin Deliomini"
-      file: "slides/2024-03/Kubernetes Story.pdf"
+      file: "/slides/2024-03/Kubernetes Story.pdf"
     - title: "Implementing a Multi-Layer Kubernetes Security System with SUSE NeuVector"
       speaker: "Daniel Drack"
       recording: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
@@ -428,9 +430,9 @@
   participants: "22"
   talks:
     - title: "How to securely deploy Kubernetes on Azure"
-      url: "slides/2024-04-PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+      url: "/slides/2024-04-PCG_AT_Talk_CNCF_Secure_AKS.pdf"
       speaker: "Marcel Tober & Andreas Wimmersberger"
-      file: "slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+      file: "/slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
     - title: "Transforming diverse system landscapes into sustainable API products with Azure API Management"
       speaker: "Tobias Berei"
   
