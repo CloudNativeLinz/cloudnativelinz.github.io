@@ -561,3 +561,14 @@
   registrations: ""
   participants: ""
 
+- id: 41
+  title: "July 2025 edition"
+  date: "2025-07-01"
+  host: "Gepardec"
+  event_link: ""
+  registrations: ""
+  participants: ""
+  talks:
+    - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
+      speaker: "Simon Gartner"
+
