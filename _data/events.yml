@@ -552,6 +552,9 @@
   event_link: ""
   registrations: ""
   participants: ""
+  talks:
+    - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
+      speaker: "Jan Wiesbauer"
 
 - id: 40
   title: "May 2025 edition"
