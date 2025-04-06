@@ -30,7 +30,8 @@ layout: default
     <div class="talkdetails">
       <strong>{{ talk.title }}</strong> <span class="label">by {{ talk.speaker }}</span>
       {% if talk.file %}
-        <br><br><object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
+        <br><br><object data="{{ talk.file }}" width="100%" height="500" type="application/pdf" class="hide-on-mobile"></object>
+        <p><a href="{{ talk.file }}" class="show-on-mobile">📄 Open/Download PDF</a></p>
       {% else %}
         <br><br>The speaker has not provided the slides (yet).
       {% endif %}
@@ -38,7 +39,8 @@ layout: default
         {% assign rec = talk.recording | split: 'v=' %}
         {% assign video_id = rec[1] %} 
         <center>
-        <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="hide-on-mobile"></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="show-on-mobile"></iframe>
         </center>
       {% endif %}
     </div>

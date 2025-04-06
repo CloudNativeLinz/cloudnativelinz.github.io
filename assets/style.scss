@@ -1290,6 +1290,20 @@ Modules - reusable parts of our design
   margin: 20px 0;
 }
 
+.hide-on-mobile {
+  display: block;
+  @include mobile {
+    display: none;
+  }
+}
+.show-on-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
