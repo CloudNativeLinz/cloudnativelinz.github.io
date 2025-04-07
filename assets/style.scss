@@ -1291,3 +1291,15 @@ Modules - reusable parts of our design
   margin: 20px 0;
 }
 
+.hide-on-mobile {
+  display: block;
+  @include mobile {
+    display: none;
+  }
+}
+.show-on-mobile {
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}
