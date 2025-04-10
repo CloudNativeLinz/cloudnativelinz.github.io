@@ -546,15 +546,17 @@
       file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
 
 - id: 39
-  title: "April 2025 edition"
+  title: "Zero-Downtime Experiences & Event-Driven Microservices at scale"
   date: "2025-04-29"
   host: "tractive"
-  event_link: ""
+  event_link: "https://www.meetup.com/cloud-native-linz/events/307219291/"
   registrations: ""
   participants: ""
   talks:
     - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
       speaker: "Jan Wiesbauer"
+    - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
+      speaker: "Shahab Ganji"
 
 - id: 40
   title: "May 2025 edition"
@@ -563,6 +565,12 @@
   event_link: ""
   registrations: ""
   participants: ""
+  talks:
+    - title: "TBD"
+      speaker: "TBD"
+    - title: "CloudEvents: A Standard for Event-Driven Architectures"  
+      speaker: "Christian Schabetsberger"
+
 
 - id: 41
   title: "July 2025 edition"
@@ -574,4 +582,8 @@
   talks:
     - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
       speaker: "Simon Gartner"
+    - title: "TBD"
+      speaker: "TBD"
+
+
 
