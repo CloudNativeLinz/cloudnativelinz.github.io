@@ -10,6 +10,10 @@ layout: default
 
 </style>
 
+{% assign event_date = page.date | date: "%Y-%m-%d" %}
+{% assign today = site.time | date: "%Y-%m-%d" %}
+
+
 <h1>{{ page.title }}</h1>
 <center>
 <span class="label">{{ page.date }}</span>
@@ -25,7 +29,7 @@ layout: default
 
 
 {% if page.talks %}
-  <h2>Talks</h2>
+  <h2>{% if event_date >= today %}We are looking forward to the following talks {% else %} Talks{% endif %}</h2>
     {% for talk in page.talks %}
     <div class="talkdetails">
       <strong>{{ talk.title }}</strong> <span class="label">by {{ talk.speaker }}</span>

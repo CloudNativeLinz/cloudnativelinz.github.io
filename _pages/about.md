@@ -6,6 +6,8 @@ redirect_from:
   - /about
 ---
 
+{% include upcoming-events.html %}
+
 <img src="{{ site.baseurl }}/images/cloudnativelinz-banner.png">
 
 If you believe that Cloud Native is the future of IT then you are at the right place.

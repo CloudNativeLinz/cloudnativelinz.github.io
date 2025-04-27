@@ -559,15 +559,15 @@
       speaker: "Shahab Ganji"
 
 - id: 40
-  title: "May 2025 edition"
+  title: "TalosOS and CloudEvents"
   date: "2025-05-20"
   host: "Cloudflight"
   event_link: ""
   registrations: ""
   participants: ""
   talks:
-    - title: "TBD"
-      speaker: "TBD"
+    - title: "TalosOS: The OS Kubernetes Deserves"
+      speaker: "Siegfried Stumpfer"
     - title: "CloudEvents: A Standard for Event-Driven Architectures"  
       speaker: "Christian Schabetsberger"
 
