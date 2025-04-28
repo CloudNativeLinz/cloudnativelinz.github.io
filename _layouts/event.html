@@ -18,7 +18,13 @@ layout: default
 <center>
 <span class="label">{{ page.date }}</span>
 <span class="label">hosted by {{ page.host }}</span>
-<span class="label"><a href="{{ page.event_link }}">registration link</a></span>
+<span class="label">
+{% if page.event_link == nil or page.event_link == "" %}
+  registration not yet open
+{% else %}
+  <a href="{{ page.event_link }}">registration link</a> 
+{% endif %}
+</span>
 {% if page.participants != nil and page.participants != empty %} 
 <span class="label">participants: {{ page.participants }}</span>
 {% endif %}
