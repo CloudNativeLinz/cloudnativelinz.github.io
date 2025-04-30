@@ -552,7 +552,7 @@
       speaker: "Jan Wiesbauer"
     - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
       speaker: "Shahab Ganji"
-      file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf" 
+      file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf"
 
 - id: 40
   title: "TalosOS and CloudEvents"
