@@ -546,7 +546,7 @@
   host: "tractive"
   event_link: "https://www.meetup.com/cloud-native-linz/events/307219291/"
   registrations: ""
-  participants: ""
+  participants: "31"
   talks:
     - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
       speaker: "Jan Wiesbauer"
