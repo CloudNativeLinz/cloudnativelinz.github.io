@@ -430,7 +430,6 @@
   participants: "22"
   talks:
     - title: "How to securely deploy Kubernetes on Azure"
-      url: "/slides/2024-04-PCG_AT_Talk_CNCF_Secure_AKS.pdf"
       speaker: "Marcel Tober & Andreas Wimmersberger"
       file: "/slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
     - title: "Transforming diverse system landscapes into sustainable API products with Azure API Management"
@@ -487,7 +486,6 @@
   participants: "22"
   talks: 
     - title: "From IT Ops to Cloud-Native Harmony"
-      url: "/slides/2024-11-ITOpsToCloudNativeHarmony_19112024"
       speaker: "Alexander Höllwart & Michael “Obi” Obernberger"
       file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
     - title: "Backstage Techdocs"
@@ -520,7 +518,6 @@
   talks:
     - title: "Designing Zero Trust Systems"
       speaker: "Damjan Gjurovski"
-      url: "/slides/2025-02-Designing_Zero_Trust_Systems"
       file: "/slides/2025-02/Designing_Zero_Trust_Systems.pdf"
       recording: "https://www.youtube.com/watch?v=YV5U2mcohTk"
     - title: "Auto-Updates of microservices in your CI/CD pipeline"
@@ -537,11 +534,9 @@
   participants: "29"
   talks:
     - title: "Laravel in Kubernetes"
-      url: "/slides/2025-03-laravel_in_k8s_huber"
       speaker: "Sebastian Huber"
       file: "/slides/2025-03/laravel_in_k8s_huber.pdf"
     - title: "You Suck at Shell Scripting"
-      url: "/slides/2025-03-You_Suck_at_Shell_Scripting"
       speaker: "Florian Arthofer"
       file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
 
@@ -557,6 +552,7 @@
       speaker: "Jan Wiesbauer"
     - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
       speaker: "Shahab Ganji"
+      file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf" 
 
 - id: 40
   title: "TalosOS and CloudEvents"
