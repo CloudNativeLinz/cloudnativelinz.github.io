@@ -550,6 +550,7 @@
   talks:
     - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
       speaker: "Jan Wiesbauer"
+      file: "/slides/2025-04/Deploy Without Disruption - Crafting Zero-Downtime Experiences with Stateless Services.pdf"
     - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
       speaker: "Shahab Ganji"
       file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf"
