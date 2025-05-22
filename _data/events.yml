@@ -561,7 +561,7 @@
   host: "Cloudflight"
   event_link: "https://www.meetup.com/cloud-native-linz/events/307676898/"
   registrations: ""
-  participants: ""
+  participants: "27"
   talks:
     - title: "TalosOS: The OS Kubernetes Deserves"
       speaker: "Siegfried Stumpfer"
@@ -570,17 +570,17 @@
 
 
 - id: 41
-  title: "July 2025 edition"
+  title: "OpenRewrite & Adversary Emulation for k8s"
   date: "2025-07-01"
   host: "Gepardec"
-  event_link: ""
+  event_link: "https://www.meetup.com/cloud-native-linz/events/307975704/"
   registrations: ""
   participants: ""
   talks:
     - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
       speaker: "Simon Gartner"
-    - title: "TBD"
-      speaker: "TBD"
+    - title: "Adversary Emulation for Kubernetes Environments"
+      speaker: "Markus Gierlinger"
 
 
 
