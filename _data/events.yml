@@ -565,8 +565,10 @@
   talks:
     - title: "TalosOS: The OS Kubernetes Deserves"
       speaker: "Siegfried Stumpfer"
+      file: "/slides/2025-05/TalosOS.pdf"
     - title: "CloudEvents: A Standard for Event-Driven Architectures"  
       speaker: "Christian Schabetsberger"
+      file: "/slides/2025-05/CloudEvents.pdf"
 
 
 - id: 41
