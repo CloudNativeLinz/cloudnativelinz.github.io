@@ -581,6 +581,7 @@
   talks:
     - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
       speaker: "Simon Gartner"
+      file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
     - title: "Adversary Emulation for Kubernetes Environments"
       speaker: "Markus Gierlinger"
       file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
