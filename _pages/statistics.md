@@ -8,10 +8,19 @@ permalink: /statistics/
 
 Here you can find insights about our Cloud Native Computing Linz meetups including event timelines, hosting organizations, and participation trends.
 
+<div id="charts-status" class="alert-info" style="display: none; padding: 15px; background-color: #d1ecf1; border: 1px solid #bee5eb; border-radius: 5px; margin: 20px 0;">
+  <strong>📊 Loading interactive charts...</strong> If charts don't appear, static data tables will be shown instead.
+</div>
+
+<div id="fallback-notice" class="alert-warning" style="display: none; padding: 15px; background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; margin: 20px 0;">
+  <strong>📋 Interactive charts unavailable:</strong> Displaying data in table format. Charts require external resources that may be blocked by network restrictions.
+</div>
+
 ### Events Over Time
 <div class="chart-container">
   <canvas id="eventsTimelineChart"></canvas>
   <div id="eventsTimelineFallback" style="display: none;">
+    <div class="chart-title">📈 Events Timeline</div>
     <table class="stats-table">
       <thead>
         <tr><th>Date</th><th>Event</th><th>Host</th></tr>
@@ -20,13 +29,13 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
         {% for event in site.data.events reversed limit:10 %}
         <tr>
           <td>{{ event.date }}</td>
-          <td>{{ event.title }}</td>
-          <td>{{ event.host }}</td>
+          <td><strong>{{ event.title }}</strong></td>
+          <td><span class="badge" style="background-color: #007bff; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.8em;">{{ event.host }}</span></td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
-    <p><em>Recent 10 events shown. Full timeline would display {{ site.data.events | size }} total events.</em></p>
+    <div class="fallback-note">⏰ Recent 10 events shown. Full timeline would display {{ site.data.events | size }} total events since September 2020.</div>
   </div>
 </div>
 
@@ -34,31 +43,33 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
 <div class="chart-container">
   <canvas id="hostOrganizationsChart"></canvas>
   <div id="hostOrganizationsFallback" style="display: none;">
+    <div class="chart-title">📊 Host Organizations</div>
     <table class="stats-table">
       <thead>
-        <tr><th>Host Organization</th><th>Events Hosted</th></tr>
+        <tr><th>Host Organization</th><th>Events Hosted</th><th>Visual</th></tr>
       </thead>
       <tbody>
-        <tr><td>online</td><td>8</td></tr>
-        <tr><td>Dynatrace</td><td>3</td></tr>
-        <tr><td>Cloudflight</td><td>3</td></tr>
-        <tr><td>Gepardec</td><td>3</td></tr>
-        <tr><td>Runtastic</td><td>2</td></tr>
-        <tr><td>Public Cloud Group</td><td>2</td></tr>
-        <tr><td>karriere.at</td><td>2</td></tr>
-        <tr><td>tractive</td><td>1</td></tr>
-        <tr><td>cloudxcelerate</td><td>1</td></tr>
-        <tr><td>eww IT and TEL</td><td>1</td></tr>
-        <tr><td>netcetera</td><td>2</td></tr>
-        <tr><td>Porsche Informatik</td><td>1</td></tr>
-        <tr><td>Usersnap</td><td>1</td></tr>
-        <tr><td>Startrampe</td><td>1</td></tr>
-        <tr><td>Tractive</td><td>1</td></tr>
-        <tr><td>hello again</td><td>1</td></tr>
-        <tr><td>smec</td><td>1</td></tr>
-        <tr><td>MIC</td><td>1</td></tr>
+        <tr><td>online</td><td class="number-cell">8</td><td><span class="host-bar" style="width: 80px;"></span> 8</td></tr>
+        <tr><td>Dynatrace</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
+        <tr><td>Cloudflight</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
+        <tr><td>Gepardec</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
+        <tr><td>Runtastic</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px;"></span> 2</td></tr>
+        <tr><td>Public Cloud Group</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px;"></span> 2</td></tr>
+        <tr><td>karriere.at</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px;"></span> 2</td></tr>
+        <tr><td>netcetera</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px;"></span> 2</td></tr>
+        <tr><td>tractive</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>cloudxcelerate</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>eww IT and TEL</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>Porsche Informatik</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>Usersnap</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>Startrampe</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>Tractive</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>hello again</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>smec</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
+        <tr><td>MIC</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
       </tbody>
     </table>
+    <div class="fallback-note">📈 This data represents the distribution of events across different hosting organizations.</div>
   </div>
 </div>
 
@@ -66,22 +77,34 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
 <div class="chart-container">
   <canvas id="registrationTrendsChart"></canvas>
   <div id="registrationTrendsFallback" style="display: none;">
+    <div class="chart-title">📊 Registration Trends</div>
     <table class="stats-table">
       <thead>
-        <tr><th>Date</th><th>Event</th><th>Registrations</th></tr>
+        <tr><th>Date</th><th>Event</th><th>Registrations</th><th>Popularity</th></tr>
       </thead>
       <tbody>
         {% for event in site.data.events reversed %}
           {% if event.registrations and event.registrations != '' %}
           <tr>
             <td>{{ event.date }}</td>
-            <td>{{ event.title }}</td>
-            <td>{{ event.registrations }}</td>
+            <td><strong>{{ event.title }}</strong></td>
+            <td class="number-cell">{{ event.registrations }}</td>
+            <td>
+              {% assign reg_num = event.registrations | plus: 0 %}
+              {% if reg_num >= 50 %}
+                <span class="host-bar" style="width: 50px; background-color: #28a745;"></span> High
+              {% elsif reg_num >= 30 %}
+                <span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium
+              {% else %}
+                <span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low
+              {% endif %}
+            </td>
           </tr>
           {% endif %}
         {% endfor %}
       </tbody>
     </table>
+    <div class="fallback-note">📈 Registration data shows community engagement levels over time.</div>
   </div>
 </div>
 
@@ -89,26 +112,27 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
 <div class="chart-container">
   <canvas id="monthlyFrequencyChart"></canvas>
   <div id="monthlyFrequencyFallback" style="display: none;">
+    <div class="chart-title">📅 Event Frequency by Month</div>
     <table class="stats-table">
       <thead>
-        <tr><th>Month</th><th>Events Count</th></tr>
+        <tr><th>Month</th><th>Events Count</th><th>Activity Level</th></tr>
       </thead>
       <tbody>
-        <tr><td>January</td><td>2</td></tr>
-        <tr><td>February</td><td>3</td></tr>
-        <tr><td>March</td><td>4</td></tr>
-        <tr><td>April</td><td>3</td></tr>
-        <tr><td>May</td><td>4</td></tr>
-        <tr><td>June</td><td>3</td></tr>
-        <tr><td>July</td><td>2</td></tr>
-        <tr><td>August</td><td>0</td></tr>
-        <tr><td>September</td><td>3</td></tr>
-        <tr><td>October</td><td>4</td></tr>
-        <tr><td>November</td><td>3</td></tr>
-        <tr><td>December</td><td>0</td></tr>
+        <tr><td>January</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low</td></tr>
+        <tr><td>February</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
+        <tr><td>March</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
+        <tr><td>April</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
+        <tr><td>May</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
+        <tr><td>June</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
+        <tr><td>July</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low</td></tr>
+        <tr><td>August</td><td class="number-cell">0</td><td><span class="host-bar" style="width: 5px; background-color: #dc3545;"></span> None</td></tr>
+        <tr><td>September</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
+        <tr><td>October</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
+        <tr><td>November</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
+        <tr><td>December</td><td class="number-cell">0</td><td><span class="host-bar" style="width: 5px; background-color: #dc3545;"></span> None</td></tr>
       </tbody>
     </table>
-    <p><em>Note: Most active months are March, May, and October. Summer and winter months typically have fewer events.</em></p>
+    <div class="fallback-note">🗓️ Most active months are March, May, and October. Summer and winter months typically have fewer events.</div>
   </div>
 </div>
 
@@ -136,8 +160,62 @@ Many of our events are recorded and slides are available. You can find these res
 {% endfor %}
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Try multiple CDNs for Chart.js -->
 <script>
+// Function to load scripts with fallback
+function loadScript(src, callback, errorCallback) {
+  const script = document.createElement('script');
+  script.src = src;
+  script.onload = callback;
+  script.onerror = errorCallback;
+  document.head.appendChild(script);
+}
+
+// Try loading Chart.js from multiple sources
+const chartJsSources = [
+  'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js',
+  'https://unpkg.com/chart.js@3.9.1/dist/chart.min.js',
+  'https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js'
+];
+
+let currentSourceIndex = 0;
+
+function tryLoadChartJs() {
+  // Show loading status
+  document.getElementById('charts-status').style.display = 'block';
+  
+  if (currentSourceIndex >= chartJsSources.length) {
+    // All CDNs failed, show fallback tables
+    showFallbackTables();
+    return;
+  }
+  
+  loadScript(
+    chartJsSources[currentSourceIndex],
+    function() {
+      // Chart.js loaded successfully, try to load date adapter
+      loadScript(
+        'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-date-fns/2.0.0/chartjs-adapter-date-fns.bundle.min.js',
+        function() {
+          // Both Chart.js and date adapter loaded
+          document.getElementById('charts-status').style.display = 'none';
+          initializeCharts();
+        },
+        function() {
+          // Date adapter failed, initialize charts without time scales
+          document.getElementById('charts-status').style.display = 'none';
+          initializeChartsWithoutTime();
+        }
+      );
+    },
+    function() {
+      // This CDN failed, try next one
+      currentSourceIndex++;
+      tryLoadChartJs();
+    }
+  );
+}
+
 // Prepare data from Jekyll
 const eventsData = [
   {% for event in site.data.events %}
@@ -152,8 +230,11 @@ const eventsData = [
   {% endfor %}
 ];
 
-// Check if Chart.js is available
-if (typeof Chart === 'undefined') {
+function showFallbackTables() {
+  // Show fallback notice
+  document.getElementById('charts-status').style.display = 'none';
+  document.getElementById('fallback-notice').style.display = 'block';
+  
   // Fallback: Show static tables instead of charts
   document.getElementById('eventsTimelineChart').style.display = 'none';
   document.getElementById('eventsTimelineFallback').style.display = 'block';
@@ -166,7 +247,16 @@ if (typeof Chart === 'undefined') {
   
   document.getElementById('monthlyFrequencyChart').style.display = 'none';
   document.getElementById('monthlyFrequencyFallback').style.display = 'block';
-} else {
+}
+
+function initializeChartsWithoutTime() {
+  // Initialize charts without time scales (for when date adapter fails)
+  if (typeof Chart === 'undefined') {
+    showFallbackTables();
+    return;
+  }
+
+  try {
   // Process data for charts
   const processEventsData = (events) => {
     // Events timeline data
@@ -382,21 +472,241 @@ if (typeof Chart === 'undefined') {
       }
     });
   } catch (error) {
-    console.error('Error creating charts:', error);
-    // Fallback for any chart creation errors
-    document.getElementById('eventsTimelineChart').style.display = 'none';
-    document.getElementById('eventsTimelineFallback').style.display = 'block';
-    
-    document.getElementById('hostOrganizationsChart').style.display = 'none';
-    document.getElementById('hostOrganizationsFallback').style.display = 'block';
-    
-    document.getElementById('registrationTrendsChart').style.display = 'none';
-    document.getElementById('registrationTrendsFallback').style.display = 'block';
-    
-    document.getElementById('monthlyFrequencyChart').style.display = 'none';
-    document.getElementById('monthlyFrequencyFallback').style.display = 'block';
+    console.error('Error creating charts without time scale:', error);
+    showFallbackTables();
   }
 }
+
+function initializeCharts() {
+  // Initialize charts with time scales (when date adapter is available)
+  if (typeof Chart === 'undefined') {
+    showFallbackTables();
+    return;
+  }
+
+  try {
+    // Process data for charts
+    const processEventsData = (events) => {
+      // Events timeline data
+      const timelineData = events.map(event => ({
+        x: event.date,
+        y: 1,
+        title: event.title,
+        host: event.host
+      }));
+
+      // Host frequency data
+      const hostCount = {};
+      events.forEach(event => {
+        if (event.host && event.host !== '') {
+          hostCount[event.host] = (hostCount[event.host] || 0) + 1;
+        }
+      });
+
+      // Registration trends (filter out non-numeric values)
+      const registrationData = events
+        .filter(event => event.registrations && !isNaN(event.registrations))
+        .map(event => ({
+          x: event.date,
+          y: parseInt(event.registrations)
+        }));
+
+      // Monthly frequency
+      const monthlyCount = {};
+      events.forEach(event => {
+        const month = new Date(event.date).getMonth();
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const monthName = monthNames[month];
+        monthlyCount[monthName] = (monthlyCount[monthName] || 0) + 1;
+      });
+
+      return {
+        timeline: timelineData,
+        hosts: hostCount,
+        registrations: registrationData,
+        monthly: monthlyCount
+      };
+    };
+
+    const chartData = processEventsData(eventsData);
+
+    // Chart configuration options
+    const commonOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true
+        }
+      }
+    };
+
+    // Events Timeline Chart with time scale (requires date adapter)
+    const timelineCtx = document.getElementById('eventsTimelineChart').getContext('2d');
+    new Chart(timelineCtx, {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Events',
+          data: chartData.timeline,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          pointRadius: 8,
+          pointHoverRadius: 10
+        }]
+      },
+      options: {
+        ...commonOptions,
+        scales: {
+          x: {
+            type: 'time',
+            time: {
+              parser: 'YYYY-MM-DD',
+              tooltipFormat: 'MMM DD, YYYY'
+            },
+            title: {
+              display: true,
+              text: 'Date'
+            }
+          },
+          y: {
+            display: false
+          }
+        },
+        plugins: {
+          ...commonOptions.plugins,
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                const event = context.raw;
+                return [event.title, `Hosted by: ${event.host}`];
+              }
+            }
+          }
+        }
+      }
+    });
+
+    // Host Organizations Chart
+    const hostCtx = document.getElementById('hostOrganizationsChart').getContext('2d');
+    new Chart(hostCtx, {
+      type: 'bar',
+      data: {
+        labels: Object.keys(chartData.hosts),
+        datasets: [{
+          label: 'Events Hosted',
+          data: Object.values(chartData.hosts),
+          backgroundColor: 'rgba(255, 99, 132, 0.6)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        ...commonOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Number of Events'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Host Organization'
+            }
+          }
+        }
+      }
+    });
+
+    // Registration Trends Chart with time scale
+    if (chartData.registrations.length > 0) {
+      const registrationCtx = document.getElementById('registrationTrendsChart').getContext('2d');
+      new Chart(registrationCtx, {
+        type: 'line',
+        data: {
+          datasets: [{
+            label: 'Registrations',
+            data: chartData.registrations,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            fill: true
+          }]
+        },
+        options: {
+          ...commonOptions,
+          scales: {
+            x: {
+              type: 'time',
+              time: {
+                parser: 'YYYY-MM-DD',
+                tooltipFormat: 'MMM DD, YYYY'
+              },
+              title: {
+                display: true,
+                text: 'Date'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of Registrations'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // Monthly Frequency Chart
+    const monthlyCtx = document.getElementById('monthlyFrequencyChart').getContext('2d');
+    new Chart(monthlyCtx, {
+      type: 'doughnut',
+      data: {
+        labels: Object.keys(chartData.monthly),
+        datasets: [{
+          data: Object.values(chartData.monthly),
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 205, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(199, 199, 199, 0.6)',
+            'rgba(83, 102, 255, 0.6)',
+            'rgba(255, 99, 255, 0.6)',
+            'rgba(99, 255, 132, 0.6)',
+            'rgba(255, 132, 99, 0.6)',
+            'rgba(132, 99, 255, 0.6)'
+          ]
+        }]
+      },
+      options: {
+        ...commonOptions,
+        plugins: {
+          ...commonOptions.plugins,
+          title: {
+            display: true,
+            text: 'Events Distribution by Month'
+          }
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Error creating charts with time scale:', error);
+    // Fallback to non-time charts
+    initializeChartsWithoutTime();
+  }
+}
+
+// Start loading Chart.js
+tryLoadChartJs();
 </script>
 
 <style>
@@ -407,6 +717,14 @@ if (typeof Chart === 'undefined') {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
+  background-color: #fdfdfd;
+}
+
+.chart-container h4 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
 }
 
 .recording-item {
@@ -441,25 +759,93 @@ if (typeof Chart === 'undefined') {
   width: 100%;
   border-collapse: collapse;
   margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .stats-table th,
 .stats-table td {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px 15px;
   text-align: left;
 }
 
 .stats-table th {
-  background-color: #f2f2f2;
+  background-color: #007bff;
+  color: white;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
 }
 
 .stats-table tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
 }
 
 .stats-table tr:hover {
-  background-color: #f5f5f5;
+  background-color: #e3f2fd;
+  transition: background-color 0.2s ease;
+}
+
+.stats-table td:last-child {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Visual indicators for data */
+.stats-table .number-cell {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  background-color: #e8f4fd;
+}
+
+.host-bar {
+  display: inline-block;
+  height: 20px;
+  background-color: #007bff;
+  margin-right: 8px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.chart-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.fallback-note {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  border: 1px solid #cce7ff;
+}
+
+.alert-info, .alert-warning {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
 }
 </style>
