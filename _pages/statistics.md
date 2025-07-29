@@ -49,21 +49,18 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   </div>
 </div>
 
-### Recent Speakers (Last 15 Events)
+### Top 15 Speakers
 <div class="chart-container">
   <canvas id="topSpeakersChart"></canvas>
   <div id="topSpeakersFallback" style="display: none;">
-    <div class="chart-title">🎤 Recent Speakers</div>
+    <div class="chart-title">🎤 Top Speakers</div>
     <table class="stats-table">
       <thead>
-        <tr><th>Speaker</th><th>Most Recent Event</th><th>Presentations</th><th>Visual</th></tr>
+        <tr><th>Speaker</th><th>Presentations</th><th>Visual</th></tr>
       </thead>
       <tbody>
-      {% comment %} Get the last 15 events (most recent) {% endcomment %}
-      {% assign recent_events = site.data.events | reverse | slice: 0, 15 %}
       {% assign speakers = "" | split: "|" %}
-      {% assign speaker_events = "" | split: "|" %}
-      {% for event in recent_events %}
+      {% for event in site.data.events %}
         {% if event.talks %}
           {% for talk in event.talks %}
             {% if talk.speaker and talk.speaker != '' %}
@@ -79,7 +76,6 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
                 {% assign single_speaker = part | strip %}
                 {% if single_speaker != '' %}
                   {% assign speakers = speakers | push: single_speaker %}
-                  {% assign speaker_events = speaker_events | push: single_speaker | append: '###' | append: event.date | append: '###' | append: event.title %}
                 {% endif %}
               {% endfor %}
             {% endif %}
@@ -90,47 +86,27 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
       {% assign speaker_rows = "" | split: "|" %}
       {% for speaker in unique_speakers %}
         {% assign count = 0 %}
-        {% assign most_recent_date = '' %}
-        {% assign most_recent_title = '' %}
         {% for s in speakers %}
           {% if s == speaker %}
             {% assign count = count | plus: 1 %}
           {% endif %}
         {% endfor %}
-        {% comment %} Find the most recent event for this speaker {% endcomment %}
-        {% for entry in speaker_events %}
-          {% assign parts = entry | split: '###' %}
-          {% if parts[0] == speaker %}
-            {% if most_recent_date == '' or parts[1] > most_recent_date %}
-              {% assign most_recent_date = parts[1] %}
-              {% assign most_recent_title = parts[2] %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-        {% assign speaker_rows = speaker_rows | push: speaker | append: '|||' | append: count | append: '|||' | append: most_recent_date | append: '|||' | append: most_recent_title %}
+        {% assign speaker_rows = speaker_rows | push: speaker | append: '|||' | append: count %}
       {% endfor %}
-      {% comment %} Sort by most recent date (descending) {% endcomment %}
-      {% assign sorted_speaker_rows = speaker_rows | sort %}
-      {% assign final_sorted_rows = "" | split: "|" %}
-      {% for row in sorted_speaker_rows %}
-        {% assign final_sorted_rows = final_sorted_rows | unshift: row %}
-      {% endfor %}
-      {% for entry in final_sorted_rows %}
+      {% assign sorted_speaker_rows = speaker_rows | sort_natural %}
+      {% for entry in sorted_speaker_rows %}
         {% assign parts = entry | split: '|||' %}
         {% assign speaker = parts[0] %}
         {% assign count = parts[1] %}
-        {% assign event_date = parts[2] %}
-        {% assign event_title = parts[3] %}
         <tr>
           <td>{{ speaker }}</td>
-          <td><strong>{{ event_date }}</strong><br><small>{{ event_title }}</small></td>
           <td class="number-cell">{{ count }}</td>
           <td><span class="host-bar" style="width: {{ count | times: 10 }}px;"></span> {{ count }}</td>
         </tr>
       {% endfor %}
       </tbody>
     </table>
-    <div class="fallback-note">🎤 This shows speakers from our 15 most recent events, sorted by their latest presentation date.</div>
+    <div class="fallback-note">🎤 This data shows which speakers have presented most often at our events.</div>
   </div>
 </div>
 
@@ -144,7 +120,7 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
         <tr><th>Date</th><th>Event</th><th>Participants</th><th>Popularity</th></tr>
       </thead>
       <tbody>
-        {% for event in site.data.events reversed %}
+        {% for event in site.data.events %}
           {% assign part_str = event.participants | strip %}
           {% assign part_num = part_str | plus: 0 %}
           {% if part_str != '' and part_num > 0 %}
@@ -339,6 +315,10 @@ function initializeChartsWithoutTime() {
     // Process data for charts
     const processEventsData = (events) => {
       // Host frequency data (exclude 'online' and sort desc)
+      // Reverse events for chronological order (oldest to newest)
+      const reversedEvents = [...events].reverse();
+      events = reversedEvents;
+
       const hostCount = {};
       events.forEach(event => {
         if (event.host && event.host !== '' && event.host.toLowerCase() !== 'online') {
@@ -352,12 +332,9 @@ function initializeChartsWithoutTime() {
       const hostLabels = sortedHosts.map(([host]) => host);
       const hostData = sortedHosts.map(([, count]) => count);
 
-      // Recent speakers data (from last 15 events)
-      const recentEvents = events.slice(-15); // Get last 15 events
+      // Top speakers data
       const speakerCount = {};
-      const speakerLastEvent = {};
-      
-      recentEvents.forEach(event => {
+      events.forEach(event => {
         if (event.talks && event.talks.length > 0) {
           event.talks.forEach(talk => {
             if (talk.speaker) {
@@ -382,14 +359,10 @@ function initializeChartsWithoutTime() {
                 .map(s => s.trim())      // Trim whitespace
                 .filter(s => s);         // Remove empty strings
               
-              // Count each speaker and track their most recent event
+              // Count each speaker
               speakers.forEach(speaker => {
                 if (speaker) {
                   speakerCount[speaker] = (speakerCount[speaker] || 0) + 1;
-                  // Update last event if this event is more recent
-                  if (!speakerLastEvent[speaker] || event.date > speakerLastEvent[speaker]) {
-                    speakerLastEvent[speaker] = event.date;
-                  }
                 }
               });
             }
@@ -397,19 +370,16 @@ function initializeChartsWithoutTime() {
         }
       });
       
-      // Sort speakers by most recent event date (descending)
+      // Sort speakers by count desc
       const sortedSpeakers = Object.entries(speakerCount)
-        .sort((a, b) => {
-          const dateA = speakerLastEvent[a[0]];
-          const dateB = speakerLastEvent[b[0]];
-          return dateB.localeCompare(dateA); // Most recent first
-        })
-        .slice(0, 15); // Get top 15 most recent speakers
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 15); // Get top 20 speakers for better visualization
       const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
       const speakerData = sortedSpeakers.map(([, count]) => count);
 
       // Participants trends (strict numeric filtering)
-      const participantsData = events
+
+      const participantsData = events.reverse()
         .filter(event => {
           // Only include events where participants is a valid number
           if (!event.participants) return false;
@@ -549,7 +519,7 @@ function initializeChartsWithoutTime() {
       }
     });
     
-    // Recent Speakers Chart
+    // Top Speakers Chart
     const speakersCtx = document.getElementById('topSpeakersChart').getContext('2d');
     new Chart(speakersCtx, {
       type: 'bar',
@@ -565,13 +535,6 @@ function initializeChartsWithoutTime() {
       },
       options: {
         ...commonOptions,
-        plugins: {
-          ...commonOptions.plugins,
-          title: {
-            display: true,
-            text: 'Recent Speakers (Last 15 Events)'
-          }
-        },
         scales: {
           y: {
             beginAtZero: true,
@@ -688,6 +651,10 @@ function initializeCharts() {
   try {
     // Process data for charts
     const processEventsData = (events) => {
+      // Reverse events for chronological order (oldest to newest)
+      const reversedEvents = [...events].reverse();
+      events = reversedEvents;
+
       // Host frequency data (exclude 'online' and sort desc)
       const hostCount = {};
       events.forEach(event => {
@@ -701,12 +668,9 @@ function initializeCharts() {
       const hostLabels = sortedHosts.map(([host]) => host);
       const hostData = sortedHosts.map(([, count]) => count);
       
-      // Recent speakers data (from last 15 events)
-      const recentEvents = events.slice(-15); // Get last 15 events
+      // Top speakers data
       const speakerCount = {};
-      const speakerLastEvent = {};
-      
-      recentEvents.forEach(event => {
+      events.forEach(event => {
         if (event.talks && event.talks.length > 0) {
           event.talks.forEach(talk => {
             if (talk.speaker) {
@@ -726,14 +690,10 @@ function initializeCharts() {
                 .map(s => s.trim())
                 .filter(s => s && s.length > 0);
               
-              // Count each speaker and track their most recent event
+              // Count each speaker
               speakers.forEach(speaker => {
                 if (speaker) {
                   speakerCount[speaker] = (speakerCount[speaker] || 0) + 1;
-                  // Update last event if this event is more recent
-                  if (!speakerLastEvent[speaker] || event.date > speakerLastEvent[speaker]) {
-                    speakerLastEvent[speaker] = event.date;
-                  }
                 }
               });
             }
@@ -741,14 +701,10 @@ function initializeCharts() {
         }
       });
       
-      // Sort speakers by most recent event date (descending)
+      // Sort speakers by count desc
       const sortedSpeakers = Object.entries(speakerCount)
-        .sort((a, b) => {
-          const dateA = speakerLastEvent[a[0]];
-          const dateB = speakerLastEvent[b[0]];
-          return dateB.localeCompare(dateA); // Most recent first
-        })
-        .slice(0, 15); // Get top 15 most recent speakers
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 20); // Get top 20 speakers for better visualization
       const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
       const speakerData = sortedSpeakers.map(([, count]) => count);
 
@@ -892,7 +848,7 @@ function initializeCharts() {
       }
     });
 
-    // Recent Speakers Chart
+    // Top Speakers Chart
     const speakersCtx = document.getElementById('topSpeakersChart').getContext('2d');
     new Chart(speakersCtx, {
       type: 'bar',
@@ -908,13 +864,6 @@ function initializeCharts() {
       },
       options: {
         ...commonOptions,
-        plugins: {
-          ...commonOptions.plugins,
-          title: {
-            display: true,
-            text: 'Recent Speakers (Last 15 Events)'
-          }
-        },
         scales: {
           y: {
             beginAtZero: true,
