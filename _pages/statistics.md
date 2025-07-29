@@ -16,7 +16,7 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   <strong>📋 Interactive charts unavailable:</strong> Displaying data in table format. Charts require external resources that may be blocked by network restrictions.
 </div>
 
-### Host Organizations
+### Top 15 Host Organizations
 <div class="chart-container">
   <canvas id="hostOrganizationsChart"></canvas>
   <div id="hostOrganizationsFallback" style="display: none;">
@@ -49,7 +49,7 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   </div>
 </div>
 
-### Top Speakers
+### Top 15 Speakers
 <div class="chart-container">
   <canvas id="topSpeakersChart"></canvas>
   <div id="topSpeakersFallback" style="display: none;">
@@ -121,13 +121,14 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
       </thead>
       <tbody>
         {% for event in site.data.events reversed %}
-          {% if event.participants and event.participants != '' %}
+          {% assign part_str = event.participants | strip %}
+          {% assign part_num = part_str | plus: 0 %}
+          {% if part_str != '' and part_num > 0 %}
           <tr>
             <td>{{ event.date }}</td>
             <td><strong>{{ event.title }}</strong></td>
-            <td class="number-cell">{{ event.participants }}</td>
+            <td class="number-cell">{{ part_num }}</td>
             <td>
-              {% assign part_num = event.participants | plus: 0 %}
               {% if part_num >= 50 %}
                 <span class="host-bar" style="width: 50px; background-color: #28a745;"></span> High
               {% elsif part_num >= 30 %}
@@ -257,8 +258,7 @@ function tryLoadChartJs() {
 
 // Prepare data from Jekyll
 const eventsData = [
-  {% assign reversed_events = site.data.events | reverse %}
-  {% for event in reversed_events %}
+  {% for event in site.data.events %}
   {
     id: {{ event.id }},
     title: "{{ event.title | escape }}",
@@ -323,7 +323,8 @@ function initializeChartsWithoutTime() {
       });
       // Sort hosts by count desc
       const sortedHosts = Object.entries(hostCount)
-        .sort((a, b) => b[1] - a[1]);
+        .sort((a, b) => b[1] - a[1])
+        .slice(0,15);
       const hostLabels = sortedHosts.map(([host]) => host);
       const hostData = sortedHosts.map(([, count]) => count);
 
@@ -368,13 +369,23 @@ function initializeChartsWithoutTime() {
       // Sort speakers by count desc
       const sortedSpeakers = Object.entries(speakerCount)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 20); // Get top 20 speakers for better visualization
+        .slice(0, 15); // Get top 20 speakers for better visualization
       const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
       const speakerData = sortedSpeakers.map(([, count]) => count);
 
-      // Participants trends (filter out non-numeric values)
+      // Participants trends (strict numeric filtering)
       const participantsData = events
-        .filter(event => event.participants && !isNaN(Number(String(event.participants).replace(/[^\d]/g, ''))))
+        .filter(event => {
+          // Only include events where participants is a valid number
+          if (!event.participants) return false;
+          
+          // Convert to string and check if it contains digits
+          const participantsStr = String(event.participants);
+          const numericValue = participantsStr.replace(/[^\d]/g, '');
+          
+          // Only accept if it has digits and converts to a valid number > 0
+          return numericValue.length > 0 && !isNaN(Number(numericValue)) && Number(numericValue) > 0;
+        })
         .map(event => ({
           x: event.date,
           y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
@@ -684,19 +695,28 @@ function initializeCharts() {
       // Sort speakers by count desc
       const sortedSpeakers = Object.entries(speakerCount)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 15); // Get top 15 speakers for better visualization
+        .slice(0, 20); // Get top 20 speakers for better visualization
       const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
       const speakerData = sortedSpeakers.map(([, count]) => count);
 
-      // Participants trends (filter out non-numeric values)
+      // Participants trends (strict numeric filtering)
+      // Get participants data with proper chronological order (oldest to newest)
       const participantsData = events
-        .filter(event => event.participants && !isNaN(Number(String(event.participants).replace(/[^\d]/g, ''))))
+        .filter(event => {
+          // Only include events where participants is a valid number
+          if (!event.participants) return false;
+          
+          // Convert to string and check if it contains digits
+          const participantsStr = String(event.participants);
+          const numericValue = participantsStr.replace(/[^\d]/g, '');
+          
+          // Only accept if it has digits and converts to a valid number > 0
+          return numericValue.length > 0 && !isNaN(Number(numericValue)) && Number(numericValue) > 0;
+        })
         .map(event => ({
           x: event.date,
           y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
-        }));
-
-      // Monthly frequency
+        }));    // Monthly frequency
       const monthlyCount = {};
       events.forEach(event => {
         const month = new Date(event.date).getMonth();
