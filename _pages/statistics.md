@@ -73,27 +73,27 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   </div>
 </div>
 
-### Registration Trends
+### Participants Trends
 <div class="chart-container">
-  <canvas id="registrationTrendsChart"></canvas>
-  <div id="registrationTrendsFallback" style="display: none;">
-    <div class="chart-title">📊 Registration Trends</div>
+  <canvas id="participantsTrendsChart"></canvas>
+  <div id="participantsTrendsFallback" style="display: none;">
+    <div class="chart-title">📊 Participants Trends</div>
     <table class="stats-table">
       <thead>
-        <tr><th>Date</th><th>Event</th><th>Registrations</th><th>Popularity</th></tr>
+        <tr><th>Date</th><th>Event</th><th>Participants</th><th>Popularity</th></tr>
       </thead>
       <tbody>
         {% for event in site.data.events reversed %}
-          {% if event.registrations and event.registrations != '' %}
+          {% if event.participants and event.participants != '' %}
           <tr>
             <td>{{ event.date }}</td>
             <td><strong>{{ event.title }}</strong></td>
-            <td class="number-cell">{{ event.registrations }}</td>
+            <td class="number-cell">{{ event.participants }}</td>
             <td>
-              {% assign reg_num = event.registrations | plus: 0 %}
-              {% if reg_num >= 50 %}
+              {% assign part_num = event.participants | plus: 0 %}
+              {% if part_num >= 50 %}
                 <span class="host-bar" style="width: 50px; background-color: #28a745;"></span> High
-              {% elsif reg_num >= 30 %}
+              {% elsif part_num >= 30 %}
                 <span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium
               {% else %}
                 <span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low
@@ -104,7 +104,7 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
         {% endfor %}
       </tbody>
     </table>
-    <div class="fallback-note">📈 Registration data shows community engagement levels over time.</div>
+    <div class="fallback-note">📈 Participants data shows community engagement levels over time.</div>
   </div>
 </div>
 
@@ -162,6 +162,7 @@ Many of our events are recorded and slides are available. You can find these res
 
 <!-- Try multiple CDNs for Chart.js -->
 <script>
+document.addEventListener('DOMContentLoaded', function() {
 // Function to load scripts with fallback
 function loadScript(src, callback, errorCallback) {
   const script = document.createElement('script');
@@ -182,7 +183,8 @@ let currentSourceIndex = 0;
 
 function tryLoadChartJs() {
   // Show loading status
-  document.getElementById('charts-status').style.display = 'block';
+  var chartsStatus = document.getElementById('charts-status');
+  if (chartsStatus) chartsStatus.style.display = 'block';
   
   if (currentSourceIndex >= chartJsSources.length) {
     // All CDNs failed, show fallback tables
@@ -198,12 +200,12 @@ function tryLoadChartJs() {
         'https://cdnjs.cloudflare.com/ajax/libs/chartjs-adapter-date-fns/2.0.0/chartjs-adapter-date-fns.bundle.min.js',
         function() {
           // Both Chart.js and date adapter loaded
-          document.getElementById('charts-status').style.display = 'none';
+          if (chartsStatus) chartsStatus.style.display = 'none';
           initializeCharts();
         },
         function() {
           // Date adapter failed, initialize charts without time scales
-          document.getElementById('charts-status').style.display = 'none';
+          if (chartsStatus) chartsStatus.style.display = 'none';
           initializeChartsWithoutTime();
         }
       );
@@ -224,7 +226,7 @@ const eventsData = [
     title: "{{ event.title | escape }}",
     date: "{{ event.date }}",
     host: "{{ event.host | escape }}",
-    registrations: {{ event.registrations | default: 0 }},
+    registrations: "{{ event.registrations | default: 0 | escape }}",
     participants: "{{ event.participants | default: '' }}"
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -232,21 +234,24 @@ const eventsData = [
 
 function showFallbackTables() {
   // Show fallback notice
-  document.getElementById('charts-status').style.display = 'none';
-  document.getElementById('fallback-notice').style.display = 'block';
+  var chartsStatus = document.getElementById('charts-status');
+  var fallbackNotice = document.getElementById('fallback-notice');
+  if (chartsStatus) chartsStatus.style.display = 'none';
+  if (fallbackNotice) fallbackNotice.style.display = 'block';
   
   // Fallback: Show static tables instead of charts
-  document.getElementById('eventsTimelineChart').style.display = 'none';
-  document.getElementById('eventsTimelineFallback').style.display = 'block';
-  
-  document.getElementById('hostOrganizationsChart').style.display = 'none';
-  document.getElementById('hostOrganizationsFallback').style.display = 'block';
-  
-  document.getElementById('registrationTrendsChart').style.display = 'none';
-  document.getElementById('registrationTrendsFallback').style.display = 'block';
-  
-  document.getElementById('monthlyFrequencyChart').style.display = 'none';
-  document.getElementById('monthlyFrequencyFallback').style.display = 'block';
+  var ids = [
+    ['eventsTimelineChart', 'eventsTimelineFallback'],
+    ['hostOrganizationsChart', 'hostOrganizationsFallback'],
+    ['participantsTrendsChart', 'participantsTrendsFallback'],
+    ['monthlyFrequencyChart', 'monthlyFrequencyFallback']
+  ];
+  ids.forEach(function(pair) {
+    var chart = document.getElementById(pair[0]);
+    var fallback = document.getElementById(pair[1]);
+    if (chart) chart.style.display = 'none';
+    if (fallback) fallback.style.display = 'block';
+  });
 }
 
 function initializeChartsWithoutTime() {
@@ -257,64 +262,63 @@ function initializeChartsWithoutTime() {
   }
 
   try {
-  // Process data for charts
-  const processEventsData = (events) => {
-    // Events timeline data
-    const timelineData = events.map(event => ({
-      x: event.date,
-      y: 1,
-      title: event.title,
-      host: event.host
-    }));
-
-    // Host frequency data
-    const hostCount = {};
-    events.forEach(event => {
-      if (event.host && event.host !== '') {
-        hostCount[event.host] = (hostCount[event.host] || 0) + 1;
-      }
-    });
-
-    // Registration trends (filter out non-numeric values)
-    const registrationData = events
-      .filter(event => event.registrations && !isNaN(event.registrations))
-      .map(event => ({
+    // Process data for charts
+    const processEventsData = (events) => {
+      // Events timeline data
+      const timelineData = events.map(event => ({
         x: event.date,
-        y: parseInt(event.registrations)
+        y: 1,
+        title: event.title,
+        host: event.host
       }));
 
-    // Monthly frequency
-    const monthlyCount = {};
-    events.forEach(event => {
-      const month = new Date(event.date).getMonth();
-      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                         'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      const monthName = monthNames[month];
-      monthlyCount[monthName] = (monthlyCount[monthName] || 0) + 1;
-    });
+      // Host frequency data
+      const hostCount = {};
+      events.forEach(event => {
+        if (event.host && event.host !== '') {
+          hostCount[event.host] = (hostCount[event.host] || 0) + 1;
+        }
+      });
 
-    return {
-      timeline: timelineData,
-      hosts: hostCount,
-      registrations: registrationData,
-      monthly: monthlyCount
+      // Participants trends (filter out non-numeric values)
+      const participantsData = events
+        .filter(event => event.participants && !isNaN(Number(String(event.participants).replace(/[^\d]/g, ''))))
+        .map(event => ({
+          x: event.date,
+          y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
+        }));
+
+      // Monthly frequency
+      const monthlyCount = {};
+      events.forEach(event => {
+        const month = new Date(event.date).getMonth();
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const monthName = monthNames[month];
+        monthlyCount[monthName] = (monthlyCount[monthName] || 0) + 1;
+      });
+
+      return {
+        timeline: timelineData,
+        hosts: hostCount,
+        participants: participantsData,
+        monthly: monthlyCount
+      };
     };
-  };
 
-  const chartData = processEventsData(eventsData);
+    const chartData = processEventsData(eventsData);
 
-  // Chart configuration options
-  const commonOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        display: true
+    // Chart configuration options
+    const commonOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true
+        }
       }
-    }
-  };
+    };
 
-  try {
     // Events Timeline Chart
     const timelineCtx = document.getElementById('eventsTimelineChart').getContext('2d');
     new Chart(timelineCtx, {
@@ -333,15 +337,12 @@ function initializeChartsWithoutTime() {
         ...commonOptions,
         scales: {
           x: {
-            type: 'time',
-            time: {
-              parser: 'YYYY-MM-DD',
-              tooltipFormat: 'MMM DD, YYYY'
-            },
+            type: 'category', // changed from 'time' to 'category'
             title: {
               display: true,
               text: 'Date'
-            }
+            },
+            labels: chartData.timeline.map(e => e.x)
           },
           y: {
             display: false
@@ -395,15 +396,16 @@ function initializeChartsWithoutTime() {
       }
     });
 
-    // Registration Trends Chart
-    if (chartData.registrations.length > 0) {
-      const registrationCtx = document.getElementById('registrationTrendsChart').getContext('2d');
-      new Chart(registrationCtx, {
+    // Participants Trends Chart
+    if (chartData.participants.length > 0) {
+      const participantsCtx = document.getElementById('participantsTrendsChart').getContext('2d');
+      new Chart(participantsCtx, {
         type: 'line',
         data: {
+          labels: chartData.participants.map(e => e.x),
           datasets: [{
-            label: 'Registrations',
-            data: chartData.registrations,
+            label: 'Participants',
+            data: chartData.participants.map(e => e.y),
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 2,
@@ -414,21 +416,18 @@ function initializeChartsWithoutTime() {
           ...commonOptions,
           scales: {
             x: {
-              type: 'time',
-              time: {
-                parser: 'YYYY-MM-DD',
-                tooltipFormat: 'MMM DD, YYYY'
-              },
+              type: 'category',
               title: {
                 display: true,
                 text: 'Date'
-              }
+              },
+              labels: chartData.participants.map(e => e.x)
             },
             y: {
               beginAtZero: true,
               title: {
                 display: true,
-                text: 'Number of Registrations'
+                text: 'Number of Participants'
               }
             }
           }
@@ -503,12 +502,12 @@ function initializeCharts() {
         }
       });
 
-      // Registration trends (filter out non-numeric values)
-      const registrationData = events
-        .filter(event => event.registrations && !isNaN(event.registrations))
+      // Participants trends (filter out non-numeric values)
+      const participantsData = events
+        .filter(event => event.participants && !isNaN(Number(String(event.participants).replace(/[^\d]/g, ''))))
         .map(event => ({
           x: event.date,
-          y: parseInt(event.registrations)
+          y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
         }));
 
       // Monthly frequency
@@ -524,7 +523,7 @@ function initializeCharts() {
       return {
         timeline: timelineData,
         hosts: hostCount,
-        registrations: registrationData,
+        participants: participantsData,
         monthly: monthlyCount
       };
     };
@@ -622,15 +621,15 @@ function initializeCharts() {
       }
     });
 
-    // Registration Trends Chart with time scale
-    if (chartData.registrations.length > 0) {
-      const registrationCtx = document.getElementById('registrationTrendsChart').getContext('2d');
-      new Chart(registrationCtx, {
+    // Participants Trends Chart with time scale
+    if (chartData.participants.length > 0) {
+      const participantsCtx = document.getElementById('participantsTrendsChart').getContext('2d');
+      new Chart(participantsCtx, {
         type: 'line',
         data: {
           datasets: [{
-            label: 'Registrations',
-            data: chartData.registrations,
+            label: 'Participants',
+            data: chartData.participants,
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 2,
@@ -655,7 +654,7 @@ function initializeCharts() {
               beginAtZero: true,
               title: {
                 display: true,
-                text: 'Number of Registrations'
+                text: 'Number of Participants'
               }
             }
           }
@@ -707,6 +706,7 @@ function initializeCharts() {
 
 // Start loading Chart.js
 tryLoadChartJs();
+});
 </script>
 
 <style>
