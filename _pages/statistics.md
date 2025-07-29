@@ -16,29 +16,6 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   <strong>📋 Interactive charts unavailable:</strong> Displaying data in table format. Charts require external resources that may be blocked by network restrictions.
 </div>
 
-### Events Over Time
-<div class="chart-container">
-  <canvas id="eventsTimelineChart"></canvas>
-  <div id="eventsTimelineFallback" style="display: none;">
-    <div class="chart-title">📈 Events Timeline</div>
-    <table class="stats-table">
-      <thead>
-        <tr><th>Date</th><th>Event</th><th>Host</th></tr>
-      </thead>
-      <tbody>
-        {% for event in site.data.events reversed limit:10 %}
-        <tr>
-          <td>{{ event.date }}</td>
-          <td><strong>{{ event.title }}</strong></td>
-          <td><span class="badge" style="background-color: #007bff; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.8em;">{{ event.host }}</span></td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <div class="fallback-note">⏰ Recent 10 events shown. Full timeline would display {{ site.data.events | size }} total events since September 2020.</div>
-  </div>
-</div>
-
 ### Host Organizations
 <div class="chart-container">
   <canvas id="hostOrganizationsChart"></canvas>
@@ -49,7 +26,6 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
         <tr><th>Host Organization</th><th>Events Hosted</th><th>Visual</th></tr>
       </thead>
       <tbody>
-        <tr><td>online</td><td class="number-cell">8</td><td><span class="host-bar" style="width: 80px;"></span> 8</td></tr>
         <tr><td>Dynatrace</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
         <tr><td>Cloudflight</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
         <tr><td>Gepardec</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px;"></span> 3</td></tr>
@@ -241,7 +217,6 @@ function showFallbackTables() {
   
   // Fallback: Show static tables instead of charts
   var ids = [
-    ['eventsTimelineChart', 'eventsTimelineFallback'],
     ['hostOrganizationsChart', 'hostOrganizationsFallback'],
     ['participantsTrendsChart', 'participantsTrendsFallback'],
     ['monthlyFrequencyChart', 'monthlyFrequencyFallback']
@@ -264,21 +239,18 @@ function initializeChartsWithoutTime() {
   try {
     // Process data for charts
     const processEventsData = (events) => {
-      // Events timeline data
-      const timelineData = events.map(event => ({
-        x: event.date,
-        y: 1,
-        title: event.title,
-        host: event.host
-      }));
-
-      // Host frequency data
+      // Host frequency data (exclude 'online' and sort desc)
       const hostCount = {};
       events.forEach(event => {
-        if (event.host && event.host !== '') {
+        if (event.host && event.host !== '' && event.host.toLowerCase() !== 'online') {
           hostCount[event.host] = (hostCount[event.host] || 0) + 1;
         }
       });
+      // Sort hosts by count desc
+      const sortedHosts = Object.entries(hostCount)
+        .sort((a, b) => b[1] - a[1]);
+      const hostLabels = sortedHosts.map(([host]) => host);
+      const hostData = sortedHosts.map(([, count]) => count);
 
       // Participants trends (filter out non-numeric values)
       const participantsData = events
@@ -299,8 +271,8 @@ function initializeChartsWithoutTime() {
       });
 
       return {
-        timeline: timelineData,
-        hosts: hostCount,
+        hostLabels,
+        hostData,
         participants: participantsData,
         monthly: monthlyCount
       };
@@ -319,58 +291,15 @@ function initializeChartsWithoutTime() {
       }
     };
 
-    // Events Timeline Chart
-    const timelineCtx = document.getElementById('eventsTimelineChart').getContext('2d');
-    new Chart(timelineCtx, {
-      type: 'scatter',
-      data: {
-        datasets: [{
-          label: 'Events',
-          data: chartData.timeline,
-          backgroundColor: 'rgba(54, 162, 235, 0.6)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          pointRadius: 8,
-          pointHoverRadius: 10
-        }]
-      },
-      options: {
-        ...commonOptions,
-        scales: {
-          x: {
-            type: 'category', // changed from 'time' to 'category'
-            title: {
-              display: true,
-              text: 'Date'
-            },
-            labels: chartData.timeline.map(e => e.x)
-          },
-          y: {
-            display: false
-          }
-        },
-        plugins: {
-          ...commonOptions.plugins,
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                const event = context.raw;
-                return [event.title, `Hosted by: ${event.host}`];
-              }
-            }
-          }
-        }
-      }
-    });
-
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart').getContext('2d');
     new Chart(hostCtx, {
       type: 'bar',
       data: {
-        labels: Object.keys(chartData.hosts),
+        labels: chartData.hostLabels,
         datasets: [{
           label: 'Events Hosted',
-          data: Object.values(chartData.hosts),
+          data: chartData.hostData,
           backgroundColor: 'rgba(255, 99, 132, 0.6)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
@@ -384,6 +313,10 @@ function initializeChartsWithoutTime() {
             title: {
               display: true,
               text: 'Number of Events'
+            },
+            ticks: {
+              stepSize: 1,
+              precision: 0
             }
           },
           x: {
@@ -428,6 +361,10 @@ function initializeChartsWithoutTime() {
               title: {
                 display: true,
                 text: 'Number of Participants'
+              },
+              ticks: {
+                stepSize: 1,
+                precision: 0
               }
             }
           }
@@ -486,21 +423,18 @@ function initializeCharts() {
   try {
     // Process data for charts
     const processEventsData = (events) => {
-      // Events timeline data
-      const timelineData = events.map(event => ({
-        x: event.date,
-        y: 1,
-        title: event.title,
-        host: event.host
-      }));
-
-      // Host frequency data
+      // Host frequency data (exclude 'online' and sort desc)
       const hostCount = {};
       events.forEach(event => {
-        if (event.host && event.host !== '') {
+        if (event.host && event.host !== '' && event.host.toLowerCase() !== 'online') {
           hostCount[event.host] = (hostCount[event.host] || 0) + 1;
         }
       });
+      // Sort hosts by count desc
+      const sortedHosts = Object.entries(hostCount)
+        .sort((a, b) => b[1] - a[1]);
+      const hostLabels = sortedHosts.map(([host]) => host);
+      const hostData = sortedHosts.map(([, count]) => count);
 
       // Participants trends (filter out non-numeric values)
       const participantsData = events
@@ -521,8 +455,8 @@ function initializeCharts() {
       });
 
       return {
-        timeline: timelineData,
-        hosts: hostCount,
+        hostLabels,
+        hostData,
         participants: participantsData,
         monthly: monthlyCount
       };
@@ -541,61 +475,15 @@ function initializeCharts() {
       }
     };
 
-    // Events Timeline Chart with time scale (requires date adapter)
-    const timelineCtx = document.getElementById('eventsTimelineChart').getContext('2d');
-    new Chart(timelineCtx, {
-      type: 'scatter',
-      data: {
-        datasets: [{
-          label: 'Events',
-          data: chartData.timeline,
-          backgroundColor: 'rgba(54, 162, 235, 0.6)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          pointRadius: 8,
-          pointHoverRadius: 10
-        }]
-      },
-      options: {
-        ...commonOptions,
-        scales: {
-          x: {
-            type: 'time',
-            time: {
-              parser: 'YYYY-MM-DD',
-              tooltipFormat: 'MMM DD, YYYY'
-            },
-            title: {
-              display: true,
-              text: 'Date'
-            }
-          },
-          y: {
-            display: false
-          }
-        },
-        plugins: {
-          ...commonOptions.plugins,
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                const event = context.raw;
-                return [event.title, `Hosted by: ${event.host}`];
-              }
-            }
-          }
-        }
-      }
-    });
-
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart').getContext('2d');
     new Chart(hostCtx, {
       type: 'bar',
       data: {
-        labels: Object.keys(chartData.hosts),
+        labels: chartData.hostLabels,
         datasets: [{
           label: 'Events Hosted',
-          data: Object.values(chartData.hosts),
+          data: chartData.hostData,
           backgroundColor: 'rgba(255, 99, 132, 0.6)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
@@ -609,6 +497,10 @@ function initializeCharts() {
             title: {
               display: true,
               text: 'Number of Events'
+            },
+            ticks: {
+              stepSize: 1,
+              precision: 0
             }
           },
           x: {
@@ -655,6 +547,10 @@ function initializeCharts() {
               title: {
                 display: true,
                 text: 'Number of Participants'
+              },
+              ticks: {
+                stepSize: 1,
+                precision: 0
               }
             }
           }
