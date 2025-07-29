@@ -49,6 +49,67 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   </div>
 </div>
 
+### Top Speakers
+<div class="chart-container">
+  <canvas id="topSpeakersChart"></canvas>
+  <div id="topSpeakersFallback" style="display: none;">
+    <div class="chart-title">🎤 Top Speakers</div>
+    <table class="stats-table">
+      <thead>
+        <tr><th>Speaker</th><th>Presentations</th><th>Visual</th></tr>
+      </thead>
+      <tbody>
+      {% assign speakers = "" | split: "|" %}
+      {% for event in site.data.events %}
+        {% if event.talks %}
+          {% for talk in event.talks %}
+            {% if talk.speaker and talk.speaker != '' %}
+              {% comment %} First replace all [, ], and quotes {% endcomment %}
+              {% assign talk_speakers = talk.speaker | replace: '[', '' | replace: ']', '' | replace: '"', '' %}
+              
+              {% comment %} Replace all ampersands (both HTML entity and regular) with commas {% endcomment %}
+              {% assign talk_speakers = talk_speakers | replace: '&amp;', ', ' | replace: ' & ', ', ' %}
+              
+              {% comment %} Split by comma and process each name {% endcomment %}
+              {% assign speaker_parts = talk_speakers | split: ',' %}
+              {% for part in speaker_parts %}
+                {% assign single_speaker = part | strip %}
+                {% if single_speaker != '' %}
+                  {% assign speakers = speakers | push: single_speaker %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+      {% assign unique_speakers = speakers | uniq %}
+      {% assign speaker_rows = "" | split: "|" %}
+      {% for speaker in unique_speakers %}
+        {% assign count = 0 %}
+        {% for s in speakers %}
+          {% if s == speaker %}
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% assign speaker_rows = speaker_rows | push: speaker | append: '|||' | append: count %}
+      {% endfor %}
+      {% assign sorted_speaker_rows = speaker_rows | sort_natural | reverse %}
+      {% for entry in sorted_speaker_rows %}
+        {% assign parts = entry | split: '|||' %}
+        {% assign speaker = parts[0] %}
+        {% assign count = parts[1] %}
+        <tr>
+          <td>{{ speaker }}</td>
+          <td class="number-cell">{{ count }}</td>
+          <td><span class="host-bar" style="width: {{ count | times: 10 }}px;"></span> {{ count }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <div class="fallback-note">🎤 This data shows which speakers have presented most often at our events.</div>
+  </div>
+</div>
+
 ### Participants Trends
 <div class="chart-container">
   <canvas id="participantsTrendsChart"></canvas>
@@ -196,14 +257,27 @@ function tryLoadChartJs() {
 
 // Prepare data from Jekyll
 const eventsData = [
-  {% for event in site.data.events %}
+  {% assign reversed_events = site.data.events | reverse %}
+  {% for event in reversed_events %}
   {
     id: {{ event.id }},
     title: "{{ event.title | escape }}",
     date: "{{ event.date }}",
     host: "{{ event.host | escape }}",
     registrations: "{{ event.registrations | default: 0 | escape }}",
-    participants: "{{ event.participants | default: '' }}"
+    participants: "{{ event.participants | default: '' }}",
+    talks: [
+      {% if event.talks %}
+        {% for talk in event.talks %}
+          {% if talk.speaker and talk.speaker != '' %}
+          {
+            title: "{{ talk.title | escape }}",
+            speaker: "{{ talk.speaker | escape }}"
+          }{% unless forloop.last %},{% endunless %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    ]
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];
@@ -218,6 +292,7 @@ function showFallbackTables() {
   // Fallback: Show static tables instead of charts
   var ids = [
     ['hostOrganizationsChart', 'hostOrganizationsFallback'],
+    ['topSpeakersChart', 'topSpeakersFallback'],
     ['participantsTrendsChart', 'participantsTrendsFallback'],
     ['monthlyFrequencyChart', 'monthlyFrequencyFallback']
   ];
@@ -252,6 +327,51 @@ function initializeChartsWithoutTime() {
       const hostLabels = sortedHosts.map(([host]) => host);
       const hostData = sortedHosts.map(([, count]) => count);
 
+      // Top speakers data
+      const speakerCount = {};
+      events.forEach(event => {
+        if (event.talks && event.talks.length > 0) {
+          event.talks.forEach(talk => {
+            if (talk.speaker) {
+              // Handle array or string format
+              // First, ensure we're working with a string
+              const speakerStr = String(talk.speaker);
+              
+              // Decode any HTML entities (like &amp;)
+              const div = document.createElement('div');
+              div.innerHTML = speakerStr;
+              const decodedStr = div.textContent || div.innerText || speakerStr;
+              
+              // Remove brackets and quotes (for array format)
+              const strippedStr = decodedStr.replace(/^\[|\]$/g, '').replace(/"/g, '');
+              
+              // Replace all ampersand variations with commas for consistent splitting
+              const normalizedStr = strippedStr.replace(/\s*&\s*/g, ', ');
+              
+              // Split by comma and process
+              const speakers = normalizedStr
+                .split(',')
+                .map(s => s.trim())      // Trim whitespace
+                .filter(s => s);         // Remove empty strings
+              
+              // Count each speaker
+              speakers.forEach(speaker => {
+                if (speaker) {
+                  speakerCount[speaker] = (speakerCount[speaker] || 0) + 1;
+                }
+              });
+            }
+          });
+        }
+      });
+      
+      // Sort speakers by count desc
+      const sortedSpeakers = Object.entries(speakerCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 20); // Get top 20 speakers for better visualization
+      const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
+      const speakerData = sortedSpeakers.map(([, count]) => count);
+
       // Participants trends (filter out non-numeric values)
       const participantsData = events
         .filter(event => event.participants && !isNaN(Number(String(event.participants).replace(/[^\d]/g, ''))))
@@ -273,12 +393,66 @@ function initializeChartsWithoutTime() {
       return {
         hostLabels,
         hostData,
+        speakerLabels,
+        speakerData,
         participants: participantsData,
         monthly: monthlyCount
       };
     };
 
     const chartData = processEventsData(eventsData);
+
+    // Test speaker name processing
+    function testSpeakerProcessing() {
+      const testCases = [
+        { input: 'John Doe', expected: ['John Doe'] },
+        { input: 'John Doe & Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe &amp; Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe, Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe & Jane Smith, Bob Johnson', expected: ['John Doe', 'Jane Smith', 'Bob Johnson'] },
+        { input: '[\"John Doe & Jane Smith\"]', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe & Jane Smith & Bob Johnson', expected: ['John Doe', 'Jane Smith', 'Bob Johnson'] }
+      ];
+      
+      const resultsDiv = document.getElementById('speaker-test-results');
+      resultsDiv.innerHTML = '<table class="debug-table" style="width:100%; border-collapse: collapse;">' +
+        '<tr style="background: #e9ecef;"><th style="text-align:left; padding:8px;">Input</th>' +
+        '<th style="text-align:left; padding:8px;">Processed Result</th>' +
+        '<th style="text-align:left; padding:8px;">Expected</th>' +
+        '<th style="text-align:center; padding:8px;">Pass</th></tr>';
+      
+      testCases.forEach(test => {
+        // Process the speaker string
+        const div = document.createElement('div');
+        div.innerHTML = test.input;
+        const decodedStr = div.textContent || div.innerText || test.input;
+        const strippedStr = decodedStr.replace(/^\[|\]$/g, '').replace(/"/g, '');
+        const normalizedStr = strippedStr.replace(/\s*&\s*/g, ', ');
+        const processed = normalizedStr
+          .split(',')
+          .map(s => s.trim())
+          .filter(s => s);
+        
+        // Check if the result matches expected
+        const pass = JSON.stringify(processed) === JSON.stringify(test.expected);
+        
+        // Add to the results table
+        resultsDiv.querySelector('table').innerHTML += 
+          `<tr style="border-bottom: 1px solid #dee2e6;">
+            <td style="padding:8px;">${test.input}</td>
+            <td style="padding:8px;">${JSON.stringify(processed)}</td>
+            <td style="padding:8px;">${JSON.stringify(test.expected)}</td>
+            <td style="padding:8px; text-align:center; color:${pass ? 'green' : 'red'};font-weight:bold;">
+              ${pass ? '✓' : '✗'}
+            </td>
+          </tr>`;
+      });
+      
+      resultsDiv.querySelector('table').innerHTML += '</table>';
+    }
+    
+    // Run the test when the page loads
+    document.addEventListener('DOMContentLoaded', testSpeakerProcessing);
 
     // Chart configuration options
     const commonOptions = {
@@ -323,6 +497,44 @@ function initializeChartsWithoutTime() {
             title: {
               display: true,
               text: 'Host Organization'
+            }
+          }
+        }
+      }
+    });
+    
+    // Top Speakers Chart
+    const speakersCtx = document.getElementById('topSpeakersChart').getContext('2d');
+    new Chart(speakersCtx, {
+      type: 'bar',
+      data: {
+        labels: chartData.speakerLabels,
+        datasets: [{
+          label: 'Presentations Given',
+          data: chartData.speakerData,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        ...commonOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Number of Presentations'
+            },
+            ticks: {
+              stepSize: 1,
+              precision: 0
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Speaker'
             }
           }
         }
@@ -435,6 +647,46 @@ function initializeCharts() {
         .sort((a, b) => b[1] - a[1]);
       const hostLabels = sortedHosts.map(([host]) => host);
       const hostData = sortedHosts.map(([, count]) => count);
+      
+      // Top speakers data
+      const speakerCount = {};
+      events.forEach(event => {
+        if (event.talks && event.talks.length > 0) {
+          event.talks.forEach(talk => {
+            if (talk.speaker) {
+              // Handle array or string format
+              // First, decode HTML entities (like &amp; to &)
+              const decodedSpeaker = talk.speaker.replace(/&amp;/g, '&');
+              
+              // Then clean up brackets, quotes
+              const cleanedSpeakerStr = decodedSpeaker.replace(/[\[\]"]/g, '');
+              
+              // Replace all ampersands with commas for consistent splitting
+              const normalizedStr = cleanedSpeakerStr.replace(/\s*&\s*/g, ', ');
+              
+              // Split by comma and process each name
+              const speakers = normalizedStr
+                .split(',')
+                .map(s => s.trim())
+                .filter(s => s && s.length > 0);
+              
+              // Count each speaker
+              speakers.forEach(speaker => {
+                if (speaker) {
+                  speakerCount[speaker] = (speakerCount[speaker] || 0) + 1;
+                }
+              });
+            }
+          });
+        }
+      });
+      
+      // Sort speakers by count desc
+      const sortedSpeakers = Object.entries(speakerCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 15); // Get top 15 speakers for better visualization
+      const speakerLabels = sortedSpeakers.map(([speaker]) => speaker);
+      const speakerData = sortedSpeakers.map(([, count]) => count);
 
       // Participants trends (filter out non-numeric values)
       const participantsData = events
@@ -457,12 +709,66 @@ function initializeCharts() {
       return {
         hostLabels,
         hostData,
+        speakerLabels,
+        speakerData,
         participants: participantsData,
         monthly: monthlyCount
       };
     };
 
     const chartData = processEventsData(eventsData);
+
+    // Test speaker name processing
+    function testSpeakerProcessing() {
+      const testCases = [
+        { input: 'John Doe', expected: ['John Doe'] },
+        { input: 'John Doe & Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe &amp; Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe, Jane Smith', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe & Jane Smith, Bob Johnson', expected: ['John Doe', 'Jane Smith', 'Bob Johnson'] },
+        { input: '[\"John Doe & Jane Smith\"]', expected: ['John Doe', 'Jane Smith'] },
+        { input: 'John Doe & Jane Smith & Bob Johnson', expected: ['John Doe', 'Jane Smith', 'Bob Johnson'] }
+      ];
+      
+      const resultsDiv = document.getElementById('speaker-test-results');
+      resultsDiv.innerHTML = '<table class="debug-table" style="width:100%; border-collapse: collapse;">' +
+        '<tr style="background: #e9ecef;"><th style="text-align:left; padding:8px;">Input</th>' +
+        '<th style="text-align:left; padding:8px;">Processed Result</th>' +
+        '<th style="text-align:left; padding:8px;">Expected</th>' +
+        '<th style="text-align:center; padding:8px;">Pass</th></tr>';
+      
+      testCases.forEach(test => {
+        // Process the speaker string
+        const div = document.createElement('div');
+        div.innerHTML = test.input;
+        const decodedStr = div.textContent || div.innerText || test.input;
+        const strippedStr = decodedStr.replace(/^\[|\]$/g, '').replace(/"/g, '');
+        const normalizedStr = strippedStr.replace(/\s*&\s*/g, ', ');
+        const processed = normalizedStr
+          .split(',')
+          .map(s => s.trim())
+          .filter(s => s);
+        
+        // Check if the result matches expected
+        const pass = JSON.stringify(processed) === JSON.stringify(test.expected);
+        
+        // Add to the results table
+        resultsDiv.querySelector('table').innerHTML += 
+          `<tr style="border-bottom: 1px solid #dee2e6;">
+            <td style="padding:8px;">${test.input}</td>
+            <td style="padding:8px;">${JSON.stringify(processed)}</td>
+            <td style="padding:8px;">${JSON.stringify(test.expected)}</td>
+            <td style="padding:8px; text-align:center; color:${pass ? 'green' : 'red'};font-weight:bold;">
+              ${pass ? '✓' : '✗'}
+            </td>
+          </tr>`;
+      });
+      
+      resultsDiv.querySelector('table').innerHTML += '</table>';
+    }
+    
+    // Run the test when the page loads
+    document.addEventListener('DOMContentLoaded', testSpeakerProcessing);
 
     // Chart configuration options
     const commonOptions = {
@@ -507,6 +813,44 @@ function initializeCharts() {
             title: {
               display: true,
               text: 'Host Organization'
+            }
+          }
+        }
+      }
+    });
+
+    // Top Speakers Chart
+    const speakersCtx = document.getElementById('topSpeakersChart').getContext('2d');
+    new Chart(speakersCtx, {
+      type: 'bar',
+      data: {
+        labels: chartData.speakerLabels,
+        datasets: [{
+          label: 'Presentations Given',
+          data: chartData.speakerData,
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        ...commonOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Number of Presentations'
+            },
+            ticks: {
+              stepSize: 1,
+              precision: 0
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Speaker'
             }
           }
         }

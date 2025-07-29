@@ -40,7 +40,7 @@
       speaker: "Malte Menkhoff"
       recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
     - title: "Kubernetes certifications: How to prepare and get it done"
-      speaker: "Juliano Costa and Yuri Oliveira"
+      speaker: "Juliano Costa & Yuri Oliveira"
       recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
 
 
@@ -149,7 +149,7 @@
       speaker: "Philipp Weckerle"
       recording: "https://www.youtube.com/watch?v=81Tg--7GIFI"
     - title: "[canceled] Cloud-native delivery with Keptn"
-      speaker: "Jürgen Etzlstorfer"
+      speaker: "[canceled] Jürgen Etzlstorfer"
 
 - id: 12
   title: "12. Cloud Native Computing Linz Meetup"
