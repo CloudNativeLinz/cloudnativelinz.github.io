@@ -12,7 +12,9 @@
 {% if upcoming_events %}
 ## Upcoming events
 
-<div class="events-grid">
+<div class="events-carousel-container">
+  <div class="events-carousel">
+    <div class="events-carousel-track">
 {% for event in site.data.events %}
  {% assign event_date = event.date | date: "%Y-%m-%d" %}
  {% assign today = site.time | date: "%Y-%m-%d" %}
@@ -112,12 +114,251 @@
   </article>
  {% endif %}
 {% endfor %}
+    </div>
+  </div>
+  
+  <!-- Carousel Navigation -->
+  <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15,18 9,12 15,6"></polyline>
+    </svg>
+  </button>
+  <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9,6 15,12 9,18"></polyline>
+    </svg>
+  </button>
+  
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+    <!-- Will be populated by JavaScript -->
+  </div>
 </div>
 
 <script>
-// Add intersection observer for scroll animations (upcoming events)
+// Carousel functionality for upcoming events
+let currentSlide = 0;
+let eventsCarousel = null;
+let eventsTrack = null;
+let totalSlides = 0;
+let isInitialized = false;
+let autoAdvanceInterval = null;
+
+function initializeCarousel() {
+  if (isInitialized) return;
+  
+  eventsCarousel = document.querySelector('.events-carousel');
+  eventsTrack = document.querySelector('.events-carousel-track');
+  
+  if (!eventsCarousel || !eventsTrack) return;
+  
+  const eventCards = eventsTrack.querySelectorAll('.event-card');
+  totalSlides = eventCards.length;
+  
+  if (totalSlides === 0) return;
+  
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  
+  // Mark container for single slide styling
+  if (totalSlides === 1) {
+    carouselContainer.setAttribute('data-single-slide', 'true');
+  } else {
+    carouselContainer.setAttribute('data-single-slide', 'false');
+  }
+  
+  // Create indicators only if more than one slide
+  if (totalSlides > 1) {
+    createIndicators();
+    setupNavigationButtons();
+  }
+  
+  // Set initial ARIA attributes
+  updateAriaAttributes();
+  
+  updateCarouselPosition();
+  isInitialized = true;
+  
+  console.log(`Carousel initialized with ${totalSlides} slides`);
+}
+
+function createIndicators() {
+  const indicatorsContainer = document.querySelector('.carousel-indicators');
+  indicatorsContainer.innerHTML = '';
+  
+  for (let i = 0; i < totalSlides; i++) {
+    const indicator = document.createElement('button');
+    indicator.className = `carousel-indicator ${i === 0 ? 'active' : ''}`;
+    indicator.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    indicator.onclick = () => goToSlide(i);
+    indicatorsContainer.appendChild(indicator);
+  }
+}
+
+function setupNavigationButtons() {
+  const prevBtn = document.querySelector('.carousel-btn-prev');
+  const nextBtn = document.querySelector('.carousel-btn-next');
+  
+  if (prevBtn && nextBtn) {
+    prevBtn.setAttribute('aria-label', 'Previous event');
+    nextBtn.setAttribute('aria-label', 'Next event');
+    
+    // Add keyboard support
+    prevBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        moveCarousel(-1);
+      }
+    });
+    
+    nextBtn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        moveCarousel(1);
+      }
+    });
+  }
+}
+
+function moveCarousel(direction) {
+  if (totalSlides <= 1) return;
+  
+  stopAutoAdvance(); // Stop auto-advance when user interacts
+  
+  currentSlide += direction;
+  
+  if (currentSlide >= totalSlides) {
+    currentSlide = 0;
+  } else if (currentSlide < 0) {
+    currentSlide = totalSlides - 1;
+  }
+  
+  updateCarouselPosition();
+  
+  // Restart auto-advance after user interaction
+  setTimeout(() => {
+    if (document.querySelector('.events-carousel-container:hover') === null) {
+      startAutoAdvance();
+    }
+  }, 3000);
+}
+
+function goToSlide(slideIndex) {
+  if (slideIndex >= 0 && slideIndex < totalSlides && slideIndex !== currentSlide) {
+    stopAutoAdvance();
+    currentSlide = slideIndex;
+    updateCarouselPosition();
+    
+    // Restart auto-advance
+    setTimeout(() => {
+      if (document.querySelector('.events-carousel-container:hover') === null) {
+        startAutoAdvance();
+      }
+    }, 3000);
+  }
+}
+
+function updateCarouselPosition() {
+  if (!eventsTrack) return;
+  
+  const translateX = -currentSlide * 100;
+  eventsTrack.style.transform = `translateX(${translateX}%)`;
+  
+  // Update indicators
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentSlide);
+    indicator.setAttribute('aria-pressed', index === currentSlide ? 'true' : 'false');
+  });
+  
+  // Update button states (don't disable for infinite loop)
+  const prevBtn = document.querySelector('.carousel-btn-prev');
+  const nextBtn = document.querySelector('.carousel-btn-next');
+  
+  if (prevBtn && nextBtn) {
+    // For infinite carousel, buttons are never disabled
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+  }
+  
+  updateAriaAttributes();
+}
+
+function updateAriaAttributes() {
+  const eventCards = eventsTrack.querySelectorAll('.event-card');
+  eventCards.forEach((card, index) => {
+    const isVisible = index === currentSlide;
+    card.setAttribute('aria-hidden', !isVisible);
+    card.setAttribute('tabindex', isVisible ? '0' : '-1');
+  });
+  
+  // Update carousel region
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  if (carouselContainer) {
+    carouselContainer.setAttribute('aria-label', `Event ${currentSlide + 1} of ${totalSlides}`);
+  }
+}
+
+function startAutoAdvance() {
+  if (totalSlides <= 1 || autoAdvanceInterval) return;
+  
+  // Check if user prefers reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+  
+  autoAdvanceInterval = setInterval(() => {
+    moveCarousel(1);
+  }, 8000); // Change slide every 8 seconds
+}
+
+function stopAutoAdvance() {
+  if (autoAdvanceInterval) {
+    clearInterval(autoAdvanceInterval);
+    autoAdvanceInterval = null;
+  }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(initializeCarousel, 100);
+});
+
+// Also initialize after a short delay in case DOM isn't fully ready
+setTimeout(() => {
+  if (!isInitialized) {
+    initializeCarousel();
+  }
+}, 500);
+
+// Add intersection observer for scroll animations and auto-advance trigger
 if ('IntersectionObserver' in window) {
-  const upcomingCards = document.querySelectorAll('.event-card');
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  
+  if (carouselContainer) {
+    const carouselObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Start auto-advance when carousel becomes visible
+          setTimeout(() => {
+            if (isInitialized) {
+              startAutoAdvance();
+            }
+          }, 2000);
+        } else {
+          // Stop auto-advance when carousel is not visible
+          stopAutoAdvance();
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '50px'
+    });
+    
+    carouselObserver.observe(carouselContainer);
+  }
+  
+  // Animate individual cards
+  const upcomingCards = document.querySelectorAll('.events-carousel .event-card');
   const upcomingObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
@@ -134,7 +375,7 @@ if ('IntersectionObserver' in window) {
   });
   
   upcomingCards.forEach((card) => {
-    if (!card.style.opacity) { // Only apply if not already set by past events script
+    if (!card.style.opacity) {
       card.style.opacity = '0';
       card.style.transform = 'translateY(30px)';
       card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -142,5 +383,104 @@ if ('IntersectionObserver' in window) {
     }
   });
 }
+
+// Pause auto-advance on hover and focus
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
+    carouselContainer.addEventListener('mouseleave', () => {
+      setTimeout(startAutoAdvance, 1000);
+    });
+    
+    carouselContainer.addEventListener('focusin', stopAutoAdvance);
+    carouselContainer.addEventListener('focusout', () => {
+      setTimeout(startAutoAdvance, 1000);
+    });
+  }
+});
+
+// Handle touch events for mobile swipe
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+let isSwiping = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      touchStartY = e.changedTouches[0].screenY;
+      isSwiping = true;
+    }, { passive: true });
+    
+    carouselContainer.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      
+      const currentX = e.changedTouches[0].screenX;
+      const currentY = e.changedTouches[0].screenY;
+      const diffX = Math.abs(currentX - touchStartX);
+      const diffY = Math.abs(currentY - touchStartY);
+      
+      // If horizontal swipe is more pronounced than vertical, prevent scrolling
+      if (diffX > diffY && diffX > 10) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+    
+    carouselContainer.addEventListener('touchend', (e) => {
+      if (!isSwiping) return;
+      
+      touchEndX = e.changedTouches[0].screenX;
+      touchEndY = e.changedTouches[0].screenY;
+      handleSwipe();
+      isSwiping = false;
+    }, { passive: true });
+  }
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const diffX = touchStartX - touchEndX;
+  const diffY = Math.abs(touchStartY - touchEndY);
+  
+  // Only trigger swipe if horizontal movement is more significant than vertical
+  if (Math.abs(diffX) > swipeThreshold && Math.abs(diffX) > diffY) {
+    if (diffX > 0) {
+      moveCarousel(1); // Swipe left - next slide
+    } else {
+      moveCarousel(-1); // Swipe right - previous slide
+    }
+  }
+}
+
+// Handle keyboard navigation
+document.addEventListener('keydown', (e) => {
+  const carouselContainer = document.querySelector('.events-carousel-container');
+  if (!carouselContainer || !carouselContainer.contains(document.activeElement)) {
+    return;
+  }
+  
+  switch (e.key) {
+    case 'ArrowLeft':
+      e.preventDefault();
+      moveCarousel(-1);
+      break;
+    case 'ArrowRight':
+      e.preventDefault();
+      moveCarousel(1);
+      break;
+    case 'Home':
+      e.preventDefault();
+      goToSlide(0);
+      break;
+    case 'End':
+      e.preventDefault();
+      goToSlide(totalSlides - 1);
+      break;
+  }
+});
 </script>
 {% endif %}
