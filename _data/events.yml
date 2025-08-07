@@ -588,3 +588,16 @@
       file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
       recording: "https://www.youtube.com/watch?v=Bs9ndXt7DZY"
 
+- id: 42
+  title: "cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz"
+  date: "2025-09-24"
+  host: "netcetera"
+  event_link: ""
+  registrations: ""
+  participants: ""
+  talks:
+    - title: "Talk title to be announced soon"
+      speaker: "Markus Adelsberger & Georg Mayrhauser"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
+    - title: "Open Mic - Share your Cloud Native Journey"
+      speaker: "the community"
