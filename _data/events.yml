@@ -121,7 +121,7 @@
   registrations: 15
   participants: ""
   talks:
-    - title: "9. CNCLinz - Charles Pretzer - Service Mesh Principles: Observability through Telemetry with Linkerd"
+    - title: "Service Mesh Principles: Observability through Telemetry with Linkerd"
       speaker: "Charles Pretzer"
       recording: "https://www.youtube.com/watch?v=XeXcgz5stMo"
 
@@ -169,8 +169,8 @@
   date: "2022-03-30"
   host: "smec"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284662219/"
-  registrations: ""
-  participants: "20"
+  registrations: "20 (combined)"
+  participants: ""
   talks:
     - title: "Java on Azure"
       speaker: "Ed Burns"
@@ -181,8 +181,8 @@
   date: "2022-04-19"
   host: "hello again"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284847987/"
-  registrations: ""
-  participants: "23"
+  registrations: 23
+  participants: ""
   talks:
     - title: "The art of scaling without scaling your DevOps-Team"
       speaker: "Michael Schöndorfer"
@@ -194,11 +194,12 @@
   date: "2022-05-31"
   host: "netcetera"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/285775843/"
-  registrations: ""
-  participants: "20"
+  registrations: 20
+  participants: ""
   talks:
     - title: "How deploying feature branches opened the door to more scalability"
       speaker: "Markus Adelsberger"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
     - title: "From Command Line to GitOps - how we transformed our infrastructure"
       speaker: "Thomas Einwaller"
 
@@ -207,8 +208,8 @@
   date: "2022-06-28"
   host: "Dynatrace"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/286504906/"
-  registrations: ""
-  participants: "17"
+  registrations: 17
+  participants: ""
   talks:
     - title: "Policy as Code - an introduction to Open Policy Agent"
       speaker: "Anders Eknert"
@@ -220,8 +221,8 @@
   date: "2022-10-18"
   host: "Cloudflight"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/"
-  registrations: ""
-  participants: "20"
+  registrations: "~20"
+  participants: ""
   talks:
     - title: "Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
       speaker: "Martin Strigl"
@@ -234,7 +235,7 @@
 - id: 18
   title: "18. Cloud Native Computing Linz Meetup"
   date: "2022-11-22"
-  host: "tractive"
+  host: "Tractive"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/"
   registrations: ""
   participants: "38"
@@ -271,9 +272,11 @@
   talks:
     - title: "Serverless container workloads beyond K8s"
       speaker: "Martin Sereinig"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQE6fI1fbOr5SQ/profile-displayphoto-shrink_800_800/B4DZS4kKhwH0Ak-/0/1738263276269?e=1757548800&v=beta&t=I6uJ1Pr5626dOemLcR6t7zOnRcFu6Gt4Gk6Cw_MbjzY"
     - title: "Kubernetes Alternatives"
       speaker: "Martin Ahrer"
       file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D35AQGynbu86vzdTg/profile-framedphoto-shrink_800_800/B4DZdoW.lzGgAo-/0/1749802543807?e=1755097200&v=beta&t=vegLdjG-6QIxU3-Wsr-59XE8wB1Xr4-IHC0ni2OqNPc"
 
 - id: 21
   title: "Crossplane Usecases"
@@ -285,11 +288,12 @@
   talks:
     - title: "Crossplane & GitOps: A perfect match?"
       speaker: "Katharina Sick"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA"
       file: "/slides/2023-03/CrossplaneAndGitOps.pdf"
     - title: "Kubernetes as a universal controlplane: An Introduction into Crossplane"
       speaker: "David Hondl"
       file: "/slides/2023-03/K8sAsUniversalControlplane.pdf"
-
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQE79AhnHStpfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584001330854?e=1757548800&v=beta&t=M1vmw3zRqDnJs6CohixehxInl5HWuExcYPtCp5yv_GI"
 
 - id: 22
   title: "Hagenberg Edition"
@@ -301,9 +305,11 @@
   talks:
     - title: "Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
       speaker: "Carolin Schuntermann"
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQHK6jvQQBRH3A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680677252991?e=1757548800&v=beta&t=he3irWIA1Q0axShmGsRzlJn8AH_ukV6pR9vh1vlpOyc"
       file: "/slides/2023-04/Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik.pdf"
     - title: "Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered Productivity Duo"
       speaker: "Jürgen Etzlstorfer"
+      image: "/assets/speaker-images/jetzlstorfer.jpg"
 
 - id: 23
   title: "CertOps and K8sGPT"
@@ -319,6 +325,7 @@
     - title: "Leveraging AI to Troubleshoot Kubernetes with K8sGPT"
       speaker: "Thomas Schuetz"
       file: "/slides/2023-05/K8sGPT - Linz.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHIoZZqHIm8Xw/profile-displayphoto-shrink_800_800/B4DZYhJhJMGkAc-/0/1744312865954?e=1757548800&v=beta&t=LRClipa9DSseuvWfmjch_gYdjaKY_ZnlQUGyUdnWnSk"
 
 - id: 24
   title: "GitOps & Terraform and a Guide to OpenTelemetry"
@@ -331,9 +338,11 @@
     - title: "GitOps and Terraform"
       speaker: "Alexander Lackner"
       file: "/slides/2023-06/GitOps and Terraform.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8"
     - title: "Distributed Tracing and OpenTelemetry"
       speaker: "Daniel Khan"
       file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQGgnDtvONM9oQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516506347196?e=1757548800&v=beta&t=Ka5vr-4YMnztvPD2NtFTzWqKPJOtiarPbCrVu0Z_6NQ"
 
 - id: 25
   title: "Migration to Cloud Native & The Power of Operators"
@@ -346,8 +355,10 @@
     - title: "Scaling Observability - Dynatrace Operator"
       speaker: "Christoph Müllner"
       file: "/slides/2023-09/Scaling Observability - Dynatrace Operator.pdf"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQGG0DupxggIkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1625521433577?e=1757548800&v=beta&t=7gbxeHWaBbsyvCl9O7QN3JDvti3Io0xe6Z2qowucoUM"
     - title: "Migration of on-prem payment systems to a Cloud Native Environments"
       speaker: "Markus Adelsberger & Georg Mayrhauser"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
 
 - id: 26
   title: "Testing K8s Operators & OpenTelemetry for Logs"
@@ -359,8 +370,10 @@
   talks: 
     - title: "Test and evolve your Kubernetes Operators"
       speaker: "Riccardo Capraro"
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQHzFT7BHKzpEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694073153386?e=1757548800&v=beta&t=LcH6ELZmdeFtnenJZrgBd-kdsfLLYK8Ok7fK4Bw0YzM"
     - title: "OpenTelemetry for Logging"
       speaker: "Philipp Krenn"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQGjEcUTWv9uaw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517750712975?e=1757548800&v=beta&t=hY5hdmDFAdyrB1andaBGgNKd0IXHdD2KvdwL6fAmZ_c"
 
 
 - id: 27
@@ -373,8 +386,10 @@
   talks:
     - title: "Automating Legacy System Management with GitOps: A Journey from On-Premises to Kubernetes"
       speaker: "Michael Skledar"
+      image: "https://media.licdn.com/dms/image/v2/C5603AQHJsmTkCkggww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1526027101800?e=1757548800&v=beta&t=lCaN39srLvMfXL5d7wpY644egJzfYJ3kkZreddQmTPI"
     - title: "Taming and Testing the Cloud Environment from localhost to cncf.io"
       speaker: "Anca Ghenade"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQEMMorJPCi6-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650608875496?e=1757548800&v=beta&t=TbqL9os7e3gjdTk96U8l-EzcuhqME_ddCkBm0EfNxwg"
 
 - id: 28
   title: "Cloud Adventure and Cloud Native Sustainability"
@@ -390,6 +405,7 @@
     - title: "Green Software"
       speaker: "Erik Auer"
       file: "/slides/2024-01/green-software-whizus.pdf"
+      image: "https://media.licdn.com/dms/image/v2/C5603AQH_hqHPLexhEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516964341240?e=1757548800&v=beta&t=gJjfBLfUc_Ud_jdhri3Utpb1s2K4LiuOl5jwtcfMlbA"
 
 - id: 29
   title: "Access Control and Platforms with Devs in Mind"
@@ -402,9 +418,11 @@
     - title: "Pathways, Not Pitfalls: Building Platforms With Developers in Mind"
       speaker: "Katharina Sick"
       recording: "https://www.youtube.com/watch?v=-naCMU4-jG4"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA"
     - title: "An Open-Source approach to Multi-tenant Label-based Access control"
       speaker: "Constantin Winkler"
       recording: "https://www.youtube.com/watch?v=4yNZTnj-71I"
+      image: ""
 
 - id: 30
   title: "K8s Journey and a Multi-Layer K8s Security System"
@@ -417,9 +435,11 @@
     - title: "A Tale of ROSEs and Containers: Our Kubernetes Journey"
       speaker: "Alexander Lackner & Armin Deliomini"
       file: "/slides/2024-03/Kubernetes Story.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8"
     - title: "Implementing a Multi-Layer Kubernetes Security System with SUSE NeuVector"
       speaker: "Daniel Drack"
       recording: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQEts5sU_EKoPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667970204734?e=1757548800&v=beta&t=FRQxEvjMkaHyaksTlSvGQ-ZvA0jzHX0tQGT-rOFn_xk"
 
 - id: 31
   title: "Secure K8s Deployment and API Management in Azure"
@@ -434,6 +454,7 @@
       file: "/slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
     - title: "Transforming diverse system landscapes into sustainable API products with Azure API Management"
       speaker: "Tobias Berei"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQH2JLH9TbCMlg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729413915506?e=1757548800&v=beta&t=uZbSAqlNYumkdCmuo60bviMWag0bmzCqWq1R_bpazOs"
   
 - id: 32
   title: "Inspecting Running Containers & Observability on the Edge"
@@ -446,9 +467,11 @@
     - title: "Inspecting running containers"
       speaker: "Martin Strigl"
       file: "/slides/2024-06/Inspecting and Manipulating Running Containers.pdf"
+      image: ""
     - title: "Observability at the Edge: Envoy Distributed Tracing with OpenTelemetry"
       speaker: "João Grassi"
       file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHozYRZ9aNLcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698585581568?e=1757548800&v=beta&t=XMlIfQcM91pm-g8hXSJpPKW40STpexWBXjPFX6qCbIM"
 
 - id: 33
   title: "OpenTelemetry Errors"
@@ -473,9 +496,11 @@
   talks:
     - title: "Open-Source Metrics Primer"
       speaker: "Georg Pirklbauer"
+      image: "https://media.licdn.com/dms/image/v2/C5603AQFVFZZsH4zC5w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597943810151?e=1757548800&v=beta&t=LWMleTjnNX579zF3IuXVgSHIAkglvOtTF_-lq61xm5Y"
       file: "/slides/2024-10/OpenTelemetryMetricsPrimer-2024-10.pdf"
     - title: "Beyond Kubernetes: Integrating Backstage for a Seamless Developer Experience"
       speaker: "Philipp Bergsmann"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHYMjqvEas0Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709294832581?e=1757548800&v=beta&t=uwJuP4TgLID9S6KN9w5mBV7K7K1C6TQfAxV6VW6IH7A"
 
 - id: 35
   title: "Cloud-Native Harmony & Backstage Techdocs"
@@ -490,6 +515,7 @@
       file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
     - title: "Backstage Techdocs"
       speaker: "Sebastian Poxhofer"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQE2FWya7vofzg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683062908079?e=1757548800&v=beta&t=OgNXNOPDa7eNS6CGoofHGykjZcWcH8M3HpUSe1stEKk"
 
 
 - id: 36
@@ -503,9 +529,11 @@
     - title: "A closer look at Docker BuildKit and Buildx"
       speaker: "Sophia Zehethofer"
       file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
+      image: "/assets/speaker-images/36-1.jpeg"
     - title: "Beesting Can't touch this"
       speaker: "Patrick Pichler"
       file: "/slides/2025-01/beesting_cant_touch_this.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQEcINA76a_SGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1682435586877?e=1757548800&v=beta&t=nRbYymlr0ZXDlkU4FHyl41-ooqabKf9T9IzIHhuLfpk"
     
 
 - id: 37
@@ -520,9 +548,11 @@
       speaker: "Damjan Gjurovski"
       file: "/slides/2025-02/Designing_Zero_Trust_Systems.pdf"
       recording: "https://www.youtube.com/watch?v=YV5U2mcohTk"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQGAioB727TYTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720607141320?e=1757548800&v=beta&t=mkqDA3x-FEiFosQwmatSWN-iyttj8NrYtck-swmZo-I"
     - title: "Auto-Updates of microservices in your CI/CD pipeline"
       speaker: "Christoph Ruhsam"
       recording: "https://www.youtube.com/watch?v=1mlVzss8bHE"
+      image: "https://media.licdn.com/dms/image/v2/C4E03AQHpwAiFUsCptA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637830069531?e=1757548800&v=beta&t=ZM33Mzttw_GKzZ2-WUchTqRXZ7B_smWOlDW4DvSc8Tk"
 
 
 - id: 38
@@ -536,6 +566,7 @@
     - title: "Laravel in Kubernetes"
       speaker: "Sebastian Huber"
       file: "/slides/2025-03/laravel_in_k8s_huber.pdf"
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQFma2Vj7iIBcQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617619935313?e=1757548800&v=beta&t=rEPh27fxxHqyYVXdom_KsiSTRi8ulXhNF388qoXI5NQ"
     - title: "You Suck at Shell Scripting"
       speaker: "Florian Arthofer"
       file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
@@ -550,10 +581,12 @@
   talks:
     - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
       speaker: "Jan Wiesbauer"
+      image: "https://media.licdn.com/dms/image/v2/D5603AQHsT_lwTZ_X-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1670424759043?e=1757548800&v=beta&t=tm62IgaB4zcTlmEfdH0tXLb_Hckpi-I1aW9pyorVm_o"
       file: "/slides/2025-04/Deploy Without Disruption - Crafting Zero-Downtime Experiences with Stateless Services.pdf"
     - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
       speaker: "Shahab Ganji"
       file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQH02VpNw2ikow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711545555699?e=1757548800&v=beta&t=LDg7Bu7-SdsSJkaYUDiTLrw33ddzndeOsHfHFnU5Vqg"
 
 - id: 40
   title: "TalosOS and CloudEvents"
@@ -565,11 +598,10 @@
   talks:
     - title: "TalosOS: The OS Kubernetes Deserves"
       speaker: "Siegfried Stumpfer"
-      file: "/slides/2025-05/TalosOS.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHhF89AJkaVoA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692985359380?e=1757548800&v=beta&t=oVOAte8mfnN_i1BrV_47AW0F05Z3LleDHAOuF2ny-ro"
     - title: "CloudEvents: A Standard for Event-Driven Architectures"  
       speaker: "Christian Schabetsberger"
-      file: "/slides/2025-05/CloudEvents.pdf"
-      recording: "https://www.youtube.com/watch?v=VMRse7AtE5M"
+      image: "https://media.licdn.com/dms/image/v2/C5603AQFmJHv-wc6rww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1551188718654?e=1757548800&v=beta&t=gmHSl-QbRKVTDL3qCn9DQVFhn3FKSHh2b04Tt-mog2A"
 
 
 - id: 41
@@ -582,11 +614,10 @@
   talks:
     - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
       speaker: "Simon Gartner"
-      file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQFLarBafQv63A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687567134073?e=1757548800&v=beta&t=X0jnYeGJQgk40wOkA9gKl4C7MVRpeiv3fRG26MX29G0"
     - title: "Adversary Emulation for Kubernetes Environments"
       speaker: "Markus Gierlinger"
-      file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
-      recording: "https://www.youtube.com/watch?v=Bs9ndXt7DZY"
+      image: "https://media.licdn.com/dms/image/v2/C4D03AQEAzyUotk44Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611606832681?e=1757548800&v=beta&t=RAMEEcvpeyoP4n4g19GEIzzOlXHCWvl9YJnqTmL1S2c"
 
 - id: 42
   title: "cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz"
