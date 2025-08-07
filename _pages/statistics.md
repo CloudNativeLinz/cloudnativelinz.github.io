@@ -146,58 +146,6 @@ Here you can find insights about our Cloud Native Computing Linz meetups includi
   </div>
 </div>
 
-### Event Frequency by Month
-<div class="chart-container">
-  <canvas id="monthlyFrequencyChart"></canvas>
-  <div id="monthlyFrequencyFallback" style="display: none;">
-    <div class="chart-title">📅 Event Frequency by Month</div>
-    <table class="stats-table">
-      <thead>
-        <tr><th>Month</th><th>Events Count</th><th>Activity Level</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>January</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low</td></tr>
-        <tr><td>February</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
-        <tr><td>March</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
-        <tr><td>April</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
-        <tr><td>May</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
-        <tr><td>June</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
-        <tr><td>July</td><td class="number-cell">2</td><td><span class="host-bar" style="width: 20px; background-color: #17a2b8;"></span> Low</td></tr>
-        <tr><td>August</td><td class="number-cell">0</td><td><span class="host-bar" style="width: 5px; background-color: #dc3545;"></span> None</td></tr>
-        <tr><td>September</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
-        <tr><td>October</td><td class="number-cell">4</td><td><span class="host-bar" style="width: 40px; background-color: #28a745;"></span> High</td></tr>
-        <tr><td>November</td><td class="number-cell">3</td><td><span class="host-bar" style="width: 30px; background-color: #ffc107;"></span> Medium</td></tr>
-        <tr><td>December</td><td class="number-cell">0</td><td><span class="host-bar" style="width: 5px; background-color: #dc3545;"></span> None</td></tr>
-      </tbody>
-    </table>
-    <div class="fallback-note">🗓️ Most active months are March, May, and October. Summer and winter months typically have fewer events.</div>
-  </div>
-</div>
-
-### Recordings and Slides
-
-Many of our events are recorded and slides are available. You can find these resources on the individual event pages or in our [slides repository]({{ site.baseurl }}/slides/).
-
-<div id="recordings-list">
-{% for event in site.data.events reversed %}
-  {% if event.talks %}
-    {% for talk in event.talks %}
-      {% if talk.recording or talk.file %}
-        <div class="recording-item">
-          <strong>{{ event.date }}</strong> - {{ talk.title }} ({{ talk.speaker }})
-          {% if talk.recording %}
-            <a href="{{ talk.recording }}" target="_blank">🎥 Recording</a>
-          {% endif %}
-          {% if talk.file %}
-            <a href="{{ site.baseurl }}{{ talk.file }}" target="_blank">📄 Slides</a>
-          {% endif %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
-</div>
-
 <!-- Try multiple CDNs for Chart.js -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -293,8 +241,7 @@ function showFallbackTables() {
   var ids = [
     ['hostOrganizationsChart', 'hostOrganizationsFallback'],
     ['topSpeakersChart', 'topSpeakersFallback'],
-    ['participantsTrendsChart', 'participantsTrendsFallback'],
-    ['monthlyFrequencyChart', 'monthlyFrequencyFallback']
+    ['participantsTrendsChart', 'participantsTrendsFallback']
   ];
   ids.forEach(function(pair) {
     var chart = document.getElementById(pair[0]);
@@ -396,23 +343,12 @@ function initializeChartsWithoutTime() {
           y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
         }));
 
-      // Monthly frequency
-      const monthlyCount = {};
-      events.forEach(event => {
-        const month = new Date(event.date).getMonth();
-        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        const monthName = monthNames[month];
-        monthlyCount[monthName] = (monthlyCount[monthName] || 0) + 1;
-      });
-
       return {
         hostLabels,
         hostData,
         speakerLabels,
         speakerData,
-        participants: participantsData,
-        monthly: monthlyCount
+        participants: participantsData
       };
     };
 
@@ -596,52 +532,14 @@ function initializeChartsWithoutTime() {
               }
             }
           }
-        }
-      });
-    }
-
-    // Monthly Frequency Chart
-    const monthlyCtx = document.getElementById('monthlyFrequencyChart').getContext('2d');
-    new Chart(monthlyCtx, {
-      type: 'doughnut',
-      data: {
-        labels: Object.keys(chartData.monthly),
-        datasets: [{
-          data: Object.values(chartData.monthly),
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 205, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(153, 102, 255, 0.6)',
-            'rgba(255, 159, 64, 0.6)',
-            'rgba(199, 199, 199, 0.6)',
-            'rgba(83, 102, 255, 0.6)',
-            'rgba(255, 99, 255, 0.6)',
-            'rgba(99, 255, 132, 0.6)',
-            'rgba(255, 132, 99, 0.6)',
-            'rgba(132, 99, 255, 0.6)'
-          ]
-        }]
-      },
-      options: {
-        ...commonOptions,
-        plugins: {
-          ...commonOptions.plugins,
-          title: {
-            display: true,
-            text: 'Events Distribution by Month'
           }
-        }
+        });
       }
-    });
-  } catch (error) {
-    console.error('Error creating charts without time scale:', error);
-    showFallbackTables();
-  }
-}
-
-function initializeCharts() {
+    } catch (error) {
+      console.error('Error creating charts without time scale:', error);
+      showFallbackTables();
+    }
+  }function initializeCharts() {
   // Initialize charts with time scales (when date adapter is available)
   if (typeof Chart === 'undefined') {
     showFallbackTables();
@@ -725,23 +623,14 @@ function initializeCharts() {
         .map(event => ({
           x: event.date,
           y: parseInt(String(event.participants).replace(/[^\d]/g, ''), 10)
-        }));    // Monthly frequency
-      const monthlyCount = {};
-      events.forEach(event => {
-        const month = new Date(event.date).getMonth();
-        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        const monthName = monthNames[month];
-        monthlyCount[monthName] = (monthlyCount[monthName] || 0) + 1;
-      });
+        }));
 
       return {
         hostLabels,
         hostData,
         speakerLabels,
         speakerData,
-        participants: participantsData,
-        monthly: monthlyCount
+        participants: participantsData
       };
     };
 
@@ -930,42 +819,6 @@ function initializeCharts() {
         }
       });
     }
-
-    // Monthly Frequency Chart
-    const monthlyCtx = document.getElementById('monthlyFrequencyChart').getContext('2d');
-    new Chart(monthlyCtx, {
-      type: 'doughnut',
-      data: {
-        labels: Object.keys(chartData.monthly),
-        datasets: [{
-          data: Object.values(chartData.monthly),
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            'rgba(255, 205, 86, 0.6)',
-            'rgba(75, 192, 192, 0.6)',
-            'rgba(153, 102, 255, 0.6)',
-            'rgba(255, 159, 64, 0.6)',
-            'rgba(199, 199, 199, 0.6)',
-            'rgba(83, 102, 255, 0.6)',
-            'rgba(255, 99, 255, 0.6)',
-            'rgba(99, 255, 132, 0.6)',
-            'rgba(255, 132, 99, 0.6)',
-            'rgba(132, 99, 255, 0.6)'
-          ]
-        }]
-      },
-      options: {
-        ...commonOptions,
-        plugins: {
-          ...commonOptions.plugins,
-          title: {
-            display: true,
-            text: 'Events Distribution by Month'
-          }
-        }
-      }
-    });
   } catch (error) {
     console.error('Error creating charts with time scale:', error);
     // Fallback to non-time charts
@@ -994,34 +847,6 @@ tryLoadChartJs();
   color: #333;
   border-bottom: 2px solid #007bff;
   padding-bottom: 8px;
-}
-
-.recording-item {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-left: 4px solid #007bff;
-  border-radius: 4px;
-}
-
-.recording-item a {
-  margin-left: 10px;
-  text-decoration: none;
-  padding: 4px 8px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-
-.recording-item a:hover {
-  background-color: #0056b3;
-}
-
-#recordings-list {
-  max-height: 400px;
-  overflow-y: auto;
-  margin-top: 20px;
 }
 
 .stats-table {
