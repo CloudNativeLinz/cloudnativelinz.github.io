@@ -43,7 +43,7 @@
     
     <div class="event-content">
       <h3 class="event-title">
-        <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a>
+        <a href="{{ site.url }}{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a>
       </h3>
       
       {% if event.talks %}
@@ -55,12 +55,12 @@
                 <span class="emoji" style="font-style: normal;">👨‍💻</span>
                 <span class="talk-speaker-name">{{ talk.speaker }}</span><br>
                 {% if talk.file %}
-                  <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+                  <a href="{{ site.url }}{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
                     📎 Get the slides 
                   </a>
                 {% endif %}
                  {% if talk.recording %}
-                  <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+                  <a href="{{ site.url }}{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
                     📺 Watch the recording
                   </a>
                 {% endif %}
@@ -92,7 +92,7 @@
           </span>
         {% endif %}
         
-        <a class="meta-link" href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">Event details</a>
+        <a class="meta-link" href="{{ site.url }}{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">Event details</a>
 
         {% if event.event_link and event.event_link != "" %}
           <a href="{{ event.event_link }}" class="meta-link" target="_blank" rel="noopener">
