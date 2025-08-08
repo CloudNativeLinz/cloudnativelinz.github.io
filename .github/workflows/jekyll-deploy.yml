@@ -52,6 +52,19 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
+        
+  trigger-bannerimage-generation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send repository_dispatch to other repo
+        run: |
+          curl -X POST \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.go-image-generator-token }}" \
+          https://api.github.com/repos/CloudNativeLinz/go-image-generator/dispatches \
+          -d '{"event_type":"website-merged"}'
+
+
   # Deployment job
   deploy:
     environment:
