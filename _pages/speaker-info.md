@@ -4,11 +4,6 @@ title: Speaker Information
 permalink: /speaker-info/
 ---
 
----
-layout: page
-title: Speaker Information
-permalink: /speaker-info/
----
 
 <div class="speaker-intro">
   <div class="hero-content">

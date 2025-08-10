@@ -4,12 +4,6 @@ title: Join us!
 permalink: /join/
 ---
 
----
-layout: page
-title: Join Our Community
-permalink: /join/
----
-
 <div class="join-hero">
   <div class="hero-content">
     <h1>🚀 Join the Cloud Native Revolution</h1>
