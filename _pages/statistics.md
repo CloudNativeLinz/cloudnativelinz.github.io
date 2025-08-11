@@ -145,6 +145,10 @@ permalink: /statistics/
         <div class="highlight-label">Total Events</div>
       </div>
       <div class="highlight-item">
+        <div class="highlight-number">700+</div>
+        <div class="highlight-label">Community members</div>
+      </div>
+      <div class="highlight-item">
         <div class="highlight-number">{% assign total_hosts = site.data.events | map: 'host' | uniq | size %}{{ total_hosts }}</div>
         <div class="highlight-label">Host Organizations</div>
       </div>

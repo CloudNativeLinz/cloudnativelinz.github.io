@@ -58,6 +58,11 @@ redirect_from:
       <div class="card-content">
         <h3>📋 Code of Conduct</h3>
         <p>All events follow the <a href="https://github.com/cncf/foundation/blob/main/code-of-conduct.md" target="_blank">CNCF Code of Conduct</a>. Our primary goal is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.</p>
+
+        <div class="cta-box">
+          <h4>Everyone is welcome!</h4>
+          <p>We encourage participation from all community members, regardless of experience level. Join us in shaping the future of cloud-native computing!</p>
+        </div>
       </div>
     </div>
 
@@ -66,10 +71,10 @@ redirect_from:
         <h3>📅 When & Where</h3>
         <div class="meeting-details">
           <div class="detail-item">
-            <strong>📆 Schedule:</strong> Usually the 3rd or 4th Tuesday of each month
+            <strong>📆 Schedule:</strong> Usually the 3rd or 4th Tuesday of each month. Find the <a href="/events">next edition here</a>.
           </div>
           <div class="detail-item">
-            <strong>📍 Location:</strong> Various venues around Linz
+            <strong>📍 Location:</strong> Various venues in and around Linz. Checkout our previous hosts in the <a href="statistics">statistics</a> section.
           </div>
           <div class="detail-item">
             <strong>🌐 Online:</strong> 
