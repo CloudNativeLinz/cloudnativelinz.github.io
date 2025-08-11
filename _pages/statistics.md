@@ -216,16 +216,100 @@ document.addEventListener('DOMContentLoaded', function() {
   function createCharts() {
     chartsStatus.style.display = 'none';
 
+    // Generate dynamic data from Jekyll - only include past events
+    const today = new Date();
+    const eventsData = [
+      {% for event in site.data.events %}
+      {
+        host: "{{ event.host | escape }}",
+        date: "{{ event.date }}",
+        participants: "{{ event.participants | strip }}",
+        talks: [
+          {% if event.talks %}
+            {% for talk in event.talks %}
+              {
+                speaker: "{{ talk.speaker | escape }}"
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          {% endif %}
+        ]
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ].filter(event => {
+      // Only include events that have already occurred
+      const eventDate = new Date(event.date);
+      return eventDate <= today;
+    });
+
+    // Process Host Organizations data
+    const hostCounts = {};
+    eventsData.forEach(event => {
+      if (event.host && event.host.trim() !== '' && event.host !== 'online') {
+        hostCounts[event.host] = (hostCounts[event.host] || 0) + 1;
+      }
+    });
+    
+    const hostEntries = Object.entries(hostCounts)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 15);
+    
+    const hostLabels = hostEntries.map(entry => entry[0]);
+    const hostData = hostEntries.map(entry => entry[1]);
+
+    // Process Speakers data
+    const speakerCounts = {};
+    eventsData.forEach(event => {
+      event.talks.forEach(talk => {
+        if (talk.speaker && talk.speaker.trim() !== '') {
+          // Handle multiple speakers - split by & and clean up each name
+          let speakerString = talk.speaker.trim();
+          
+          // Split by & or &amp; (in case of HTML encoding)
+          const speakers = speakerString.split(/\s*&(?:amp;)?\s*/)
+            .map(s => s.trim())
+            .filter(s => s !== '' && s !== '&' && s !== '&amp;');
+          
+          speakers.forEach(speaker => {
+            if (speaker && speaker.trim() !== '') {
+              speakerCounts[speaker] = (speakerCounts[speaker] || 0) + 1;
+            }
+          });
+        }
+      });
+    });
+    
+    const speakerEntries = Object.entries(speakerCounts)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 15);
+    
+    const speakerLabels = speakerEntries.map(entry => entry[0]);
+    const speakerData = speakerEntries.map(entry => entry[1]);
+
+    // Process Participants Trends data
+    const participantsData = eventsData
+      .filter(event => event.participants && event.participants.trim() !== '' && !isNaN(parseInt(event.participants)))
+      .map(event => ({
+        date: event.date,
+        participants: parseInt(event.participants)
+      }))
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    const participantLabels = participantsData.map(item => {
+      const date = new Date(item.date);
+      return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+    });
+    const participantValues = participantsData.map(item => item.participants);
+
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart');
     if (hostCtx) {
       new Chart(hostCtx, {
         type: 'bar',
         data: {
-          labels: ['Gepardec', 'Cloudflight', 'Dynatrace', 'netcetera', 'karriere.at', 'Public Cloud Group', 'Runtastic', 'MIC', 'tractive', 'cloudxcelerate', 'eww IT and TEL', 'Porsche Informatik', 'Usersnap', 'Startrampe', 'hello again', 'smec'],
+          labels: hostLabels,
           datasets: [{
             label: 'Events Hosted',
-            data: [3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            data: hostData,
             backgroundColor: 'rgba(102, 126, 234, 0.8)',
             borderColor: 'rgba(102, 126, 234, 1)',
             borderWidth: 1
@@ -237,22 +321,27 @@ document.addEventListener('DOMContentLoaded', function() {
             legend: { display: false }
           },
           scales: {
-            y: { beginAtZero: true }
+            y: { 
+              beginAtZero: true,
+              ticks: {
+                stepSize: 1
+              }
+            }
           }
         }
       });
     }
 
-    // Top Speakers Chart with correct chronological ordering
+    // Top Speakers Chart
     const speakersCtx = document.getElementById('topSpeakersChart');
     if (speakersCtx) {
       new Chart(speakersCtx, {
         type: 'bar',
         data: {
-          labels: ['Markus Adelsberger', 'Martin Strigl', 'Matthias Steinbauer', 'Alexander Lackner', 'Katharina Sick', 'Juliano Costa', 'Simon Gartner', 'Markus Gierlinger', 'Christian Schabetsberger', 'Siegfried Stumpfer', 'Shahab Ganji', 'Jan Wiesbauer', 'Florian Arthofer', 'Sebastian Huber', 'Christoph Ruhsam'],
+          labels: speakerLabels,
           datasets: [{
             label: 'Presentations',
-            data: [3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            data: speakerData,
             backgroundColor: 'rgba(118, 75, 162, 0.8)',
             borderColor: 'rgba(118, 75, 162, 1)',
             borderWidth: 1
@@ -264,7 +353,12 @@ document.addEventListener('DOMContentLoaded', function() {
             legend: { display: false }
           },
           scales: {
-            y: { beginAtZero: true },
+            y: { 
+              beginAtZero: true,
+              ticks: {
+                stepSize: 1
+              }
+            },
             x: {
               ticks: {
                 maxRotation: 45,
@@ -276,16 +370,16 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Participants Trends Chart with actual data
+    // Participants Trends Chart
     const participantsCtx = document.getElementById('participantsTrendsChart');
     if (participantsCtx) {
       new Chart(participantsCtx, {
         type: 'line',
         data: {
-          labels: ['Mar 2022', 'Oct 2022', 'Nov 2022', 'Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023', 'May 2023', 'Jun 2023', 'Sep 2023', 'Jan 2024', 'Mar 2024', 'Apr 2024', 'Jun 2024', 'Sep 2024', 'Oct 2024', 'Nov 2024', 'Jan 2025', 'Feb 2025', 'Mar 2025', 'Apr 2025', 'May 2025', 'Jul 2025'],
+          labels: participantLabels,
           datasets: [{
             label: 'Participants',
-            data: [38, 35, 45, 43, 35, 25, 52, 37, 27, 41, 31, 39, 40, 22, 22, 27, 22, 33, 34, 29, 31, 27, 17],
+            data: participantValues,
             borderColor: 'rgba(102, 126, 234, 1)',
             backgroundColor: 'rgba(102, 126, 234, 0.1)',
             fill: true,
@@ -300,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
           scales: {
             y: { 
               beginAtZero: true,
-              max: 60
+              max: Math.max(...participantValues) + 10
             },
             x: {
               ticks: {
