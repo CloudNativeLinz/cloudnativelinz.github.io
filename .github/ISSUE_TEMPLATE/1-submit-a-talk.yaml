@@ -1,0 +1,57 @@
+name: Submit a Talk
+description: Join Cloud Native Linz as a speaker and share your knowledge with the community.
+title: "[Talk Proposal]: "
+labels: [ "talk-proposal" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in speaking at the Cloud Native Linz meetup! We're excited to hear what you have to share.
+  - type: input
+    id: name
+    attributes:
+      label: What's your name?
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Email
+    validations:
+      required: true
+  - type: textarea
+    id: bio
+    attributes:
+      label: Bio
+      description: Tell us a bit about yourself. This will be used to introduce you at the meetup.
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Talk Title
+      description: What is the title of your talk?
+    validations:
+      required: true
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Talk Abstract
+      description: Provide a brief description of your talk. We'll use this in the meetup announcement and to help us understand the content and audience.
+    validations:
+      required: true
+  - type: textarea
+    id: takeaways
+    attributes:
+      label: 3 Key Takeaways for the Community
+      description: What are the three main points or lessons that attendees will learn from your talk?
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
+      options:
+        - label: I agree to follow this meetups's Code of Conduct
+          required: true
