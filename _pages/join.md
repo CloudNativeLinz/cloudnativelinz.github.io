@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Join us!
+title: 🚀 Join the Cloud Native Revolution
 permalink: /join/
 ---
 
 <div class="join-hero">
   <div class="hero-content">
-    <h1>🚀 Join the Cloud Native Revolution</h1>
     <p class="lead">Connect with passionate developers, DevOps engineers, and cloud-native enthusiasts in Linz. Together, we're building the future of cloud computing!</p>
   </div>
 </div>
