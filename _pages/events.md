@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Events
+title: 📆 Events
 permalink: events/
 ---
 
@@ -16,11 +16,13 @@ permalink: events/
  {% if event_date < today %}
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
-      <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}.jpg" 
-           alt="{{ event.title }}" 
-           loading="lazy"
-           onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
-      />
+      <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+        <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}.jpg" 
+             alt="{{ event.title }}" 
+             loading="lazy"
+             onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
+        />
+      </a>
       <div class="event-overlay">
         <div class="event-date">
           {% if event_date == today %}

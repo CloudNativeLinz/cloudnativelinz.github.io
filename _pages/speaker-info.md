@@ -1,13 +1,12 @@
 ---
 layout: page
-title: Speaker Information
+title: 🎤 Become a Speaker
 permalink: /speaker-info/
 ---
 
 
 <div class="speaker-intro">
   <div class="hero-content">
-    <h1>🎤 Become a Speaker</h1>
     <p class="lead">Share your expertise with the Cloud Native Computing Linz community! We're always looking for passionate speakers to present on cloud-native technologies, DevOps practices, and innovative solutions.</p>
   </div>
 </div>

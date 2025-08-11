@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Community Statistics
+title: 📊 Community Statistics
 permalink: /statistics/
 ---
 
@@ -282,10 +282,10 @@ document.addEventListener('DOMContentLoaded', function() {
       new Chart(participantsCtx, {
         type: 'line',
         data: {
-          labels: ['Mar 2022', 'Oct 2022', 'Nov 2022', 'Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023', 'May 2023', 'Jun 2023', 'Sep 2023', 'Jan 2024', 'Mar 2024', 'Apr 2024', 'Jun 2024', 'Sep 2024', 'Oct 2024', 'Nov 2024', 'Jan 2025', 'Feb 2025'],
+          labels: ['Mar 2022', 'Oct 2022', 'Nov 2022', 'Jan 2023', 'Feb 2023', 'Mar 2023', 'Apr 2023', 'May 2023', 'Jun 2023', 'Sep 2023', 'Jan 2024', 'Mar 2024', 'Apr 2024', 'Jun 2024', 'Sep 2024', 'Oct 2024', 'Nov 2024', 'Jan 2025', 'Feb 2025', 'Mar 2025', 'Apr 2025', 'May 2025', 'Jul 2025'],
           datasets: [{
             label: 'Participants',
-            data: [38, 35, 45, 43, 35, 25, 52, 37, 27, 41, 31, 39, 40, 22, 22, 27, 22, 33, 34],
+            data: [38, 35, 45, 43, 35, 25, 52, 37, 27, 41, 31, 39, 40, 22, 22, 27, 22, 33, 34, 29, 31, 27, 17],
             borderColor: 'rgba(102, 126, 234, 1)',
             backgroundColor: 'rgba(102, 126, 234, 0.1)',
             fill: true,

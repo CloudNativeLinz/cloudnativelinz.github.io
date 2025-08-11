@@ -3,57 +3,331 @@ layout: default
 ---
 
 <style>
-  /* Override the default styles for the slide layout */
+  /* Override the default styles for the event layout */
   #main.container {
-    max-width: 960px;
+    max-width: 1200px;
+    padding: 2rem;
   }
 
+  .event-detail-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    margin: 2rem 0;
+  }
+
+  .event-detail-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .event-detail-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .event-detail-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 2rem;
+    color: white;
+  }
+
+  .event-detail-date {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-detail-host {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  .event-detail-content {
+    padding: 2rem;
+  }
+
+  .event-detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: #111827;
+    line-height: 1.2;
+  }
+
+  .event-meta-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .meta-badge {
+    background: #f3f4f6;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    text-decoration: none;
+  }
+
+  .meta-badge.primary {
+    background: #667eea;
+    color: white;
+  }
+
+  .meta-badge.success {
+    background: #10b981;
+    color: white;
+  }
+
+  .talks-section {
+    margin-top: 2rem;
+  }
+
+  .talks-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .talk-card {
+    background: #f9fafb;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #f3f4f6;
+  }
+
+  .talk-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .talk-speaker {
+    font-size: 1.125rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .talk-content {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .slides-container {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .slides-container object {
+    border-radius: 0.5rem;
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .video-container {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .download-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #667eea;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .download-link:hover {
+    background: #5a67d8;
+    color: white;
+    text-decoration: none;
+  }
+
+  .no-slides-message {
+    background: #fff;
+    border: 1px solid #fbbf24;
+    color: #92400e;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    #main.container {
+      padding: 1rem;
+    }
+
+    .event-detail-banner {
+      height: 250px;
+    }
+
+    .event-detail-overlay {
+      padding: 1.5rem;
+    }
+
+    .event-detail-title {
+      font-size: 2rem;
+    }
+
+    .event-detail-content {
+      padding: 1.5rem;
+    }
+
+    .talk-card {
+      padding: 1.5rem;
+    }
+
+    .meta-badge {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.75rem;
+    }
+
+    .slides-container object {
+      display: none;
+    }
+  }
 </style>
 
 {% assign event_date = page.date | date: "%Y-%m-%d" %}
 {% assign today = site.time | date: "%Y-%m-%d" %}
 
-
-<h1>{{ page.title }}</h1>
-<center>
-<span class="label">{{ page.date }}</span>
-<span class="label">hosted by {{ page.host }}</span>
-<span class="label">
-{% if page.event_link == nil or page.event_link == "" %}
-  registration not yet open
-{% else %}
-  <a href="{{ page.event_link }}">registration link</a> 
-{% endif %}
-</span>
-{% if page.participants != nil and page.participants != empty %} 
-<span class="label">participants: {{ page.participants }}</span>
-{% endif %}
-{% if page.registrations != nil and page.registrations != empty %} 
-<span class="label">registrations: {{ page.registrations }}</span>
-{% endif %}
-</center>
-
-
-{% if page.talks %}
-  <h2>{% if event_date >= today %}We are looking forward to the following talks {% else %} Talks{% endif %}</h2>
-    {% for talk in page.talks %}
-    <div class="talkdetails">
-      <strong>{{ talk.title }}</strong> <span class="label">by {{ talk.speaker }}</span>
-      {% if talk.file %}
-        <br><br><object data="{{ talk.file }}" width="100%" height="500" type="application/pdf" class="hide-on-mobile"></object>
-        <p><a href="{{ talk.file }}" class="show-on-mobile">📄 Open/Download PDF</a></p>
-      {% else %}
-        <br><br>The speaker has not provided the slides (yet).
-      {% endif %}
-      {% if talk.recording %}
-        {% assign rec = talk.recording | split: 'v=' %}
-        {% assign video_id = rec[1] %} 
-        <center>
-        <br><iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="hide-on-mobile"></iframe>
-            <iframe src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="show-on-mobile"></iframe>
-        </center>
+<div class="event-detail-card">
+  <div class="event-detail-banner">
+    <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ page.id }}.jpg" 
+         alt="{{ page.title }}" 
+         loading="lazy"
+         onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
+    />
+    <div class="event-detail-overlay">
+      <div class="event-detail-date">
+        {% if event_date == today %}
+          🔥 TODAY - {{ page.date | date: "%B %d, %Y" }}
+        {% else %}
+          📅 {{ page.date | date: "%B %d, %Y" }}
+        {% endif %}
+      </div>
+      {% if page.host and page.host != "" %}
+        <div class="event-detail-host">📍 Hosted by {{ page.host }}</div>
       {% endif %}
     </div>
-    {% endfor %}
-{% endif %}
+  </div>
+  
+  <div class="event-detail-content">
+    <h1 class="event-detail-title">{{ page.title }}</h1>
+    
+    <div class="event-meta-section">
+      {% if page.event_link and page.event_link != "" %}
+        <a href="{{ page.event_link }}" class="meta-badge primary" target="_blank" rel="noopener">
+          {% if event_date >= today %}
+            🎟️ Register for Event
+          {% else %}
+            👀 View on Meetup.com
+          {% endif %}
+        </a>
+      {% else %}
+        <span class="meta-badge">⏳ Registration opening soon</span>
+      {% endif %}
+
+      {% if page.registrations and page.registrations != "" %} 
+        <span class="meta-badge">📝 {{ page.registrations }} Registrations</span>
+      {% endif %}      
+
+      {% if page.participants and page.participants != "" %} 
+        <span class="meta-badge success">👥 {{ page.participants }} Participants</span>
+      {% endif %}
+        <span class="meta-badge">📅 {{ page.date | date: "%a, %B %d, %Y" }}</span>
+        <span class="meta-badge">📍 Hosted by {{ page.host }}</span>
+    </div>
+
+    {% if page.talks %}
+      <div class="talks-section">
+        <h2>{% if event_date >= today %}🎯 Upcoming Talks{% else %}📚 Event Talks{% endif %}</h2>
+        
+        <div class="talks-grid">
+          {% for talk in page.talks %}
+            <div class="talk-card">
+              <div class="talk-title">{{ talk.title }}</div>
+              <div class="talk-speaker">👨‍💻 {{ talk.speaker }}</div>
+              
+              <div class="talk-content">
+                {% if talk.file %}
+                  <div class="slides-container">
+                    <h4 style="margin: 0 0 1rem 0; color: #374151;">📄 Presentation Slides</h4>
+                    <object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
+                    <div style="margin-top: 1rem;">
+                      <a href="{{ talk.file }}" class="download-link">
+                        � Download Slides
+                      </a>
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="no-slides-message">
+                    📋 The speaker has not provided slides yet.
+                  </div>
+                {% endif %}
+                
+                {% if talk.recording %}
+                  {% assign rec = talk.recording | split: 'v=' %}
+                  {% assign video_id = rec[1] %} 
+                  <div class="video-container">
+                    <h4 style="margin: 0 0 1rem 0; color: #374151;">🎥 Video Recording</h4>
+                    <div class="video-responsive">
+                      <iframe src="https://www.youtube.com/embed/{{ video_id }}" 
+                              title="YouTube video player" 
+                              frameborder="0" 
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin" 
+                              allowfullscreen>
+                      </iframe>
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
 

@@ -3,6 +3,13 @@
 
 /* Modern 2025 Design System - Cloud Native Linz */
 
+// Mobile mixin
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
 /* Base Reset */
 * {
   box-sizing: border-box;
@@ -611,6 +618,7 @@ a:hover {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
+  padding-bottom: 1rem;
 }
 
 .community-highlights h3 {
@@ -981,14 +989,12 @@ ul.custom-options li {
   background: white;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;
 }
 
 .event-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .event-banner {
@@ -997,10 +1003,21 @@ ul.custom-options li {
   overflow: hidden;
 }
 
+.event-banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .event-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-banner a:hover img {
+  transform: scale(1.05);
 }
 
 .event-overlay {
@@ -1181,6 +1198,211 @@ ul.custom-options li {
   .member-photo {
     width: 120px;
     height: 120px;
+  }
+}
+
+/* Events Carousel Styles */
+.events-carousel-container {
+  position: relative;
+  margin: 2rem 0;
+  overflow: hidden;
+  
+  @include mobile {
+    margin: 1rem 0;
+  }
+}
+
+.events-carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.events-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  .event-card {
+    flex: 0 0 100%;
+    margin: 0;
+    
+    /* Ensure each card takes full width */
+    width: 100%;
+    box-sizing: border-box;
+    
+    /* Prevent flex shrinking issues */
+    min-width: 0;
+  }
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 17%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #374151;
+    transition: color 0.3s ease;
+  }
+  
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    
+    svg {
+      color: #667eea;
+    }
+  }
+  
+  &:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+  
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+    
+    &:hover {
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.95);
+      
+      svg {
+        color: #374151;
+      }
+    }
+  }
+  
+  @include mobile {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    
+    &:hover {
+      transform: translateY(-50%) scale(1.05);
+    }
+  }
+}
+
+.carousel-btn-prev {
+  left: 1rem;
+  
+  @include mobile {
+    left: 0.5rem;
+  }
+}
+
+.carousel-btn-next {
+  right: 1rem;
+  
+  @include mobile {
+    right: 0.5rem;
+  }
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  
+  @include mobile {
+    margin-top: 1rem;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+}
+
+.carousel-indicator {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: block;
+  
+  &.active {
+    background: #667eea;
+    transform: scale(1.4);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+  }
+  
+  &:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.15);
+  }
+  
+  @include mobile {
+    width: 12px;
+    height: 12px;
+    
+    &.active {
+      transform: scale(1.3);
+      box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.25);
+    }
+    
+    &:hover:not(.active) {
+      transform: scale(1.1);
+    }
+  }
+}
+
+/* Hide carousel controls when there's only one slide */
+.events-carousel-container[data-single-slide="true"] {
+  .carousel-btn,
+  .carousel-indicators {
+    display: none;
+  }
+}
+
+/* Accessibility improvements */
+.carousel-btn:focus,
+.carousel-indicator:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .events-carousel-track {
+    transition: none;
+  }
+  
+  .carousel-btn,
+  .carousel-indicator {
+    transition: none;
+  }
+  
+  .event-card {
+    transition: none;
   }
 }
 
