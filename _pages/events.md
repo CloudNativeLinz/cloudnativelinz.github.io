@@ -49,7 +49,10 @@ permalink: events/
               <div class="talk-title">{{ talk.title }}</div>
               <div class="talk-speaker">
                 <span class="emoji" style="font-style: normal;">👨‍💻</span>
-                <span class="talk-speaker-name">{{ talk.speaker }}</span><br>
+                <span class="talk-speaker-name">{{ talk.speaker }}</span>
+                {% if talk.social and talk.social contains "linkedin.com" %}
+                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="Connect on LinkedIn" class="linkedin-icon"></a>
+                {% endif %}<br>
                 {% if talk.file %}
                   <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
                     📎 Get the slides 

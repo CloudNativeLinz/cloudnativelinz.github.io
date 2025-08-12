@@ -1170,7 +1170,35 @@ ul.custom-options li {
   margin-right: 1rem;
 }
 
-.more-talks {
+// Small LinkedIn icon for speaker links
+.linkedin-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  vertical-align: text-top;
+  background-color: #0077b5;
+  border-radius: 2px;
+  text-decoration: none;
+  position: relative;
+  
+  &::before {
+    content: "in";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9px;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+  }
+  
+  &:hover {
+    background-color: #005885;
+  }
+}.more-talks {
   background: #f9fafb;
   padding: 0.75rem;
   border-radius: 0.5rem;

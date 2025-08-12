@@ -9,6 +9,7 @@
     - title: "Digital Transformation (from on-premises to the cloud)"
       speaker: "Donovan Brown"
       recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
+      social: "https://www.linkedin.com/in/darquewarrior/"
     - title: "Serverless on the AWS Cloud, Challenges Beyond the Toy Problems"
       speaker: "Matthias Steinbauer"
       recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
@@ -618,11 +619,13 @@
       speaker: "Simon Gartner"
       file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
       image: "https://media.licdn.com/dms/image/v2/D4E03AQFLarBafQv63A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687567134073?e=1757548800&v=beta&t=X0jnYeGJQgk40wOkA9gKl4C7MVRpeiv3fRG26MX29G0"
+      social: ""
     - title: "Adversary Emulation for Kubernetes Environments"
       speaker: "Markus Gierlinger"
       recording: "https://www.youtube.com/watch?v=Bs9ndXt7DZY"
       file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
       image: "https://media.licdn.com/dms/image/v2/C4D03AQEAzyUotk44Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611606832681?e=1757548800&v=beta&t=RAMEEcvpeyoP4n4g19GEIzzOlXHCWvl9YJnqTmL1S2c"
+      social: "https://www.linkedin.com/in/markus-gierlinger/"
 
 - id: 42
   title: "cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz"
@@ -648,6 +651,8 @@
   talks:
     - title: "Talk title to be announced soon"
       speaker: "Matthias Steinbauer"
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQGeyJ7GQgLw4g/profile-displayphoto-shrink_800_800/B4DZd56zluGYAg-/0/1750097148964?e=1758153600&v=beta&t=b3FnlTwnSZqqDzUzENyPfoMfJHuqtd4v0PGGfpI1mcY"
+      social: "https://www.linkedin.com/in/matthias-steinbauer/"
 
 - id: 44
   title: "November 2025 edition"

@@ -287,7 +287,12 @@ layout: default
           {% for talk in page.talks %}
             <div class="talk-card">
               <div class="talk-title">{{ talk.title }}</div>
-              <div class="talk-speaker">👨‍💻 {{ talk.speaker }}</div>
+              <div class="talk-speaker">
+                👨‍💻 {{ talk.speaker }}
+                {% if talk.social and talk.social contains "linkedin.com" %}
+                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="Connect on LinkedIn" class="linkedin-icon"></a>
+                {% endif %}
+              </div>
               
               <div class="talk-content">
                 {% if talk.file %}
@@ -296,7 +301,7 @@ layout: default
                     <object data="{{ talk.file }}" width="100%" height="500" type="application/pdf"></object>
                     <div style="margin-top: 1rem;">
                       <a href="{{ talk.file }}" class="download-link">
-                        � Download Slides
+                        📎 Download Slides
                       </a>
                     </div>
                   </div>
