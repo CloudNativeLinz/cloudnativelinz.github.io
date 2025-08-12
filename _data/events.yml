@@ -598,9 +598,11 @@
   talks:
     - title: "TalosOS: The OS Kubernetes Deserves"
       speaker: "Siegfried Stumpfer"
+      file: "/slides/2025-05/TalosOS.pdf"
       image: "https://media.licdn.com/dms/image/v2/D4D03AQHhF89AJkaVoA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692985359380?e=1757548800&v=beta&t=oVOAte8mfnN_i1BrV_47AW0F05Z3LleDHAOuF2ny-ro"
     - title: "CloudEvents: A Standard for Event-Driven Architectures"  
       speaker: "Christian Schabetsberger"
+      file: "/slides/2025-05/CloudEvents.pdf"
       image: "https://media.licdn.com/dms/image/v2/C5603AQFmJHv-wc6rww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1551188718654?e=1757548800&v=beta&t=gmHSl-QbRKVTDL3qCn9DQVFhn3FKSHh2b04Tt-mog2A"
 
 
@@ -614,9 +616,12 @@
   talks:
     - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
       speaker: "Simon Gartner"
+      file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
       image: "https://media.licdn.com/dms/image/v2/D4E03AQFLarBafQv63A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687567134073?e=1757548800&v=beta&t=X0jnYeGJQgk40wOkA9gKl4C7MVRpeiv3fRG26MX29G0"
     - title: "Adversary Emulation for Kubernetes Environments"
       speaker: "Markus Gierlinger"
+      recording: "https://www.youtube.com/watch?v=Bs9ndXt7DZY"
+      file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
       image: "https://media.licdn.com/dms/image/v2/C4D03AQEAzyUotk44Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611606832681?e=1757548800&v=beta&t=RAMEEcvpeyoP4n4g19GEIzzOlXHCWvl9YJnqTmL1S2c"
 
 - id: 42

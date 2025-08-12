@@ -4,6 +4,7 @@ title: 👩‍💻 Our Team
 permalink: /team/
 ---
 
+
 <div class="team-intro">
   <p class="lead">Meet the passionate organizers who make Cloud Native Computing Linz possible. Our team is dedicated to building an inclusive community where everyone can learn, share, and grow together in the cloud native ecosystem.</p>
 </div>
@@ -256,6 +257,7 @@ permalink: /team/
   }
 }
 
+
 .join-team-section {
   margin-top: 4rem;
   
@@ -285,3 +287,4 @@ permalink: /team/
   }
 }
 </style>
+
