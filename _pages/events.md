@@ -28,7 +28,7 @@ permalink: events/
           {% if event_date == today %}
             <span class="today-badge">TODAY</span>
           {% else %}
-            {{ event.date | date: "%b %d, %Y" }}
+            📅 {{ event.date | date: "%b %d, %Y" }}
           {% endif %}
         </div>
         {% if event.host != nil and event.host != "" %}
