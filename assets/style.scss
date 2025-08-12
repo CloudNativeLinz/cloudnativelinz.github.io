@@ -1,6 +1,9 @@
 ---
 ---
 
+// Use SVG icons
+@use 'svg-icons';
+
 /* Modern 2025 Design System - Cloud Native Linz */
 
 // Mobile mixin
@@ -945,17 +948,77 @@ a:hover {
 .site-footer {
   background: #f9fafb;
   border-top: 1px solid #e5e7eb;
-  padding: 2rem 0;
-  margin-top: 2rem;
+  padding: 0rem 1rem 1rem 1rem;
 }
 
 .footer-content {
   text-align: center;
 }
 
-.footer-text {
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 0;
+
+
+  
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    &:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.9);
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .svg-icon {
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    gap: 0.6rem;
+    
+    a {
+      width: 40px;
+      height: 40px;
+      
+      .svg-icon {
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
+      }
+    }
+  }
+}.footer-text {
   color: #6b7280;
-  margin: 1rem 0 0 0;
+  margin: 0;
   font-size: 0.875rem;
 }
 
@@ -1055,7 +1118,7 @@ ul.custom-options li {
 
 .event-title {
   margin: 0 0 1rem 0;
-  font-size: 1.25rem;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 
