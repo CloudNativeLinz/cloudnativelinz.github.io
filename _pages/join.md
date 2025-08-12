@@ -29,6 +29,7 @@ permalink: /join/
         </div>
         <p>📍 Various locations around Linz</p>
         <p>We rotate between different host companies to give everyone a chance to showcase their workspace and connect with the community.</p>
+        <p>Have a look at our <a href="/events/">upcoming events</a> to find out when and where we'll be meeting next or <a href="/statistics">browse the statistics</a> to see our loyal hosts!</p>
         <div class="cta-box">
           <h4>Want to host or speak?</h4>
           <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-primary">Get in Touch</a>
@@ -45,8 +46,7 @@ permalink: /join/
       <div class="platform-grid">
         <div class="platform primary-platform">
           <div class="platform-header">
-            <h3>🏆 CNCF Community (Recommended)</h3>
-            <span class="badge primary">Primary Platform</span>
+            <h3>🧑‍🤝‍🧑 CNCF Community </h3>
           </div>
           <p>Our official home as a CNCF chapter. This is where we post all events, updates, and community discussions.</p>
           <a href="https://community.cncf.io/linz/" class="btn btn-primary">
@@ -56,11 +56,10 @@ permalink: /join/
         
         <div class="platform secondary-platform">
           <div class="platform-header">
-            <h3>📱 Meetup.com</h3>
-            <span class="badge secondary">Legacy Platform</span>
+            <h3>🧑‍🤝‍🧑 Meetup.com</h3>
           </div>
           <p>We also maintain a Meetup.com presence for broader reach, though we're planning to phase this out in favor of the CNCF platform.</p>
-          <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/" class="btn btn-secondary">
+          <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/" class="btn btn-primary">
             View on Meetup.com
           </a>
         </div>
@@ -75,29 +74,27 @@ permalink: /join/
     <div class="card-content">
       <div class="benefits-grid">
         <div class="benefit-item">
-          <div class="benefit-icon">🧠</div>
-          <h4>Learn & Grow</h4>
+          <h4><span class="benefit-icon">🧠</span> Learn & Grow</h4>
           <p>Stay up-to-date with the latest cloud-native technologies, tools, and best practices.</p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">🤝</div>
-          <h4>Network</h4>
+          <h4><span class="benefit-icon">🤝</span> Network</h4>
           <p>Connect with like-minded professionals and build lasting relationships in the tech community.</p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">💡</div>
-          <h4>Share Knowledge</h4>
+          <h4><span class="benefit-icon">💡</span> Share Knowledge</h4>
           <p>Present your projects, share your experiences, and contribute to the community's growth.</p>
         </div>
         <div class="benefit-item">
-          <div class="benefit-icon">🚀</div>
-          <h4>Career Growth</h4>
+          <h4><span class="benefit-icon">🚀</span> Career Growth</h4>
           <p>Discover new opportunities, get inspired by others' journeys, and advance your career.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{% include upcoming-events.html %}
 
 <div class="join-cta">
   <div class="card gradient-card">

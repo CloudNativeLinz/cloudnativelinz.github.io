@@ -8,6 +8,7 @@ redirect_from:
 
 {% include upcoming-events.html %}
 
+<!--
 <div class="hero-section">
   <div class="hero-banner">
     <img src="{{ site.baseurl }}/images/cloudnativelinz-banner.png" alt="Cloud Native Computing Linz" class="banner-image">
@@ -19,14 +20,16 @@ redirect_from:
     </div>
   </div>
 </div>
+-->
 
 <div class="intro-section">
   <div class="content-grid">
     <div class="card gradient-card">
       <div class="card-content text-center">
         <h2>🚀 Our Mission</h2>
-        <p class="lead">We believe that Cloud Native is the future of IT, and we're here to help our community grow, learn, and thrive together.</p>
-      </div>
+        <p class="lead">
+          Cloud Native is transforming the way we build and run applications. Our mission is to empower the Linz tech community to explore, adopt, and excel with cloud-native technologies. We foster a welcoming space for learning, sharing experiences, and connecting with peers—whether you're just starting out or leading the way. Together, we shape the future of applications, one meetup at a time.
+        </p>    </div>
     </div>
 
     <div class="card">

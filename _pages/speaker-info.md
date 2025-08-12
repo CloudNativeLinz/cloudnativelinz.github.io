@@ -50,11 +50,11 @@ permalink: /speaker-info/
       <div class="schedule">
         <div class="schedule-item">
           <div class="time">17:30</div>
-          <div class="activity">Doors open, networking begins</div>
+          <div class="activity">Doors open</div>
         </div>
         <div class="schedule-item">
           <div class="time">18:00</div>
-          <div class="activity">Opening by organizers (Juliano + Jürgen)</div>
+          <div class="activity">Opening by organizers</div>
         </div>
         <div class="schedule-item">
           <div class="time">18:10</div>
@@ -75,6 +75,7 @@ permalink: /speaker-info/
       </div>
     </div>
   </div>
+
 
   <div class="card">
     <div class="card-header">
@@ -101,6 +102,45 @@ permalink: /speaker-info/
       </div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>🏢 How to be a Great Host</h2>
+    </div>
+    <div class="card-content">
+      <div class="tips-grid">
+        <div class="tip-item">
+          <h4>🍕 Food & Drinks</h4>
+          <p>Provide snacks, pizza, or light refreshments. Nothing brings a community together like sharing a meal and good conversations.</p>
+        </div>
+        <div class="tip-item">
+          <h4>🎤 Tech Setup</h4>
+          <p>Ensure reliable WiFi, projector/screen, and power outlets. The organizers always arrive ahead of time so we can test everything runs smoothly.</p>
+        </div>
+        <div class="tip-item">
+          <h4>🛋️ Welcoming Space</h4>
+          <p>Create a comfortable environment with clear signage, accessible entrance, and enough seating for 30-50 attendees.</p>
+        </div>
+        <!--
+        <div class="tip-item">
+          <h4>🎁 Company Showcase</h4>
+          <p>Share your company culture, tech stack, or open positions. It's a great opportunity to attract talent and show what makes your workplace special.</p>
+        </div>
+        -->
+        <div class="tip-item">
+          <h4>🅿️ Location & Parking</h4>
+          <p>Provide detailed directions, parking information, and public transport options. Make it easy for everyone to find and reach your venue.</p>
+        </div>
+        <!--
+        <div class="tip-item">
+          <h4>🤝 Networking Support</h4>
+          <p>Encourage mingling by welcoming attendees and creating conversation spaces. We always like to stay for another hour or so even after the official program ends.</p>
+        </div>
+        -->
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="cta-section">
