@@ -290,7 +290,9 @@ layout: default
               <div class="talk-speaker">
                 👨‍💻 {{ talk.speaker }}
                 {% if talk.social and talk.social contains "linkedin.com" %}
-                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="Connect on LinkedIn" class="linkedin-icon"></a>
+                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="Connect on LinkedIn" class="linkedin-icon">
+                    {% include linkedin-icon.html size="14" %}
+                  </a>
                 {% endif %}
               </div>
               
