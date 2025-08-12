@@ -124,7 +124,7 @@ a:hover {
 /* Navigation */
 .site-nav {
   display: none;
-  gap: 1.5rem;
+  gap: 1.1rem;
 }
 
 @media (min-width: 768px) {
@@ -137,7 +137,7 @@ a:hover {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 0.7rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   display: flex;

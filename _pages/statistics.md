@@ -243,14 +243,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Process Host Organizations data
     const hostCounts = {};
+    const hostLastEvent = {};
+    
     eventsData.forEach(event => {
       if (event.host && event.host.trim() !== '' && event.host !== 'online') {
         hostCounts[event.host] = (hostCounts[event.host] || 0) + 1;
+        // Track the most recent hosting date for this organization
+        const eventDate = new Date(event.date);
+        if (!hostLastEvent[event.host] || eventDate > hostLastEvent[event.host]) {
+          hostLastEvent[event.host] = eventDate;
+        }
       }
     });
     
     const hostEntries = Object.entries(hostCounts)
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        // First sort by event count (descending)
+        if (b[1] !== a[1]) {
+          return b[1] - a[1];
+        }
+        // Then sort by most recent hosting date (descending - most recent first)
+        const dateA = hostLastEvent[a[0]];
+        const dateB = hostLastEvent[b[0]];
+        return dateB - dateA;
+      })
       .slice(0, 15);
     
     const hostLabels = hostEntries.map(entry => entry[0]);
@@ -258,6 +274,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Process Speakers data
     const speakerCounts = {};
+    const speakerLastAppearance = {};
+    
     eventsData.forEach(event => {
       event.talks.forEach(talk => {
         if (talk.speaker && talk.speaker.trim() !== '') {
@@ -272,6 +290,11 @@ document.addEventListener('DOMContentLoaded', function() {
           speakers.forEach(speaker => {
             if (speaker && speaker.trim() !== '') {
               speakerCounts[speaker] = (speakerCounts[speaker] || 0) + 1;
+              // Track the most recent appearance date for this speaker
+              const eventDate = new Date(event.date);
+              if (!speakerLastAppearance[speaker] || eventDate > speakerLastAppearance[speaker]) {
+                speakerLastAppearance[speaker] = eventDate;
+              }
             }
           });
         }
@@ -279,7 +302,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     const speakerEntries = Object.entries(speakerCounts)
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        // First sort by presentation count (descending)
+        if (b[1] !== a[1]) {
+          return b[1] - a[1];
+        }
+        // Then sort by most recent appearance (descending - most recent first)
+        const dateA = speakerLastAppearance[a[0]];
+        const dateB = speakerLastAppearance[b[0]];
+        return dateB - dateA;
+      })
       .slice(0, 15);
     
     const speakerLabels = speakerEntries.map(entry => entry[0]);
@@ -303,6 +335,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart');
     if (hostCtx) {
+      // Create gradient for host organizations
+      const hostGradient = hostCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+      hostGradient.addColorStop(0, 'rgba(102, 126, 234, 0.9)');
+      hostGradient.addColorStop(0.5, 'rgba(67, 56, 202, 0.8)');
+      hostGradient.addColorStop(1, 'rgba(79, 70, 229, 0.7)');
+      
+      const hostHoverGradient = hostCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+      hostHoverGradient.addColorStop(0, 'rgba(102, 126, 234, 1)');
+      hostHoverGradient.addColorStop(0.5, 'rgba(67, 56, 202, 0.95)');
+      hostHoverGradient.addColorStop(1, 'rgba(79, 70, 229, 0.9)');
+
       new Chart(hostCtx, {
         type: 'bar',
         data: {
@@ -310,23 +353,67 @@ document.addEventListener('DOMContentLoaded', function() {
           datasets: [{
             label: 'Events Hosted',
             data: hostData,
-            backgroundColor: 'rgba(102, 126, 234, 0.8)',
-            borderColor: 'rgba(102, 126, 234, 1)',
-            borderWidth: 1
+            backgroundColor: hostGradient,
+            borderColor: 'rgba(67, 56, 202, 1)',
+            borderWidth: 2,
+            borderRadius: 8,
+            borderSkipped: false,
+            hoverBackgroundColor: hostHoverGradient,
+            hoverBorderColor: 'rgba(79, 70, 229, 1)',
+            hoverBorderWidth: 3
           }]
         },
         options: {
           responsive: true,
           plugins: {
-            legend: { display: false }
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(17, 24, 39, 0.95)',
+              titleColor: 'rgba(243, 244, 246, 1)',
+              bodyColor: 'rgba(243, 244, 246, 1)',
+              borderColor: 'rgba(102, 126, 234, 0.8)',
+              borderWidth: 1,
+              cornerRadius: 8,
+              displayColors: false,
+              callbacks: {
+                label: function(context) {
+                  return `${context.parsed.y} event${context.parsed.y !== 1 ? 's' : ''} hosted`;
+                }
+              }
+            }
           },
           scales: {
             y: { 
               beginAtZero: true,
               ticks: {
-                stepSize: 1
+                stepSize: 1,
+                color: 'rgba(75, 85, 99, 0.8)',
+                font: { size: 12 }
+              },
+              grid: {
+                color: 'rgba(229, 231, 235, 0.5)',
+                drawBorder: false
+              }
+            },
+            x: {
+              ticks: {
+                color: 'rgba(75, 85, 99, 0.8)',
+                font: { size: 11 },
+                maxRotation: 45,
+                minRotation: 45
+              },
+              grid: {
+                display: false
               }
             }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          },
+          animation: {
+            duration: 1000,
+            easing: 'easeInOutQuart'
           }
         }
       });
@@ -335,6 +422,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Top Speakers Chart
     const speakersCtx = document.getElementById('topSpeakersChart');
     if (speakersCtx) {
+      // Create gradient for speakers
+      const speakerGradient = speakersCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+      speakerGradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
+      speakerGradient.addColorStop(0.5, 'rgba(147, 51, 234, 0.8)');
+      speakerGradient.addColorStop(1, 'rgba(126, 34, 206, 0.7)');
+      
+      const speakerHoverGradient = speakersCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
+      speakerHoverGradient.addColorStop(0, 'rgba(168, 85, 247, 1)');
+      speakerHoverGradient.addColorStop(0.5, 'rgba(147, 51, 234, 0.95)');
+      speakerHoverGradient.addColorStop(1, 'rgba(126, 34, 206, 0.9)');
+
       new Chart(speakersCtx, {
         type: 'bar',
         data: {
@@ -342,29 +440,67 @@ document.addEventListener('DOMContentLoaded', function() {
           datasets: [{
             label: 'Presentations',
             data: speakerData,
-            backgroundColor: 'rgba(118, 75, 162, 0.8)',
-            borderColor: 'rgba(118, 75, 162, 1)',
-            borderWidth: 1
+            backgroundColor: speakerGradient,
+            borderColor: 'rgba(147, 51, 234, 1)',
+            borderWidth: 2,
+            borderRadius: 8,
+            borderSkipped: false,
+            hoverBackgroundColor: speakerHoverGradient,
+            hoverBorderColor: 'rgba(126, 34, 206, 1)',
+            hoverBorderWidth: 3
           }]
         },
         options: {
           responsive: true,
           plugins: {
-            legend: { display: false }
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(17, 24, 39, 0.95)',
+              titleColor: 'rgba(243, 244, 246, 1)',
+              bodyColor: 'rgba(243, 244, 246, 1)',
+              borderColor: 'rgba(168, 85, 247, 0.8)',
+              borderWidth: 1,
+              cornerRadius: 8,
+              displayColors: false,
+              callbacks: {
+                label: function(context) {
+                  return `${context.parsed.y} presentation${context.parsed.y !== 1 ? 's' : ''}`;
+                }
+              }
+            }
           },
           scales: {
             y: { 
               beginAtZero: true,
               ticks: {
-                stepSize: 1
+                stepSize: 1,
+                color: 'rgba(75, 85, 99, 0.8)',
+                font: { size: 12 }
+              },
+              grid: {
+                color: 'rgba(229, 231, 235, 0.5)',
+                drawBorder: false
               }
             },
             x: {
               ticks: {
+                color: 'rgba(75, 85, 99, 0.8)',
+                font: { size: 11 },
                 maxRotation: 45,
                 minRotation: 45
+              },
+              grid: {
+                display: false
               }
             }
+          },
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          },
+          animation: {
+            duration: 1000,
+            easing: 'easeInOutQuart'
           }
         }
       });
