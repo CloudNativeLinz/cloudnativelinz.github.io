@@ -35,4 +35,20 @@ install:
 	@bundle install
 	@bundle exec jekyll build
 
-.PHONY: all serve serve-livereload serve-windows
+# Generate calendar.ics from events data
+calendar: setup-python
+	@echo "Generating calendar.ics from events data..."
+	@./.venv/bin/python generate_calendar.py
+	@echo "Calendar generated successfully!"
+
+# Setup Python environment for calendar generation
+setup-python:
+	@if [ ! -d ".venv" ]; then \
+		echo "Setting up Python environment..."; \
+		python3 -m venv .venv --upgrade-deps; \
+		.venv/bin/pip install -r requirements.txt; \
+		echo "Python environment ready!"; \
+	fi
+
+.PHONY: all serve serve-livereload serve-windows calendar setup-python
+

@@ -1,0 +1,36 @@
+name: Generate Calendar
+
+on:
+  push:
+    paths:
+      - '_data/events.yml'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  generate-calendar:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Generate calendar
+      run: python generate_calendar.py
+      
+    - name: Commit and push if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add calendar.ics
+        git diff --staged --quiet || git commit -m "Update calendar.ics"
+        git push

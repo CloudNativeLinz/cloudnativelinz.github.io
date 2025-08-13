@@ -12,3 +12,7 @@ package.json
 .jekyll-cache
 /vendor/
 vendor/
+
+# ignore the python virtual environment
+.venv/
+__pycache__/
