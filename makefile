@@ -35,4 +35,11 @@ install:
 	@bundle install
 	@bundle exec jekyll build
 
-.PHONY: all serve serve-livereload serve-windows
+# Generate calendar.ics from events data
+calendar:
+	@echo "Generating calendar.ics from events data..."
+	@./.venv/bin/python generate_calendar.py
+	@echo "Calendar generated successfully!"
+
+.PHONY: all serve serve-livereload serve-windows calendar
+
