@@ -58,7 +58,7 @@ permalink: /join/
           <div class="platform-header">
             <h3>🧑‍🤝‍🧑 Meetup.com</h3>
           </div>
-          <p>We also maintain a Meetup.com presence for broader reach, though we're planning to phase this out in favor of the CNCF platform.</p>
+          <p>We also maintain a Meetup.com presence for broader reach, as we know a lot of our valued community members are using this as their main platform.</p>
           <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/" class="btn btn-primary">
             View on Meetup.com
           </a>
