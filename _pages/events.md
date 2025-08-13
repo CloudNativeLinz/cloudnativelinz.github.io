@@ -17,7 +17,7 @@ permalink: events/
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
       <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
-        <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}.jpg" 
+        <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}-550.jpg" 
              alt="{{ event.title }}" 
              loading="lazy"
              onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
