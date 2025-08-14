@@ -1,21 +1,205 @@
 <script src="{{ site.baseurl }}/assets/scripts/generate-random-numbers.js"></script>
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <div style="display: flex; flex-direction: row; gap: 24px;">
-    <div class="input__wrapper field">
-        <input type="number" class="input__field" placeholder="⬇️ Minimum Value" name="min" id='min' required />
-        <label for="min" class="input__label">⬇️ Minimum Value</label>
-      </div>
 
-      <div class="input__wrapper field">
-        <input type="number" class="input__field" placeholder="⬆️ Maximum Value" name="max" id='max' required />
-        <label for="max" class="input__label">⬆️ Maximum Value</label>
+<div class="random-generator-container">
+  <!-- Header Card -->
+  <div class="card gradient-card">
+    <div class="card-content">
+      <h2 class="generator-title">🎲 Random Number Generator</h2>
+      <p class="generator-subtitle">We love to do raffles and to make it fun, we do it via random numbers so everyone has a fair chance to win!</p>
+    </div>
+  </div>
+
+  <!-- Input Form Card -->
+  <div class="card">
+    <div class="card-content">
+      <div class="generator-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="min" class="form-label">⬇️ Minimum Value</label>
+            <input type="number" id="min" name="min" class="form-input" placeholder="e.g., 1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="max" class="form-label">⬆️ Maximum Value</label>
+            <input type="number" id="max" name="max" class="form-input" placeholder="e.g., 100" required />
+          </div>
+
+          <div class="form-group">
+            <label for="spins" class="form-label">🔁 Number of Results</label>
+            <input type="number" id="spins" name="spins" class="form-input" placeholder="e.g., 5" required />
+          </div>
+        </div>
+
+        <button onclick="generateRandomNumbers()" class="btn btn-primary btn-large">
+          🎲 Generate Random Numbers
+        </button>
       </div>
     </div>
-      <div class="input__wrapper field">
-        <input type="number" class="input__field" placeholder="🔁 Spins" name="spins" id='spins' required />
-        <label for="spins" class="input__label">🔁 Spins</label>
-      </div>
-    <button onclick="generateRandomNumbers()">🎲 Generate</button>
-    <strong id="result-header"></strong>
-    <p id="result"></p>
+  </div>
+
+  <!-- Results Card -->
+  <div class="card result-card" id="result-card" style="display: none;">
+    <div class="card-content">
+      <h3 id="result-header" class="result-header"></h3>
+      <div id="result" class="result-numbers"></div>
+    </div>
+  </div>
 </div>
+
+<style>
+.random-generator-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.generator-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.generator-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.generator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row:last-of-type {
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input:hover {
+  border-color: #d1d5db;
+  background: white;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.result-card {
+  border: 2px solid #10b981;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+}
+
+.result-header {
+  color: #065f46;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.result-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.result-numbers::before {
+  content: attr(data-numbers);
+}
+
+.result-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+.result-number:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .random-generator-container {
+    padding: 1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .generator-title {
+    font-size: 1.75rem;
+  }
+  
+  .generator-subtitle {
+    font-size: 1rem;
+  }
+}
+</style>

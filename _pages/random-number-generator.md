@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Random Number Generator
+layout: no-headline
+title: 🎲 Random Number Generator
 permalink: /random-number-generator/
 ---
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     {% seo title=false %}
     {% include meta.html %}
@@ -8,58 +9,134 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    
+    <!-- Modern font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#667eea">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
     {% include analytics_head.html %}
   </head>
 
   <body>
-    <div id="bar"></div>
-    <div class="wrapper-container">
-      <div class="wrapper-masthead">
+    <!-- Modern gradient bar -->
+    <div class="gradient-bar"></div>
+    
+    <div class="layout-container">
+      <!-- Modern navigation header -->
+      <header class="site-header">
         <div class="container">
-          <header class="masthead clearfix">
-            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
+          <div class="header-content">
+            <a href="{{ site.baseurl }}/" class="site-logo">
+              <img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" />
+              <div class="site-info">
+                <h1 class="site-name">{{ site.name }}</h1>
+                <p class="site-description">{{ site.description }}</p>
+              </div>
+            </a>
 
-            <div class="site-info">
-              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-              <p class="site-description">{{ site.description }}</p> 
-            </div>
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
 
-            <nav>
-              <a href="{{ site.baseurl }}/">Home</a>
-              <!--<a href="{{ site.baseurl }}/about">About</a>-->
-              <a href="{{ site.baseurl }}/team">Team</a>
-              <a href="{{ site.baseurl }}/join">Join us!</a>
-              <a href="{{ site.baseurl }}/speaker-info">Speaker Info</a>
-              <a href="{{ site.baseurl }}/events">Events</a>
-              <a href="{{ site.baseurl }}/statistics">📊</a>
-              <a href="{{ site.baseurl }}/random-number-generator">🎲</a>
-              <!--
-              <a href="{{ site.baseurl }}/search">Search</a>
-              <a href="{{ site.baseurl }}/archive">Archive</a>
-              -->
+            <!-- Navigation -->
+            <nav class="site-nav" aria-label="Main navigation">
+              <a href="{{ site.baseurl }}/" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Home</span>
+              </a>
+              <a href="{{ site.baseurl }}/team" class="nav-link">
+                <span class="nav-icon">👩‍💻</span>
+                <span class="nav-text">Team</span>
+              </a>
+              <a href="{{ site.baseurl }}/events" class="nav-link">
+                <span class="nav-icon">📅</span>
+                <span class="nav-text">Events</span>
+              </a>
+              <a href="{{ site.baseurl }}/speaker-info" class="nav-link">
+                <span class="nav-icon">🎤</span>
+                <span class="nav-text">Speaker Info</span>
+              </a>
+              <a href="{{ site.baseurl }}/statistics" class="nav-link">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Statistics</span>
+              </a>
+              <a href="{{ site.baseurl }}/join" class="nav-link nav-cta">
+                <span class="nav-icon">🤝</span>
+                <span class="nav-text">Join us!</span>
+              </a>
             </nav>
-          </header>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div class="wrapper-main">
-        <div id="main" role="main" class="container">
+      <!-- Main content -->
+      <main class="site-main">
+        <div class="container">
           {{ content }}
         </div>
-      </div>
+      </main>
 
-      <div class="wrapper-footer">
+      <!-- Modern footer -->
+      <footer class="site-footer">
         <div class="container">
-          <footer class="footer">
-            {% include svg-icons.html %}
-          </footer>
+          <div class="footer-content">
+            <div class="footer-social">
+              {% include svg-icons.html %}
+            </div>
+            <p class="footer-text">
+              Cloud Native Computing Linz - Building the future of cloud native technology together.
+            </p>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
 
     {% include analytics.html %}
+    
+    <!-- Mobile navigation script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const siteNav = document.querySelector('.site-nav');
+        const body = document.body;
+        
+        if (mobileMenuBtn && siteNav) {
+          mobileMenuBtn.addEventListener('click', function() {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenuBtn.classList.toggle('active');
+            siteNav.classList.toggle('active');
+            body.classList.toggle('nav-open');
+          });
+          
+          // Close menu when clicking on a link
+          siteNav.addEventListener('click', function(e) {
+            if (e.target.classList.contains('nav-link')) {
+              mobileMenuBtn.classList.remove('active');
+              siteNav.classList.remove('active');
+              body.classList.remove('nav-open');
+              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', function(e) {
+            if (!siteNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+              mobileMenuBtn.classList.remove('active');
+              siteNav.classList.remove('active');
+              body.classList.remove('nav-open');
+              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>

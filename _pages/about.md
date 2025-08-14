@@ -8,22 +8,94 @@ redirect_from:
 
 {% include upcoming-events.html %}
 
-<img src="{{ site.baseurl }}/images/cloudnativelinz-banner.png">
+<!--
+<div class="hero-section">
+  <div class="hero-banner">
+    <img src="{{ site.baseurl }}/images/cloudnativelinz-banner.png" alt="Cloud Native Computing Linz" class="banner-image">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Welcome to Cloud Native Computing Linz</h1>
+        <p class="hero-subtitle">Where the future of IT comes together</p>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 
-If you believe that Cloud Native is the future of IT then you are at the right place.
+<div class="intro-section">
+  <div class="content-grid">
+    <div class="card gradient-card">
+      <div class="card-content text-center">
+        <h2>🚀 Our Mission</h2>
+        <p class="lead">
+          Cloud Native is transforming the way we build and run applications. Our mission is to empower the Linz tech community to explore, adopt, and excel with cloud-native technologies. We foster a welcoming space for learning, sharing experiences, and connecting with peers—whether you're just starting out or leading the way. Together, we shape the future of applications, one meetup at a time.
+        </p>    </div>
+    </div>
 
-Our goal with the group is to help the Cloud Native community to grow even more and bring together people that inspire, support, and challenge each other sharing from the basics to the most advanced topics.
+    <div class="card">
+      <div class="card-content">
+        <h3>🌟 What We Do</h3>
+        <p>Our goal is to bring together passionate individuals who inspire, support, and challenge each other. From beginners taking their first steps to experts sharing advanced techniques, we cover the full spectrum of cloud-native technologies.</p>
+        
+        <div class="highlight-box">
+          <h4>🏗️ Explore the CNCF Landscape</h4>
+          <p>With hundreds of open source projects in the <a href="https://landscape.cncf.io/" target="_blank">Cloud Native Computing Foundation Landscape</a>, there's always something new to discover and master.</p>
+        </div>
+      </div>
+    </div>
 
-There are hundreds of open source projects within the [Cloud Native Computing Foundation Landscape](https://landscape.cncf.io/), and this group is open to everyone that is interested in those projects, no matter if you are a newbie or an expert, you are invited to join, learn and share from others experience and become part of this awesome community.
+    <div class="card">
+      <div class="card-content">
+        <h3>🤝 Everyone is Welcome</h3>
+        <p>Whether you're a curious newcomer or a seasoned expert, you have a place in our community. We believe diverse perspectives and experiences make us all stronger.</p>
+        
+        <div class="cta-box">
+          <h4>Want to contribute?</h4>
+          <p>We're always looking for speakers and sponsors who want to share their knowledge and support our community.</p>
+          <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-primary">Get Involved</a>
+        </div>
+      </div>
+    </div>
 
-If **you would like to give a talk or sponsor an event**, [please fill out our form](https://forms.gle/9GPboKs4T5Yboq5c8) and we will get in touch with you.
+    <div class="card">
+      <div class="card-content">
+        <h3>📋 Code of Conduct</h3>
+        <p>All events follow the <a href="https://github.com/cncf/foundation/blob/main/code-of-conduct.md" target="_blank">CNCF Code of Conduct</a>. Our primary goal is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.</p>
 
-All events of the Cloud Native Computing Linz group follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md). Our primary goal is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible.
+        <div class="cta-box">
+          <h4>Everyone is welcome!</h4>
+          <p>We encourage participation from all community members, regardless of experience level. Join us in shaping the future of cloud-native computing!</p>
+        </div>
+      </div>
+    </div>
 
-**Find us** (and **join us!**) on our **official home at [community.cncf.io](https://community.cncf.io/linz/)** and on [meetup.com](https://www.meetup.com/Cloud-Native-Computing-Linz/).
+    <div class="card">
+      <div class="card-content">
+        <h3>📅 When & Where</h3>
+        <div class="meeting-details">
+          <div class="detail-item">
+            <strong>📆 Schedule:</strong> Usually the 3rd or 4th Tuesday of each month. Find the <a href="/events">next edition here</a>.
+          </div>
+          <div class="detail-item">
+            <strong>📍 Location:</strong> Various venues in and around Linz. Checkout our previous hosts in the <a href="statistics">statistics</a> section.
+          </div>
+          <div class="detail-item">
+            <strong>🌐 Online:</strong> 
+            <a href="https://community.cncf.io/linz/" target="_blank">CNCF Community</a> | 
+            <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/" target="_blank">Meetup.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-We **usually meet at the third or fourth Tuesday of a month**.
-
-## Join our community!
-
-{% include cncf-meetup-join.html %}
+<div class="community-cta">
+  <div class="card gradient-card">
+    <div class="card-content text-center">
+      <h2>Ready to Join Our Community?</h2>
+      <p>Connect with Linz's most passionate cloud-native enthusiasts and start your journey with us today.</p>
+      {% include cncf-meetup-join.html %}
+    </div>
+  </div>
+</div>
