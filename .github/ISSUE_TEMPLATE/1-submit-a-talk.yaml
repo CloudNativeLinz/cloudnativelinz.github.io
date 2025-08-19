@@ -14,9 +14,9 @@ body:
     validations:
       required: true
   - type: input
-    id: email
     attributes:
-      label: Email
+      label: Contact Details
+      description: How can we reach out to you?
     validations:
       required: true
   - type: textarea
