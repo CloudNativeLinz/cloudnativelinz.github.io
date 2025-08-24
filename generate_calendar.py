@@ -6,6 +6,8 @@ import pytz
 
 # ---- SETTINGS ----
 TIMEZONE = "Europe/Berlin"  # Change to your time zone, e.g. "America/New_York"
+CALENDAR_NAME = "Cloud Native Linz Events"
+CALENDAR_DESCRIPTION = "Meetup events for the Cloud Native Linz community"
 
 # Load YAML
 with open("_data/events.yml", "r") as f:
@@ -13,8 +15,11 @@ with open("_data/events.yml", "r") as f:
 
 # Prepare calendar
 cal = Calendar()
-cal.add("prodid", "-//My GitHub Calendar//EN")
+cal.add("prodid", "-//Cloud Native Linz Calendar//EN")
 cal.add("version", "2.0")
+cal.add("x-wr-calname", CALENDAR_NAME)  # Calendar name (widely supported)
+cal.add("x-wr-caldesc", CALENDAR_DESCRIPTION)  # Calendar description
+cal.add("name", CALENDAR_NAME)  # Standard property for calendar name
 
 tz = pytz.timezone(TIMEZONE)
 
