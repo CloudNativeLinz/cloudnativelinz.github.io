@@ -4,11 +4,23 @@
 // Use SVG icons
 @use 'svg-icons';
 
-/* Modern 2025 Design System - Cloud Native Linz */
-
 // Mobile mixin
 @mixin mobile {
   @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+// Tablet mixin
+@mixin tablet {
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// Mobile and Tablet combined (for menu behavior)
+@mixin mobile-tablet {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
@@ -44,6 +56,21 @@ h4 { font-size: 1.25rem; }
 h5 { font-size: 1.125rem; }
 h6 { font-size: 1rem; }
 
+/* Tablet-specific typography */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.625rem; }
+  h4 { font-size: 1.375rem; }
+  h5 { font-size: 1.1875rem; }
+  h6 { font-size: 1.0625rem; }
+}
+
 p { margin-bottom: 1rem; }
 
 a {
@@ -63,6 +90,13 @@ a:hover {
   padding: 0 1rem;
 }
 
+/* Tablet-specific container adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
 /* Gradient bar */
 .gradient-bar {
   height: 4px;
@@ -77,6 +111,13 @@ a:hover {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet-specific header adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .site-header {
+    padding: 1.25rem 0;
+  }
 }
 
 .header-content {
@@ -104,6 +145,18 @@ a:hover {
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Tablet-specific logo adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .site-logo img {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .site-logo {
+    gap: 1.25rem;
+  }
+}
+
 .site-info {
   display: flex;
   flex-direction: column;
@@ -124,13 +177,24 @@ a:hover {
   font-weight: 400;
 }
 
+/* Tablet-specific typography improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .site-name {
+    font-size: 1.625rem;
+  }
+  
+  .site-description {
+    font-size: 0.9375rem;
+  }
+}
+
 /* Navigation */
 .site-nav {
   display: none;
   gap: 1.1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .site-nav {
     display: flex;
   }
@@ -187,7 +251,21 @@ a:hover {
   z-index: 10;
 }
 
-@media (min-width: 768px) {
+/* Tablet-specific mobile menu button */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .mobile-menu-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.125rem; /* Add small padding for better touch target */
+  }
+  
+  .hamburger-line {
+    width: 2rem;
+    height: 0.25rem;
+  }
+}
+
+@media (min-width: 1025px) {
   .mobile-menu-btn {
     display: none;
   }
@@ -215,8 +293,8 @@ a:hover {
   transform: rotate(-45deg);
 }
 
-/* Mobile Navigation */
-@media (max-width: 767px) {
+/* Mobile and Tablet Navigation */
+@media (max-width: 1024px) {
   .site-nav {
     position: absolute;
     top: 100%;
@@ -248,15 +326,42 @@ a:hover {
   }
 }
 
+/* Tablet-specific navigation improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .site-nav {
+    padding: 1.25rem;
+  }
+  
+  .nav-link {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.0625rem;
+    min-height: 48px; /* Better touch target for tablets */
+  }
+}
+
 /* Main Content */
 .site-main {
   padding: 2rem 0;
+}
+
+/* Tablet-specific main content improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .site-main {
+    padding: 2.5rem 0;
+  }
 }
 
 .page-content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* Tablet-specific page content improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .page-content {
+    padding: 0 1.5rem;
+  }
 }
 
 /* Cards */
