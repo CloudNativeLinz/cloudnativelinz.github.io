@@ -635,9 +635,9 @@
   registrations: ""
   participants: ""
   talks:
-    - title: "Secrets Management - from plaintext to hiding keys in the Swiss Alps"
-      speaker: "Markus Adelsberger & Georg Mayrhauser"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
+    - title: "Secrets management - from plaintext to hiding keys in the Swiss Alps"
+      speaker: "Georg Mayrhauser"
+      image: "/assets/speaker-images/gmh.jpeg"
     - title: "Open Mic - Share your Cloud Native Journey"
       speaker: "the community"
 
