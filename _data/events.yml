@@ -193,7 +193,7 @@
 - id: 15
   title: "15. Cloud Native Computing Linz Meetup"
   date: "2022-05-31"
-  host: "netcetera"
+  host: "G+D Netcetera"
   event_link: "https://www.meetup.com/cloud-native-computing-linz/events/285775843/"
   registrations: 20
   participants: ""
@@ -349,7 +349,7 @@
 - id: 25
   title: "Migration to Cloud Native & The Power of Operators"
   date: "2023-09-19"
-  host: "netcetera"
+  host: "G+D Netcetera"
   event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/"
   registrations: ""
   participants: "37"
@@ -630,7 +630,7 @@
 - id: 42
   title: "cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz"
   date: "2025-09-24"
-  host: "netcetera"
+  host: "G+D Netcetera"
   event_link: "https://www.meetup.com/cloud-native-linz/events/310732711/"
   registrations: ""
   participants: ""
