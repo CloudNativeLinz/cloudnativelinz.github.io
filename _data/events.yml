@@ -653,6 +653,11 @@
       speaker: "Matthias Steinbauer"
       image: "https://media.licdn.com/dms/image/v2/D4D03AQGeyJ7GQgLw4g/profile-displayphoto-shrink_800_800/B4DZd56zluGYAg-/0/1750097148964?e=1758153600&v=beta&t=b3FnlTwnSZqqDzUzENyPfoMfJHuqtd4v0PGGfpI1mcY"
       social: "https://www.linkedin.com/in/matthias-steinbauer/"
+    - title: "the kubernetes and the bazzar"
+      speaker: "Hubert Ströbitzer"
+      image: ""
+      social: "https://www.linkedin.com/in/stroebitzer/"
+
 
 - id: 44
   title: "November 2025 edition at MIC"
