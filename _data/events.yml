@@ -649,14 +649,14 @@
   registrations: ""
   participants: ""
   talks:
-    - title: "Talk title to be announced soon"
+    - title: "Is the Lambdalith the sweet spot in modern Cloud architecture?"
       speaker: "Matthias Steinbauer"
       image: "https://media.licdn.com/dms/image/v2/D4D03AQGeyJ7GQgLw4g/profile-displayphoto-shrink_800_800/B4DZd56zluGYAg-/0/1750097148964?e=1758153600&v=beta&t=b3FnlTwnSZqqDzUzENyPfoMfJHuqtd4v0PGGfpI1mcY"
       social: "https://www.linkedin.com/in/matthias-steinbauer/"
-    - title: "the kubernetes and the bazzar"
-      speaker: "Hubert Ströbitzer"
-      image: ""
-      social: "https://www.linkedin.com/in/stroebitzer/"
+    - title: "Catch Hackers with Koney: Automated Honeytokens for Cloud-Native Apps"
+      speaker: "Mario Kahlhofer"
+      image: "https://media.licdn.com/dms/image/v2/C5603AQGT3eD-ton2VA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584629003058?e=1759968000&v=beta&t=gtvpeaT0vuf3AU1rE3W7EnEU1VzbP9mZTM6ysakFdjQ"
+      social: "https://www.linkedin.com/in/mario-kahlhofer/"
 
 
 - id: 44
@@ -667,4 +667,11 @@
   registrations: ""
   participants: ""
   talks:
+    - title: "Talk title to be announced soon"
+      speaker: TBD
+    - title: "The Kubernetes and the Bazzar"
+      speaker: "Hubert Ströbitzer"
+      image: ""
+      social: "https://www.linkedin.com/in/stroebitzer/"
+
 
