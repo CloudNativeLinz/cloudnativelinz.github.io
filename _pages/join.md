@@ -32,7 +32,7 @@ permalink: /join/
         <p>Have a look at our <a href="/events/">upcoming events</a> to find out when and where we'll be meeting next or <a href="/statistics">browse the statistics</a> to see our loyal hosts!</p>
         <div class="cta-box">
           <h4>Want to host or speak?</h4>
-          <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-primary">Get in Touch</a>
+          <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new/choose" class="btn btn-primary">Get in Touch</a>
         </div>
       </div>
     </div>

@@ -486,6 +486,16 @@ a:hover {
   color: #667eea;
 }
 
+.btn-light-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #764ba2;
+}
+
+.btn-light-secondary:hover {
+  background: white;
+  color: #764ba2;
+}
+
 /* Team Section */
 .team-grid {
   display: grid;

@@ -18,7 +18,7 @@ permalink: /speaker-info/
     </div>
     <div class="card-content">
       <p>Ready to share your knowledge? We'd love to hear from you!</p>
-      <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-primary">
+      <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new?template=1-submit-a-talk.yaml" class="btn btn-primary" target="_blank">
         Submit Your Proposal
       </a>
       <p class="small-text">Use our form to apply with a session proposal. We review all submissions and will get back to you promptly.</p>
@@ -148,7 +148,7 @@ permalink: /speaker-info/
     <div class="card-content text-center">
       <h3>Ready to Inspire Our Community?</h3>
       <p>Join our growing list of amazing speakers who have shared their knowledge with the Cloud Native Computing Linz community.</p>
-      <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-light">
+      <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new?template=1-submit-a-talk.yaml" class="btn btn-light" target="_blank">
         Start Your Speaker Journey
       </a>
     </div>

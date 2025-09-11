@@ -52,7 +52,7 @@ redirect_from:
         <div class="cta-box">
           <h4>Want to contribute?</h4>
           <p>We're always looking for speakers and sponsors who want to share their knowledge and support our community.</p>
-          <a href="https://forms.gle/9GPboKs4T5Yboq5c8" class="btn btn-primary">Get Involved</a>
+          <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new/choose" class="btn btn-primary" target="_blank">Get Involved</a>
         </div>
       </div>
     </div>

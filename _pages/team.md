@@ -87,7 +87,7 @@ permalink: /team/
     <h3>Want to Join Our Team?</h3>
     <p>We're always looking for passionate individuals who want to help grow the cloud native community in Linz. Whether you're interested in organizing events, speaking, or helping with logistics, we'd love to hear from you!</p>
     <div style="text-align: center; margin-top: 2rem;">
-      <a href="https://forms.gle/9GPboKs4T5Yboq5c8" target="_blank" rel="noopener" class="btn btn-large">
+      <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new/choose" target="_blank" rel="noopener" class="btn btn-large">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
         </svg>

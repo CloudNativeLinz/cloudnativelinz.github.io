@@ -56,6 +56,14 @@ permalink: /statistics/
         </table>
         <div class="fallback-note">📈 This data represents the distribution of events across different hosting organizations in our community.</div>
       </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new?template=2-host-us.yaml" target="_blank" rel="noopener" class="btn btn-light">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          Become a Host
+        </a>
+      </div>
     </div>
   </div>
 
@@ -96,6 +104,14 @@ permalink: /statistics/
           </tbody>
         </table>
         <div class="fallback-note">🎤 This data shows which speakers have presented most often at our events, highlighting our active community contributors.</div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new?template=1-submit-a-talk.yaml" target="_blank" rel="noopener" class="btn btn-light-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+          </svg>
+          Become a Speaker
+        </a>
       </div>
     </div>
   </div>
