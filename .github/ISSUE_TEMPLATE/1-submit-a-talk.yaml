@@ -41,13 +41,6 @@ body:
       description: Provide a brief description of your talk. We'll use this in the meetup announcement and to help us understand the content and audience.
     validations:
       required: true
-  - type: textarea
-    id: takeaways
-    attributes:
-      label: 3 Key Takeaways for the Community
-      description: What are the three main points or lessons that attendees will learn from your talk?
-    validations:
-      required: true
   - type: checkboxes
     id: terms
     attributes:

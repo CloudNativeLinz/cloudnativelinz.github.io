@@ -26,10 +26,17 @@ body:
       label: Company Name
     validations:
       required: true
+  - type: input
+    id: address
+    attributes:
+      label: Address
+      description: Where can we find you?
+    validations:
+      required: true
   - type: textarea
     id: additionalinfo
     attributes:
-      label: additional Information 
+      label: Additional Information 
       description: Is there anything else you would like to share with us?
     validations:
       required: false
