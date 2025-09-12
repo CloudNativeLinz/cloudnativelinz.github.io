@@ -119,7 +119,7 @@ permalink: /speaker-info/
         </div>
         <div class="tip-item">
           <h4>🛋️ Welcoming Space</h4>
-          <p>Create a comfortable environment with clear signage, accessible entrance, and enough seating for 30-50 attendees.</p>
+          <p>Create a comfortable environment with clear signage, accessible entrance, and enough seating for 30-50 attendees. You can use <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/tree/main/images/press" target="_blank">our official logo and press assets</a> for any branding materials.</p>
         </div>
         <!--
         <div class="tip-item">
