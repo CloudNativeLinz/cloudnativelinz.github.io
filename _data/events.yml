@@ -633,7 +633,7 @@
   host: "G+D Netcetera"
   event_link: "https://www.meetup.com/cloud-native-linz/events/310732711/"
   registrations: ""
-  participants: ""
+  participants: "27"
   talks:
     - title: "Secrets management - from plaintext to hiding keys in the Swiss Alps"
       speaker: "Georg Mayrhauser"
