@@ -668,7 +668,7 @@
   registrations: ""
   participants: ""
   talks:
-    - title: "Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline with ClickHouse & Python"
+    - title: "Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline" # with ClickHouse & Python
       speaker: "Clemens Kriechbaumer & Heinz Mayer"
       image: ""
     - title: "The Kubernetes and the Bazzar"
