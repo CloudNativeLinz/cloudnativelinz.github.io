@@ -668,11 +668,12 @@
   registrations: ""
   participants: ""
   talks:
-    - title: "Talk title to be announced soon"
-      speaker: TBD
+    - title: "Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline with ClickHouse & Python"
+      speaker: "Clemens Kriechbaumer & Heinz Mayer"
+      image: ""
     - title: "The Kubernetes and the Bazzar"
       speaker: "Hubert Ströbitzer"
-      image: ""
+      image: "https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg"
       social: "https://www.linkedin.com/in/stroebitzer/"
 
 
