@@ -647,7 +647,7 @@
   host: ".LOUPE"
   event_link: "https://www.meetup.com/cloud-native-linz/events/310733201/"
   registrations: ""
-  participants: ""
+  participants: "25"
   talks:
     - title: "Is the Lambdalith the sweet spot in modern Cloud architecture?"
       speaker: "Matthias Steinbauer"
