@@ -1,679 +1,684 @@
+---
 - id: 1
-  title: "1. Cloud Native Computing Linz Meetup"
-  date: "2020-09-29"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273245544/"
+  title: 1. Cloud Native Computing Linz Meetup
+  slug: 1-cloud-native-computing-linz-meetup
+  date: '2020-09-29'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/273245544/
   registrations: 54
-  participants: "not tracked for the first editions of the meetup"
+  participants: not tracked for the first editions of the meetup
   talks:
-    - title: "Digital Transformation (from on-premises to the cloud)"
-      speaker: "Donovan Brown"
-      recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
-      social: "https://www.linkedin.com/in/darquewarrior/"
-    - title: "Serverless on the AWS Cloud, Challenges Beyond the Toy Problems"
-      speaker: "Matthias Steinbauer"
-      recording: "https://www.youtube.com/watch?v=xzB5Al18aao"
-
+  - title: Digital Transformation (from on-premises to the cloud)
+    speaker: Donovan Brown
+    recording: https://www.youtube.com/watch?v=xzB5Al18aao
+    social: https://www.linkedin.com/in/darquewarrior/
+  - title: Serverless on the AWS Cloud, Challenges Beyond the Toy Problems
+    speaker: Matthias Steinbauer
+    recording: https://www.youtube.com/watch?v=xzB5Al18aao
 - id: 2
-  title: "2. Cloud Native Computing Linz Meetup"
-  date: "2020-10-27"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/273726815/"
+  title: 2. Cloud Native Computing Linz Meetup
+  slug: 2-cloud-native-computing-linz-meetup
+  date: '2020-10-27'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/273726815/
   registrations: 41
-  participants: ""
+  participants: ''
   talks:
-    - title: "The challenges of exposing and connecting microservices"
-      speaker: "Denis Jannot"
-      recording: "https://www.youtube.com/watch?v=MQKfZdsHC9s"
-    - title: "Custom Autoscaling with Prometheus, Grafana, and a little bit of code"
-      speaker: "János Pásztor"
-      recording: "https://www.youtube.com/watch?v=MQKfZdsHC9s"
-
+  - title: The challenges of exposing and connecting microservices
+    speaker: Denis Jannot
+    recording: https://www.youtube.com/watch?v=MQKfZdsHC9s
+  - title: Custom Autoscaling with Prometheus, Grafana, and a little bit of code
+    speaker: János Pásztor
+    recording: https://www.youtube.com/MQKfZdsHC9s
 - id: 3
-  title: "3. Cloud Native Computing Linz Meetup"
-  date: "2020-11-24"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/274417589/"
+  title: 3. Cloud Native Computing Linz Meetup
+  slug: 3-cloud-native-computing-linz-meetup
+  date: '2020-11-24'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/274417589/
   registrations: 50
-  participants: ""
+  participants: ''
   talks:
-    - title: "KubeOne for Beginners"
-      speaker: "Malte Menkhoff"
-      recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
-    - title: "Kubernetes certifications: How to prepare and get it done"
-      speaker: "Juliano Costa & Yuri Oliveira"
-      recording: "https://www.youtube.com/watch?v=ouWVGtRyRkA"
-
-
+  - title: KubeOne for Beginners
+    speaker: Malte Menkhoff
+    recording: https://www.youtube.com/watch?v=ouWVGtRyRkA
+  - title: 'Kubernetes certifications: How to prepare and get it done'
+    speaker: Juliano Costa & Yuri Oliveira
+    recording: https://www.youtube.com/watch?v=ouWVGtRyRkA
 - id: 4
-  title: "4. Cloud Native Computing Linz Meetup"
-  date: "2021-01-26"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/275600776/"
+  title: 4. Cloud Native Computing Linz Meetup
+  date: '2021-01-26'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/275600776/
   registrations: 43
-  participants: ""
+  participants: ''
   talks:
-    - title: "Remote debugging challenges in Kubernetes"
-      speaker: "Oded Keret"
-      recording: "https://www.youtube.com/watch?v=dZXL51xaMew"
-    - title: "When the destination is not what you expect to be or MITM in k8s"
-      speaker: "Dimitrij Klesev"
-      recording: "https://www.youtube.com/watch?v=qD5XQdf7w5k"
-
+  - title: Remote debugging challenges in Kubernetes
+    speaker: Oded Keret
+    recording: https://www.youtube.com/watch?v=dZXL51xaMew
+  - title: When the destination is not what you expect to be or MITM in k8s
+    speaker: Dimitrij Klesev
+    recording: https://www.youtube.com/watch?v=qD5XQdf7w5k
+  slug: 4-cloud-native-computing-linz-meetup
 - id: 5
-  title: "5. Cloud Native Computing Linz Meetup"
-  date: "2021-02-23"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276236712/"
+  title: 5. Cloud Native Computing Linz Meetup
+  date: '2021-02-23'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/276236712/
   registrations: 30
-  participants: ""
+  participants: ''
   talks:
-    - title: "Observability & Declarative Hypothesis in Chaos Engineering"
-      speaker: "Karthik S"
-      recording: "https://www.youtube.com/watch?v=3Jr4kNkgTpw"
-    - title: "Can I write a platform in the cloud as a single person?"
-      speaker: "Michael Aufreiter"
-      recording: "https://www.youtube.com/watch?v=iYrVBlplRd4"
-
+  - title: Observability & Declarative Hypothesis in Chaos Engineering
+    speaker: Karthik S
+    recording: https://www.youtube.com/watch?v=3Jr4kNkgTpw
+  - title: Can I write a platform in the cloud as a single person?
+    speaker: Michael Aufreiter
+    recording: https://www.youtube.com/watch?v=iYrVBlplRd4
+  slug: 5-cloud-native-computing-linz-meetup
 - id: 6
-  title: "6. Cloud Native Computing Linz Meetup"
-  date: "2021-03-30"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/276718585/"
+  title: 6. Cloud Native Computing Linz Meetup
+  date: '2021-03-30'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/276718585/
   registrations: 36
-  participants: ""
+  participants: ''
   talks:
-    - title: "Continuous Security - Building Security into your Pipelines"
-      speaker: "Matt Jarvis"
-      recording: "https://www.youtube.com/watch?v=BTFH1jYV9qI"
-    - title: "Cloud Security Beyond Technology"
-      speaker: "Rainer Stropek"
-      recording: "https://www.youtube.com/watch?v=8jbWGxgoKJQ"
-
+  - title: Continuous Security - Building Security into your Pipelines
+    speaker: Matt Jarvis
+    recording: https://www.youtube.com/watch?v=BTFH1jYV9qI
+  - title: Cloud Security Beyond Technology
+    speaker: Rainer Stropek
+    recording: https://www.youtube.com/watch?v=8jbWGxgoKJQ
+  slug: 6-cloud-native-computing-linz-meetup
 - id: 7
-  title: "7. Cloud Native Computing Linz Meetup"
-  date: "2021-04-27"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/277569639/"
+  title: 7. Cloud Native Computing Linz Meetup
+  date: '2021-04-27'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/277569639/
   registrations: 42
-  participants: ""
+  participants: ''
   talks:
-    - title: "All you need to know about OpenTelemetry"
-      speaker: "Juraci Paixão Kröhling"
-      recording: "https://www.youtube.com/watch?v=bh0v6k6eLRw"
-
+  - title: All you need to know about OpenTelemetry
+    speaker: Juraci Paixão Kröhling
+    recording: https://www.youtube.com/watch?v=bh0v6k6eLRw
+  slug: 7-cloud-native-computing-linz-meetup
 - id: 8
-  title: "8. Cloud Native Computing Linz Meetup"
-  date: "2021-05-25"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278104169/"
+  title: 8. Cloud Native Computing Linz Meetup
+  date: '2021-05-25'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/278104169/
   registrations: 27
-  participants: ""
+  participants: ''
   talks:
-    - title: "Cloud-Native Storage: What it can and can't (yet) do"
-      speaker: "Moritz Wanzenböck"
-      recording: "https://www.youtube.com/watch?v=DXffA0IgZyc"
-
+  - title: 'Cloud-Native Storage: What it can and can''t (yet) do'
+    speaker: Moritz Wanzenböck
+    recording: https://www.youtube.com/watch?v=DXffA0IgZyc
+  slug: 8-cloud-native-computing-linz-meetup
 - id: 9
-  title: "9. Cloud Native Computing Linz Meetup"
-  date: "2021-06-29"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/278914758/"
+  title: 9. Cloud Native Computing Linz Meetup
+  date: '2021-06-29'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/278914758/
   registrations: 15
-  participants: ""
+  participants: ''
   talks:
-    - title: "Service Mesh Principles: Observability through Telemetry with Linkerd"
-      speaker: "Charles Pretzer"
-      recording: "https://www.youtube.com/watch?v=XeXcgz5stMo"
-
+  - title: 'Service Mesh Principles: Observability through Telemetry with Linkerd'
+    speaker: Charles Pretzer
+    recording: https://www.youtube.com/watch?v=XeXcgz5stMo
+  slug: 9-cloud-native-computing-linz-meetup
 - id: 10
-  title: "10. Cloud Native Computing Linz Meetup"
-  date: "2021-09-28"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/280749046/"
+  title: 10. Cloud Native Computing Linz Meetup
+  date: '2021-09-28'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/280749046/
   registrations: 20
-  participants: ""
+  participants: ''
   talks:
-    - title: "Automatically optimize cloud-native systems for fun and profit"
-      speaker: "Lars Wolff"
-      recording: "https://www.youtube.com/watch?v=0WEts9WLhoc"
-
+  - title: Automatically optimize cloud-native systems for fun and profit
+    speaker: Lars Wolff
+    recording: https://www.youtube.com/watch?v=0WEts9WLhoc
+  slug: 10-cloud-native-computing-linz-meetup
 - id: 11
-  title: "11. IN PERSON - Cloud Native Computing Linz Meetup"
-  date: "2021-10-19"
-  host: "Dynatrace"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/281064988/"
+  title: 11. IN PERSON - Cloud Native Computing Linz Meetup
+  date: '2021-10-19'
+  host: Dynatrace
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/281064988/
   registrations: 36
-  participants: ""
+  participants: ''
   talks:
-    - title: "The 1001 serverless options of Microsoft Azure"
-      speaker: "Philipp Weckerle"
-      recording: "https://www.youtube.com/watch?v=81Tg--7GIFI"
-    - title: "How OpenTelemetry is currently used at my company"
-      speaker: "Juliano Costa"
-
+  - title: The 1001 serverless options of Microsoft Azure
+    speaker: Philipp Weckerle
+    recording: https://www.youtube.com/watch?v=81Tg--7GIFI
+  - title: How OpenTelemetry is currently used at my company
+    speaker: Juliano Costa
+  slug: 11-in-person-cloud-native-computing-linz-meetup
 - id: 12
-  title: "12. Cloud Native Computing Linz Meetup"
-  date: "2022-02-23"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/283691539/"
-  note: "starting from here we are using both meetup.com and cncf.io"
+  title: 12. Cloud Native Computing Linz Meetup
+  date: '2022-02-23'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/283691539/
+  note: starting from here we are using both meetup.com and cncf.io
   registrations: 12
-  participants: ""
+  participants: ''
   talks:
-    - title: "A Tour of Operator-SDK"
-      speaker: "Alexandre Menezes & Yuri Oliveira Sá"
-      recording: "https://www.youtube.com/watch?v=39XqltavUW0"
-
+  - title: A Tour of Operator-SDK
+    speaker: Alexandre Menezes & Yuri Oliveira Sá
+    recording: https://www.youtube.com/watch?v=39XqltavUW0
+  slug: 12-cloud-native-computing-linz-meetup
 - id: 13
-  title: "13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Linz)"
-  date: "2022-03-30"
-  host: "smec"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284662219/"
-  registrations: "20 (combined)"
-  participants: ""
+  title: 13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Linz)
+  date: '2022-03-30'
+  host: smec
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/284662219/
+  registrations: 20 (combined)
+  participants: ''
   talks:
-    - title: "Java on Azure"
-      speaker: "Ed Burns"
-      file: "/slides/2022-03/java-on-azure-ed-burns.pdf"
-
+  - title: Java on Azure
+    speaker: Ed Burns
+    file: "/slides/2022-03/java-on-azure-ed-burns.pdf"
+  slug: 13-cloud-native-computing-linz-meetup-joint-meetup-with-ejug-linz
 - id: 14
-  title: "14. Cloud Native Computing Linz Meetup"
-  date: "2022-04-19"
-  host: "hello again"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/284847987/"
+  title: 14. Cloud Native Computing Linz Meetup
+  date: '2022-04-19'
+  host: hello again
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/284847987/
   registrations: 23
-  participants: ""
+  participants: ''
   talks:
-    - title: "The art of scaling without scaling your DevOps-Team"
-      speaker: "Michael Schöndorfer"
-    - title: "The 7 deadly sins in Kubernetes"
-      speaker: "Hubert Ströbitzer"
-
+  - title: The art of scaling without scaling your DevOps-Team
+    speaker: Michael Schöndorfer
+  - title: The 7 deadly sins in Kubernetes
+    speaker: Hubert Ströbitzer
+  slug: 14-cloud-native-computing-linz-meetup
 - id: 15
-  title: "15. Cloud Native Computing Linz Meetup"
-  date: "2022-05-31"
-  host: "G+D Netcetera"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/285775843/"
+  title: 15. Cloud Native Computing Linz Meetup
+  date: '2022-05-31'
+  host: G+D Netcetera
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/285775843/
   registrations: 20
-  participants: ""
+  participants: ''
   talks:
-    - title: "How deploying feature branches opened the door to more scalability"
-      speaker: "Markus Adelsberger"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
-    - title: "From Command Line to GitOps - how we transformed our infrastructure"
-      speaker: "Thomas Einwaller"
-
+  - title: How deploying feature branches opened the door to more scalability
+    speaker: Markus Adelsberger
+    image: https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q
+  - title: From Command Line to GitOps - how we transformed our infrastructure
+    speaker: Thomas Einwaller
+  slug: 15-cloud-native-computing-linz-meetup
 - id: 16
-  title: "16. Cloud Native Computing Linz Meetup"
-  date: "2022-06-28"
-  host: "Dynatrace"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/286504906/"
+  title: 16. Cloud Native Computing Linz Meetup
+  date: '2022-06-28'
+  host: Dynatrace
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/286504906/
   registrations: 17
-  participants: ""
+  participants: ''
   talks:
-    - title: "Policy as Code - an introduction to Open Policy Agent"
-      speaker: "Anders Eknert"
-    - title: "ClickOps over GitOps"
-      speaker: "Laszlo Fogas"
-
+  - title: Policy as Code - an introduction to Open Policy Agent
+    speaker: Anders Eknert
+  - title: ClickOps over GitOps
+    speaker: Laszlo Fogas
+  slug: 16-cloud-native-computing-linz-meetup
 - id: 17
-  title: "17. Cloud Native Computing Linz Meetup"
-  date: "2022-10-18"
-  host: "Cloudflight"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/"
+  title: 17. Cloud Native Computing Linz Meetup
+  date: '2022-10-18'
+  host: Cloudflight
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/
   registrations: "~20"
-  participants: ""
+  participants: ''
   talks:
-    - title: "Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together"
-      speaker: "Martin Strigl"
-      file: "/slides/2022-10/Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they are and how they fit together.pdf"
-    - title: "Kong's Service Connectivity Platform"
-      speaker: "Marco Marquez"
-      file: "/slides/2022-10/Cloud Native Meetup - Marco Marquez.pdf"
-
-
+  - title: Kubernetes, docker, cri-o, containerd, OCI, runC, container - what they
+      are and how they fit together
+    speaker: Martin Strigl
+    file: "/slides/2022-10/Kubernetes, docker, cri-o, containerd, OCI, runC, container
+      - what they are and how they fit together.pdf"
+  - title: Kong's Service Connectivity Platform
+    speaker: Marco Marquez
+    file: "/slides/2022-10/Cloud Native Meetup - Marco Marquez.pdf"
+  slug: 17-cloud-native-computing-linz-meetup
 - id: 18
-  title: "18. Cloud Native Computing Linz Meetup"
-  date: "2022-11-22"
-  host: "Tractive"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/"
-  registrations: ""
-  participants: "38"
+  title: 18. Cloud Native Computing Linz Meetup
+  date: '2022-11-22'
+  host: Tractive
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/
+  registrations: ''
+  participants: '38'
   talks:
-    - title: "How to build fault resistant services with infrastructure automation?"
-      speaker: "Stefan Burgholzer"
-    - title: "Secure DevOps Environment"
-      speaker: "Christian Köberl"
-      file: "/slides/2022-11/CNCF-Linz-Secure-DevOps-Environment.pdf"
-
-
+  - title: How to build fault resistant services with infrastructure automation?
+    speaker: Stefan Burgholzer
+  - title: Secure DevOps Environment
+    speaker: Christian Köberl
+    file: "/slides/2022-11/CNCF-Linz-Secure-DevOps-Environment.pdf"
+  slug: 18-cloud-native-computing-linz-meetup
 - id: 19
-  title: "19. Cloud Native Computing Linz Meetup"
-  date: "2023-01-17"
-  host: "Startrampe"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/"
-  registrations: ""
-  participants: "35"
+  title: 19. Cloud Native Computing Linz Meetup
+  date: '2023-01-17'
+  host: Startrampe
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/
+  registrations: ''
+  participants: '35'
   talks:
-    - title: "Instrumenting Tyk API Gateway with OpenTelemetry"
-      speaker: "Sonja Chevre"
-      file: "/slides/2023-01/CNCLinz-Tyk-opentelemetry lessons learned.pdf"
-    - title: "Don't deploy into the DARK! DORA Metrics: automatically, for all your k8s workloads!"
-      speaker: "Andreas Grabner"
-      file: "/slides/2023-01/CNCFLinz_DORAMetrics_with_Keptn.pdf"
-
+  - title: Instrumenting Tyk API Gateway with OpenTelemetry
+    speaker: Sonja Chevre
+    file: "/slides/2023-01/CNCLinz-Tyk-opentelemetry lessons learned.pdf"
+  - title: 'Don''t deploy into the DARK! DORA Metrics: automatically, for all your
+      k8s workloads!'
+    speaker: Andreas Grabner
+    file: "/slides/2023-01/CNCFLinz_DORAMetrics_with_Keptn.pdf"
+  slug: 19-cloud-native-computing-linz-meetup
 - id: 20
-  title: "Kubernetes Alternatives"
-  date: "2023-02-21"
-  host: "Usersnap"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/"
-  registrations: ""
-  participants: "45"
+  title: Kubernetes Alternatives
+  date: '2023-02-21'
+  host: Usersnap
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/
+  registrations: ''
+  participants: '45'
   talks:
-    - title: "Serverless container workloads beyond K8s"
-      speaker: "Martin Sereinig"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQE6fI1fbOr5SQ/profile-displayphoto-shrink_800_800/B4DZS4kKhwH0Ak-/0/1738263276269?e=1757548800&v=beta&t=I6uJ1Pr5626dOemLcR6t7zOnRcFu6Gt4Gk6Cw_MbjzY"
-    - title: "Kubernetes Alternatives"
-      speaker: "Martin Ahrer"
-      file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D35AQGynbu86vzdTg/profile-framedphoto-shrink_800_800/B4DZdoW.lzGgAo-/0/1749802543807?e=1755097200&v=beta&t=vegLdjG-6QIxU3-Wsr-59XE8wB1Xr4-IHC0ni2OqNPc"
-
+  - title: Serverless container workloads beyond K8s
+    speaker: Martin Sereinig
+    image: https://media.licdn.com/dms/image/v2/D4D03AQE6fI1fbOr5SQ/profile-displayphoto-shrink_800_800/B4DZS4kKhwH0Ak-/0/1738263276269?e=1757548800&v=beta&t=I6uJ1Pr5626dOemLcR6t7zOnRcFu6Gt4Gk6Cw_MbjzY
+  - title: Kubernetes Alternatives
+    speaker: Martin Ahrer
+    file: "/slides/2023-02/Need something simpler than Kubernetes.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D35AQGynbu86vzdTg/profile-framedphoto-shrink_800_800/B4DZdoW.lzGgAo-/0/1749802543807?e=1755097200&v=beta&t=vegLdjG-6QIxU3-Wsr-59XE8wB1Xr4-IHC0ni2OqNPc
+  slug: kubernetes-alternatives
 - id: 21
-  title: "Crossplane Usecases"
-  date: "2023-03-28"
-  host: "Dynatrace"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/"
-  registrations: ""
-  participants: "43"
+  title: Crossplane Usecases
+  date: '2023-03-28'
+  host: Dynatrace
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/
+  registrations: ''
+  participants: '43'
   talks:
-    - title: "Crossplane & GitOps: A perfect match?"
-      speaker: "Katharina Sick"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA"
-      file: "/slides/2023-03/CrossplaneAndGitOps.pdf"
-    - title: "Kubernetes as a universal controlplane: An Introduction into Crossplane"
-      speaker: "David Hondl"
-      file: "/slides/2023-03/K8sAsUniversalControlplane.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQE79AhnHStpfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584001330854?e=1757548800&v=beta&t=M1vmw3zRqDnJs6CohixehxInl5HWuExcYPtCp5yv_GI"
-
+  - title: 'Crossplane & GitOps: A perfect match?'
+    speaker: Katharina Sick
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA
+    file: "/slides/2023-03/CrossplaneAndGitOps.pdf"
+  - title: 'Kubernetes as a universal controlplane: An Introduction into Crossplane'
+    speaker: David Hondl
+    file: "/slides/2023-03/K8sAsUniversalControlplane.pdf"
+    image: https://media.licdn.com/dms/image/v2/C4E03AQE79AhnHStpfg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584001330854?e=1757548800&v=beta&t=M1vmw3zRqDnJs6CohixehxInl5HWuExcYPtCp5yv_GI
+  slug: crossplane-usecases
 - id: 22
-  title: "Hagenberg Edition"
-  date: "2023-04-18"
-  host: "Porsche Informatik"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/"
-  registrations: ""
-  participants: "35"
+  title: Hagenberg Edition
+  date: '2023-04-18'
+  host: Porsche Informatik
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/
+  registrations: ''
+  participants: '35'
   talks:
-    - title: "Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik"
-      speaker: "Carolin Schuntermann"
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQHK6jvQQBRH3A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680677252991?e=1757548800&v=beta&t=he3irWIA1Q0axShmGsRzlJn8AH_ukV6pR9vh1vlpOyc"
-      file: "/slides/2023-04/Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik.pdf"
-    - title: "Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered Productivity Duo"
-      speaker: "Jürgen Etzlstorfer"
-      image: "/assets/speaker-images/jetzlstorfer.jpg"
-      social: "https://www.linkedin.com/in/juergenetzlstorfer/"
-
+  - title: Let's Turn Off the Database - Chaos Engineering @ Porsche Informatik
+    speaker: Carolin Schuntermann
+    image: https://media.licdn.com/dms/image/v2/D4E03AQHK6jvQQBRH3A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1680677252991?e=1757548800&v=beta&t=he3irWIA1Q0axShmGsRzlJn8AH_ukV6pR9vh1vlpOyc
+    file: "/slides/2023-04/Let's Turn Off the Database - Chaos Engineering @ Porsche
+      Informatik.pdf"
+  - title: 'Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered
+      Productivity Duo'
+    speaker: Jürgen Etzlstorfer
+    image: "/assets/speaker-images/jetzlstorfer.jpg"
+    social: https://www.linkedin.com/in/juergenetzlstorfer/
+  slug: hagenberg-edition
 - id: 23
-  title: "CertOps and K8sGPT"
-  date: "2023-05-30"
-  host: "Cloudflight"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/"
-  registrations: ""
-  participants: "25"
+  title: CertOps and K8sGPT
+  date: '2023-05-30'
+  host: Cloudflight
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/
+  registrations: ''
+  participants: '25'
   talks:
-    - title: "CertOps: Certificate Lifecycle Management done Cloud Native"
-      speaker: "Martin Strigl"
-      file: "/slides/2023-05/CertOps-Certificate-Lifecycle-Management-done-Cloud-Native.pdf"
-    - title: "Leveraging AI to Troubleshoot Kubernetes with K8sGPT"
-      speaker: "Thomas Schuetz"
-      file: "/slides/2023-05/K8sGPT - Linz.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHIoZZqHIm8Xw/profile-displayphoto-shrink_800_800/B4DZYhJhJMGkAc-/0/1744312865954?e=1757548800&v=beta&t=LRClipa9DSseuvWfmjch_gYdjaKY_ZnlQUGyUdnWnSk"
-
+  - title: 'CertOps: Certificate Lifecycle Management done Cloud Native'
+    speaker: Martin Strigl
+    file: "/slides/2023-05/CertOps-Certificate-Lifecycle-Management-done-Cloud-Native.pdf"
+  - title: Leveraging AI to Troubleshoot Kubernetes with K8sGPT
+    speaker: Thomas Schuetz
+    file: "/slides/2023-05/K8sGPT - Linz.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHIoZZqHIm8Xw/profile-displayphoto-shrink_800_800/B4DZYhJhJMGkAc-/0/1744312865954?e=1757548800&v=beta&t=LRClipa9DSseuvWfmjch_gYdjaKY_ZnlQUGyUdnWnSk
+  slug: certops-and-k8sgpt
 - id: 24
-  title: "GitOps & Terraform and a Guide to OpenTelemetry"
-  date: "2023-06-27"
-  host: "Runtastic"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/"
-  registrations: ""
-  participants: "52"
+  title: GitOps & Terraform and a Guide to OpenTelemetry
+  date: '2023-06-27'
+  host: Runtastic
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/
+  registrations: ''
+  participants: '52'
   talks:
-    - title: "GitOps and Terraform"
-      speaker: "Alexander Lackner"
-      file: "/slides/2023-06/GitOps and Terraform.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8"
-    - title: "Distributed Tracing and OpenTelemetry"
-      speaker: "Daniel Khan"
-      file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQGgnDtvONM9oQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516506347196?e=1757548800&v=beta&t=Ka5vr-4YMnztvPD2NtFTzWqKPJOtiarPbCrVu0Z_6NQ"
-
+  - title: GitOps and Terraform
+    speaker: Alexander Lackner
+    file: "/slides/2023-06/GitOps and Terraform.pdf"
+    image: https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8
+  - title: Distributed Tracing and OpenTelemetry
+    speaker: Daniel Khan
+    file: "/slides/2023-06/Distributed Tracing and OpenTelemetry.pdf"
+    image: https://media.licdn.com/dms/image/v2/C4D03AQGgnDtvONM9oQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516506347196?e=1757548800&v=beta&t=Ka5vr-4YMnztvPD2NtFTzWqKPJOtiarPbCrVu0Z_6NQ
+  slug: gitops-terraform-and-a-guide-to-opentelemetry
 - id: 25
-  title: "Migration to Cloud Native & The Power of Operators"
-  date: "2023-09-19"
-  host: "G+D Netcetera"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/"
-  registrations: ""
-  participants: "37"
+  title: Migration to Cloud Native & The Power of Operators
+  date: '2023-09-19'
+  host: G+D Netcetera
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/
+  registrations: ''
+  participants: '37'
   talks:
-    - title: "Scaling Observability - Dynatrace Operator"
-      speaker: "Christoph Müllner"
-      file: "/slides/2023-09/Scaling Observability - Dynatrace Operator.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQGG0DupxggIkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1625521433577?e=1757548800&v=beta&t=7gbxeHWaBbsyvCl9O7QN3JDvti3Io0xe6Z2qowucoUM"
-    - title: "Migration of on-prem payment systems to a Cloud Native Environments"
-      speaker: "Markus Adelsberger & Georg Mayrhauser"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q"
-
+  - title: Scaling Observability - Dynatrace Operator
+    speaker: Christoph Müllner
+    file: "/slides/2023-09/Scaling Observability - Dynatrace Operator.pdf"
+    image: https://media.licdn.com/dms/image/v2/C4E03AQGG0DupxggIkQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1625521433577?e=1757548800&v=beta&t=7gbxeHWaBbsyvCl9O7QN3JDvti3Io0xe6Z2qowucoUM
+  - title: Migration of on-prem payment systems to a Cloud Native Environments
+    speaker: Markus Adelsberger & Georg Mayrhauser
+    image: https://media.licdn.com/dms/image/v2/C4E03AQHKADs1R6XXuw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653720929705?e=1757548800&v=beta&t=vzgx8X9dsz8AztA1wzVPkKW8yPKhK_XzWmyvGHqdR9Q
+  slug: migration-to-cloud-native-the-power-of-operators
 - id: 26
-  title: "Testing K8s Operators & OpenTelemetry for Logs"
-  date: "2023-10-18"
-  host: "eww IT and TEL"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/"
-  registrations: ""
-  participants: "27"
-  talks: 
-    - title: "Test and evolve your Kubernetes Operators"
-      speaker: "Riccardo Capraro"
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQHzFT7BHKzpEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694073153386?e=1757548800&v=beta&t=LcH6ELZmdeFtnenJZrgBd-kdsfLLYK8Ok7fK4Bw0YzM"
-    - title: "OpenTelemetry for Logging"
-      speaker: "Philipp Krenn"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQGjEcUTWv9uaw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517750712975?e=1757548800&v=beta&t=hY5hdmDFAdyrB1andaBGgNKd0IXHdD2KvdwL6fAmZ_c"
-
-
+  title: Testing K8s Operators & OpenTelemetry for Logs
+  date: '2023-10-18'
+  host: eww IT and TEL
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/
+  registrations: ''
+  participants: '27'
+  talks:
+  - title: Test and evolve your Kubernetes Operators
+    speaker: Riccardo Capraro
+    image: https://media.licdn.com/dms/image/v2/D4E03AQHzFT7BHKzpEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694073153386?e=1757548800&v=beta&t=LcH6ELZmdeFtnenJZrgBd-kdsfLLYK8Ok7fK4Bw0YzM
+  - title: OpenTelemetry for Logging
+    speaker: Philipp Krenn
+    image: https://media.licdn.com/dms/image/v2/C4E03AQGjEcUTWv9uaw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517750712975?e=1757548800&v=beta&t=hY5hdmDFAdyrB1andaBGgNKd0IXHdD2KvdwL6fAmZ_c
+  slug: testing-k8s-operators-opentelemetry-for-logs
 - id: 27
-  title: "GitOps and Testing Cloud Environments"
-  date: "2023-11-21"
-  host: "MIC"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/"
-  registrations: ""
-  participants: "41"
+  title: GitOps and Testing Cloud Environments
+  date: '2023-11-21'
+  host: MIC
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/
+  registrations: ''
+  participants: '41'
   talks:
-    - title: "Automating Legacy System Management with GitOps: A Journey from On-Premises to Kubernetes"
-      speaker: "Michael Skledar"
-      image: "https://media.licdn.com/dms/image/v2/C5603AQHJsmTkCkggww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1526027101800?e=1757548800&v=beta&t=lCaN39srLvMfXL5d7wpY644egJzfYJ3kkZreddQmTPI"
-    - title: "Taming and Testing the Cloud Environment from localhost to cncf.io"
-      speaker: "Anca Ghenade"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQEMMorJPCi6-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650608875496?e=1757548800&v=beta&t=TbqL9os7e3gjdTk96U8l-EzcuhqME_ddCkBm0EfNxwg"
-
+  - title: 'Automating Legacy System Management with GitOps: A Journey from On-Premises
+      to Kubernetes'
+    speaker: Michael Skledar
+    image: https://media.licdn.com/dms/image/v2/C5603AQHJsmTkCkggww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1526027101800?e=1757548800&v=beta&t=lCaN39srLvMfXL5d7wpY644egJzfYJ3kkZreddQmTPI
+  - title: Taming and Testing the Cloud Environment from localhost to cncf.io
+    speaker: Anca Ghenade
+    image: https://media.licdn.com/dms/image/v2/C4E03AQEMMorJPCi6-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1650608875496?e=1757548800&v=beta&t=TbqL9os7e3gjdTk96U8l-EzcuhqME_ddCkBm0EfNxwg
+  slug: gitops-and-testing-cloud-environments
 - id: 28
-  title: "Cloud Adventure and Cloud Native Sustainability"
-  date: "2024-01-24"
-  host: "karriere.at"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/"
-  registrations: ""
-  participants: "31"
+  title: Cloud Adventure and Cloud Native Sustainability
+  date: '2024-01-24'
+  host: karriere.at
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/
+  registrations: ''
+  participants: '31'
   talks:
-    - title: "Cloud Adventure"
-      speaker: "Georg Buchgeher"
-      file: "/slides/2024-01/Cloud-Native-Meetup-Slides-karriereat.pdf"
-    - title: "Green Software"
-      speaker: "Erik Auer"
-      file: "/slides/2024-01/green-software-whizus.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C5603AQH_hqHPLexhEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516964341240?e=1757548800&v=beta&t=gJjfBLfUc_Ud_jdhri3Utpb1s2K4LiuOl5jwtcfMlbA"
-
+  - title: Cloud Adventure
+    speaker: Georg Buchgeher
+    file: "/slides/2024-01/Cloud-Native-Meetup-Slides-karriereat.pdf"
+  - title: Green Software
+    speaker: Erik Auer
+    file: "/slides/2024-01/green-software-whizus.pdf"
+    image: https://media.licdn.com/dms/image/v2/C5603AQH_hqHPLexhEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516964341240?e=1757548800&v=beta&t=gJjfBLfUc_Ud_jdhri3Utpb1s2K4LiuOl5jwtcfMlbA
+  slug: cloud-adventure-and-cloud-native-sustainability
 - id: 29
-  title: "Access Control and Platforms with Devs in Mind"
-  date: "2024-02-27"
-  host: "Gepardec"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/"
-  registrations: ""
-  participants: "39"
-  talks: 
-    - title: "Pathways, Not Pitfalls: Building Platforms With Developers in Mind"
-      speaker: "Katharina Sick"
-      recording: "https://www.youtube.com/watch?v=-naCMU4-jG4"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA"
-    - title: "An Open-Source approach to Multi-tenant Label-based Access control"
-      speaker: "Constantin Winkler"
-      recording: "https://www.youtube.com/watch?v=4yNZTnj-71I"
-      image: ""
-
+  title: Access Control and Platforms with Devs in Mind
+  date: '2024-02-27'
+  host: Gepardec
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/
+  registrations: ''
+  participants: '39'
+  talks:
+  - title: 'Pathways, Not Pitfalls: Building Platforms With Developers in Mind'
+    speaker: Katharina Sick
+    recording: https://www.youtube.com/watch?v=-naCMU4-jG4
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1694361905742?e=1757548800&v=beta&t=W7hKRUYxXX_deDVIzSXhpOE11EBaZT79HKdM-c0vROA
+  - title: An Open-Source approach to Multi-tenant Label-based Access control
+    speaker: Constantin Winkler
+    recording: https://www.youtube.com/watch?v=4yNZTnj-71I
+    image: ''
+  slug: access-control-and-platforms-with-devs-in-mind
 - id: 30
-  title: "K8s Journey and a Multi-Layer K8s Security System"
-  date: "2024-03-26"
-  host: "Runtastic"
-  event_link: "https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/"
-  registrations: ""
-  participants: "40"
+  title: K8s Journey and a Multi-Layer K8s Security System
+  date: '2024-03-26'
+  host: Runtastic
+  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/
+  registrations: ''
+  participants: '40'
   talks:
-    - title: "A Tale of ROSEs and Containers: Our Kubernetes Journey"
-      speaker: "Alexander Lackner & Armin Deliomini"
-      file: "/slides/2024-03/Kubernetes Story.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8"
-    - title: "Implementing a Multi-Layer Kubernetes Security System with SUSE NeuVector"
-      speaker: "Daniel Drack"
-      recording: "https://www.youtube.com/watch?v=NaXmLnZ7R0U"
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQEts5sU_EKoPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667970204734?e=1757548800&v=beta&t=FRQxEvjMkaHyaksTlSvGQ-ZvA0jzHX0tQGT-rOFn_xk"
-
+  - title: 'A Tale of ROSEs and Containers: Our Kubernetes Journey'
+    speaker: Alexander Lackner & Armin Deliomini
+    file: "/slides/2024-03/Kubernetes Story.pdf"
+    image: https://media.licdn.com/dms/image/v2/D5603AQEjO9fcSuOd6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1727948940310?e=1757548800&v=beta&t=ejcjs4epdmQuk14MAtPyB4lKRCZAaTOE0skaa2LWbO8
+  - title: Implementing a Multi-Layer Kubernetes Security System with SUSE NeuVector
+    speaker: Daniel Drack
+    recording: https://www.youtube.com/watch?v=NaXmLnZ7R0U
+    image: https://media.licdn.com/dms/image/v2/C4D03AQEts5sU_EKoPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667970204734?e=1757548800&v=beta&t=FRQxEvjMkaHyaksTlSvGQ-ZvA0jzHX0tQGT-rOFn_xk
+  slug: k8s-journey-and-a-multi-layer-k8s-security-system
 - id: 31
-  title: "Secure K8s Deployment and API Management in Azure"
-  date: "2024-04-23"
-  host: "Public Cloud Group"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/298076702/"
-  registrations: ""
-  participants: "22"
+  title: Secure K8s Deployment and API Management in Azure
+  date: '2024-04-23'
+  host: Public Cloud Group
+  event_link: https://www.meetup.com/cloud-native-linz/events/298076702/
+  registrations: ''
+  participants: '22'
   talks:
-    - title: "How to securely deploy Kubernetes on Azure"
-      speaker: "Marcel Tober & Andreas Wimmersberger"
-      file: "/slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
-    - title: "Transforming diverse system landscapes into sustainable API products with Azure API Management"
-      speaker: "Tobias Berei"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQH2JLH9TbCMlg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729413915506?e=1757548800&v=beta&t=uZbSAqlNYumkdCmuo60bviMWag0bmzCqWq1R_bpazOs"
-  
+  - title: How to securely deploy Kubernetes on Azure
+    speaker: Marcel Tober & Andreas Wimmersberger
+    file: "/slides/2024-04/PCG_AT_Talk_CNCF_Secure_AKS.pdf"
+  - title: Transforming diverse system landscapes into sustainable API products with
+      Azure API Management
+    speaker: Tobias Berei
+    image: https://media.licdn.com/dms/image/v2/D4D03AQH2JLH9TbCMlg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729413915506?e=1757548800&v=beta&t=uZbSAqlNYumkdCmuo60bviMWag0bmzCqWq1R_bpazOs
+  slug: secure-k8s-deployment-and-api-management-in-azure
 - id: 32
-  title: "Inspecting Running Containers & Observability on the Edge"
-  date: "2024-06-25"
-  host: "Cloudflight"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/300982876/"
-  registrations: ""
-  participants: "22"
+  title: Inspecting Running Containers & Observability on the Edge
+  date: '2024-06-25'
+  host: Cloudflight
+  event_link: https://www.meetup.com/cloud-native-linz/events/300982876/
+  registrations: ''
+  participants: '22'
   talks:
-    - title: "Inspecting running containers"
-      speaker: "Martin Strigl"
-      file: "/slides/2024-06/Inspecting and Manipulating Running Containers.pdf"
-      image: ""
-    - title: "Observability at the Edge: Envoy Distributed Tracing with OpenTelemetry"
-      speaker: "João Grassi"
-      file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHozYRZ9aNLcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698585581568?e=1757548800&v=beta&t=XMlIfQcM91pm-g8hXSJpPKW40STpexWBXjPFX6qCbIM"
-
+  - title: Inspecting running containers
+    speaker: Martin Strigl
+    file: "/slides/2024-06/Inspecting and Manipulating Running Containers.pdf"
+    image: ''
+  - title: 'Observability at the Edge: Envoy Distributed Tracing with OpenTelemetry'
+    speaker: João Grassi
+    file: "/slides/2024-06/envoy-distributed-tracing-with-opentelemetry.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHozYRZ9aNLcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698585581568?e=1757548800&v=beta&t=XMlIfQcM91pm-g8hXSJpPKW40STpexWBXjPFX6qCbIM
+  slug: inspecting-running-containers-observability-on-the-edge
 - id: 33
-  title: "OpenTelemetry Errors"
-  date: "2024-09-18"
-  host: "online"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/302570761/"
-  registrations: ""
-  participants: "22 (remote only)"      
+  title: OpenTelemetry Errors
+  date: '2024-09-18'
+  host: online
+  event_link: https://www.meetup.com/cloud-native-linz/events/302570761/
+  registrations: ''
+  participants: 22 (remote only)
   talks:
-    - title: "Dude, Where's My Error? How OTel Records Errors, and Why it Does Like That"
-      speaker: "Adriana Villela & Reese Lee"
-      file: "/slides/2024-09/Dude, Where's My Error__ How OTel Records Errors.pdf"
-      recording: "https://www.youtube.com/watch?v=nl7BaeAcv3g"
-
+  - title: Dude, Where's My Error? How OTel Records Errors, and Why it Does Like That
+    speaker: Adriana Villela & Reese Lee
+    file: "/slides/2024-09/Dude, Where's My Error__ How OTel Records Errors.pdf"
+    recording: https://www.youtube.com/watch?v=nl7BaeAcv3g
+  slug: opentelemetry-errors
 - id: 34
   title: "Beyond k8s and OpenSource Metrics"
-  date: "2024-10-21"
-  host: "Dynatrace"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/303406885/"
-  registrations: ""
-  participants: "27"
+  slug: "beyond-k8s-and-opensource-metrics"
+  redirect_from:
+    - "/events/meetup/34-cloud-native-computing-linz-meetup"
+  date: '2024-10-21'
+  host: Dynatrace
+  event_link: https://www.meetup.com/cloud-native-linz/events/303406885/
+  registrations: ''
+  participants: '27'
   talks:
-    - title: "Open-Source Metrics Primer"
-      speaker: "Georg Pirklbauer"
-      image: "https://media.licdn.com/dms/image/v2/C5603AQFVFZZsH4zC5w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597943810151?e=1757548800&v=beta&t=LWMleTjnNX579zF3IuXVgSHIAkglvOtTF_-lq61xm5Y"
-      file: "/slides/2024-10/OpenTelemetryMetricsPrimer-2024-10.pdf"
-    - title: "Beyond Kubernetes: Integrating Backstage for a Seamless Developer Experience"
-      speaker: "Philipp Bergsmann"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHYMjqvEas0Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709294832581?e=1757548800&v=beta&t=uwJuP4TgLID9S6KN9w5mBV7K7K1C6TQfAxV6VW6IH7A"
-
+  - title: Open-Source Metrics Primer
+    speaker: Georg Pirklbauer
+    image: https://media.licdn.com/dms/image/v2/C5603AQFVFZZsH4zC5w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1597943810151?e=1757548800&v=beta&t=LWMleTjnNX579zF3IuXVgSHIAkglvOtTF_-lq61xm5Y
+    file: "/slides/2024-10/OpenTelemetryMetricsPrimer-2024-10.pdf"
+  - title: 'Beyond Kubernetes: Integrating Backstage for a Seamless Developer Experience'
+    speaker: Philipp Bergsmann
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHYMjqvEas0Sw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1709294832581?e=1757548800&v=beta&t=uwJuP4TgLID9S6KN9w5mBV7K7K1C6TQfAxV6VW6IH7A
 - id: 35
-  title: "Cloud-Native Harmony & Backstage Techdocs"
-  date: "2024-11-19"
-  host: "cloudxcelerate"
-  event_link: "https://www.meetup.com/cloud-native-computing-linz/events/302568919/"
-  registrations: ""
-  participants: "22"
-  talks: 
-    - title: "From IT Ops to Cloud-Native Harmony"
-      speaker: "Alexander Höllwart & Michael “Obi” Obernberger"
-      file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
-    - title: "Backstage Techdocs"
-      speaker: "Sebastian Poxhofer"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQE2FWya7vofzg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683062908079?e=1757548800&v=beta&t=OgNXNOPDa7eNS6CGoofHGykjZcWcH8M3HpUSe1stEKk"
-
-
+  title: Cloud-Native Harmony & Backstage Techdocs
+  date: '2024-11-19'
+  host: cloudxcelerate
+  event_link: https://www.meetup.com/cloud-native-computing-linz/events/302568919/
+  registrations: ''
+  participants: '22'
+  talks:
+  - title: From IT Ops to Cloud-Native Harmony
+    speaker: Alexander Höllwart & Michael “Obi” Obernberger
+    file: "/slides/2024-11/ITOpsToCloudNativeHarmony_19112024.pdf"
+  - title: Backstage Techdocs
+    speaker: Sebastian Poxhofer
+    image: https://media.licdn.com/dms/image/v2/D4D03AQE2FWya7vofzg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1683062908079?e=1757548800&v=beta&t=OgNXNOPDa7eNS6CGoofHGykjZcWcH8M3HpUSe1stEKk
+  slug: cloud-native-harmony-backstage-techdocs
 - id: 36
-  title: "Containerized Builds & Beesting"
-  date: "2025-01-15"
-  host: "Public Cloud Group"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/304003701/"
-  registrations: ""
-  participants: "33"
+  title: Containerized Builds & Beesting
+  date: '2025-01-15'
+  host: Public Cloud Group
+  event_link: https://www.meetup.com/cloud-native-linz/events/304003701/
+  registrations: ''
+  participants: '33'
   talks:
-    - title: "A closer look at Docker BuildKit and Buildx"
-      speaker: "Sophia Zehethofer"
-      file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
-      image: "/assets/speaker-images/36-1.jpeg"
-    - title: "Beesting Can't touch this"
-      speaker: "Patrick Pichler"
-      file: "/slides/2025-01/beesting_cant_touch_this.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQEcINA76a_SGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1682435586877?e=1757548800&v=beta&t=nRbYymlr0ZXDlkU4FHyl41-ooqabKf9T9IzIHhuLfpk"
-    
-
+  - title: A closer look at Docker BuildKit and Buildx
+    speaker: Sophia Zehethofer
+    file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
+    image: "/assets/speaker-images/36-1.jpeg"
+  - title: Beesting Can't touch this
+    speaker: Patrick Pichler
+    file: "/slides/2025-01/beesting_cant_touch_this.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D03AQEcINA76a_SGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1682435586877?e=1757548800&v=beta&t=nRbYymlr0ZXDlkU4FHyl41-ooqabKf9T9IzIHhuLfpk
+  slug: containerized-builds-beesting
 - id: 37
-  title: "Auto-updates in the CI/CD and Zero Trust Systems"
-  date: "2025-02-25"
-  host: "Gepardec"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/304124258/"
-  registrations: ""
-  participants: "34"
+  title: Auto-updates in the CI/CD and Zero Trust Systems
+  date: '2025-02-25'
+  host: Gepardec
+  event_link: https://www.meetup.com/cloud-native-linz/events/304124258/
+  registrations: ''
+  participants: '34'
   talks:
-    - title: "Designing Zero Trust Systems"
-      speaker: "Damjan Gjurovski"
-      file: "/slides/2025-02/Designing_Zero_Trust_Systems.pdf"
-      recording: "https://www.youtube.com/watch?v=YV5U2mcohTk"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQGAioB727TYTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720607141320?e=1757548800&v=beta&t=mkqDA3x-FEiFosQwmatSWN-iyttj8NrYtck-swmZo-I"
-    - title: "Auto-Updates of microservices in your CI/CD pipeline"
-      speaker: "Christoph Ruhsam"
-      recording: "https://www.youtube.com/watch?v=1mlVzss8bHE"
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQHpwAiFUsCptA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637830069531?e=1757548800&v=beta&t=ZM33Mzttw_GKzZ2-WUchTqRXZ7B_smWOlDW4DvSc8Tk"
-
-
+  - title: Designing Zero Trust Systems
+    speaker: Damjan Gjurovski
+    file: "/slides/2025-02/Designing_Zero_Trust_Systems.pdf"
+    recording: https://www.youtube.com/watch?v=YV5U2mcohTk
+    image: https://media.licdn.com/dms/image/v2/D4D03AQGAioB727TYTw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720607141320?e=1757548800&v=beta&t=mkqDA3x-FEiFosQwmatSWN-iyttj8NrYtck-swmZo-I
+  - title: Auto-Updates of microservices in your CI/CD pipeline
+    speaker: Christoph Ruhsam
+    recording: https://www.youtube.com/watch?v=1mlVzss8bHE
+    image: https://media.licdn.com/dms/image/v2/C4E03AQHpwAiFUsCptA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1637830069531?e=1757548800&v=beta&t=ZM33Mzttw_GKzZ2-WUchTqRXZ7B_smWOlDW4DvSc8Tk
+  slug: auto-updates-in-the-cicd-and-zero-trust-systems
 - id: 38
-  title: "Laravel in K8s and Shell Scripting"
-  date: "2025-03-18"
-  host: "karriere.at"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/306377483/"
-  registrations: ""
-  participants: "29"
+  title: Laravel in K8s and Shell Scripting
+  date: '2025-03-18'
+  host: karriere.at
+  event_link: https://www.meetup.com/cloud-native-linz/events/306377483/
+  registrations: ''
+  participants: '29'
   talks:
-    - title: "Laravel in Kubernetes"
-      speaker: "Sebastian Huber"
-      file: "/slides/2025-03/laravel_in_k8s_huber.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQFma2Vj7iIBcQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617619935313?e=1757548800&v=beta&t=rEPh27fxxHqyYVXdom_KsiSTRi8ulXhNF388qoXI5NQ"
-    - title: "You Suck at Shell Scripting"
-      speaker: "Florian Arthofer"
-      file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
-
+  - title: Laravel in Kubernetes
+    speaker: Sebastian Huber
+    file: "/slides/2025-03/laravel_in_k8s_huber.pdf"
+    image: https://media.licdn.com/dms/image/v2/C4D03AQFma2Vj7iIBcQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1617619935313?e=1757548800&v=beta&t=rEPh27fxxHqyYVXdom_KsiSTRi8ulXhNF388qoXI5NQ
+  - title: You Suck at Shell Scripting
+    speaker: Florian Arthofer
+    file: "/slides/2025-03/You_Suck_at_Shell_Scripting.pdf"
+  slug: laravel-in-k8s-and-shell-scripting
 - id: 39
-  title: "Zero-Downtime Experiences & Event-Driven Microservices at scale"
-  date: "2025-04-29"
-  host: "Tractive"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/307219291/"
-  registrations: ""
-  participants: "31"
+  title: Zero-Downtime Experiences & Event-Driven Microservices at scale
+  date: '2025-04-29'
+  host: Tractive
+  event_link: https://www.meetup.com/cloud-native-linz/events/307219291/
+  registrations: ''
+  participants: '31'
   talks:
-    - title: "Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless Services"
-      speaker: "Jan Wiesbauer"
-      image: "https://media.licdn.com/dms/image/v2/D5603AQHsT_lwTZ_X-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1670424759043?e=1757548800&v=beta&t=tm62IgaB4zcTlmEfdH0tXLb_Hckpi-I1aW9pyorVm_o"
-      file: "/slides/2025-04/Deploy Without Disruption - Crafting Zero-Downtime Experiences with Stateless Services.pdf"
-    - title: "Building Event-Driven Microservices at scale with Azure Cosmos DB"
-      speaker: "Shahab Ganji"
-      file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQH02VpNw2ikow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711545555699?e=1757548800&v=beta&t=LDg7Bu7-SdsSJkaYUDiTLrw33ddzndeOsHfHFnU5Vqg"
-
+  - title: 'Deploy Without Disruption: Crafting Zero-Downtime Experiences with Stateless
+      Services'
+    speaker: Jan Wiesbauer
+    image: https://media.licdn.com/dms/image/v2/D5603AQHsT_lwTZ_X-w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1670424759043?e=1757548800&v=beta&t=tm62IgaB4zcTlmEfdH0tXLb_Hckpi-I1aW9pyorVm_o
+    file: "/slides/2025-04/Deploy Without Disruption - Crafting Zero-Downtime Experiences
+      with Stateless Services.pdf"
+  - title: Building Event-Driven Microservices at scale with Azure Cosmos DB
+    speaker: Shahab Ganji
+    file: "/slides/2025-04/Azure_Cosmos_DB_SHA.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D03AQH02VpNw2ikow/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711545555699?e=1757548800&v=beta&t=LDg7Bu7-SdsSJkaYUDiTLrw33ddzndeOsHfHFnU5Vqg
+  slug: zero-downtime-experiences-event-driven-microservices-at-scale
 - id: 40
-  title: "TalosOS and CloudEvents"
-  date: "2025-05-20"
-  host: "Cloudflight"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/307676898/"
-  registrations: ""
-  participants: "27"
+  title: TalosOS and CloudEvents
+  date: '2025-05-20'
+  host: Cloudflight
+  event_link: https://www.meetup.com/cloud-native-linz/events/307676898/
+  registrations: ''
+  participants: '27'
   talks:
-    - title: "TalosOS: The OS Kubernetes Deserves"
-      speaker: "Siegfried Stumpfer"
-      file: "/slides/2025-05/TalosOS.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHhF89AJkaVoA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692985359380?e=1757548800&v=beta&t=oVOAte8mfnN_i1BrV_47AW0F05Z3LleDHAOuF2ny-ro"
-    - title: "CloudEvents: A Standard for Event-Driven Architectures"  
-      speaker: "Christian Schabetsberger"
-      file: "/slides/2025-05/CloudEvents.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C5603AQFmJHv-wc6rww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1551188718654?e=1757548800&v=beta&t=gmHSl-QbRKVTDL3qCn9DQVFhn3FKSHh2b04Tt-mog2A"
-
-
+  - title: 'TalosOS: The OS Kubernetes Deserves'
+    speaker: Siegfried Stumpfer
+    file: "/slides/2025-05/TalosOS.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHhF89AJkaVoA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692985359380?e=1757548800&v=beta&t=oVOAte8mfnN_i1BrV_47AW0F05Z3LleDHAOuF2ny-ro
+  - title: 'CloudEvents: A Standard for Event-Driven Architectures'
+    speaker: Christian Schabetsberger
+    file: "/slides/2025-05/CloudEvents.pdf"
+    image: https://media.licdn.com/dms/image/v2/C5603AQFmJHv-wc6rww/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1551188718654?e=1757548800&v=beta&t=gmHSl-QbRKVTDL3qCn9DQVFhn3FKSHh2b04Tt-mog2A
+  slug: talosos-and-cloudevents
 - id: 41
-  title: "OpenRewrite & Adversary Emulation for k8s"
-  date: "2025-07-01"
-  host: "Gepardec"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/307975704/"
-  registrations: ""
-  participants: "17"
+  title: OpenRewrite & Adversary Emulation for k8s
+  date: '2025-07-01'
+  host: Gepardec
+  event_link: https://www.meetup.com/cloud-native-linz/events/307975704/
+  registrations: ''
+  participants: '17'
   talks:
-    - title: "OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights"
-      speaker: "Simon Gartner"
-      file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQFLarBafQv63A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687567134073?e=1757548800&v=beta&t=X0jnYeGJQgk40wOkA9gKl4C7MVRpeiv3fRG26MX29G0"
-    - title: "Adversary Emulation for Kubernetes Environments"
-      speaker: "Markus Gierlinger"
-      recording: "https://www.youtube.com/watch?v=Bs9ndXt7DZY"
-      file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
-      image: "https://media.licdn.com/dms/image/v2/C4D03AQEAzyUotk44Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611606832681?e=1757548800&v=beta&t=RAMEEcvpeyoP4n4g19GEIzzOlXHCWvl9YJnqTmL1S2c"
-      social: "https://www.linkedin.com/in/markus-gierlinger/"
-
+  - title: 'OpenRewrite in a Nutshell: Scaling Upgrades with Practical Insights'
+    speaker: Simon Gartner
+    file: "/slides/2025-07/OpenRewriteInANutshell30min.pdf"
+    image: https://media.licdn.com/dms/image/v2/D4E03AQFLarBafQv63A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687567134073?e=1757548800&v=beta&t=X0jnYeGJQgk40wOkA9gKl4C7MVRpeiv3fRG26MX29G0
+  - title: Adversary Emulation for Kubernetes Environments
+    speaker: Markus Gierlinger
+    recording: https://www.youtube.com/watch?v=Bs9ndXt7DZY
+    file: "/slides/2025-07/K8s_Adversary_Emulation.pdf"
+    image: https://media.licdn.com/dms/image/v2/C4D03AQEAzyUotk44Ug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611606832681?e=1757548800&v=beta&t=RAMEEcvpeyoP4n4g19GEIzzOlXHCWvl9YJnqTmL1S2c
+    social: https://www.linkedin.com/in/markus-gierlinger/
+  slug: openrewrite-adversary-emulation-for-k8s
 - id: 42
-  title: "cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz"
-  date: "2025-09-24"
-  host: "G+D Netcetera"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/310732711/"
-  registrations: ""
-  participants: "27"
+  title: cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud Native Linz
+  date: '2025-09-24'
+  host: G+D Netcetera
+  event_link: https://www.meetup.com/cloud-native-linz/events/310732711/
+  registrations: ''
+  participants: '27'
   talks:
-    - title: "Secrets management - from plaintext to hiding keys in the Swiss Alps"
-      speaker: "Georg Mayrhauser"
-      image: "/assets/speaker-images/gmh.jpeg"
-    - title: "Open Mic - Share your Cloud Native Journey"
-      speaker: "the community"
-
+  - title: Secrets management - from plaintext to hiding keys in the Swiss Alps
+    speaker: Georg Mayrhauser
+    image: "/assets/speaker-images/gmh.jpeg"
+  - title: Open Mic - Share your Cloud Native Journey
+    speaker: the community
+  slug: ctencf-party-celebrating-10-years-of-cncf-and-5-years-of-cloud-native-linz
 - id: 43
-  title: "October 2025 edition at .LOUPE"
-  date: "2025-10-28"
+  title: October 2025 edition at .LOUPE
+  date: '2025-10-28'
   host: ".LOUPE"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/310733201/"
-  registrations: ""
-  participants: "25"
+  event_link: https://www.meetup.com/cloud-native-linz/events/310733201/
+  registrations: ''
+  participants: '25'
   talks:
-    - title: "Is the Lambdalith the sweet spot in modern Cloud architecture?"
-      speaker: "Matthias Steinbauer"
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQGeyJ7GQgLw4g/profile-displayphoto-shrink_800_800/B4DZd56zluGYAg-/0/1750097148964?e=1761782400&v=beta&t=gDx4QPjXIjbKPF6mmrklPOzS0k7jF66Df8mcblDOYW0"
-      social: "https://www.linkedin.com/in/matthias-steinbauer/"
-    - title: "Catch Hackers with Koney: Automated Honeytokens for Cloud-Native Apps"
-      speaker: "Mario Kahlhofer"
-      image: "https://media.licdn.com/dms/image/v2/C5603AQGT3eD-ton2VA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584629003058?e=1759968000&v=beta&t=gtvpeaT0vuf3AU1rE3W7EnEU1VzbP9mZTM6ysakFdjQ"
-      social: "https://www.linkedin.com/in/mario-kahlhofer/"
-      file: "/slides/2025-10/2025-10-07 CNDA 2025 - Catch Hackers with Koney.pdf"
-
-
+  - title: Is the Lambdalith the sweet spot in modern Cloud architecture?
+    speaker: Matthias Steinbauer
+    image: https://media.licdn.com/dms/image/v2/D4D03AQGeyJ7GQgLw4g/profile-displayphoto-shrink_800_800/B4DZd56zluGYAg-/0/1750097148964?e=1761782400&v=beta&t=gDx4QPjXIjbKPF6mmrklPOzS0k7jF66Df8mcblDOYW0
+    social: https://www.linkedin.com/in/matthias-steinbauer/
+  - title: 'Catch Hackers with Koney: Automated Honeytokens for Cloud-Native Apps'
+    speaker: Mario Kahlhofer
+    image: https://media.licdn.com/dms/image/v2/C5603AQGT3eD-ton2VA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1584629003058?e=1759968000&v=beta&t=gtvpeaT0vuf3AU1rE3W7EnEU1VzbP9mZTM6ysakFdjQ
+    social: https://www.linkedin.com/in/mario-kahlhofer/
+    file: "/slides/2025-10/2025-10-07 CNDA 2025 - Catch Hackers with Koney.pdf"
+  slug: october-2025-edition-at-loupe
 - id: 44
-  title: "November 2025 edition at MIC"
-  date: "2025-11-25"
-  host: "MIC"
-  event_link: "https://www.meetup.com/cloud-native-linz/events/310733593/"
-  registrations: ""
-  participants: ""
+  title: Cloud Bills and the Bazzar
+  date: '2025-11-25'
+  host: MIC
+  event_link: https://www.meetup.com/cloud-native-linz/events/310733593/
+  registrations: ''
+  participants: ''
   talks:
-    - title: "Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline" # with ClickHouse & Python
-      speaker: "Clemens Kriechbaumer & Heinz Mayer"
-      image: ""
-    - title: "The Kubernetes and the Bazzar"
-      speaker: "Hubert Ströbitzer"
-      image: "https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg"
-      social: "https://www.linkedin.com/in/stroebitzer/"
-
-
+  - title: 'Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline'
+    speaker: Clemens Kriechbaumer & Heinz Mayer
+    image: ''
+  - title: The Kubernetes and the Bazzar
+    speaker: Hubert Ströbitzer
+    image: https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg
+    social: https://www.linkedin.com/in/stroebitzer/
+  slug: cloud-bills-and-the-bazzar1
+  redirect_from:
+    - "/events/meetup/november-2025-edition-at-mic/"
+    - "/events/meetup/cloud-bills-and-the-bazzar/"
