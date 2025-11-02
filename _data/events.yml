@@ -721,9 +721,9 @@
   registrations: ''
   participants: ''
   talks:
-  - title: 'Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline'
+  - title: 'Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline' # with ClickHouse & Python
     speaker: Clemens Kriechbaumer & Heinz Mayer
-    image: ''
+    image: "/assets/speaker-images/44-1.png"
   - title: The Kubernetes and the Bazzar
     speaker: Hubert Ströbitzer
     image: https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg
@@ -731,4 +731,5 @@
   slug: cloud-bills-and-the-bazzar
   redirect_from:
     - "/events/meetup/november-2025-edition-at-mic/"
+
 
