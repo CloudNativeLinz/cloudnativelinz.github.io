@@ -7,4 +7,4 @@ gem "jekyll-feed" # Create an Atom feed using the official Jekyll feed gem
 gem "jekyll-seo-tag"
 gem "jekyll-redirect-from" # https://stackoverflow.com/questions/31166747/jekyll-default-page
 gem "jekyll-datapage-generator"
-gem "sass-embedded", ">= 1.68", "< 2.0"
+gem "sass-embedded", "~>  1.93.2" # For Jekyll to process SCSS files
