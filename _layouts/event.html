@@ -243,9 +243,9 @@ layout: default
     <div class="event-detail-overlay">
       <div class="event-detail-date">
         {% if event_date == today %}
-          🔥 TODAY - {{ page.date | date: "%B %d, %Y" }}
+          🔥 TODAY - {{ page.date | date: "%B %d, %Y" }} - doors open at {{ page.doors_open }}
         {% else %}
-          📅 {{ page.date | date: "%B %d, %Y" }}
+          📅 {{ page.date | date: "%B %d, %Y" }} - doors open at {{ page.doors_open }}
         {% endif %}
       </div>
       {% if page.host and page.host != "" %}
@@ -278,13 +278,25 @@ layout: default
         <span class="meta-badge success">👥 {{ page.participants }} Participants</span>
       {% endif %}
         <span class="meta-badge">📅 {{ page.date | date: "%a, %B %d, %Y" }}</span>
+        {% if page.doors_open and page.doors_open != "" %}
+        <span class="meta-badge">🕒 Doors open at {{ page.doors_open }}</span>
+        {% endif %}
         <span class="meta-badge">📍 Hosted by {{ page.host }}</span>
     </div>
 
+    {% if page.address and page.address != "" %}
+      <p>
+      📌 <strong>Address:</strong>
+      <a href="https://www.google.com/maps/search/?api=1&query={{ page.address | uri_escape }}" target="_blank" rel="noopener">
+        {{ page.address }}
+      </a>
+      </p>
+    {% endif %}
+
+
+
     {% if page.talks %}
       <div class="talks-section">
-        <h2>{% if event_date >= today %}🎯 Upcoming Talks{% else %}📚 Event Talks{% endif %}</h2>
-        
         <div class="talks-grid">
           {% for talk in page.talks %}
             <div class="talk-card">

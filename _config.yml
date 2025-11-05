@@ -97,7 +97,7 @@ page_gen:
   - data: 'events'
     dir: 'events/meetup'
     template: 'event'
-    name: 'title'
+    name: 'slug'
   
 
 

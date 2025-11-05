@@ -16,7 +16,7 @@ permalink: events/
  {% if event_date < today %}
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
-      <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+      <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
         <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}-550.jpg" 
              alt="{{ event.title }}" 
              loading="lazy"
@@ -39,7 +39,7 @@ permalink: events/
     
     <div class="event-content">
       <h3 class="event-title">
-        <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">{{ event.title }}</a>
+        <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">{{ event.title }}</a>
       </h3>
       
       {% if event.talks %}
@@ -56,12 +56,12 @@ permalink: events/
                   </a>
                 {% endif %}<br>
                 {% if talk.file %}
-                  <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+                  <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
                     📎 Get the slides 
                   </a>
                 {% endif %}
                  {% if talk.recording %}
-                  <a href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">
+                  <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
                     📺 Watch the recording
                   </a>
                 {% endif %}
@@ -86,7 +86,7 @@ permalink: events/
           </span>
         {% endif %}
         
-         <a class="meta-link" href="{{ site.baseurl }}/events/{{ event.title | datapage_url: 'meetup' | remove: '.html' }}">Event details</a>
+         <a class="meta-link" href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">Event details</a>
 
 
         {% if event.event_link %}
