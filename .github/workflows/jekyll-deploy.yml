@@ -37,21 +37,21 @@ jobs:
       - name: Install build dependencies
         run: sudo apt-get update && sudo apt-get install -y build-essential
 
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
+
       - name: Update Bundler
         run: |
           gem install bundler --user-install
           echo "$HOME/.gem/ruby/3.2.0/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
-        run: bundle install 
+        run: bundle install
 
-      - name: Setup Ruby
-        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
-        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
