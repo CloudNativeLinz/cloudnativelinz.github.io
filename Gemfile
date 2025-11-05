@@ -7,8 +7,10 @@ gem "jekyll-feed" # Create an Atom feed using the official Jekyll feed gem
 gem "jekyll-seo-tag"
 gem "jekyll-redirect-from" # https://stackoverflow.com/questions/31166747/jekyll-default-page
 gem "jekyll-datapage-generator"
-gem "sass-embedded", "~> 1.93.2" # For Jekyll to process SCSS files
+
+# Use sassc instead of sass-embedded for better CI compatibility
+gem "sassc", "~> 2.4"
+gem "jekyll-sass-converter", "~> 2.2"
 
 # Platform-specific gems for better compatibility
 gem "ffi", "~> 1.17", platforms: [:mingw, :x64_mingw, :mswin]
-gem "google-protobuf", "~> 4.33", force_ruby_platform: false

@@ -37,30 +37,17 @@ jobs:
       - name: Install build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake pkg-config libprotobuf-dev protobuf-compiler
+          sudo apt-get install -y build-essential libffi-dev
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
-          cache-version: 1
-
-      - name: Clear bundle cache if needed
-        run: |
-          if [ -f .bundle/config ]; then
-            echo "Bundle config exists, clearing cache"
-            bundle clean --force
-          fi
+          cache-version: 2
 
       - name: Install dependencies
-        run: |
-          bundle install --retry 3 || \
-          (echo "Native extensions failed, trying with ruby platform..." && \
-           bundle config set force_ruby_platform true && \
-           bundle install --retry 3)
-        env:
-          BUNDLE_FORCE_RUBY_PLATFORM: false
+        run: bundle install --retry 3
 
       - name: Setup Pages
         id: pages
