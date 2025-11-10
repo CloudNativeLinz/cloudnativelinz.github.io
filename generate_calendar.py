@@ -26,17 +26,29 @@ tz = pytz.timezone(TIMEZONE)
 for ev in data:
     event = Event()
 
-    # Parse date and assume meetup is from 18:00 to 20:00
+    # Parse date
     event_date = datetime.strptime(ev["date"], "%Y-%m-%d")
-    start_dt = tz.localize(event_date.replace(hour=18, minute=0))
-    end_dt = tz.localize(event_date.replace(hour=21, minute=0))
+    
+    # Use doors_open time if available, otherwise default to 18:00 (6pm)
+    if 'doors_open' in ev and ev['doors_open']:
+        # Parse the doors_open time (format: 'HH:MM')
+        time_parts = ev['doors_open'].split(':')
+        start_hour = int(time_parts[0])
+        start_minute = int(time_parts[1])
+    else:
+        start_hour = 18
+        start_minute = 0
+    
+    start_dt = tz.localize(event_date.replace(hour=start_hour, minute=start_minute))
+    # End time is 3 hours after start
+    end_dt = tz.localize(event_date.replace(hour=start_hour + 3, minute=start_minute))
 
     event.add("summary", ev["title"])
     event.add("dtstart", start_dt)
     event.add("dtend", end_dt)
     
-    # Add location information with enhanced mapping
-    location = ev.get('host', 'TBA')
+    # Add location information - prefer address field if available, otherwise use host
+    location = ev.get('address') if 'address' in ev and ev['address'] else ev.get('host', 'TBA')
     if location and location.lower() != 'online':
         event.add("location", location)
     elif location and location.lower() == 'online':

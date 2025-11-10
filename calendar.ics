@@ -1,6 +1,9 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//My GitHub Calendar//EN
+PRODID:-//Cloud Native Linz Calendar//EN
+X-WR-CALDESC:Meetup events for the Cloud Native Linz community
+NAME:Cloud Native Linz Events
+X-WR-CALNAME:Cloud Native Linz Events
 BEGIN:VEVENT
 SUMMARY:1. Cloud Native Computing Linz Meetup
 DTSTART;TZID=Europe/Berlin:20200929T180000
@@ -169,12 +172,12 @@ SUMMARY:15. Cloud Native Computing Linz Meetup
 DTSTART;TZID=Europe/Berlin:20220531T180000
 DTEND;TZID=Europe/Berlin:20220531T210000
 UID:9bf31c7ff062936a96d3c8bd1f8f2ff3@cncflinz.at
-DESCRIPTION:Host: netcetera\nTalks:\n- How deploying feature branches open
- ed the door to more scalability by Markus Adelsberger\n- From Command Line
-  to GitOps - how we transformed our infrastructure by Thomas Einwaller\n\n
- Event link (RSVP): https://www.meetup.com/cloud-native-computing-linz/even
- ts/285775843/
-LOCATION:netcetera
+DESCRIPTION:Host: G+D Netcetera\nTalks:\n- How deploying feature branches 
+ opened the door to more scalability by Markus Adelsberger\n- From Command 
+ Line to GitOps - how we transformed our infrastructure by Thomas Einwaller
+ \n\nEvent link (RSVP): https://www.meetup.com/cloud-native-computing-linz/
+ events/285775843/
+LOCATION:G+D Netcetera
 URL:https://www.meetup.com/cloud-native-computing-linz/events/285775843/
 END:VEVENT
 BEGIN:VEVENT
@@ -306,13 +309,13 @@ SUMMARY:Migration to Cloud Native & The Power of Operators
 DTSTART;TZID=Europe/Berlin:20230919T180000
 DTEND;TZID=Europe/Berlin:20230919T210000
 UID:8e296a067a37563370ded05f5a3bf3ec@cncflinz.at
-DESCRIPTION:Host: netcetera\nTalks:\n- Scaling Observability - Dynatrace O
- perator by Christoph Müllner\n- Migration of on-prem payment systems to a
-  Cloud Native Environments by Markus Adelsberger & Georg Mayrhauser\n\nEve
- nt link (RSVP): https://community.cncf.io/events/details/cncf-linz-present
- s-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-ope
- rators/
-LOCATION:netcetera
+DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Scaling Observability - Dynatra
+ ce Operator by Christoph Müllner\n- Migration of on-prem payment systems 
+ to a Cloud Native Environments by Markus Adelsberger & Georg Mayrhauser\n\
+ nEvent link (RSVP): https://community.cncf.io/events/details/cncf-linz-pre
+ sents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of
+ -operators/
+LOCATION:G+D Netcetera
 URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/
 END:VEVENT
@@ -525,33 +528,46 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud N
  ative Linz
-DTSTART;TZID=Europe/Berlin:20250924T180000
-DTEND;TZID=Europe/Berlin:20250924T210000
+DTSTART;TZID=Europe/Berlin:20250924T173000
+DTEND;TZID=Europe/Berlin:20250924T203000
 UID:a1d0c6e83f027327d8461063f4ac58a6@cncflinz.at
-DESCRIPTION:Host: netcetera\nTalks:\n- Secrets Management - from plaintext
-  to hiding keys in the Swiss Alps by Markus Adelsberger & Georg Mayrhauser
- \n- Open Mic - Share your Cloud Native Journey by the community\n\nEvent l
- ink (RSVP): 
-LOCATION:netcetera
-URL:
+DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Secrets management - from plain
+ text to hiding keys in the Swiss Alps by Georg Mayrhauser\n- Open Mic - Sh
+ are your Cloud Native Journey by the community\n\nEvent link (RSVP): https
+ ://www.meetup.com/cloud-native-linz/events/310732711/
+LOCATION:G+D Netcetera\, Europaplatz 4\, 4020 Linz
+URL:https://www.meetup.com/cloud-native-linz/events/310732711/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:October 2025 edition at .LOUPE
-DTSTART;TZID=Europe/Berlin:20251028T180000
-DTEND;TZID=Europe/Berlin:20251028T210000
+DTSTART;TZID=Europe/Berlin:20251028T173000
+DTEND;TZID=Europe/Berlin:20251028T203000
 UID:17e62166fc8586dfa4d1bc0e1742c08b@cncflinz.at
-DESCRIPTION:Host: .LOUPE\nTalks:\n- Talk title to be announced soon by Mat
- thias Steinbauer\n\nEvent link (RSVP): 
-LOCATION:.LOUPE
-URL:
+DESCRIPTION:Host: .LOUPE\nTalks:\n- Is the Lambdalith the sweet spot in mo
+ dern Cloud architecture? by Matthias Steinbauer\n- Catch Hackers with Kone
+ y: Automated Honeytokens for Cloud-Native Apps by Mario Kahlhofer\n\nEvent
+  link (RSVP): https://www.meetup.com/cloud-native-linz/events/310733201/
+LOCATION:fobi solutions gmbh\, Industriezeile 35\, 4020 Linz
+URL:https://www.meetup.com/cloud-native-linz/events/310733201/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:November 2025 edition at MIC
-DTSTART;TZID=Europe/Berlin:20251125T180000
-DTEND;TZID=Europe/Berlin:20251125T210000
+SUMMARY:Cloud Bills and the Bazzar
+DTSTART;TZID=Europe/Berlin:20251125T173000
+DTEND;TZID=Europe/Berlin:20251125T203000
 UID:f7177163c833dff4b38fc8d2872f1ec6@cncflinz.at
-DESCRIPTION:Host: MIC\n\nEvent link (RSVP): 
-LOCATION:MIC
-URL:
+DESCRIPTION:Host: MIC\nTalks:\n- Hacking the Cloud Bill: Building a Multi-
+ Cloud Cost Pipeline by Clemens Kriechbaumer & Heinz Mayer\n- The Kubernete
+ s and the Bazzar by Hubert Ströbitzer\n\nEvent link (RSVP): https://www.m
+ eetup.com/cloud-native-linz/events/310733593/
+LOCATION:MIC Datenverarbeitung GmbH\, Lederergasse 78\, 4020 Linz
+URL:https://www.meetup.com/cloud-native-linz/events/310733593/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:January 2026 edition hosted by PCG
+DTSTART;TZID=Europe/Berlin:20260127T173000
+DTEND;TZID=Europe/Berlin:20260127T203000
+UID:6c8349cc7260ae62e3b1396831a8398f@cncflinz.at
+DESCRIPTION:Host: PCG - Public Cloud Group\n
+LOCATION:Startrampe\, Peter-Behrens-Platz 10\, 4020 Linz
 END:VEVENT
 END:VCALENDAR
