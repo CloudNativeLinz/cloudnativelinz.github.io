@@ -1101,8 +1101,8 @@ a:hover {
     }
     
     .svg-icon {
-      width: 40px;
-      height: 40px;
+      width: 40px !important;
+      height: 40px !important;
       background-size: 40px 40px;
       background-repeat: no-repeat;
       background-position: center;
@@ -1125,8 +1125,8 @@ a:hover {
       height: 40px;
       
       .svg-icon {
-        width: 20px;
-        height: 20px;
+        width: 20px !important;
+        height: 20px !important;
         background-size: 20px 20px;
       }
     }
@@ -1351,7 +1351,7 @@ ul.custom-options li {
   margin-right: 0.25rem;
 }
 
-/* SVG Icons */
+/* SVG Icons - Default size for inline text icons */
 .svg-icon {
   width: 16px;
   height: 16px;
