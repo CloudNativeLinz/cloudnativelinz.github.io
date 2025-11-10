@@ -1,15 +1,17 @@
 # Makefile for Jekyll commands
 
 # Variables
-JEKYLL_CMD = jekyll serve
+JEKYLL_CMD = bundle exec jekyll serve
 LIVERELOAD_FLAG = --livereload
 FORCE_POLLING_FLAG = --force_polling
 
 # Default target
-all: serve
+all:
+	$(JEKYLL_CMD)
 
 # Helper for Juergen ;)
-run: serve-livereload
+run:
+	 $(MAKE) serve-livereload
 
 # Serve the site
 serve:
@@ -50,5 +52,5 @@ setup-python:
 		echo "Python environment ready!"; \
 	fi
 
-.PHONY: all serve serve-livereload serve-windows calendar setup-python
+.PHONY: all serve serve-livereload serve-windows calendar setup-python run clean install
 
