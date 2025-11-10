@@ -2,7 +2,7 @@
 ---
 
 // Use SVG icons
-@use 'svg-icons';
+@import 'svg-icons';
 
 // Mobile mixin
 @mixin mobile {
@@ -1351,7 +1351,7 @@ ul.custom-options li {
   margin-right: 0.25rem;
 }
 
-/* SVG Icons */
+/* SVG Icons - Default size for inline text icons */
 .svg-icon {
   width: 16px;
   height: 16px;
