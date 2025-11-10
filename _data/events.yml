@@ -734,4 +734,17 @@
   redirect_from:
     - "/events/meetup/november-2025-edition-at-mic/"
 
+- id: 45
+  title: January 2026 edition hosted by PCG
+  date: '2026-01-27'
+  doors_open: '17:30'
+  host: PCG - Public Cloud Group
+  address: Startrampe, Peter-Behrens-Platz 10, 4020 Linz
+  # event_link: 
+  registrations: ''
+  participants: ''
+  talks:
+  slug: january-2026-edition-hosted-by-pcg
+  #redirect_from:
+    #- "/events/meetup/november-2025-edition-at-mic/"
 
