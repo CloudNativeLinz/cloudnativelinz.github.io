@@ -43,7 +43,9 @@ for ev in data:
     # End time is 3 hours after start
     end_dt = tz.localize(event_date.replace(hour=start_hour + 3, minute=start_minute))
 
-    event.add("summary", ev["title"])
+    # Append "CNCF Linz" to the event title
+    event_title = f"{ev['title']} - CNCF Linz"
+    event.add("summary", event_title)
     event.add("dtstart", start_dt)
     event.add("dtend", end_dt)
     

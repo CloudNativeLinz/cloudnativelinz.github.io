@@ -5,7 +5,7 @@ X-WR-CALDESC:Meetup events for the Cloud Native Linz community
 NAME:Cloud Native Linz Events
 X-WR-CALNAME:Cloud Native Linz Events
 BEGIN:VEVENT
-SUMMARY:1. Cloud Native Computing Linz Meetup
+SUMMARY:1. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20200929T180000
 DTEND;TZID=Europe/Berlin:20200929T210000
 UID:c4ca4238a0b923820dcc509a6f75849b@cncflinz.at
@@ -17,7 +17,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/273245544/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:2. Cloud Native Computing Linz Meetup
+SUMMARY:2. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20201027T180000
 DTEND;TZID=Europe/Berlin:20201027T210000
 UID:c81e728d9d4c2f636f067f89cc14862c@cncflinz.at
@@ -29,7 +29,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/273726815/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:3. Cloud Native Computing Linz Meetup
+SUMMARY:3. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20201124T180000
 DTEND;TZID=Europe/Berlin:20201124T210000
 UID:eccbc87e4b5ce2fe28308fd9f2a7baf3@cncflinz.at
@@ -41,7 +41,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/274417589/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:4. Cloud Native Computing Linz Meetup
+SUMMARY:4. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210126T180000
 DTEND;TZID=Europe/Berlin:20210126T210000
 UID:a87ff679a2f3e71d9181a67b7542122c@cncflinz.at
@@ -53,7 +53,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/275600776/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:5. Cloud Native Computing Linz Meetup
+SUMMARY:5. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210223T180000
 DTEND;TZID=Europe/Berlin:20210223T210000
 UID:e4da3b7fbbce2345d7772b0674a318d5@cncflinz.at
@@ -65,7 +65,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/276236712/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:6. Cloud Native Computing Linz Meetup
+SUMMARY:6. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210330T180000
 DTEND;TZID=Europe/Berlin:20210330T210000
 UID:1679091c5a880faf6fb5e6087eb1b2dc@cncflinz.at
@@ -77,7 +77,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/276718585/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:7. Cloud Native Computing Linz Meetup
+SUMMARY:7. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210427T180000
 DTEND;TZID=Europe/Berlin:20210427T210000
 UID:8f14e45fceea167a5a36dedd4bea2543@cncflinz.at
@@ -88,7 +88,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/277569639/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:8. Cloud Native Computing Linz Meetup
+SUMMARY:8. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210525T180000
 DTEND;TZID=Europe/Berlin:20210525T210000
 UID:c9f0f895fb98ab9159f51fd0297e236d@cncflinz.at
@@ -99,7 +99,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/278104169/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:9. Cloud Native Computing Linz Meetup
+SUMMARY:9. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210629T180000
 DTEND;TZID=Europe/Berlin:20210629T210000
 UID:45c48cce2e2d7fbdea1afc51c7c6ad26@cncflinz.at
@@ -110,7 +110,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/278914758/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:10. Cloud Native Computing Linz Meetup
+SUMMARY:10. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20210928T180000
 DTEND;TZID=Europe/Berlin:20210928T210000
 UID:d3d9446802a44259755d38e6d163e820@cncflinz.at
@@ -121,7 +121,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-computing-linz/events/280749046/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:11. IN PERSON - Cloud Native Computing Linz Meetup
+SUMMARY:11. IN PERSON - Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20211019T180000
 DTEND;TZID=Europe/Berlin:20211019T210000
 UID:6512bd43d9caa6e02c990b0a82652dca@cncflinz.at
@@ -133,7 +133,7 @@ LOCATION:Dynatrace
 URL:https://www.meetup.com/cloud-native-computing-linz/events/281064988/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:12. Cloud Native Computing Linz Meetup
+SUMMARY:12. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20220223T180000
 DTEND;TZID=Europe/Berlin:20220223T210000
 UID:c20ad4d76fe97759aa27a0c99bff6710@cncflinz.at
@@ -145,7 +145,7 @@ URL:https://www.meetup.com/cloud-native-computing-linz/events/283691539/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Lin
- z)
+ z) - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20220330T180000
 DTEND;TZID=Europe/Berlin:20220330T210000
 UID:c51ce410c124a10e0db5e4b97fc2af39@cncflinz.at
@@ -156,7 +156,7 @@ LOCATION:smec
 URL:https://www.meetup.com/cloud-native-computing-linz/events/284662219/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:14. Cloud Native Computing Linz Meetup
+SUMMARY:14. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20220419T180000
 DTEND;TZID=Europe/Berlin:20220419T210000
 UID:aab3238922bcc25a6f606eb525ffdc56@cncflinz.at
@@ -168,7 +168,7 @@ LOCATION:hello again
 URL:https://www.meetup.com/cloud-native-computing-linz/events/284847987/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:15. Cloud Native Computing Linz Meetup
+SUMMARY:15. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20220531T180000
 DTEND;TZID=Europe/Berlin:20220531T210000
 UID:9bf31c7ff062936a96d3c8bd1f8f2ff3@cncflinz.at
@@ -181,7 +181,7 @@ LOCATION:G+D Netcetera
 URL:https://www.meetup.com/cloud-native-computing-linz/events/285775843/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:16. Cloud Native Computing Linz Meetup
+SUMMARY:16. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20220628T180000
 DTEND;TZID=Europe/Berlin:20220628T210000
 UID:c74d97b01eae257e44aa9d5bade97baf@cncflinz.at
@@ -193,7 +193,7 @@ LOCATION:Dynatrace
 URL:https://www.meetup.com/cloud-native-computing-linz/events/286504906/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:17. Cloud Native Computing Linz Meetup
+SUMMARY:17. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20221018T180000
 DTEND;TZID=Europe/Berlin:20221018T210000
 UID:70efdf2ec9b086079795c442636b55fb@cncflinz.at
@@ -207,7 +207,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-n
  ative-computing-linz-meetup-october-18-2022/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:18. Cloud Native Computing Linz Meetup
+SUMMARY:18. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20221122T180000
 DTEND;TZID=Europe/Berlin:20221122T210000
 UID:6f4922f45568161a8cdf4ad2299f6d23@cncflinz.at
@@ -221,7 +221,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-n
  ative-computing-linz-meetup-november-22-2022/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:19. Cloud Native Computing Linz Meetup
+SUMMARY:19. Cloud Native Computing Linz Meetup - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230117T180000
 DTEND;TZID=Europe/Berlin:20230117T210000
 UID:1f0e3dad99908345f7439f8ffabdffc4@cncflinz.at
@@ -236,7 +236,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kubernetes Alternatives
+SUMMARY:Kubernetes Alternatives - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230221T180000
 DTEND;TZID=Europe/Berlin:20230221T210000
 UID:98f13708210194c475687be6106a3b84@cncflinz.at
@@ -249,7 +249,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-feb-21-kubernetes-alternatives/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Crossplane Usecases
+SUMMARY:Crossplane Usecases - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230328T180000
 DTEND;TZID=Europe/Berlin:20230328T210000
 UID:3c59dc048e8850243be8079a5c74d079@cncflinz.at
@@ -263,7 +263,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-march-28-crossplane-use-cases/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Hagenberg Edition
+SUMMARY:Hagenberg Edition - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230418T180000
 DTEND;TZID=Europe/Berlin:20230418T210000
 UID:b6d767d2f8ed5d21a44b0e5886680cb9@cncflinz.at
@@ -278,7 +278,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-april-18-hagenberg-edition/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:CertOps and K8sGPT
+SUMMARY:CertOps and K8sGPT - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230530T180000
 DTEND;TZID=Europe/Berlin:20230530T210000
 UID:37693cfc748049e45d87b8c7d8b9aacd@cncflinz.at
@@ -292,7 +292,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-may-30-troubleshooting-with-k8sgpt/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GitOps & Terraform and a Guide to OpenTelemetry
+SUMMARY:GitOps & Terraform and a Guide to OpenTelemetry - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230627T180000
 DTEND;TZID=Europe/Berlin:20230627T210000
 UID:1ff1de774005f8da13f42943881c655f@cncflinz.at
@@ -305,7 +305,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Migration to Cloud Native & The Power of Operators
+SUMMARY:Migration to Cloud Native & The Power of Operators - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20230919T180000
 DTEND;TZID=Europe/Berlin:20230919T210000
 UID:8e296a067a37563370ded05f5a3bf3ec@cncflinz.at
@@ -320,7 +320,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Testing K8s Operators & OpenTelemetry for Logs
+SUMMARY:Testing K8s Operators & OpenTelemetry for Logs - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20231018T180000
 DTEND;TZID=Europe/Berlin:20231018T210000
 UID:4e732ced3463d06de0ca9a15b6153677@cncflinz.at
@@ -334,7 +334,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GitOps and Testing Cloud Environments
+SUMMARY:GitOps and Testing Cloud Environments - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20231121T180000
 DTEND;TZID=Europe/Berlin:20231121T210000
 UID:02e74f10e0327ad868d138f2b4fdd6f0@cncflinz.at
@@ -349,7 +349,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-november-21-gitops-and-testing-cloud-environments/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cloud Adventure and Cloud Native Sustainability
+SUMMARY:Cloud Adventure and Cloud Native Sustainability - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20240124T180000
 DTEND;TZID=Europe/Berlin:20240124T210000
 UID:33e75ff09dd601bbe69f351039152189@cncflinz.at
@@ -362,7 +362,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-january-24-cloud-adventure-and-cloud-native-sustainability/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Access Control and Platforms with Devs in Mind
+SUMMARY:Access Control and Platforms with Devs in Mind - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20240227T180000
 DTEND;TZID=Europe/Berlin:20240227T210000
 UID:6ea9ab1baa0efb9e19094440c317e21b@cncflinz.at
@@ -377,7 +377,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  ve-linz-february-27-access-control-and-platforms-with-devs-in-mind/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:K8s Journey and a Multi-Layer K8s Security System
+SUMMARY:K8s Journey and a Multi-Layer K8s Security System - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20240326T180000
 DTEND;TZID=Europe/Berlin:20240326T210000
 UID:34173cb38f07f89ddbebc2ac9128303f@cncflinz.at
@@ -393,7 +393,7 @@ URL:https://community.cncf.io/events/details/cncf-linz-presents-cloud-nati
  system/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Secure K8s Deployment and API Management in Azure
+SUMMARY:Secure K8s Deployment and API Management in Azure - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20240423T180000
 DTEND;TZID=Europe/Berlin:20240423T210000
 UID:c16a5320fa475530d9583c34fd356ef5@cncflinz.at
@@ -406,7 +406,8 @@ LOCATION:Public Cloud Group
 URL:https://www.meetup.com/cloud-native-linz/events/298076702/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Inspecting Running Containers & Observability on the Edge
+SUMMARY:Inspecting Running Containers & Observability on the Edge - CNCF L
+ inz
 DTSTART;TZID=Europe/Berlin:20240625T180000
 DTEND;TZID=Europe/Berlin:20240625T210000
 UID:6364d3f0f495b6ab9dcf8d3b5c6e0b01@cncflinz.at
@@ -418,7 +419,7 @@ LOCATION:Cloudflight
 URL:https://www.meetup.com/cloud-native-linz/events/300982876/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:OpenTelemetry Errors
+SUMMARY:OpenTelemetry Errors - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20240918T180000
 DTEND;TZID=Europe/Berlin:20240918T210000
 UID:182be0c5cdcd5072bb1864cdee4d3d6e@cncflinz.at
@@ -430,7 +431,7 @@ LOCATION:Online Event
 URL:https://www.meetup.com/cloud-native-linz/events/302570761/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Beyond k8s and OpenSource Metrics
+SUMMARY:Beyond k8s and OpenSource Metrics - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20241021T180000
 DTEND;TZID=Europe/Berlin:20241021T210000
 UID:e369853df766fa44e1ed0ff613f563bd@cncflinz.at
@@ -442,7 +443,7 @@ LOCATION:Dynatrace
 URL:https://www.meetup.com/cloud-native-linz/events/303406885/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cloud-Native Harmony & Backstage Techdocs
+SUMMARY:Cloud-Native Harmony & Backstage Techdocs - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20241119T180000
 DTEND;TZID=Europe/Berlin:20241119T210000
 UID:1c383cd30b7c298ab50293adfecb7b18@cncflinz.at
@@ -454,7 +455,7 @@ LOCATION:cloudxcelerate
 URL:https://www.meetup.com/cloud-native-computing-linz/events/302568919/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Containerized Builds & Beesting
+SUMMARY:Containerized Builds & Beesting - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250115T180000
 DTEND;TZID=Europe/Berlin:20250115T210000
 UID:19ca14e7ea6328a42e0eb13d585e4c22@cncflinz.at
@@ -466,7 +467,7 @@ LOCATION:Public Cloud Group
 URL:https://www.meetup.com/cloud-native-linz/events/304003701/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Auto-updates in the CI/CD and Zero Trust Systems
+SUMMARY:Auto-updates in the CI/CD and Zero Trust Systems - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250225T180000
 DTEND;TZID=Europe/Berlin:20250225T210000
 UID:a5bfc9e07964f8dddeb95fc584cd965d@cncflinz.at
@@ -478,7 +479,7 @@ LOCATION:Gepardec
 URL:https://www.meetup.com/cloud-native-linz/events/304124258/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Laravel in K8s and Shell Scripting
+SUMMARY:Laravel in K8s and Shell Scripting - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250318T180000
 DTEND;TZID=Europe/Berlin:20250318T210000
 UID:a5771bce93e200c36f7cd9dfd0e5deaa@cncflinz.at
@@ -489,7 +490,8 @@ LOCATION:karriere.at
 URL:https://www.meetup.com/cloud-native-linz/events/306377483/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zero-Downtime Experiences & Event-Driven Microservices at scale
+SUMMARY:Zero-Downtime Experiences & Event-Driven Microservices at scale - 
+ CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250429T180000
 DTEND;TZID=Europe/Berlin:20250429T210000
 UID:d67d8ab4f4c10bf22aa353e27879133c@cncflinz.at
@@ -502,7 +504,7 @@ LOCATION:Tractive
 URL:https://www.meetup.com/cloud-native-linz/events/307219291/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:TalosOS and CloudEvents
+SUMMARY:TalosOS and CloudEvents - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250520T180000
 DTEND;TZID=Europe/Berlin:20250520T210000
 UID:d645920e395fedad7bbbed0eca3fe2e0@cncflinz.at
@@ -514,7 +516,7 @@ LOCATION:Cloudflight
 URL:https://www.meetup.com/cloud-native-linz/events/307676898/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:OpenRewrite & Adversary Emulation for k8s
+SUMMARY:OpenRewrite & Adversary Emulation for k8s - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250701T180000
 DTEND;TZID=Europe/Berlin:20250701T210000
 UID:3416a75f4cea9109507cacd8e2f2aefc@cncflinz.at
@@ -527,7 +529,7 @@ URL:https://www.meetup.com/cloud-native-linz/events/307975704/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud N
- ative Linz
+ ative Linz - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20250924T173000
 DTEND;TZID=Europe/Berlin:20250924T203000
 UID:a1d0c6e83f027327d8461063f4ac58a6@cncflinz.at
@@ -539,7 +541,7 @@ LOCATION:G+D Netcetera\, Europaplatz 4\, 4020 Linz
 URL:https://www.meetup.com/cloud-native-linz/events/310732711/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:October 2025 edition at .LOUPE
+SUMMARY:October 2025 edition at .LOUPE - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20251028T173000
 DTEND;TZID=Europe/Berlin:20251028T203000
 UID:17e62166fc8586dfa4d1bc0e1742c08b@cncflinz.at
@@ -551,7 +553,7 @@ LOCATION:fobi solutions gmbh\, Industriezeile 35\, 4020 Linz
 URL:https://www.meetup.com/cloud-native-linz/events/310733201/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Cloud Bills and the Bazzar
+SUMMARY:Cloud Bills and the Bazzar - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20251125T173000
 DTEND;TZID=Europe/Berlin:20251125T203000
 UID:f7177163c833dff4b38fc8d2872f1ec6@cncflinz.at
@@ -563,7 +565,7 @@ LOCATION:MIC Datenverarbeitung GmbH\, Lederergasse 78\, 4020 Linz
 URL:https://www.meetup.com/cloud-native-linz/events/310733593/
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:January 2026 edition hosted by PCG
+SUMMARY:January 2026 edition hosted by PCG - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20260127T173000
 DTEND;TZID=Europe/Berlin:20260127T203000
 UID:6c8349cc7260ae62e3b1396831a8398f@cncflinz.at
