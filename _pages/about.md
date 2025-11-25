@@ -74,7 +74,8 @@ redirect_from:
         <h3>📅 When & Where</h3>
         <div class="meeting-details">
           <div class="detail-item">
-            <strong>📆 Schedule:</strong> Usually the 3rd or 4th Tuesday of each month. Find the <a href="/events">next edition here</a>.
+            <strong>📆 Schedule:</strong> Usually the 3rd or 4th Tuesday of each month. Find the <a href="/events">next edition here</a>. <br>
+            📆 You can also subscribe to our <a href="../calendar.ics" target="_blank">calendar</a> (e.g. in <a href="https://support.microsoft.com/en-us/office/import-or-subscribe-to-a-calendar-in-outlook-com-or-outlook-on-the-web-cff1429c-5af6-41ec-a5b4-74f2c278e98c#id0edd=personal_account" target="_blank">Outlook</a> or <a href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank">Google Calendar</a>)
           </div>
           <div class="detail-item">
             <strong>📍 Location:</strong> Various venues in and around Linz. Checkout our previous hosts in the <a href="statistics">statistics</a> section.
