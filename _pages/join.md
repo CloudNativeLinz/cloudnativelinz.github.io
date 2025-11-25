@@ -30,6 +30,7 @@ permalink: /join/
         <p>📍 Various locations around Linz</p>
         <p>We rotate between different host companies to give everyone a chance to showcase their workspace and connect with the community.</p>
         <p>Have a look at our <a href="/events/">upcoming events</a> to find out when and where we'll be meeting next or <a href="/statistics">browse the statistics</a> to see our loyal hosts!</p>
+        <p> 📆 You can also subscribe to our <a href="../calendar.ics" target="_blank">calendar</a> (e.g. in <a href="https://support.microsoft.com/en-us/office/import-or-subscribe-to-a-calendar-in-outlook-com-or-outlook-on-the-web-cff1429c-5af6-41ec-a5b4-74f2c278e98c#id0edd=personal_account" target="_blank">Outlook</a> or <a href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank">Google Calendar</a>)</p>
         <div class="cta-box">
           <h4>Want to host or speak?</h4>
           <a href="https://github.com/CloudNativeLinz/cloudnativelinz.github.io/issues/new/choose" class="btn btn-primary">Get in Touch</a>
