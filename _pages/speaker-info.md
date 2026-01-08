@@ -46,7 +46,7 @@ permalink: /speaker-info/
       <h2>⏰ Typical Agenda</h2>
     </div>
     <div class="card-content">
-      <p>Here's what to expect at our meetups. We're flexible and can adapt to your needs:</p>
+      <p>Here's what to expect at our meetups. But we're flexible and might adapt the schedule a bit:</p>
       <div class="schedule">
         <div class="schedule-item">
           <div class="time">17:30</div>
