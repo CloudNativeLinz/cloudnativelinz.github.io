@@ -749,3 +749,17 @@
   #redirect_from:
     #- "/events/meetup/november-2025-edition-at-mic/"
 
+- id: 46
+  title: February 2026 edition hosted by Tractive
+  date: '2026-02-24'
+  doors_open: '17:30'
+  host: Tractive
+  address: Poststraße 4, 4061 Pasching
+  #event_link: https://www.meetup.com/cloud-native-linz/events/312772601/
+  registrations: ''
+  participants: ''
+  talks:
+  slug: february-2026-edition-hosted-by-tractive
+  #redirect_from:
+    #- "/events/meetup/november-2025-edition-at-mic/"
+
