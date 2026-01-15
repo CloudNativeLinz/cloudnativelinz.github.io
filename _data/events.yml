@@ -745,6 +745,10 @@
   registrations: ''
   participants: ''
   talks:
+  - title: TBD
+    speaker: Andreas Wimmersberger
+  - title: TBD
+    speaker: Suzanne Daniels
   slug: january-2026-edition-hosted-by-pcg
   #redirect_from:
     #- "/events/meetup/november-2025-edition-at-mic/"
