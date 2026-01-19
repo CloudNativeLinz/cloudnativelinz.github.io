@@ -747,6 +747,7 @@
   talks:
   - title: Signing and Verifying Container Images
     speaker: Andreas Wimmersberger
+    social: https://www.linkedin.com/in/andreas-wimmersberger/
     image: https://i1.sndcdn.com/avatars-000178801431-251oeu-t500x500.jpg
   - title: Impact of Agentic DevOps on Microsoft engineering practices
     speaker: Suzanne Daniels
