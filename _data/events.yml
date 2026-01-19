@@ -736,7 +736,7 @@
     - "/events/meetup/november-2025-edition-at-mic/"
 
 - id: 45
-  title: January 2026 edition hosted by PCG
+  title: Container Images and Impact of Agentic DevOps at Microsoft
   date: '2026-01-27'
   doors_open: '17:30'
   host: PCG - Public Cloud Group
@@ -745,15 +745,16 @@
   registrations: ''
   participants: ''
   talks:
-  - title: TBD
+  - title: Signing and Verifying Container Images
     speaker: Andreas Wimmersberger
+    image: https://i1.sndcdn.com/avatars-000178801431-251oeu-t500x500.jpg
   - title: Impact of Agentic DevOps on Microsoft engineering practices
     speaker: Suzanne Daniels
     social: https://www.linkedin.com/in/suzannedaniels/
     image: https://media.licdn.com/dms/image/v2/D4E03AQGxRoJSTSSGLA/profile-displayphoto-shrink_800_800/B4EZPdt4_gHkAo-/0/1734591615682?e=1770249600&v=beta&t=sUM_GHKCEYhjPiMhSjvKWxon8DihSJdeoTcaKctoh-0
-  slug: january-2026-edition-hosted-by-pcg
-  #redirect_from:
-    #- "/events/meetup/november-2025-edition-at-mic/"
+  slug: cotainer-images-and-impact-of-agentic-devops
+  redirect_from:
+    - "/events/meetup/january-2026-edition-hosted-by-pcg/
 
 - id: 46
   title: February 2026 edition hosted by Tractive
