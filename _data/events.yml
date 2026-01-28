@@ -743,7 +743,7 @@
   address: Startrampe, Peter-Behrens-Platz 10, 4020 Linz
   event_link: https://www.meetup.com/cloud-native-linz/events/312772601/
   registrations: ''
-  participants: ''
+  participants: '32'
   talks:
   - title: Signing and Verifying Container Images
     speaker: Andreas Wimmersberger
