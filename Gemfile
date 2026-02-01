@@ -12,5 +12,8 @@ gem "jekyll-datapage-generator"
 gem "sassc", "~> 2.4"
 gem "jekyll-sass-converter", "~> 2.2"
 
+# Required standard library gems for Ruby 3.4+
+gem "bigdecimal"
+
 # Platform-specific gems for better compatibility
-gem "ffi", "~> 1.17", platforms: [:mingw, :x64_mingw, :mswin]
+gem "ffi", "~> 1.17"
