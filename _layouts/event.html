@@ -243,9 +243,9 @@ layout: default
     <div class="event-detail-overlay">
       <div class="event-detail-date">
         {% if event_date == today %}
-          🔥 TODAY - {{ page.date | date: "%B %d, %Y" }} - doors open at {{ page.doors_open }}
+          🔥 TODAY - {{ page.date | date: "%B %d, %Y" }}{% if page.doors_open and page.doors_open != "" %} - doors open at {{ page.doors_open }}{% endif %}
         {% else %}
-          📅 {{ page.date | date: "%B %d, %Y" }} - doors open at {{ page.doors_open }}
+          📅 {{ page.date | date: "%B %d, %Y" }}{% if event_date >= today and page.doors_open and page.doors_open != "" %} - doors open at {{ page.doors_open }}{% endif %}
         {% endif %}
       </div>
       {% if page.host and page.host != "" %}
@@ -278,7 +278,7 @@ layout: default
         <span class="meta-badge success">👥 {{ page.participants }} Participants</span>
       {% endif %}
         <span class="meta-badge">📅 {{ page.date | date: "%a, %B %d, %Y" }}</span>
-        {% if page.doors_open and page.doors_open != "" %}
+        {% if event_date >= today and page.doors_open and page.doors_open != "" %}
         <span class="meta-badge">🕒 Doors open at {{ page.doors_open }}</span>
         {% endif %}
         <span class="meta-badge">📍 Hosted by {{ page.host }}</span>
