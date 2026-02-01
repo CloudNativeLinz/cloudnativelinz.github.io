@@ -768,6 +768,12 @@
   registrations: ''
   participants: ''
   talks:
+  - title: 18 Bluetooth Controllers Walk into a Bar
+    speaker: Simon Schrottner & Manuel Timelthaler
+    image: ''
+  - title: Smells Like Clean Telemetry
+    speaker: Juliano Costa
+    image: https://media.licdn.com/dms/image/v2/D4D03AQHkOEZG983ylA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712664137969?e=1771459200&v=beta&t=JH-5CyDJG4pt2dkVB4m1idhThiXZa0uciYLkDox_sAA
   slug: february-2026-edition-hosted-by-tractive
   #redirect_from:
     #- "/events/meetup/november-2025-edition-at-mic/"
