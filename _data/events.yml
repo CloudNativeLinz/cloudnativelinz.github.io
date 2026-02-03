@@ -759,7 +759,7 @@
     - "/events/meetup/january-2026-edition-hosted-by-pcg/"
 
 - id: 46
-  title: February 2026 edition hosted by Tractive
+  title: Observability challenges & clean telemetry
   date: '2026-02-24'
   doors_open: '17:30'
   host: Tractive
@@ -776,5 +776,5 @@
     image: https://media.licdn.com/dms/image/v2/D4D03AQHkOEZG983ylA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712664137969?e=1771459200&v=beta&t=JH-5CyDJG4pt2dkVB4m1idhThiXZa0uciYLkDox_sAA
   slug: february-2026-edition-hosted-by-tractive
   #redirect_from:
-    #- "/events/meetup/november-2025-edition-at-mic/"
+    #- "/events/meetup/february-2026-edition-hosted-by-tractive/"
 
