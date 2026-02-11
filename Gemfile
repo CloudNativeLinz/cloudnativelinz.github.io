@@ -14,6 +14,10 @@ gem "jekyll-sass-converter", "~> 2.2"
 
 # Required standard library gems for Ruby 3.4+
 gem "bigdecimal"
+gem "logger"
+gem "csv"
+gem "base64"
+gem "ostruct"
 
 # Platform-specific gems for better compatibility
 gem "ffi", "~> 1.17"

@@ -778,3 +778,22 @@
   #redirect_from:
     #- "/events/meetup/february-2026-edition-hosted-by-tractive/"
 
+- id: 47
+  title: Save the date
+  date: '2026-03-18'
+  doors_open: '17:30'
+  host: Gepardec
+  address: Gepardec, Europaplatz 4, Eingang C, 4020 Linz
+  event_link: https://www.meetup.com/cloud-native-linz/events/313309417/
+  registrations: ''
+  participants: ''
+  talks:
+  - title: TBA
+    speaker: TBA
+    image: ""
+  - title: TBA
+    speaker: TBA
+    image: ""
+  slug: march-2026-edition-at-gepardec
+  #redirect_from:
+    #- "/events/meetup/march-2026-edition-at-gepardec/"
