@@ -1,16 +1,26 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/jekyll/.devcontainer/base.Dockerfile
+# Alpine-based Ruby image for Jekyll
+FROM ruby:3.4-alpine
 
-# [Choice] Debian OS version (use bullseye on local arm64/Apple Silicon): bullseye, buster
-ARG VARIANT="2.7-bullseye"
-FROM mcr.microsoft.com/vscode/devcontainers/jekyll:0-${VARIANT}
+# Install necessary packages for Alpine Linux
+RUN apk add --no-cache \
+    build-base \
+    linux-headers \
+    git \
+    python3 \
+    py3-pip \
+    bash \
+    sudo
 
-# [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-ARG NODE_VERSION="none"
-RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
+# Create vscode user
+RUN addgroup -g 1000 vscode && \
+    adduser -D -u 1000 -G vscode vscode && \
+    echo "vscode ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vscode && \
+    chmod 0440 /etc/sudoers.d/vscode
 
-# [Optional] Uncomment this section to install additional OS packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends python3-venv python3-pip
+# Set up environment variables for gem paths
+ENV GEM_HOME="/home/vscode/.local/share/gem/ruby/3.4.0"
+ENV PATH="/home/vscode/.local/share/gem/ruby/3.4.0/bin:${PATH}"
 
-# [Optional] Uncomment this line to install global node packages.
-# RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
+# Switch to vscode user
+USER vscode
+WORKDIR /workspaces
