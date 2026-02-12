@@ -6,6 +6,7 @@ RUN apk add --no-cache \
     build-base \
     linux-headers \
     git \
+    github-cli \
     python3 \
     py3-pip \
     bash \

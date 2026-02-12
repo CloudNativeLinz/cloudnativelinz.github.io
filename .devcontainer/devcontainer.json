@@ -6,10 +6,7 @@
 		"dockerfile": "Dockerfile"
 	},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {}
-	},
+	// Features removed - github-cli installed via Dockerfile for Alpine compatibility
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
