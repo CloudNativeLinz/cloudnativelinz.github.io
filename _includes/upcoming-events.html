@@ -50,6 +50,9 @@
       {% if event.talks %}
         <div class="event-talks">
           {% for talk in event.talks limit:2 %}
+            {% assign speaker_upper = talk.speaker | upcase %}
+            {% assign title_upper = talk.title | upcase %}
+            {% unless speaker_upper == "TBA" or speaker_upper == "TBD" or title_upper == "TBA" or title_upper == "TBD" %}
             <div class="talk-item">
               <div class="talk-title">{{ talk.title }}</div>
               <div class="talk-speaker">
@@ -72,6 +75,7 @@
                 {% endif %}
               </div>
             </div>
+            {% endunless %}
           {% endfor %}
           {% if event.talks.size > 2 %}
             <div class="talk-item more-talks">
