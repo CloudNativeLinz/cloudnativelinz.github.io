@@ -791,9 +791,9 @@
   - title: TBA
     speaker: TBA
     image: ""
-  - title: TBA
-    speaker: TBA
-    image: ""
+  - title: Monster-Sized Gitops; How to scale Argo CD
+    speaker: David Hondl
+    image: "/assets/speaker-images/david-hondl.jpg"
   slug: march-2026-edition-at-gepardec
   #redirect_from:
     #- "/events/meetup/march-2026-edition-at-gepardec/"
