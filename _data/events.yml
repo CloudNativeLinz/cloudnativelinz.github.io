@@ -766,7 +766,7 @@
   address: Poststraße 4, 4061 Pasching
   event_link: https://www.meetup.com/cloud-native-linz/events/313186726/
   registrations: ''
-  participants: ''
+  participants: '42'
   talks:
   - title: 18 Bluetooth Controllers Walk into a Bar
     speaker: Simon Schrottner & Manuel Timelthaler
