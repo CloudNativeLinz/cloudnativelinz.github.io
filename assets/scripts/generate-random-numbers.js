@@ -32,22 +32,44 @@ function generateRandomNumbers() {
         generatedNumbers.add(randomNumber);
     }
 
-    // Show success results
+    // Show result card immediately
     resultHeader.innerText = '🎉 Your lucky numbers are:';
     resultHeader.style.color = '#065f46';
-    
-    const numbersArray = Array.from(generatedNumbers).sort((a, b) => a - b);
-    const numbersHTML = numbersArray.map(num => 
-        `<span class="result-number">${num}</span>`
-    ).join('');
-    
-    resultContainer.innerHTML = numbersHTML;
     resultCard.style.border = '2px solid #10b981';
     resultCard.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%)';
     resultCard.style.display = 'block';
-    
+
     // Smooth scroll to results
     setTimeout(() => {
         resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);
+
+    const diceFaces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+    const rollDuration = 2000;
+    const stagger = 2500;
+    const numbersArray = Array.from(generatedNumbers);
+
+    numbersArray.forEach((num, i) => {
+        setTimeout(() => {
+            // Append dice placeholder
+            const span = document.createElement('span');
+            span.className = 'result-number result-dice';
+            span.innerText = diceFaces[Math.floor(Math.random() * diceFaces.length)];
+            resultContainer.appendChild(span);
+
+            // Cycle through dice faces
+            const rollInterval = setInterval(() => {
+                span.innerText = diceFaces[Math.floor(Math.random() * diceFaces.length)];
+            }, 80);
+
+            // Reveal the actual number
+            setTimeout(() => {
+                clearInterval(rollInterval);
+                span.classList.remove('result-dice');
+                span.innerText = num;
+                void span.offsetWidth; // force reflow to restart animation
+                span.classList.add('result-pop');
+            }, rollDuration);
+        }, i * stagger);
+    });
 }
