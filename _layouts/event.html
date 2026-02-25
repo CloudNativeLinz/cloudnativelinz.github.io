@@ -299,6 +299,8 @@ layout: default
       <div class="talks-section">
         <div class="talks-grid">
           {% for talk in page.talks %}
+            {% assign speaker_upper = talk.speaker | upcase %}
+            {% unless speaker_upper == "TBA" or speaker_upper == "TBD" %}
             <div class="talk-card">
               <div class="talk-title">{{ talk.title }}</div>
               <div class="talk-speaker">
@@ -345,6 +347,7 @@ layout: default
                 {% endif %}
               </div>
             </div>
+            {% endunless %}
           {% endfor %}
         </div>
       </div>
