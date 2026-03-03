@@ -232,6 +232,16 @@ document.addEventListener('DOMContentLoaded', function() {
   function createCharts() {
     chartsStatus.style.display = 'none';
 
+    // Detect current theme for chart colours
+    const isDark = (function() {
+      const attr = document.documentElement.getAttribute('data-theme');
+      if (attr === 'dark') return true;
+      if (attr === 'light') return false;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    })();
+    const tickColor = isDark ? 'rgba(209, 213, 219, 0.9)' : 'rgba(75, 85, 99, 0.8)';
+    const gridColor = isDark ? 'rgba(75, 85, 99, 0.5)'   : 'rgba(229, 231, 235, 0.5)';
+
     // Generate dynamic data from Jekyll - only include past events
     const today = new Date();
     const eventsData = [
@@ -403,17 +413,17 @@ document.addEventListener('DOMContentLoaded', function() {
               beginAtZero: true,
               ticks: {
                 stepSize: 1,
-                color: 'rgba(75, 85, 99, 0.8)',
+                color: tickColor,
                 font: { size: 12 }
               },
               grid: {
-                color: 'rgba(229, 231, 235, 0.5)',
+                color: gridColor,
                 drawBorder: false
               }
             },
             x: {
               ticks: {
-                color: 'rgba(75, 85, 99, 0.8)',
+                color: tickColor,
                 font: { size: 11 },
                 maxRotation: 45,
                 minRotation: 45
@@ -490,17 +500,17 @@ document.addEventListener('DOMContentLoaded', function() {
               beginAtZero: true,
               ticks: {
                 stepSize: 1,
-                color: 'rgba(75, 85, 99, 0.8)',
+                color: tickColor,
                 font: { size: 12 }
               },
               grid: {
-                color: 'rgba(229, 231, 235, 0.5)',
+                color: gridColor,
                 drawBorder: false
               }
             },
             x: {
               ticks: {
-                color: 'rgba(75, 85, 99, 0.8)',
+                color: tickColor,
                 font: { size: 11 },
                 maxRotation: 45,
                 minRotation: 45
@@ -546,12 +556,22 @@ document.addEventListener('DOMContentLoaded', function() {
           scales: {
             y: { 
               beginAtZero: true,
-              max: Math.max(...participantValues) + 10
+              max: Math.max(...participantValues) + 10,
+              ticks: {
+                color: tickColor,
+                font: { size: 12 }
+              },
+              grid: {
+                color: gridColor,
+                drawBorder: false
+              }
             },
             x: {
               ticks: {
                 maxRotation: 45,
-                minRotation: 45
+                minRotation: 45,
+                color: tickColor,
+                font: { size: 11 }
               }
             }
           }

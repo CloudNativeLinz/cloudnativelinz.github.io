@@ -276,5 +276,54 @@ permalink: /team/
     }
   }
 }
+
+/* Dark mode overrides */
+[data-theme="dark"] .team-member {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .team-member .member-info p {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .team-member .member-info .member-links a.btn-outline {
+  color: #818cf8;
+  border-color: #818cf8;
+}
+
+[data-theme="dark"] .team-member .member-info .member-links a.btn-outline:hover {
+  background: #818cf8;
+  color: white;
+}
+
+[data-theme="dark"] .join-team-section .card p {
+  color: #9ca3af;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-member {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  :root:not([data-theme="light"]) .team-member .member-info p {
+    color: #9ca3af;
+  }
+
+  :root:not([data-theme="light"]) .team-member .member-info .member-links a.btn-outline {
+    color: #818cf8;
+    border-color: #818cf8;
+  }
+
+  :root:not([data-theme="light"]) .team-member .member-info .member-links a.btn-outline:hover {
+    background: #818cf8;
+    color: white;
+  }
+
+  :root:not([data-theme="light"]) .join-team-section .card p {
+    color: #9ca3af;
+  }
+}
 </style>
 

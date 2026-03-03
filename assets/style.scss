@@ -244,35 +244,32 @@ a:hover {
   border-radius: 0.5rem;
   color: rgba(255, 255, 255, 0.9);
   cursor: pointer;
-  padding: 0.45rem 0.7rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  font-family: inherit;
+  justify-content: center;
+  line-height: 1;
   transition: all 0.3s ease;
-  text-decoration: none;
 
   svg {
     flex-shrink: 0;
+    display: block;
   }
 
   &:hover {
     color: white;
     background: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.55);
-    text-decoration: none;
   }
 }
 
 @media (max-width: 1024px) {
   .theme-toggle-btn {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
+    width: auto;
+    padding: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    align-self: center;
+    margin: 0 auto;
   }
 }
 
