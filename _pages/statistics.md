@@ -229,18 +229,21 @@ document.addEventListener('DOMContentLoaded', function() {
     Object.values(fallbacks).forEach(fb => fb.style.display = 'block');
   }
 
+  function getChartColors() {
+    const attr = document.documentElement.getAttribute('data-theme');
+    const dark = attr === 'dark' || (!attr && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    return {
+      tickColor: dark ? 'rgba(209, 213, 219, 0.9)' : 'rgba(75, 85, 99, 0.8)',
+      gridColor: dark ? 'rgba(75, 85, 99, 0.5)'   : 'rgba(229, 231, 235, 0.5)'
+    };
+  }
+
+  const chartInstances = [];
+
   function createCharts() {
     chartsStatus.style.display = 'none';
 
-    // Detect current theme for chart colours
-    const isDark = (function() {
-      const attr = document.documentElement.getAttribute('data-theme');
-      if (attr === 'dark') return true;
-      if (attr === 'light') return false;
-      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    })();
-    const tickColor = isDark ? 'rgba(209, 213, 219, 0.9)' : 'rgba(75, 85, 99, 0.8)';
-    const gridColor = isDark ? 'rgba(75, 85, 99, 0.5)'   : 'rgba(229, 231, 235, 0.5)';
+    const { tickColor, gridColor } = getChartColors();
 
     // Generate dynamic data from Jekyll - only include past events
     const today = new Date();
@@ -360,6 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart');
+    let hostChart;
     if (hostCtx) {
       // Create gradient for host organizations
       const hostGradient = hostCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
@@ -372,7 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
       hostHoverGradient.addColorStop(0.5, 'rgba(67, 56, 202, 0.95)');
       hostHoverGradient.addColorStop(1, 'rgba(79, 70, 229, 0.9)');
 
-      new Chart(hostCtx, {
+      hostChart = new Chart(hostCtx, {
         type: 'bar',
         data: {
           labels: hostLabels,
@@ -447,6 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Top Speakers Chart
     const speakersCtx = document.getElementById('topSpeakersChart');
+    let speakersChart;
     if (speakersCtx) {
       // Create gradient for speakers
       const speakerGradient = speakersCtx.getContext('2d').createLinearGradient(0, 0, 0, 400);
@@ -459,7 +464,7 @@ document.addEventListener('DOMContentLoaded', function() {
       speakerHoverGradient.addColorStop(0.5, 'rgba(147, 51, 234, 0.95)');
       speakerHoverGradient.addColorStop(1, 'rgba(126, 34, 206, 0.9)');
 
-      new Chart(speakersCtx, {
+      speakersChart = new Chart(speakersCtx, {
         type: 'bar',
         data: {
           labels: speakerLabels,
@@ -534,8 +539,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Participants Trends Chart
     const participantsCtx = document.getElementById('participantsTrendsChart');
+    let participantsChart;
     if (participantsCtx) {
-      new Chart(participantsCtx, {
+      participantsChart = new Chart(participantsCtx, {
         type: 'line',
         data: {
           labels: participantLabels,
@@ -578,6 +584,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
+    chartInstances.push(...[hostChart, speakersChart, participantsChart].filter(Boolean));
   }
+
+  document.addEventListener('themechange', function() {
+    const { tickColor, gridColor } = getChartColors();
+    chartInstances.forEach(function(chart) {
+      if (chart.options.scales?.y?.ticks) chart.options.scales.y.ticks.color = tickColor;
+      if (chart.options.scales?.y?.grid)  chart.options.scales.y.grid.color  = gridColor;
+      if (chart.options.scales?.x?.ticks) chart.options.scales.x.ticks.color = tickColor;
+      chart.update('none');
+    });
+  });
 });
 </script>

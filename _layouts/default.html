@@ -171,6 +171,7 @@
           try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) {}
           document.documentElement.setAttribute('data-theme', theme);
           updateButton(theme);
+          document.dispatchEvent(new CustomEvent('themechange'));
         }
 
         function updateButton(theme) {
