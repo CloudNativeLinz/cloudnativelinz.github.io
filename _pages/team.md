@@ -144,7 +144,7 @@ permalink: /team/
     
     h3 {
       margin-bottom: 0.5rem;
-      text-align: left;
+      text-align: center;
       font-size: 1.75rem;
       
       &::after {
@@ -159,6 +159,7 @@ permalink: /team/
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      text-align: center;
     }
     
     p {

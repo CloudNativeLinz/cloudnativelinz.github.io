@@ -1964,6 +1964,20 @@ pre code {
     background: rgba(255, 255, 255, 0.5);
   }
 
+  // Navigation - keep nav links white; header gradient does not change in dark mode
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color: white;
+    }
+
+    &.current,
+    &.nav-cta {
+      color: white;
+    }
+  }
+
   // Meta links
   .meta-link {
     color: #818cf8;
