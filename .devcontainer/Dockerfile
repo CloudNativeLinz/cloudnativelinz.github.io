@@ -10,7 +10,9 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     bash \
-    sudo
+    sudo \
+    imagemagick \
+    imagemagick-jpeg
 
 # Create vscode user
 RUN addgroup -g 1000 vscode && \
