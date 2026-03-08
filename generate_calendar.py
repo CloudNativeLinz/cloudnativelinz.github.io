@@ -71,9 +71,9 @@ for ev in data:
 
     event.add("description", description)
 
-    # Create stable UID by hashing title + date
+    # Create stable UID by hashing the event id
     uid_base = f"{ev['id']}"
-    uid_hash = hashlib.md5(uid_base.encode("utf-8")).hexdigest()
+    uid_hash = hashlib.sha256(uid_base.encode("utf-8")).hexdigest()
     event.add("uid", f"{uid_hash}@cncflinz.at")
 
     cal.add_component(event)
