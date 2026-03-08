@@ -37,11 +37,11 @@ permalink: /team/
     <img src="{{ site.baseurl }}/images/juergen.jpg" alt="Jürgen Etzlstorfer" />
     <div class="member-info">
       <h3>Jürgen Etzlstorfer</h3>
-      <div class="member-role">Co-Organizer & Cloud Specialist</div>
+      <div class="member-role">Co-Organizer & Solution Engineer</div>
       
-      <p>Jürgen is an Application Innovation Specialist at Microsoft Austria, supporting Azure customers on their journey with Kubernetes, Containers, DevOps, GitHub, and other cloud native tools. He has been working in the industry in various roles including developer, researcher, product manager, and evangelist for over 10 years.</p>
+      <p>Jürgen is a Solution Engineer for AI Applications at Microsoft Austria, working alongside customers to implement AI solutions. He has been working in the industry in various roles including developer, researcher, product manager, and evangelist for over 10 years.</p>
       
-      <p>Jürgen is a maintainer of the <a href="https://keptn.sh" target="_blank" rel="noopener">Keptn</a> open-source project and loves to share his experience with the community. He co-founded the Cloud-Native Computing Linz meetup to bring together like-minded professionals and foster knowledge sharing in the region.</p>
+      <p>He co-founded the Cloud-Native Computing Linz meetup (with Juliano, whoms he calls a friend while Juliano refers to Jürgen as a colleague) to bring together like-minded professionals and foster knowledge sharing in the region.</p>
       
       <div class="member-links">
         <a href="https://www.linkedin.com/in/juergenetzlstorfer/" target="_blank" rel="noopener" class="btn">
