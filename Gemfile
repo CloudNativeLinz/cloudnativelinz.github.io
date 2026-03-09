@@ -10,7 +10,7 @@ gem "jekyll-datapage-generator"
 
 # Use sassc instead of sass-embedded for better CI compatibility
 gem "sassc", "~> 2.4"
-gem "jekyll-sass-converter", "~> 2.2"
+gem "jekyll-sass-converter", "~> 3.1"
 
 # Required standard library gems for Ruby 3.4+
 gem "bigdecimal"
