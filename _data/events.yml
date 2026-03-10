@@ -789,7 +789,7 @@
   registrations: ''
   participants: ''
   talks:
-  - title: AI-Assisted Legacy Code Migration with Konveyor AI 
+  - title: AI-Assisted Legacy Code Migration with Konveyor AI. Here's What We Found.
     speaker: Aleksandar Zivkovic
     image: "/assets/speaker-images/47-1.jpeg"
   - title: Monster-Sized Gitops; How to scale Argo CD
