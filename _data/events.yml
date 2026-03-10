@@ -780,7 +780,7 @@
     #- "/events/meetup/february-2026-edition-hosted-by-tractive/"
 
 - id: 47
-  title: Save the date
+  title: AI-Assisted Code Migration & Monster-Sized GitOps
   date: '2026-03-18'
   doors_open: '17:30'
   host: Gepardec
@@ -789,9 +789,9 @@
   registrations: ''
   participants: ''
   talks:
-  - title: TBA
-    speaker: TBA
-    image: ""
+  - title: AI-Assisted Legacy Code Migration with Konveyor AI 
+    speaker: Aleksandar Zivkovic
+    image: "/assets/speaker-images/47-1.jpeg"
   - title: Monster-Sized Gitops; How to scale Argo CD
     speaker: David Hondl
     image: "/assets/speaker-images/david-hondl.jpg"
