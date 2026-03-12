@@ -1,7 +1,7 @@
 # Makefile for Jekyll commands
 
 # Variables
-JEKYLL_CMD = bundle exec jekyll serve
+JEKYLL_CMD = bundle exec jekyll serve --host 0.0.0.0
 LIVERELOAD_FLAG = --livereload
 FORCE_POLLING_FLAG = --force_polling
 
