@@ -1979,16 +1979,28 @@ pre code {
   }
 
   // Buttons — the generic `a` rule above would override btn text colours;
-  // restore white text for all solid button variants.
+  // restore white text for gradient-background buttons.
   .btn-primary,
   .btn-primary:hover,
   .btn-secondary,
-  .btn-secondary:hover,
+  .btn-secondary:hover {
+    color: white;
+  }
+
+  // "Light" buttons (white bg, designed for gradient cards): restore their
+  // white background and correct text colour in dark mode — the generic `a`
+  // rule would otherwise make the text indigo, and a gradient bg would blend
+  // into the gradient-card behind them.
   .btn-light,
-  .btn-light:hover,
+  .btn-light:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+  }
+
   .btn-light-secondary,
   .btn-light-secondary:hover {
-    color: white;
+    background: rgba(255, 255, 255, 0.95);
+    color: #764ba2;
   }
 
   // Meta links
