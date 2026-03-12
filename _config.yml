@@ -110,4 +110,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - .venv
 

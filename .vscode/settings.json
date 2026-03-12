@@ -1,0 +1,8 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^cd /workspaces/cloudnativelinz\\.github\\.io && bundle exec jekyll build$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}
