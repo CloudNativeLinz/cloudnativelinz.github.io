@@ -1978,6 +1978,19 @@ pre code {
     }
   }
 
+  // Buttons — the generic `a` rule above would override btn text colours;
+  // restore white text for all solid button variants.
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-secondary,
+  .btn-secondary:hover,
+  .btn-light,
+  .btn-light:hover,
+  .btn-light-secondary,
+  .btn-light-secondary:hover {
+    color: white;
+  }
+
   // Meta links
   .meta-link {
     color: #818cf8;
