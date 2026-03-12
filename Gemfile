@@ -21,4 +21,3 @@ gem "ostruct"
 
 # Platform-specific gems for better compatibility
 gem "ffi", "~> 1.17"
-gem "webrick", ">= 1.9.2"
