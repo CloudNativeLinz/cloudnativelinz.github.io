@@ -112,7 +112,8 @@ DEPENDENCIES
   jekyll-sitemap
   logger
   ostruct
-  webrick (~> 1.9, >= 1.9.2)
+  sassc (~> 2.4)
+  webrick (>= 1.9.2)
 
 BUNDLED WITH
    2.4.10
