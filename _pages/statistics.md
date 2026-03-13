@@ -14,6 +14,7 @@ permalink: /statistics/
 
 <div id="fallback-notice" class="alert-warning" style="display: none;">
   <strong>📋 Interactive charts unavailable:</strong> Displaying data in table format. Charts require external resources that may be blocked by network restrictions.
+  <span id="fallback-detail">The interactive chart library could not be loaded.</span>
 </div>
 
 <div class="stats-grid">
@@ -197,22 +198,26 @@ permalink: /statistics/
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="statistics-events-data" type="application/json">{{ site.data.events | jsonify }}</script>
+<script src="{{ '/assets/scripts/chart.umd.min.js' | relative_url }}"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const chartsStatus = document.getElementById('charts-status');
   const fallbackNotice = document.getElementById('fallback-notice');
+  const fallbackDetail = document.getElementById('fallback-detail');
+  const eventsDataElement = document.getElementById('statistics-events-data');
   const fallbacks = {
     hostOrganizations: document.getElementById('hostOrganizationsFallback'),
     topSpeakers: document.getElementById('topSpeakersFallback'),
     participantsTrends: document.getElementById('participantsTrendsFallback')
   };
+  const chartInstances = [];
 
   chartsStatus.style.display = 'block';
 
   // Check if Chart.js loaded successfully
   if (typeof Chart === 'undefined') {
-    showFallbacks();
+    showFallbacks('The interactive chart library could not be loaded from local site assets.');
     return;
   }
 
@@ -220,13 +225,31 @@ document.addEventListener('DOMContentLoaded', function() {
     createCharts();
   } catch (error) {
     console.error('Error creating charts:', error);
-    showFallbacks();
+    showFallbacks('The interactive charts failed while rendering in the browser.', error);
   }
 
-  function showFallbacks() {
+  function showFallbacks(message, error) {
     chartsStatus.style.display = 'none';
     fallbackNotice.style.display = 'block';
+    if (fallbackDetail) {
+      fallbackDetail.textContent = error && error.message ? `${message} ${error.message}` : message;
+    }
     Object.values(fallbacks).forEach(fb => fb.style.display = 'block');
+  }
+
+  function getRawEventsData() {
+    if (!eventsDataElement) {
+      throw new Error('Embedded statistics data is missing.');
+    }
+
+    const rawText = eventsDataElement.textContent ? eventsDataElement.textContent.trim() : '[]';
+    const parsed = JSON.parse(rawText || '[]');
+
+    if (!Array.isArray(parsed)) {
+      throw new Error('Embedded statistics data is not an array.');
+    }
+
+    return parsed;
   }
 
   function getChartColors() {
@@ -238,36 +261,25 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
-  const chartInstances = [];
-
   function createCharts() {
     chartsStatus.style.display = 'none';
 
     const { tickColor, gridColor } = getChartColors();
 
-    // Generate dynamic data from Jekyll - only include past events
+    // Load event data from JSON and only include past events.
     const today = new Date();
-    const eventsData = [
-      {% for event in site.data.events %}
-      {
-        host: "{{ event.host | escape }}",
-        date: "{{ event.date }}",
-        participants: "{{ event.participants | strip }}",
-        talks: [
-          {% if event.talks %}
-            {% for talk in event.talks %}
-              {
-                speaker: "{{ talk.speaker | escape }}"
-              }{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          {% endif %}
-        ]
-      }{% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    ].filter(event => {
-      // Only include events that have already occurred
+    const eventsData = getRawEventsData().map(event => ({
+      host: typeof event.host === 'string' ? event.host : '',
+      date: typeof event.date === 'string' ? event.date : '',
+      participants: typeof event.participants === 'string' ? event.participants.trim() : '',
+      talks: Array.isArray(event.talks)
+        ? event.talks.map(talk => ({
+            speaker: talk && typeof talk.speaker === 'string' ? talk.speaker : ''
+          }))
+        : []
+    })).filter(event => {
       const eventDate = new Date(event.date);
-      return eventDate <= today;
+      return !Number.isNaN(eventDate.getTime()) && eventDate <= today;
     });
 
     // Process Host Organizations data
@@ -275,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hostLastEvent = {};
     
     eventsData.forEach(event => {
-      if (event.host && event.host.trim() !== '' && event.host !== 'online') {
+      if (event.host && event.host.trim() !== '' && event.host.trim().toLowerCase() !== 'online') {
         hostCounts[event.host] = (hostCounts[event.host] || 0) + 1;
         // Track the most recent hosting date for this organization
         const eventDate = new Date(event.date);
@@ -309,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
       event.talks.forEach(talk => {
         if (talk.speaker && talk.speaker.trim() !== '') {
           // Handle multiple speakers - split by & and clean up each name
-          let speakerString = talk.speaker.trim();
+          const speakerString = talk.speaker.trim();
           
           // Split by & or &amp; (in case of HTML encoding)
           const speakers = speakerString.split(/\s*&(?:amp;)?\s*/)
@@ -348,10 +360,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Process Participants Trends data
     const participantsData = eventsData
-      .filter(event => event.participants && event.participants.trim() !== '' && !isNaN(parseInt(event.participants)))
+      .filter(event => event.participants && event.participants.trim() !== '' && !Number.isNaN(Number.parseInt(event.participants, 10)))
       .map(event => ({
         date: event.date,
-        participants: parseInt(event.participants)
+        participants: Number.parseInt(event.participants, 10)
       }))
       .sort((a, b) => new Date(a.date) - new Date(b.date));
     
@@ -360,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
     });
     const participantValues = participantsData.map(item => item.participants);
+    const participantMax = participantValues.length > 0 ? Math.max(...participantValues) + 10 : 10;
 
     // Host Organizations Chart
     const hostCtx = document.getElementById('hostOrganizationsChart');
@@ -562,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function() {
           scales: {
             y: { 
               beginAtZero: true,
-              max: Math.max(...participantValues) + 10,
+              max: participantMax,
               ticks: {
                 color: tickColor,
                 font: { size: 12 }
