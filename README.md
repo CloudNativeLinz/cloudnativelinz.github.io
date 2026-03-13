@@ -1,50 +1,114 @@
 # Cloud Native Linz Website
 
-![GitHub last commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fcloudnativelinz.github.io)![GitHub contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)
+[![Last Commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)](https://github.com/cloudnativelinz/cloudnativelinz.github.io/commits/main)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcloudnativelinz.github.io)](https://cloudnativelinz.github.io)
+[![Contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)](https://github.com/cloudnativelinz/cloudnativelinz.github.io/graphs/contributors)
 
-## Visit the website
+Official website for the Cloud Native Linz community.
 
-Find the website here: <https://cloudnativelinz.github.io>.
+🌐 Website: https://cloudnativelinz.at
 
-For RSVP and registration please visit the [CNCF.io community](https://community.cncf.io/linz/) or [meetup page](https://www.meetup.com/Cloud-Native-Linz/).
+📅 Meetup page: https://www.meetup.com/Cloud-Native-Linz/
 
-## Development using Codespaces
+💬 Community page: https://community.cncf.io/linz/
 
-It is easiest to use [codespaces](https://github.com/features/codespaces) since all tooling is already installed in the dev-container.
 
-Open via the Github UI and once you have launched the codespaces, run a development session via:
+## Quick Start
 
-```shell
-jekyll serve
+This site is built with Jekyll.
+
+### Recommended: Dev Container or Codespaces
+
+The easiest setup is GitHub Codespaces or VS Code Dev Containers, where tooling is preconfigured.
+
+Run locally:
+
+```bash
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-or via auto reload in the browser
+Open preview at: http://127.0.0.1:4000
 
-```shell
-jekyll serve --livereload
+If file watching is unreliable on your machine (commonly Windows), use:
+
+```bash
+bundle exec jekyll serve --livereload --force_polling
 ```
 
-on windows the following option might be needed for auto reload
+## Makefile Commands
 
-```shell
- jekyll serve --livereload --force_polling
+This repository includes common shortcuts in [`makefile`](makefile):
+
+- `install`: Install Ruby dependencies and run a build
+- `serve`: Run Jekyll server on all interfaces
+- `serve-livereload`: Run server with live reload
+- `serve-windows`: Live reload with force polling
+- `clean`: Remove build and cache artifacts
+- `calendar`: Generate `calendar.ics` from event data
+
+Examples:
+
+```bash
+make install
+make serve-livereload
+make calendar
 ```
 
-The preview is now available via <http://127.0.0.1:4000/>
+## Content and Data
 
-The setup of codespaces was inspired by this [blog post](https://garethbrown.net/2022/07/01/maintaining-a-blog-with-jekyll-github-pages-codespaces) - kudos!
+Key locations:
 
-## Local development with Dev Container
+- Pages: [`_pages`](./_pages)
+- Layouts: [`_layouts`](./_layouts)
+- Includes: [`_includes`](./_includes)
+- Styles: [`assets/style.scss`](assets/style.scss)
+- Event data: [`_data/events.yml`](_data/events.yml)
 
-- Docker Desktop
-- VS Code + Extension: Name: [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+## Event URL Redirects
 
-## Local development without Dev Container
+Event pages use stable slugs to avoid broken links when titles change.
 
-Probably there are some dependencies that you'd need to check to run the static web generator Jekyll locally. If you want to contribute to this readme to fill in the blanks here, you are most welcome!
+- Guide: [`REDIRECT_MANAGEMENT.md`](REDIRECT_MANAGEMENT.md)
+- Helper script: [`manage_redirects.rb`](manage_redirects.rb)
+- Redirect generator plugin: [`_plugins/datapage_redirect_generator.rb`](_plugins/datapage_redirect_generator.rb)
 
-## Source
+Typical workflow:
 
-The website source has been created by using the template from
-<https://github.com/amitmerchant1990/reverie>
+```bash
+ruby manage_redirects.rb
+bundle exec jekyll build
+```
+
+## Calendar Generation
+
+The repository can generate `calendar.ics` from event data.
+
+- Script: [`generate_calendar.py`](generate_calendar.py)
+- Python deps: [`requirements.txt`](requirements.txt)
+
+Run via Makefile:
+
+```bash
+make calendar
+```
+
+## Build and Deploy
+
+GitHub Pages builds and serves this site from this repository.
+
+To validate locally before pushing:
+
+```bash
+bundle exec jekyll build
+```
+
+## Contributing
+
+Contributions are welcome.
+
+1. Create a branch
+2. Make your changes
+3. Build locally and verify
+4. Open a pull request
+
