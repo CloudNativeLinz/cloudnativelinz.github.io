@@ -228,6 +228,97 @@ layout: default
       display: none;
     }
   }
+
+  /* Dark mode overrides */
+  [data-theme="dark"] .event-detail-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  [data-theme="dark"] .event-detail-title {
+    color: #f9fafb;
+  }
+
+  [data-theme="dark"] .event-meta-section {
+    border-bottom-color: #374151;
+  }
+
+  [data-theme="dark"] .meta-badge {
+    background: #374151;
+    color: #d1d5db;
+  }
+
+  [data-theme="dark"] .talk-card {
+    background: #111827;
+    border-color: #374151;
+  }
+
+  [data-theme="dark"] .talk-title {
+    color: #f9fafb;
+  }
+
+  [data-theme="dark"] .slides-container,
+  [data-theme="dark"] .video-container {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  [data-theme="dark"] .slides-container h4,
+  [data-theme="dark"] .video-container h4 {
+    color: #d1d5db;
+  }
+
+  [data-theme="dark"] .no-slides-message {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: #d97706;
+    color: #fcd34d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .event-detail-card {
+      background: #1f2937;
+      border-color: #374151;
+    }
+
+    :root:not([data-theme="light"]) .event-detail-title {
+      color: #f9fafb;
+    }
+
+    :root:not([data-theme="light"]) .event-meta-section {
+      border-bottom-color: #374151;
+    }
+
+    :root:not([data-theme="light"]) .meta-badge {
+      background: #374151;
+      color: #d1d5db;
+    }
+
+    :root:not([data-theme="light"]) .talk-card {
+      background: #111827;
+      border-color: #374151;
+    }
+
+    :root:not([data-theme="light"]) .talk-title {
+      color: #f9fafb;
+    }
+
+    :root:not([data-theme="light"]) .slides-container,
+    :root:not([data-theme="light"]) .video-container {
+      background: #1f2937;
+      border-color: #374151;
+    }
+
+    :root:not([data-theme="light"]) .slides-container h4,
+    :root:not([data-theme="light"]) .video-container h4 {
+      color: #d1d5db;
+    }
+
+    :root:not([data-theme="light"]) .no-slides-message {
+      background: rgba(245, 158, 11, 0.1);
+      border-color: #d97706;
+      color: #fcd34d;
+    }
+  }
 </style>
 
 {% assign event_date = page.date | date: "%Y-%m-%d" %}

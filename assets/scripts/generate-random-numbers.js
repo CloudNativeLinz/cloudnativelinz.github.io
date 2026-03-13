@@ -2,7 +2,12 @@ function generateRandomNumbers() {
     const resultCard = document.getElementById('result-card');
     const resultHeader = document.getElementById('result-header');
     const resultContainer = document.getElementById('result');
-    
+
+    // Detect current theme
+    const attr = document.documentElement.getAttribute('data-theme');
+    const isDark = attr === 'dark' ||
+        (!attr && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
     // Clear previous results
     resultHeader.innerText = '';
     resultContainer.innerHTML = '';
@@ -22,7 +27,7 @@ function generateRandomNumbers() {
         resultContainer.innerHTML = '<p style="text-align: center; color: #6b7280;">Please check your input values. Make sure minimum < maximum and number of results ≤ range size.</p>';
         resultCard.style.display = 'block';
         resultCard.style.border = '2px solid #ef4444';
-        resultCard.style.background = 'linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%)';
+        resultCard.style.background = isDark ? '#1f2937' : 'linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%)';
         return;
     }
 
@@ -34,9 +39,9 @@ function generateRandomNumbers() {
 
     // Show result card immediately
     resultHeader.innerText = '🎉 Your lucky numbers are:';
-    resultHeader.style.color = '#065f46';
+    resultHeader.style.color = isDark ? '#34d399' : '#065f46';
     resultCard.style.border = '2px solid #10b981';
-    resultCard.style.background = 'linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%)';
+    resultCard.style.background = isDark ? '#1f2937' : 'linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%)';
     resultCard.style.display = 'block';
 
     // Smooth scroll to results

@@ -237,6 +237,42 @@ a:hover {
   font-size: 1rem;
 }
 
+/* Theme toggle button */
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all 0.3s ease;
+
+  svg {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  &:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.55);
+  }
+}
+
+@media (max-width: 1024px) {
+  .theme-toggle-btn {
+    width: auto;
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    align-self: center;
+    margin: 0 auto;
+  }
+}
+
 /* Mobile Menu */
 .mobile-menu-btn {
   display: flex;
@@ -1636,4 +1672,355 @@ pre {
 pre code {
   background: none;
   padding: 0;
+}
+
+/* ==============================================
+   DARK MODE
+   Applied via [data-theme="dark"] on <html>
+   (set by the toggle button / JS)
+   and via @media (prefers-color-scheme: dark)
+   when no manual override is stored.
+   ============================================== */
+
+@mixin dark-theme {
+  color-scheme: dark;
+
+  body {
+    color: #e5e7eb;
+    background-color: #111827;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f9fafb;
+  }
+
+  a {
+    color: #818cf8;
+  }
+
+  a:hover {
+    color: #a5b4fc;
+  }
+
+  // Cards
+  .card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .card-header {
+    border-bottom-color: #374151;
+  }
+
+  .card-header h2,
+  .card-header h3 {
+    color: #818cf8;
+  }
+
+  // Statistics
+  .stat-section {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .chart-title {
+    color: #f9fafb;
+  }
+
+  .stats-table th,
+  .stats-table td {
+    border-bottom-color: #374151;
+  }
+
+  .stats-table th {
+    background-color: #374151;
+    color: #f9fafb;
+  }
+
+  .stats-table tbody tr:hover {
+    background-color: #374151;
+  }
+
+  .number-cell {
+    color: #818cf8;
+  }
+
+  // Events
+  .event-card {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .event-title a {
+    color: #f9fafb;
+  }
+
+  .event-title a:hover {
+    color: #818cf8;
+  }
+
+  .event-meta {
+    color: #9ca3af;
+  }
+
+  .talk-item {
+    border-bottom-color: #374151;
+  }
+
+  .talk-title {
+    color: #f3f4f6;
+  }
+
+  .talk-speaker {
+    color: #9ca3af;
+  }
+
+  .talk-speaker-name {
+    color: #d1d5db;
+  }
+
+  .more-talks {
+    background: #374151;
+  }
+
+  .more-talks .talk-title {
+    color: #9ca3af;
+  }
+
+  // Footer
+  .site-footer {
+    background: #1f2937;
+    border-top-color: #374151;
+  }
+
+  .footer-text {
+    color: #9ca3af;
+  }
+
+  .footer-social a {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .footer-social a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  // Code
+  code,
+  pre,
+  .highlight {
+    background: #1f2937;
+    color: #e5e7eb;
+  }
+
+  // Team
+  .member-name {
+    color: #f9fafb;
+  }
+
+  .member-bio {
+    color: #d1d5db;
+  }
+
+  // Hero
+  .hero-content h1 {
+    color: #f9fafb;
+  }
+
+  // Utility / boxes
+  .highlight-box,
+  .cta-box {
+    background: #1f2937;
+  }
+
+  .highlight-box h4,
+  .cta-box h4 {
+    color: #818cf8;
+  }
+
+  .small-text {
+    color: #9ca3af;
+  }
+
+  // Borders in lists / schedules
+  .requirements-list li {
+    border-bottom-color: #374151;
+  }
+
+  .requirements-list strong {
+    color: #818cf8;
+  }
+
+  .schedule .schedule-item {
+    border-bottom-color: #374151;
+  }
+
+  .schedule .time {
+    color: #818cf8;
+  }
+
+  .meeting-details .detail-item {
+    border-bottom-color: #374151;
+  }
+
+  .meeting-details strong {
+    color: #818cf8;
+  }
+
+  .tip-item h4 {
+    color: #818cf8;
+  }
+
+  .value-item h4 {
+    color: #818cf8;
+  }
+
+  // Sponsoring packages
+  .package-card {
+    border-color: #374151;
+  }
+
+  .package-card.featured {
+    border-color: #818cf8;
+  }
+
+  .package-header {
+    border-bottom-color: #374151;
+  }
+
+  .package-footer {
+    border-top-color: #374151;
+  }
+
+  .package-price {
+    color: #818cf8;
+  }
+
+  .option {
+    background: #374151;
+  }
+
+  .option-divider {
+    color: #9ca3af;
+  }
+
+  .benefits-list li::before {
+    color: #818cf8;
+  }
+
+  // Alerts / notices
+  .fallback-note {
+    background: rgba(14, 165, 233, 0.1);
+    color: #7dd3fc;
+    border-left-color: #0ea5e9;
+  }
+
+  .alert-info {
+    background-color: rgba(129, 140, 248, 0.15);
+    border-left-color: #818cf8;
+    color: #818cf8;
+  }
+
+  .alert-warning {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+    border-left-color: #f59e0b;
+  }
+
+  // Carousel
+  .carousel-btn {
+    background: rgba(31, 41, 55, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .carousel-btn svg {
+    color: #d1d5db;
+  }
+
+  .carousel-btn:hover {
+    background: rgba(55, 65, 81, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-btn:hover svg {
+    color: #818cf8;
+  }
+
+  .carousel-btn:disabled:hover {
+    background: rgba(31, 41, 55, 0.95);
+  }
+
+  .carousel-btn:disabled:hover svg {
+    color: #d1d5db;
+  }
+
+  .carousel-indicator {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .carousel-indicator:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  // Navigation - keep nav links white; header gradient does not change in dark mode
+  .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover {
+      color: white;
+    }
+
+    &.current,
+    &.nav-cta {
+      color: white;
+    }
+  }
+
+  // Buttons — the generic `a` rule above would override btn text colours;
+  // restore white text for gradient-background buttons.
+  .btn-primary,
+  .btn-primary:hover,
+  .btn-secondary,
+  .btn-secondary:hover {
+    color: white;
+  }
+
+  // "Light" buttons (white bg, designed for gradient cards): restore their
+  // white background and correct text colour in dark mode — the generic `a`
+  // rule would otherwise make the text indigo, and a gradient bg would blend
+  // into the gradient-card behind them.
+  .btn-light,
+  .btn-light:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #667eea;
+  }
+
+  .btn-light-secondary,
+  .btn-light-secondary:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #764ba2;
+  }
+
+  // Meta links
+  .meta-link {
+    color: #818cf8;
+  }
+
+  .meta-link:hover {
+    color: #a5b4fc;
+  }
+}
+
+/* --- Apply via data attribute (manual toggle) --- */
+[data-theme="dark"] {
+  @include dark-theme;
+}
+
+/* --- Apply via OS preference (no manual override set) --- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-theme;
+  }
 }
