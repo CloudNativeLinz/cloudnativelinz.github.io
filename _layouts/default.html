@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!-- Theme: apply saved preference immediately to avoid flash of wrong theme -->
+    <!-- Theme: apply system preference immediately to avoid flash of wrong theme -->
     <script>
       try {
-        var savedTheme = localStorage.getItem('theme-preference');
-        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-        else if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        var initialTheme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', initialTheme);
       } catch(e) {}
     </script>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
@@ -151,6 +150,7 @@
     <script>
       (function() {
         var STORAGE_KEY = 'theme-preference';
+        var prefersDarkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
         var ICONS = {
           light: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
@@ -161,14 +161,20 @@
           try { return localStorage.getItem(STORAGE_KEY); } catch(e) { return null; }
         }
 
+        function getSystemTheme() {
+          return (prefersDarkQuery && prefersDarkQuery.matches) ? 'dark' : 'light';
+        }
+
         function getEffectiveTheme() {
           var stored = getStoredTheme();
           if (stored === 'dark' || stored === 'light') return stored;
-          return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+          return getSystemTheme();
         }
 
-        function applyTheme(theme) {
-          try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) {}
+        function applyTheme(theme, persist) {
+          if (persist) {
+            try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) {}
+          }
           document.documentElement.setAttribute('data-theme', theme);
           updateButton(theme);
           document.dispatchEvent(new CustomEvent('themechange'));
@@ -184,20 +190,31 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-          // Migrate any legacy 'system' value
+          // Migrate all existing saved values to system-follow behavior.
           var stored = getStoredTheme();
-          if (stored && stored !== 'light' && stored !== 'dark') {
+          if (stored) {
             try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
-            document.documentElement.removeAttribute('data-theme');
           }
 
-          updateButton(getEffectiveTheme());
+          applyTheme(getSystemTheme(), false);
 
           var btn = document.getElementById('theme-toggle');
           if (btn) {
             btn.addEventListener('click', function() {
-              applyTheme(getEffectiveTheme() === 'dark' ? 'light' : 'dark');
+              applyTheme(getEffectiveTheme() === 'dark' ? 'light' : 'dark', false);
             });
+          }
+
+          if (prefersDarkQuery) {
+            var handleSystemThemeChange = function() {
+              applyTheme(getSystemTheme(), false);
+            };
+
+            if (typeof prefersDarkQuery.addEventListener === 'function') {
+              prefersDarkQuery.addEventListener('change', handleSystemThemeChange);
+            } else if (typeof prefersDarkQuery.addListener === 'function') {
+              prefersDarkQuery.addListener(handleSystemThemeChange);
+            }
           }
         });
       })();
