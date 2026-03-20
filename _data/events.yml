@@ -792,9 +792,11 @@
   - title: AI-Assisted Legacy Code Migration with Konveyor AI. Here's What We Found.
     speaker: Aleksandar Zivkovic
     image: "/assets/speaker-images/47-1.jpeg"
+    recording: "https://www.youtube.com/watch?v=zp9O3NDHeXw"
   - title: Monster-Sized Gitops; How to scale Argo CD
     speaker: David Hondl
     image: "/assets/speaker-images/david-hondl.jpg"
+    recording: "https://www.youtube.com/watch?v=90KuKdCv0fE"
   slug: march-2026-edition-at-gepardec
   #redirect_from:
     #- "/events/meetup/march-2026-edition-at-gepardec/"
