@@ -798,3 +798,21 @@
   slug: march-2026-edition-at-gepardec
   #redirect_from:
     #- "/events/meetup/march-2026-edition-at-gepardec/"
+
+- id: 48
+  title: Save the date
+  date: '2026-04-21'
+  doors_open: '17:30'
+  host: karriere.at
+  address: karriere.at, Donaupromenade 1, 4020 Linz
+  event_link: ''
+  registrations: ''
+  participants: ''
+  talks:
+  - title: TBA
+    speaker: TBA
+    image: ""
+  - title: TBA
+    speaker: TBA
+    image: ""
+  slug: april-2026-edition-at-karriereat
