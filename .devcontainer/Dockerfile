@@ -1,5 +1,5 @@
 # Alpine-based Ruby image for Jekyll
-FROM ruby:4.0.1-alpine3.23
+FROM ruby:4.0.2-alpine3.23
 
 # Install necessary packages for Alpine Linux
 RUN apk add --no-cache \
