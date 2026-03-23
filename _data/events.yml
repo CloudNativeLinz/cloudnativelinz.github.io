@@ -802,19 +802,19 @@
     #- "/events/meetup/march-2026-edition-at-gepardec/"
 
 - id: 48
-  title: Save the date
+  title: Save the date - April edition at karriere.at
   date: '2026-04-21'
   doors_open: '17:30'
   host: karriere.at
   address: karriere.at, Donaupromenade 1, 4020 Linz
-  event_link: ''
+  event_link: https://www.meetup.com/cloud-native-linz/events/313909845/
   registrations: ''
   participants: ''
   talks:
   - title: TBA
     speaker: TBA
     image: ""
-  - title: Observability in the AI‑Native Age
+  - title: Observability in the AI-Native Age
     speaker: Andreas (Andi) Grabner
     image: https://media.licdn.com/dms/image/v2/C5103AQEm6WnzKibGzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516319578575?e=1775692800&v=beta&t=eW2NeyXXcUjmn1VsiPoGZA-REM4X85-C4nMYR77vEeA
     social: https://www.linkedin.com/in/grabnerandi/
