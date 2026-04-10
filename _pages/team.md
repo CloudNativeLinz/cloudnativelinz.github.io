@@ -11,14 +11,14 @@ permalink: /team/
 
 <div class="team-grid">
   <div class="team-member">
-    <img src="{{ site.baseurl }}/images/juliano.jpg" alt="Juliano Costa" />
+    <img src="{{ site.baseurl }}/images/juliano.png" alt="Juliano Costa" />
     <div class="member-info">
       <h3>Juliano Costa</h3>
       <div class="member-role">Co-Organizer & Developer Advocate</div>
       
-      <p>Juliano Costa is a software engineer/developer advocate born and raised in Brazil who loves learning new things. In the last couple of years he has put his efforts into cloud technologies and got super excited about it, which made him start a Cloud Native Community Group together with a colleague in Linz (Austria), where he lives now.</p>
+       <p>Juliano Costa is a Developer Advocate at Datadog with a focus on OpenTelemetry. He is a CNCF Ambassador passionate about fostering the Cloud Native community and spreading OTel's word everywhere he goes. Juliano is an active contributor to the OpenTelemetry project and a maintainer on the OpenTelemetry Demo, as well as the Developer Experience SIG. When he's not talking about OTel, you'll find him chasing after his energetic 3-year-old.
       
-      <p>Besides organizing our meetup, he is also a maintainer of the <a href="https://github.com/open-telemetry/opentelemetry-demo" target="_blank" rel="noopener">OpenTelemetry Demo</a>. When he is not working with Kubernetes and OpenTelemetry, he is probably spending some time with his wife and his newly deployed baby.</p>
+      <p>Since September, 2020 he has been working together with his friends Jürgen (and later Katharina) in organizing the Cloud Native Computing Linz meetup and helping the community grow.</p>
       
       <div class="member-links">
         <a href="https://www.linkedin.com/in/julianocosta89/" target="_blank" rel="noopener" class="btn">
@@ -41,7 +41,7 @@ permalink: /team/
       
       <p>Jürgen is a Solution Engineer for AI Applications at Microsoft Austria, working alongside customers to implement AI solutions. He has been working in the industry in various roles including developer, researcher, product manager, and evangelist for over 10 years.</p>
       
-      <p>He co-founded the Cloud-Native Computing Linz meetup (with Juliano, whoms he calls a friend while Juliano refers to Jürgen as a colleague) to bring together like-minded professionals and foster knowledge sharing in the region.</p>
+      <p>He co-founded the Cloud-Native Computing Linz meetup (with Juliano) to bring together like-minded professionals and foster knowledge sharing in the region.</p>
       
       <div class="member-links">
         <a href="https://www.linkedin.com/in/juergenetzlstorfer/" target="_blank" rel="noopener" class="btn">
