@@ -775,6 +775,7 @@
   - title: Smells Like Clean Telemetry
     speaker: Juliano Costa
     image: https://media.licdn.com/dms/image/v2/D4D03AQHkOEZG983ylA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712664137969?e=1771459200&v=beta&t=JH-5CyDJG4pt2dkVB4m1idhThiXZa0uciYLkDox_sAA
+    social: https://www.linkedin.com/in/julianocosta89/
   slug: february-2026-edition-hosted-by-tractive
   #redirect_from:
     #- "/events/meetup/february-2026-edition-hosted-by-tractive/"
@@ -811,11 +812,12 @@
   registrations: ''
   participants: ''
   talks:
+  - title: What Going Cloud Native Taught Us About Developer Experience
+    speaker: Thomas Schuetz
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHIoZZqHIm8Xw/profile-displayphoto-shrink_400_400/B4DZYhJhJMGkAg-/0/1744312865954?e=1777507200&v=beta&t=Z_dG7Rr47qHkxV7VZy49iieISiE-hJ-xXzfC6Sz0ums"
+    social: https://www.linkedin.com/in/thschue/
   - title: TBA
-    speaker: TBA
-    image: ""
-  - title: Observability in the AI-Native Age
-    speaker: Andreas (Andi) Grabner
-    image: https://media.licdn.com/dms/image/v2/C5103AQEm6WnzKibGzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516319578575?e=1775692800&v=beta&t=eW2NeyXXcUjmn1VsiPoGZA-REM4X85-C4nMYR77vEeA
-    social: https://www.linkedin.com/in/grabnerandi/
+    speaker: Patrick Wahlmüller
+    image: https://media.licdn.com/dms/image/v2/C4E03AQHQssI8MUyqkQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1597671283843?e=1777507200&v=beta&t=63-fni5Ngfo_Gv25TJ7OZPn1YWV2ek1tjXbYJZl-KIM
+    social: https://www.linkedin.com/in/patrickwahlmueller/
   slug: april-2026-edition-at-karriereat
