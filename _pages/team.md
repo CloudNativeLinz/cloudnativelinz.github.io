@@ -16,7 +16,7 @@ permalink: /team/
       <h3>Juliano Costa</h3>
       <div class="member-role">Co-Organizer & Developer Advocate</div>
       
-       <p>Juliano Costa is a Developer Advocate at Datadog with a focus on OpenTelemetry. He is a CNCF Ambassador passionate about fostering the Cloud Native community and spreading OTel's word everywhere he goes. Juliano is an active contributor to the OpenTelemetry project and a maintainer on the OpenTelemetry Demo, as well as the Developer Experience SIG. When he's not talking about OTel, you'll find him chasing after his energetic 3-year-old.
+       <p>Juliano Costa is a Developer Advocate at Datadog with a focus on OpenTelemetry. He is a CNCF Ambassador passionate about fostering the Cloud Native community and spreading OTel's word everywhere he goes. Juliano is an active contributor to the OpenTelemetry project and a maintainer on the OpenTelemetry Demo, as well as the Developer Experience SIG. When he's not talking about OTel, you'll find him chasing after his energetic 3-year-old.</p>
       
       <p>Since September, 2020 he has been working together with his friends Jürgen (and later Katharina) in organizing the Cloud Native Computing Linz meetup and helping the community grow.</p>
       
@@ -28,6 +28,10 @@ permalink: /team/
         <a href="https://github.com/julianocosta89" target="_blank" rel="noopener" class="btn btn-outline">
           {% include github-icon.html size="16" %}
           GitHub
+        </a>
+        <a href="https://jcosta.dev" target="_blank" rel="noopener" class="btn btn-outline">
+          {% include website-icon.html size="16" %}
+          Website
         </a>
       </div>
     </div>
