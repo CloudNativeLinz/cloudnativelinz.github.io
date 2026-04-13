@@ -162,7 +162,7 @@ permalink: /statistics/
         <div class="highlight-label">Total Events</div>
       </div>
       <div class="highlight-item">
-        <div class="highlight-number">700+</div>
+        <div class="highlight-number">800+</div>
         <div class="highlight-label">Community members</div>
       </div>
       <div class="highlight-item">
