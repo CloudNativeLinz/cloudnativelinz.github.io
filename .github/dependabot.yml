@@ -4,22 +4,22 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
   # Keep Ruby gems (Jekyll + plugins) up to date
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
   # Keep Python packages up to date
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
 
   # Keep Docker base image up to date
   - package-ecosystem: "docker"
     directory: "/.devcontainer"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
