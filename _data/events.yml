@@ -810,7 +810,7 @@
   address: karriere.at, Donaupromenade 1, 4020 Linz
   event_link: https://www.meetup.com/cloud-native-linz/events/313909845/
   registrations: ''
-  participants: ''
+  participants: '28'
   talks:
   - title: What Going Cloud Native Taught Us About Developer Experience
     speaker: Thomas Schuetz
@@ -821,3 +821,4 @@
     image: https://cache.sessionize.com/image/d5c9-400o400o2-nMENAkQz2XAKe1ySN86HtU.png
     social: https://www.linkedin.com/in/patrickwahlmueller/
   slug: april-2026-edition-at-karriereat
+
