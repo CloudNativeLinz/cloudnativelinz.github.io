@@ -822,3 +822,22 @@
     social: https://www.linkedin.com/in/patrickwahlmueller/
   slug: april-2026-edition-at-karriereat
 
+- id: 49
+  title: Cloud Native Linz May/2026
+  date: '2026-05-26'
+  doors_open: '17:30'
+  host: Dynatrace
+  address: Dynatrace Austria GmbH - Engineering Headquarter, Am Fünfundzwanziger Turm 20, 4020 Linz
+  event_link: https://www.meetup.com/cloud-native-linz/events/314672208/
+  registrations: ''
+  participants: ''
+  talks:
+  - title: Closing the loop
+    speaker: Christoph Neumüller
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGlD1LFiSsZVg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1672743706280?e=1779926400&v=beta&t=nvIQyEUpfE-drjYvZi5qOKB1SqTFpxwnRi8OXlFBZfA"
+    social: https://www.linkedin.com/in/christophneumueller/
+  - title: SBOBs or how ship "Intended Behavior"
+    speaker: Constanze B. Roedig
+    image: https://avatars.sched.co/d/2b/8204914/avatar.jpg?a60
+    social: https://www.linkedin.com/in/croedig/
+  slug: may-2026-edition-at-dynatrace
