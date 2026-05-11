@@ -3,6 +3,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/cloudnativelinz/cloudnativelinz.github.io?label=updated)](https://github.com/cloudnativelinz/cloudnativelinz.github.io/commits/main)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fcloudnativelinz.github.io)](https://cloudnativelinz.github.io)
 [![Contributors](https://img.shields.io/github/contributors/cloudnativelinz/cloudnativelinz.github.io)](https://github.com/cloudnativelinz/cloudnativelinz.github.io/graphs/contributors)
+[![Dependabot Updates](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/CloudNativeLinz/cloudnativelinz.github.io/actions/workflows/dependabot/dependabot-updates)
 
 Official website for the Cloud Native Linz community.
 
