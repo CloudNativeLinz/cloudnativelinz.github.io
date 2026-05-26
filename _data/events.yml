@@ -238,7 +238,7 @@
   title: 17. Cloud Native Computing Linz Meetup
   date: '2022-10-18'
   host: Cloudflight
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-17-cloud-native-computing-linz-meetup-october-18-2022/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/cbxhcc3
   registrations: "~20"
   participants: ''
   talks:
@@ -256,7 +256,7 @@
   title: 18. Cloud Native Computing Linz Meetup
   date: '2022-11-22'
   host: Tractive
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-18-cloud-native-computing-linz-meetup-november-22-2022/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/e84kf5c
   registrations: ''
   participants: '38'
   talks:
@@ -271,7 +271,7 @@
   title: 19. Cloud Native Computing Linz Meetup
   date: '2023-01-17'
   host: Startrampe
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-jan-17-k8s-dora-metrics-and-tyk-gateway-with-opentelemetry/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/q3btaxu
   registrations: ''
   participants: '35'
   talks:
@@ -288,7 +288,7 @@
   title: Kubernetes Alternatives
   date: '2023-02-21'
   host: Usersnap
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-feb-21-kubernetes-alternatives/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/jpt7cyb
   registrations: ''
   participants: '45'
   talks:
@@ -305,7 +305,7 @@
   title: Crossplane Usecases
   date: '2023-03-28'
   host: Dynatrace
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-28-crossplane-use-cases/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/r73rm57
   registrations: ''
   participants: '43'
   talks:
@@ -323,7 +323,7 @@
   title: Hagenberg Edition
   date: '2023-04-18'
   host: Porsche Informatik
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-april-18-hagenberg-edition/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/awhh8mq
   registrations: ''
   participants: '35'
   talks:
@@ -343,7 +343,7 @@
   title: CertOps and K8sGPT
   date: '2023-05-30'
   host: Cloudflight
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-may-30-troubleshooting-with-k8sgpt/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/8n5y9kv
   registrations: ''
   participants: '25'
   talks:
@@ -360,7 +360,7 @@
   title: GitOps & Terraform and a Guide to OpenTelemetry
   date: '2023-06-27'
   host: Runtastic
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-june-27-gitops-terraform-and-a-guide-to-opentelemetry/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/737f8nv
   registrations: ''
   participants: '52'
   talks:
@@ -378,7 +378,7 @@
   title: Migration to Cloud Native & The Power of Operators
   date: '2023-09-19'
   host: G+D Netcetera
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-sept-19-migration-to-cloud-native-amp-the-power-of-operators/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/933xajp
   registrations: ''
   participants: '37'
   talks:
@@ -395,7 +395,7 @@
   title: Testing K8s Operators & OpenTelemetry for Logs
   date: '2023-10-18'
   host: eww IT and TEL
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-october-18-testing-k8s-operators-amp-opentelemetry-for-logs/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/5kkv26u
   registrations: ''
   participants: '27'
   talks:
@@ -411,7 +411,7 @@
   title: GitOps and Testing Cloud Environments
   date: '2023-11-21'
   host: MIC
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-november-21-gitops-and-testing-cloud-environments/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/9zwgun8
   registrations: ''
   participants: '41'
   talks:
@@ -428,7 +428,7 @@
   title: Cloud Adventure and Cloud Native Sustainability
   date: '2024-01-24'
   host: karriere.at
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-january-24-cloud-adventure-and-cloud-native-sustainability/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/ptatwve
   registrations: ''
   participants: '31'
   talks:
@@ -445,7 +445,7 @@
   title: Access Control and Platforms with Devs in Mind
   date: '2024-02-27'
   host: Gepardec
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-february-27-access-control-and-platforms-with-devs-in-mind/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/9abgy8z
   registrations: ''
   participants: '39'
   talks:
@@ -463,7 +463,7 @@
   title: K8s Journey and a Multi-Layer K8s Security System
   date: '2024-03-26'
   host: Runtastic
-  event_link: https://community.cncf.io/events/details/cncf-linz-presents-cloud-native-linz-march-26-kubernetes-journey-and-a-multi-layer-kubernetes-security-system/
+  event_link: https://ocgroups.dev/cncf/group/cloud-native-linz/event/kg4n999
   registrations: ''
   participants: '40'
   talks:

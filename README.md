@@ -11,7 +11,7 @@ Official website for the Cloud Native Linz community.
 
 📅 Meetup page: https://www.meetup.com/Cloud-Native-Linz/
 
-💬 Community page: https://community.cncf.io/linz/
+💬 Community page: https://ocgroups.dev/cncf/group/cloud-native-linz
 
 
 ## Quick Start
