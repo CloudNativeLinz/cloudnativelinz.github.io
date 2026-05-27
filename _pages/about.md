@@ -82,7 +82,7 @@ redirect_from:
           </div>
           <div class="detail-item">
             <strong>🌐 Online:</strong> 
-            <a href="https://community.cncf.io/linz/" target="_blank">CNCF Community</a> | 
+            <a href="https://ocgroups.dev/cncf/group/cloud-native-linz" target="_blank">CNCF Community</a> | 
             <a href="https://www.meetup.com/Cloud-Native-Computing-Linz/" target="_blank">Meetup.com</a>
           </div>
         </div>

@@ -50,7 +50,7 @@ permalink: /join/
             <h3>🧑‍🤝‍🧑 CNCF Community </h3>
           </div>
           <p>Our official home as a CNCF chapter. This is where we post all events, updates, and community discussions.</p>
-          <a href="https://community.cncf.io/linz/" class="btn btn-primary">
+          <a href="https://ocgroups.dev/cncf/group/cloud-native-linz" class="btn btn-primary">
             Join CNCF Community
           </a>
         </div>
