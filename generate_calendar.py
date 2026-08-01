@@ -1,8 +1,9 @@
-import yaml
 import hashlib
 from datetime import datetime
-from icalendar import Calendar, Event
+
 import pytz
+import yaml
+from icalendar import Calendar, Event
 
 # ---- SETTINGS ----
 TIMEZONE = "Europe/Berlin"  # Change to your time zone, e.g. "America/New_York"
@@ -30,7 +31,7 @@ for ev in data:
     event_date = datetime.strptime(ev["date"], "%Y-%m-%d")
     
     # Use doors_open time if available, otherwise default to 18:00 (6pm)
-    if 'doors_open' in ev and ev['doors_open']:
+    if ev.get('doors_open'):
         # Parse the doors_open time (format: 'HH:MM')
         time_parts = ev['doors_open'].split(':')
         start_hour = int(time_parts[0])
@@ -50,7 +51,7 @@ for ev in data:
     event.add("dtend", end_dt)
     
     # Add location information - prefer address field if available, otherwise use host
-    location = ev.get('address') if 'address' in ev and ev['address'] else ev.get('host', 'TBA')
+    location = ev.get('address') or ev.get('host', 'TBA')
     if location and location.lower() != 'online':
         event.add("location", location)
     elif location and location.lower() == 'online':
@@ -62,7 +63,7 @@ for ev in data:
 
     # Create description from talks if available
     description = f"Host: {ev.get('host', 'TBA')}\n"
-    if 'talks' in ev and ev['talks']:
+    if ev.get('talks'):
         description += "Talks:\n"
         for talk in ev['talks']:
             description += f"- {talk['title']} by {talk['speaker']}\n"

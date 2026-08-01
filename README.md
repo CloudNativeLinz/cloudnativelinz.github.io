@@ -42,6 +42,10 @@ bundle exec jekyll serve --livereload --force_polling
 This repository includes common shortcuts in [`makefile`](makefile):
 
 - `install`: Install Ruby dependencies and run a build
+- `build`: Run a strict production build
+- `lint`: Check Python, YAML, and Ruby sources
+- `test`: Generate the calendar and run a production build
+- `check`: Run all lint and test checks
 - `serve`: Run Jekyll server on all interfaces
 - `serve-livereload`: Run server with live reload
 - `serve-windows`: Live reload with force polling
@@ -52,6 +56,7 @@ Examples:
 
 ```bash
 make install
+make check
 make serve-livereload
 make calendar
 ```
@@ -101,7 +106,7 @@ GitHub Pages builds and serves this site from this repository.
 To validate locally before pushing:
 
 ```bash
-bundle exec jekyll build
+make check
 ```
 
 ## Contributing
