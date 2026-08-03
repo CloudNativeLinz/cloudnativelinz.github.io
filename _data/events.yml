@@ -841,3 +841,23 @@
     image: https://avatars.sched.co/d/2b/8204914/avatar.jpg?a60
     social: https://www.linkedin.com/in/croedig/
   slug: may-2026-edition-at-dynatrace
+
+- id: 50
+  title: 'Save the date: Cloud-Native Linz 2026 September Edition'
+  date: '2026-09-16'
+  doors_open: '17:30'
+  host: Netcetera
+  address: G+D Netcetera, Europaplatz 4, 4020 Linz
+  event_link: ''
+  registrations: ''
+  participants: ''
+  talks:
+  - title: TBA
+    speaker: TBA
+    image: ""
+    social: ""
+  - title: TBA
+    speaker: TBA
+    image: ""
+    social: ""
+  slug: september-2026-edition-at-netcetera
