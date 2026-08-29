@@ -852,8 +852,8 @@
   registrations: ''
   participants: ''
   talks:
-  - title: Beyond Engineering: A Product Owner++ in a Sea of Technical Debt
-    speaker: Petra Stepanowsky
+  - title: "Beyond Engineering: A Product Owner++ in a Sea of Technical Debt"
+    speaker: "Petra Stepanowsky"
     image: ""
     social: ""
   - title: TBA
