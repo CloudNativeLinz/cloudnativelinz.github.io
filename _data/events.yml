@@ -843,12 +843,12 @@
   slug: may-2026-edition-at-dynatrace
 
 - id: 50
-  title: 'Save the date: Cloud-Native Linz 2026 September Edition'
+  title: 'Beyond Engineering & Platform Engineering Right Side Up'
   date: '2026-09-16'
   doors_open: '17:30'
   host: G+D Netcetera
   address: G+D Netcetera, Europaplatz 4, 4020 Linz
-  event_link: ''
+  event_link: 'https://www.meetup.com/cloud-native-linz/events/316178235'
   registrations: ''
   participants: ''
   talks:
@@ -856,10 +856,10 @@
     speaker: "Petra Stepanowsky"
     image: "/assets/speaker-images/50-1.jpg"
     social: ""
-  - title: TBA
-    speaker: TBA
-    image: ""
-    social: ""
+  - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
+    speaker: Katharina Sick
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694361905742?e=1790208000&v=beta&t=G7Et2D_zYsrZU7yWNGZOYliYNBwjUZKDsD_17dcsS9I"
+    social: "https://www.linkedin.com/in/katharinasick/"
   slug: september-2026-edition-at-netcetera
 
 - id: 51
