@@ -1461,7 +1461,7 @@ ul.custom-options li {
 .events-carousel-container {
   position: relative;
   margin: 2rem 0;
-  overflow: hidden;
+  row-gap: 1rem;
   
   @include mobile {
     margin: 1rem 0;
@@ -1472,12 +1472,11 @@ ul.custom-options li {
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
-  transition: height 0.3s ease;
 }
 
 .events-carousel-track {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   
   .event-card {
@@ -1617,7 +1616,7 @@ ul.custom-options li {
 
   .carousel-indicators {
     order: 3;
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .carousel-btn-next {
@@ -1671,6 +1670,7 @@ ul.custom-options li {
 
   .carousel-indicators {
     order: 3;
+    margin-top: 0;
   }
 
   .carousel-btn-next {

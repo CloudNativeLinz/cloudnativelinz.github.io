@@ -282,11 +282,6 @@ function updateCarouselPosition() {
   
   const translateX = -currentSlide * 100;
   eventsTrack.style.transform = `translateX(${translateX}%)`;
-
-  const activeCard = eventsTrack.querySelectorAll('.event-card')[currentSlide];
-  if (eventsCarousel && activeCard) {
-    eventsCarousel.style.height = `${activeCard.offsetHeight}px`;
-  }
   
   // Update indicators
   const indicators = document.querySelectorAll('.carousel-indicator');
@@ -383,31 +378,6 @@ if ('IntersectionObserver' in window) {
     carouselObserver.observe(carouselContainer);
   }
   
-  // Animate individual cards
-  const upcomingCards = document.querySelectorAll('.events-carousel .event-card');
-  const upcomingObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, index * 100);
-        upcomingObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '50px'
-  });
-  
-  upcomingCards.forEach((card) => {
-    if (!card.style.opacity) {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      upcomingObserver.observe(card);
-    }
-  });
 }
 
 // Pause auto-advance on hover and focus
