@@ -70,6 +70,22 @@ Key locations:
 - Includes: [`_includes`](./_includes)
 - Styles: [`assets/style.scss`](assets/style.scss)
 - Event data: [`_data/events.yml`](_data/events.yml)
+- Event banners: [`images/events`](images/events)
+
+### Event Banners
+
+Store event banners in `images/events/` as `<id>.jpg`, using the numeric `id`
+from `_data/events.yml`. For example, event `51` uses `images/events/51.jpg`.
+Keep filenames lowercase and use the `.jpg` extension. No additional image
+field is needed in the event data.
+
+Upcoming event cards, past event cards, and event detail pages all use the same
+local banner. Separate `-550.jpg` thumbnails are not required. If an image is
+missing, the site displays `images/cloudnativelinz-banner.png` as a fallback.
+
+Add new banners directly to `images/events/`, not the generated `_site/`
+directory. Jekyll copies them to the built site automatically. Speaker photos
+are separate from these event banners.
 
 ## Event URL Redirects
 

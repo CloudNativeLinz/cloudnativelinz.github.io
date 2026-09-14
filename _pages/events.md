@@ -17,10 +17,10 @@ permalink: events/
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
       <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
-        <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}-550.jpg" 
+        <img src="{{ '/images/events/' | append: event.id | append: '.jpg' | relative_url }}"
              alt="{{ event.title }}" 
              loading="lazy"
-             onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
+             onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
         />
       </a>
       <div class="event-overlay">

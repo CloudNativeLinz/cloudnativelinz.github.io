@@ -326,10 +326,10 @@ layout: default
 
 <div class="event-detail-card">
   <div class="event-detail-banner">
-    <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ page.id }}.jpg" 
+    <img src="{{ '/images/events/' | append: page.id | append: '.jpg' | relative_url }}"
          alt="{{ page.title }}" 
          loading="lazy"
-         onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
+         onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
     />
     <div class="event-detail-overlay">
       <div class="event-detail-date">
