@@ -335,7 +335,7 @@
   - title: 'Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered
       Productivity Duo'
     speaker: Jürgen Etzlstorfer
-    image: "/assets/speaker-images/jetzlstorfer.jpg"
+    image: "/images/speakers/jetzlstorfer.jpg"
     social: https://www.linkedin.com/in/juergenetzlstorfer/
   slug: hagenberg-edition
 
@@ -572,7 +572,7 @@
   - title: A closer look at Docker BuildKit and Buildx
     speaker: Sophia Zehethofer
     file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
-    image: "/assets/speaker-images/36-1.jpeg"
+    image: "/images/speakers/36-1.jpeg"
   - title: Beesting Can't touch this
     speaker: Patrick Pichler
     file: "/slides/2025-01/beesting_cant_touch_this.pdf"
@@ -685,7 +685,7 @@
   talks:
   - title: Secrets management - from plaintext to hiding keys in the Swiss Alps
     speaker: Georg Mayrhauser
-    image: "/assets/speaker-images/gmh.jpeg"
+    image: "/images/speakers/gmh.jpeg"
   - title: Open Mic - Share your Cloud Native Journey
     speaker: the community
   slug: ctencf-party-celebrating-10-years-of-cncf-and-5-years-of-cloud-native-linz
@@ -725,7 +725,7 @@
   talks:
   - title: 'Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline' # with ClickHouse & Python
     speaker: Clemens Kriechbaumer
-    image: "/assets/speaker-images/44-1.png"
+    image: "/images/speakers/44-1.png"
   - title: The Kubernetes and the Bazzar
     speaker: Hubert Ströbitzer
     image: https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg
@@ -770,11 +770,11 @@
   talks:
   - title: 18 Bluetooth Controllers Walk into a Bar
     speaker: Simon Schrottner & Manuel Timelthaler
-    image: "/assets/speaker-images/46-1.png"
+    image: "/images/speakers/46-1.png"
     file: "/slides/2026-02/18-bluetooth-controllers-walk-into-a-bar.pdf"
   - title: Smells Like Clean Telemetry
     speaker: Juliano Costa
-    image: https://media.licdn.com/dms/image/v2/D4D03AQHkOEZG983ylA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712664137969?e=1771459200&v=beta&t=JH-5CyDJG4pt2dkVB4m1idhThiXZa0uciYLkDox_sAA
+    image: "/images/speakers/juliano-costa.jpg"
     social: https://www.linkedin.com/in/julianocosta89/
   slug: february-2026-edition-hosted-by-tractive
   #redirect_from:
@@ -792,11 +792,11 @@
   talks:
   - title: AI-Assisted Legacy Code Migration with Konveyor AI. Here's What We Found.
     speaker: Aleksandar Zivkovic
-    image: "/assets/speaker-images/47-1.jpeg"
+    image: "/images/speakers/47-1.jpeg"
     recording: "https://www.youtube.com/watch?v=zp9O3NDHeXw"
   - title: Monster-Sized Gitops; How to scale Argo CD
     speaker: David Hondl
-    image: "/assets/speaker-images/david-hondl.jpg"
+    image: "/images/speakers/david-hondl.jpg"
     recording: "https://www.youtube.com/watch?v=90KuKdCv0fE"
   slug: march-2026-edition-at-gepardec
   #redirect_from:
@@ -872,3 +872,20 @@
   registrations: ''
   participants: ''
   slug: october-2026-pubquiz-edition
+
+
+- id: 52
+  title: 'Beyond Engineering & Platform Engineering Right Side Up'
+  date: '2026-11-16'
+  doors_open: '17:30'
+  host: G+D Netcetera
+  address: G+D Netcetera, Europaplatz 4, 4020 Linz
+  event_link: 'https://www.meetup.com/cloud-native-linz/events/316178235'
+  registrations: ''
+  participants: ''
+  talks:
+  - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
+    speaker: Katharina Sick
+    social: "https://www.linkedin.com/in/katharinasick/"
+  slug: november-2026-edition-at-netcetera
+
