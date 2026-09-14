@@ -872,20 +872,3 @@
   registrations: ''
   participants: ''
   slug: october-2026-pubquiz-edition
-
-
-- id: 52
-  title: 'Beyond Engineering & Platform Engineering Right Side Up'
-  date: '2026-11-16'
-  doors_open: '17:30'
-  host: G+D Netcetera
-  address: G+D Netcetera, Europaplatz 4, 4020 Linz
-  event_link: 'https://www.meetup.com/cloud-native-linz/events/316178235'
-  registrations: ''
-  participants: ''
-  talks:
-  - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
-    speaker: Katharina Sick
-    social: "https://www.linkedin.com/in/katharinasick/"
-  slug: november-2026-edition-at-netcetera
-
