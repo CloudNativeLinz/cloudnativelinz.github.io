@@ -87,6 +87,11 @@ Add new banners directly to `images/events/`, not the generated `_site/`
 directory. Jekyll copies them to the built site automatically. Speaker photos
 are separate from these event banners.
 
+This repository publishes supplied banners; it does not generate them
+automatically. When creating or updating an event, commit the corresponding
+`images/events/<id>.jpg` if a new or updated banner is needed. Changes to event
+data do not regenerate existing banners.
+
 ## Event URL Redirects
 
 Event pages use stable slugs to avoid broken links when titles change.
