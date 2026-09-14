@@ -2268,7 +2268,7 @@ button, input, select, textarea {
   margin-top: auto;
 }
 
-:root .meta-link-rsvp {
+:root .meta-link.meta-link-rsvp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2280,7 +2280,7 @@ button, input, select, textarea {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-:root .meta-link-rsvp:hover {
+:root .meta-link.meta-link-rsvp:hover {
   color: #ffffff;
   background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
   text-decoration: none;
@@ -2345,7 +2345,7 @@ button, input, select, textarea {
     font-size: 1.375rem;
   }
 
-  :root .meta-link-rsvp {
+  :root .meta-link.meta-link-rsvp {
     margin-left: 0;
   }
 }
