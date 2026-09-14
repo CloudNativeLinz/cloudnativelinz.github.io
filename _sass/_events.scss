@@ -261,6 +261,40 @@
   overflow-wrap: anywhere;
 }
 
+.event-calendar {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+
+  summary {
+    color: var(--event-accent);
+    cursor: pointer;
+  }
+
+  .event-calendar-links {
+    display: grid;
+    gap: 0.75rem;
+    list-style: none;
+    margin: 0.75rem 0 0;
+    padding: 0 0 0 1rem;
+    border-left: 2px solid var(--event-line);
+    font-weight: 400;
+    overflow-wrap: anywhere;
+  }
+}
+
+.event-facts .event-map {
+  margin-top: 0.75rem;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 180px;
+    border: 1px solid var(--event-line);
+    border-radius: 6px;
+    background: var(--event-soft);
+  }
+}
+
 :root .event-page .event-action {
   display: inline-flex;
   justify-content: space-between;

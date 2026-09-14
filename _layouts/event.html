@@ -4,6 +4,7 @@ layout: default
 
   {% assign event_date = page.date | date: '%Y-%m-%d' %}
   {% assign today = site.time | date: '%Y-%m-%d' %}
+  {% assign calendar_url = 'https://cloudnativelinz.at/calendar.ics' %}
   {% assign teaser_path = '/images/events/' | append: page.id | append: '-teaser.jpg' %}
   {% assign teaser_file = site.static_files | where: 'path', teaser_path | first %}
   {% if teaser_file %}
@@ -45,13 +46,33 @@ layout: default
             {% if page.doors_open and page.doors_open != '' %}
               <dd class="event-fact-note">Doors open at {{ page.doors_open }}</dd>
             {% endif %}
+            <dd>
+              <details class="event-calendar">
+                <summary><span aria-hidden="true">&#128197;</span> Add to your calendar</summary>
+                <ul class="event-calendar-links">
+                  <li><a href="{{ calendar_url | replace: 'https://', 'webcal://' }}">Subscribe in calendar app</a></li>
+                  <li><a href="https://calendar.google.com/calendar/u/0/r?cid={{ calendar_url | url_encode }}" target="_blank" rel="noopener">Subscribe in Google Calendar <span aria-hidden="true">&nearr;</span></a></li>
+                  <li><a href="{{ '/calendar.ics' | relative_url }}" download>Download calendar (.ics)</a></li>
+                </ul>
+              </details>
+            </dd>
           </div>
           {% if page.host and page.host != '' %}
             <div>
               <dt>Where</dt>
               <dd>{{ page.host }}</dd>
               {% if page.address and page.address != '' %}
-                <dd class="event-fact-note"><a href="https://www.google.com/maps/search/?api=1&amp;query={{ page.address | uri_escape }}" target="_blank" rel="noopener">{{ page.address }}</a></dd>
+                <dd class="event-fact-note"><a href="https://www.google.com/maps/search/?api=1&amp;query={{ page.address | url_encode }}" target="_blank" rel="noopener">{{ page.address }}</a></dd>
+                {% assign map_address = page.address | strip | downcase %}
+                {% assign map_host = page.host | strip | downcase %}
+                {% unless map_address == '' or map_address == 'online' or map_address == 'online event' or map_address == 'tba' or map_address == 'tbd' or map_host == 'online' %}
+                  <dd class="event-map">
+                    <iframe src="https://www.google.com/maps?q={{ page.address | url_encode }}&amp;z=15&amp;output=embed"
+                            title="Map: {{ page.host | escape }}"
+                            width="320" height="180" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  </dd>
+                {% endunless %}
               {% endif %}
             </div>
           {% endif %}
