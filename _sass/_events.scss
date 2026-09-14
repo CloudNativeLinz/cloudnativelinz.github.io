@@ -261,7 +261,7 @@
   overflow-wrap: anywhere;
 }
 
-.event-page .event-action {
+:root .event-page .event-action {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -275,6 +275,7 @@
 
   &:hover {
     background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    color: #ffffff;
     text-decoration: none;
   }
 }
