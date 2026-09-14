@@ -810,6 +810,42 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.speaker-info {
+  .speaker-intro {
+    max-width: 78ch;
+    margin-bottom: 3rem;
+
+    .lead {
+      color: var(--event-ink);
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .community-note {
+      color: var(--event-muted);
+    }
+  }
+
+  .community-topic > h2 {
+    margin: 0 0 1.25rem;
+    color: var(--event-ink);
+    font-size: 1.5rem;
+  }
+
+  .speaker-guidance {
+    margin-top: 3rem;
+  }
+
+  .tip-item h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .schedule-item {
+    align-items: baseline;
+  }
+}
+
 .requirements-list {
   list-style: none;
   padding: 0;
