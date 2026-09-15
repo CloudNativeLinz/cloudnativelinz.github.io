@@ -191,11 +191,27 @@
   }
 }
 
-.event-page-header {
+.event-page-content {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
-  gap: 3rem;
-  padding: 2.5rem 0 3rem;
+  grid-template-areas:
+    "heading logistics"
+    "programme logistics";
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 2rem 3rem;
+  padding-top: 2.5rem;
+}
+
+.event-heading {
+  grid-area: heading;
+  min-width: 0;
+}
+
+.event-programme {
+  grid-area: programme;
+  min-width: 0;
+  container-type: inline-size;
 }
 
 .event-heading h1 {
@@ -221,12 +237,20 @@
   color: var(--event-accent);
 }
 
+.event-abstract {
+  color: var(--event-muted);
+  margin-top: 1.25rem;
+  overflow-wrap: anywhere;
+}
+
 .event-attendance {
   color: var(--event-muted);
   margin: 1.25rem 0 0;
 }
 
 .event-logistics {
+  grid-area: logistics;
+  min-width: 0;
   padding-left: 1.5rem;
   border-left: 2px solid var(--event-line);
 }
@@ -261,7 +285,8 @@
   overflow-wrap: anywhere;
 }
 
-.event-calendar {
+.event-calendar,
+.event-map {
   margin-top: 0.75rem;
   font-size: 0.875rem;
 
@@ -283,12 +308,11 @@
 }
 
 .event-facts .event-map {
-  margin-top: 0.75rem;
-
   iframe {
     display: block;
     width: 100%;
     height: 180px;
+    margin-top: 0.75rem;
     border: 1px solid var(--event-line);
     border-radius: 6px;
     background: var(--event-soft);
@@ -341,6 +365,13 @@
   gap: 2.5rem;
 }
 
+@container (max-width: 640px) {
+  .event-sessions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 .event-session {
   min-width: 0;
   padding: 1.75rem 0;
@@ -358,6 +389,45 @@
     margin: 1.5rem 0 0;
     overflow-wrap: anywhere;
     text-wrap: balance;
+  }
+}
+
+@supports (grid-template-rows: subgrid) {
+  @container (min-width: 641px) {
+    .event-sessions {
+      align-items: stretch;
+      row-gap: 0;
+    }
+
+    .event-session {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: subgrid;
+      grid-row: span 5;
+      align-items: start;
+      row-gap: 0;
+
+      > .session-speaker {
+        grid-row: 1;
+      }
+
+      > h3 {
+        grid-row: 2;
+      }
+
+      > .session-description {
+        grid-row: 3;
+      }
+
+      > .session-slides,
+      > .session-availability {
+        grid-row: 4;
+      }
+
+      > .session-recording {
+        grid-row: 5;
+      }
+    }
   }
 }
 
@@ -407,6 +477,10 @@
 .session-slides,
 .session-recording {
   margin-top: 1.25rem;
+}
+
+.event-session .session-resource-link {
+  margin-top: 0;
 }
 
 .session-slide-preview {
@@ -464,14 +538,16 @@
     --portrait-size: 76px;
   }
 
-  .event-page-header,
+  .event-page-content,
   .event-sessions {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
   }
 
-  .event-page-header {
-    padding: 1.5rem 0 2.5rem;
+  .event-page-content {
+    grid-template-areas: "heading" "logistics" "programme";
+    grid-template-rows: auto auto auto;
+    padding-top: 1.5rem;
   }
 
   .event-heading h1 {

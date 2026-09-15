@@ -856,10 +856,21 @@
     speaker: "Petra Stepanowsky"
     image: "/images/speakers/50-1.jpg"
     social: ""
+    abstract: |- 
+      I studied bioinformatics, where code was a tool, never the point. From there: backend integration work, then a reluctant detour through Docker, Kubernetes, and AWS that never quite stuck. None of it made me a cloud-native expert — but it taught me to recognize a fight I'd keep seeing: engineering wants time to clean up and stay current, the business wants the next feature, and there's always a deadline in the way.
+      Now I'm a Product Owner++ for a mobile wallet and payments app spanning Android, iOS, and Backend, where that fight happens weekly, and losing it costs more than just a slow, outdated app — told from the perspective of an ex-engineer turned PO.
   - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
     speaker: Katharina Sick
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694361905742?e=1790208000&v=beta&t=G7Et2D_zYsrZU7yWNGZOYliYNBwjUZKDsD_17dcsS9I"
     social: "https://www.linkedin.com/in/katharinasick/"
+    abstract: |-
+      Breaking into platform engineering and DevOps often feels like navigating two extremes. When I started, I bounced between perfect, predictable, and easy to follow sunshine tutorials, and the messy realities of production, where overwhelming systems and uncertainty left me stuck and, at times, spiraling into procrastination. That gap shaped my early years and still shows up when I mentor today.
+
+      It’s a bit like stepping into the Upside Down: confusing, chaotic, and full of unexpected challenges. The real issue isn’t just complexity. Tools are often taught in isolation, and juniors are left figuring out how they connect in practice. With countless combinations, there’s no one-size-fits-all guide.
+
+      This talk explores what I have found useful when mentoring newcomers to the platform engineering space. We’ll look at ways to make connections visible, create safe spaces to apply knowledge, and build community support, so talents can grow without being overwhelmed and teams can onboard more effectively.
+
+      Whether you’re a junior yourself or someone looking to support the next generation, this talk offers actionable ways to turn frustration into meaningful progress.
   slug: september-2026-edition-at-netcetera
 
 - id: 51
@@ -871,4 +882,6 @@
   event_link: 'https://www.meetup.com/cloud-native-linz/events/316178782'
   registrations: ''
   participants: ''
+  abstract: |-
+    Join us for a fun and engaging Pub Quiz edition! Test your knowledge, enjoy some friendly competition, and connect with fellow cloud-native enthusiasts in Linz. Whether you're a quiz master or just looking for a good time, this event promises an evening of entertainment and networking.
   slug: october-2026-pubquiz-edition

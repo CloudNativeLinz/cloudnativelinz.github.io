@@ -26,19 +26,23 @@ layout: default
            onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'" />
     </div>
 
-    <header class="event-page-header">
-      <div class="event-heading">
+    <div class="event-page-content">
+      <header class="event-heading">
         <p class="event-kicker">Cloud Native Linz <span aria-hidden="true">/</span> {% if event_date == today %}Today{% elsif event_date > today %}Upcoming meetup{% else %}Past meetup{% endif %}</p>
         <h1>{{ page.title }}</h1>
+        {% assign event_abstract = page.abstract | default: '' | strip %}
+        {% if event_abstract != '' %}
+          <div class="event-abstract">{{ event_abstract | markdownify }}</div>
+        {% endif %}
         {% if page.participants and page.participants != '' %}
           <p class="event-attendance">Participants: {{ page.participants }}</p>
         {% endif %}
         {% if page.registrations and page.registrations != '' %}
           <p class="event-attendance">Registrations: {{ page.registrations }}</p>
         {% endif %}
-      </div>
+      </header>
 
-      <div class="event-logistics">
+      <aside class="event-logistics" aria-label="Event details">
         <dl class="event-facts">
           <div>
             <dt>When</dt>
@@ -66,11 +70,14 @@ layout: default
                 {% assign map_address = page.address | strip | downcase %}
                 {% assign map_host = page.host | strip | downcase %}
                 {% unless map_address == '' or map_address == 'online' or map_address == 'online event' or map_address == 'tba' or map_address == 'tbd' or map_host == 'online' %}
-                  <dd class="event-map">
-                    <iframe src="https://www.google.com/maps?q={{ page.address | url_encode }}&amp;z=15&amp;output=embed"
-                            title="Map: {{ page.host | escape }}"
-                            width="320" height="180" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                  <dd>
+                    <details class="event-map">
+                      <summary>Show map</summary>
+                      <iframe src="https://www.google.com/maps?q={{ page.address | url_encode }}&amp;z=15&amp;output=embed"
+                              title="Map: {{ page.host | escape }}"
+                              width="320" height="180" loading="lazy"
+                              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </details>
                   </dd>
                 {% endunless %}
               {% endif %}
@@ -82,8 +89,7 @@ layout: default
         {% elsif event_date >= today %}
           <p class="event-fact-note">Registration opening soon</p>
         {% endif %}
-      </div>
-    </header>
+      </aside>
 
     {% assign published_talks = 0 %}
     {% for talk in page.talks %}
@@ -121,8 +127,12 @@ layout: default
                   </div>
                 </div>
                 <h3 id="talk-title-{{ forloop.index }}">{{ talk.title }}</h3>
-                {% if talk.description and talk.description != '' %}
-                  <div class="session-description">{{ talk.description | markdownify }}</div>
+                {% assign talk_abstract = talk.abstract | default: '' | strip %}
+                {% if talk_abstract == '' %}
+                  {% assign talk_abstract = talk.description | default: '' | strip %}
+                {% endif %}
+                {% if talk_abstract != '' %}
+                  <div class="session-description">{{ talk_abstract | markdownify }}</div>
                 {% endif %}
                 {% if talk.file and talk.file != '' %}
                   <div class="session-slides">
@@ -158,6 +168,7 @@ layout: default
         <p class="event-programme-pending">Programme to be announced.</p>
       {% endif %}
     </section>
+    </div>
 
     <footer class="event-page-footer">
       <a href="{{ '/events/' | relative_url }}">&larr; All events</a>
