@@ -31,12 +31,7 @@
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner{% if teaser_file %} event-banner--teaser{% endif %}">
       <a href="{{ "/events/meetup/" | append: event.slug | append: "/" | relative_url }}">
-        <img class="{{ event_image_class }}"
-             src="{{ event_image_path | relative_url }}"
-             alt="{{ event.title }}" 
-             loading="lazy"
-             onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
-        />
+        {% include event-image.html path=event_image_path alt=event.title class=event_image_class %}
       </a>
       <div class="event-overlay">
         <div class="event-date">

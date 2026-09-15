@@ -6,6 +6,7 @@ permalink: /statistics/
 
 <div class="stats-intro">
   <p class="lead">Discover insights about our Cloud Native Computing Linz community. Explore event timelines, hosting organizations, speaker contributions, and participation trends that showcase our growing ecosystem.</p>
+  <p>Tap a bar or point to see its full label and value.</p>
 </div>
 
 <div id="charts-status" class="alert-info" style="display: none;">
@@ -21,9 +22,12 @@ permalink: /statistics/
   <div class="stat-section">
     <h3>🏢 Top 15 Host Organizations</h3>
     <div class="chart-container">
-      <canvas id="hostOrganizationsChart"></canvas>
+      <div class="chart-canvas">
+        <canvas id="hostOrganizationsChart" role="img" aria-label="Events hosted by the top 15 host organizations"></canvas>
+      </div>
       <div id="hostOrganizationsFallback" style="display: none;">
         <div class="chart-title">📊 Host Organizations</div>
+        <div class="stats-table-scroll" role="region" aria-label="Host organizations data" tabindex="0">
         <table class="stats-table">
           <thead>
             <tr>
@@ -55,6 +59,7 @@ permalink: /statistics/
             <tr><td>smec</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 10px;"></span> 1</td></tr>
           </tbody>
         </table>
+        </div>
         <div class="fallback-note">📈 This data represents the distribution of events across different hosting organizations in our community.</div>
       </div>
       <div style="text-align: center; margin-top: 2rem;">
@@ -71,9 +76,12 @@ permalink: /statistics/
   <div class="stat-section">
     <h3>🎤 Top 15 Speakers</h3>
     <div class="chart-container">
-      <canvas id="topSpeakersChart"></canvas>
+      <div class="chart-canvas">
+        <canvas id="topSpeakersChart" role="img" aria-label="Presentations by the top 15 speakers"></canvas>
+      </div>
       <div id="topSpeakersFallback" style="display: none;">
         <div class="chart-title">🎤 Top Speakers</div>
+        <div class="stats-table-scroll" role="region" aria-label="Speaker data" tabindex="0">
         <table class="stats-table">
           <thead>
             <tr>
@@ -104,6 +112,7 @@ permalink: /statistics/
           <tr><td>Christoph Ruhsam</td><td class="number-cell">1</td><td><span class="host-bar" style="width: 15px;"></span> 1</td></tr>
           </tbody>
         </table>
+        </div>
         <div class="fallback-note">🎤 This data shows which speakers have presented most often at our events, highlighting our active community contributors.</div>
       </div>
       <div style="text-align: center; margin-top: 2rem;">
@@ -120,9 +129,12 @@ permalink: /statistics/
   <div class="stat-section">
     <h3>📊 Participant Trends</h3>
     <div class="chart-container">
-      <canvas id="participantsTrendsChart"></canvas>
+      <div class="chart-canvas">
+        <canvas id="participantsTrendsChart" role="img" aria-label="Event participation over time"></canvas>
+      </div>
       <div id="participantsTrendsFallback" style="display: none;">
         <div class="chart-title">📊 Participants Trends</div>
+        <div class="stats-table-scroll" role="region" aria-label="Participant trends data" tabindex="0">
         <table class="stats-table">
           <thead>
             <tr>
@@ -147,6 +159,7 @@ permalink: /statistics/
             {% endfor %}
           </tbody>
         </table>
+        </div>
         <div class="fallback-note">📈 Participants data shows community engagement levels over time and helps us understand event popularity trends.</div>
       </div>
     </div>
@@ -229,6 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function showFallbacks(message, error) {
+    document.querySelectorAll('.chart-canvas').forEach(container => container.hidden = true);
     chartsStatus.style.display = 'none';
     fallbackNotice.style.display = 'block';
     if (fallbackDetail) {
@@ -259,6 +273,21 @@ document.addEventListener('DOMContentLoaded', function() {
       tickColor: dark ? 'rgba(209, 213, 219, 0.9)' : 'rgba(75, 85, 99, 0.8)',
       gridColor: dark ? 'rgba(75, 85, 99, 0.5)'   : 'rgba(229, 231, 235, 0.5)'
     };
+  }
+
+  function resizeChartLabels(chart, size) {
+    const compact = size.width < 480;
+    const ticks = chart.options.scales.x.ticks;
+    ticks.maxTicksLimit = compact ? 4 : 10;
+    ticks.minRotation = 0;
+    ticks.maxRotation = compact ? 0 : 45;
+    ticks.font.size = compact ? 14 : 12;
+    chart.options.scales.y.ticks.font.size = compact ? 14 : 12;
+  }
+
+  function formatChartLabel(value) {
+    const label = this.getLabelForValue(value);
+    return this.chart.width < 480 && label.length > 12 ? `${label.slice(0, 11)}…` : label;
   }
 
   function createCharts() {
@@ -408,6 +437,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
+          onResize: resizeChartLabels,
           plugins: {
             legend: { display: false },
             tooltip: {
@@ -441,9 +472,9 @@ document.addEventListener('DOMContentLoaded', function() {
             x: {
               ticks: {
                 color: tickColor,
-                font: { size: 11 },
-                maxRotation: 45,
-                minRotation: 45
+                font: { size: 12 },
+                callback: formatChartLabel,
+                autoSkip: true
               },
               grid: {
                 display: false
@@ -496,6 +527,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
+          onResize: resizeChartLabels,
           plugins: {
             legend: { display: false },
             tooltip: {
@@ -529,9 +562,9 @@ document.addEventListener('DOMContentLoaded', function() {
             x: {
               ticks: {
                 color: tickColor,
-                font: { size: 11 },
-                maxRotation: 45,
-                minRotation: 45
+                font: { size: 12 },
+                callback: formatChartLabel,
+                autoSkip: true
               },
               grid: {
                 display: false
@@ -569,6 +602,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
+          onResize: resizeChartLabels,
+          interaction: {
+            intersect: false,
+            mode: 'index'
+          },
           plugins: {
             legend: { display: false }
           },
@@ -587,10 +626,10 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             x: {
               ticks: {
-                maxRotation: 45,
-                minRotation: 45,
                 color: tickColor,
-                font: { size: 11 }
+                font: { size: 12 },
+                callback: formatChartLabel,
+                autoSkip: true
               }
             }
           }

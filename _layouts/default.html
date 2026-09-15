@@ -26,7 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <meta name="theme-color" content="#667eea">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
     {% include analytics_head.html %}
   </head>
@@ -49,14 +48,14 @@
             </a>
 
             <!-- Mobile menu button -->
-            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button type="button" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
               <span class="hamburger-line"></span>
               <span class="hamburger-line"></span>
               <span class="hamburger-line"></span>
             </button>
 
             <!-- Navigation -->
-            <nav class="site-nav" aria-label="Main navigation">
+            <nav id="main-navigation" class="site-nav" aria-label="Main navigation">
               <a href="{{ site.baseurl }}/" class="nav-link">
                 <span class="nav-text">Home</span>
               </a>
@@ -110,34 +109,73 @@
       document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const siteNav = document.querySelector('.site-nav');
-        const body = document.body;
+        const header = document.querySelector('.site-header');
+        const mobileViewport = window.matchMedia('(max-width: 1024px)');
         
-        if (mobileMenuBtn && siteNav) {
+        if (mobileMenuBtn && siteNav && header) {
+          function setMenuOpen(open, restoreFocus = false) {
+            mobileMenuBtn.setAttribute('aria-expanded', String(open));
+            mobileMenuBtn.classList.toggle('active', open);
+            siteNav.classList.toggle('active', open);
+            if (restoreFocus) mobileMenuBtn.focus();
+          }
+
+          function updateMenuHeight() {
+            // Allow for the gradient bar above the sticky header before scrolling.
+            header.style.setProperty('--header-height', `${header.offsetHeight + 4}px`);
+          }
+
+          updateMenuHeight();
+          window.addEventListener('resize', updateMenuHeight);
+          if ('ResizeObserver' in window) {
+            new ResizeObserver(updateMenuHeight).observe(header);
+          }
+
           mobileMenuBtn.addEventListener('click', function() {
-            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            mobileMenuBtn.classList.toggle('active');
-            siteNav.classList.toggle('active');
-            body.classList.toggle('nav-open');
+            setMenuOpen(mobileMenuBtn.getAttribute('aria-expanded') !== 'true');
+          });
+
+          mobileMenuBtn.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowDown') {
+              e.preventDefault();
+              setMenuOpen(true);
+              siteNav.querySelector('a').focus();
+            }
           });
           
           // Close menu when clicking on a link
           siteNav.addEventListener('click', function(e) {
-            if (e.target.classList.contains('nav-link')) {
-              mobileMenuBtn.classList.remove('active');
-              siteNav.classList.remove('active');
-              body.classList.remove('nav-open');
-              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            if (mobileViewport.matches && e.target.closest('.nav-link')) {
+              setMenuOpen(false, true);
             }
           });
           
           // Close menu when clicking outside
           document.addEventListener('click', function(e) {
             if (!siteNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-              mobileMenuBtn.classList.remove('active');
-              siteNav.classList.remove('active');
-              body.classList.remove('nav-open');
-              mobileMenuBtn.setAttribute('aria-expanded', 'false');
+              setMenuOpen(false, mobileViewport.matches && siteNav.contains(document.activeElement));
+            }
+          });
+
+          document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+              e.preventDefault();
+              setMenuOpen(false, true);
+            }
+          });
+
+          header.addEventListener('focusout', function(e) {
+            if (e.relatedTarget && !header.contains(e.relatedTarget)) {
+              setMenuOpen(false);
+            }
+          });
+
+          mobileViewport.addEventListener('change', function() {
+            const focusInNav = siteNav.contains(document.activeElement);
+            const focusOnButton = document.activeElement === mobileMenuBtn;
+            setMenuOpen(false, mobileViewport.matches && focusInNav);
+            if (!mobileViewport.matches && focusOnButton) {
+              siteNav.querySelector('a').focus();
             }
           });
         }

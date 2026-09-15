@@ -51,6 +51,7 @@ This repository includes common shortcuts in [`makefile`](makefile):
 - `serve-windows`: Live reload with force polling
 - `clean`: Remove build and cache artifacts
 - `calendar`: Generate `calendar.ics` from event data
+- `event-images`: Generate optional responsive WebP copies of event banners (requires ImageMagick)
 
 Examples:
 
@@ -80,7 +81,8 @@ Keep filenames lowercase and use the `.jpg` extension. No additional image
 field is needed in the event data.
 
 Upcoming event cards, past event cards, and event detail pages all use the same
-local banner. Separate `-550.jpg` thumbnails are not required. If an image is
+local banner. Upcoming cards and detail pages prefer an optional `<id>-teaser.jpg`
+when present. Separate `-550.jpg` thumbnails are not required. If an image is
 missing, the site displays `images/cloudnativelinz-banner.png` as a fallback.
 
 Add new banners directly to `images/events/`, not the generated `_site/`
@@ -91,6 +93,19 @@ This repository publishes supplied banners; it does not generate them
 automatically. When creating or updating an event, commit the corresponding
 `images/events/<id>.jpg` if a new or updated banner is needed. Changes to event
 data do not regenerate existing banners.
+
+After adding or replacing a banner or teaser, run `make event-images` with
+ImageMagick installed (on Ubuntu: `sudo apt-get install imagemagick`). Commit the
+generated `images/events/responsive/<name>-480.webp`, `-960.webp`, and `-1440.webp`
+alongside the original. Copies preserve the aspect ratio, strip metadata, and are
+only generated at widths no larger than the original; unchanged files are skipped.
+When deleting or renaming an original, remove its responsive copies too.
+
+The shared `_includes/event-image.html` advertises only existing copies through
+`picture`, `srcset`, and layout-specific `sizes`. Browsers select a suitable
+download for the display width and pixel density. Originals still work when no
+copies exist or WebP is unsupported, and failed image loads retain the common
+fallback. Generation is optional and is not required for a normal Jekyll build.
 
 ## Event URL Redirects
 
@@ -138,4 +153,3 @@ Contributions are welcome.
 2. Make your changes
 3. Build locally and verify
 4. Open a pull request
-

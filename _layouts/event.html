@@ -22,9 +22,7 @@ layout: default
     </nav>
 
     <div class="event-artwork">
-      <img src="{{ artwork_path | relative_url }}" alt="{{ page.title | escape }}"
-           fetchpriority="high"
-           onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'" />
+      {% include event-image.html path=artwork_path alt=page.title loading="eager" priority="high" %}
     </div>
 
     <div class="event-page-content">

@@ -17,11 +17,8 @@ permalink: events/
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
       <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
-        <img src="{{ '/images/events/' | append: event.id | append: '.jpg' | relative_url }}"
-             alt="{{ event.title }}" 
-             loading="lazy"
-             onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
-        />
+        {% assign banner_path = '/images/events/' | append: event.id | append: '.jpg' %}
+        {% include event-image.html path=banner_path alt=event.title sizes="(min-width: 1146px) 368px, (min-width: 1025px) calc(50vw - 32px), (min-width: 780px) calc(50vw - 40px), (min-width: 641px) calc(100vw - 48px), calc(100vw - 32px)" %}
       </a>
       <div class="event-overlay">
         <div class="event-date">

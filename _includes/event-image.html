@@ -1,0 +1,24 @@
+{%- assign image_name = include.path | split: '/' | last | remove: '.jpg' -%}
+{%- assign image_widths = '480,960,1440' | split: ',' -%}
+{%- assign image_srcset = '' -%}
+{%- for image_width in image_widths -%}
+  {%- assign variant_path = '/images/events/responsive/' | append: image_name | append: '-' | append: image_width | append: '.webp' -%}
+  {%- assign variant_file = site.static_files | where: 'path', variant_path | first -%}
+  {%- if variant_file -%}
+    {%- unless image_srcset == '' -%}
+      {%- assign image_srcset = image_srcset | append: ', ' -%}
+    {%- endunless -%}
+    {%- assign variant_url = variant_path | relative_url -%}
+    {%- assign image_srcset = image_srcset | append: variant_url | append: ' ' | append: image_width | append: 'w' -%}
+  {%- endif -%}
+{%- endfor -%}
+<picture>
+  {% unless image_srcset == '' %}
+  <source type="image/webp" srcset="{{ image_srcset }}" sizes="{{ include.sizes | default: '(min-width: 1200px) 1168px, (min-width: 641px) calc(100vw - 48px), calc(100vw - 32px)' }}">
+  {% endunless %}
+  <img src="{{ include.path | relative_url }}" alt="{{ include.alt | escape }}"
+       class="{{ include.class | default: '' }}"
+       loading="{{ include.loading | default: 'lazy' }}" decoding="async"
+       {% if include.priority %}fetchpriority="{{ include.priority }}"{% endif %}
+       onerror="this.onerror=null;this.parentElement.querySelectorAll('source').forEach(source => source.remove());this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'" />
+</picture>

@@ -64,6 +64,26 @@ calendar: setup-python
 	@$(PYTHON) generate_calendar.py
 	@echo "Calendar generated successfully!"
 
+# Optional responsive copies; originals remain the source of truth.
+event-images:
+	@command -v convert >/dev/null && command -v identify >/dev/null || \
+		{ echo "Install ImageMagick to generate responsive event images."; exit 1; }
+	@mkdir -p images/events/responsive
+	@set -e; for image in images/events/*.jpg; do \
+		name=$$(basename "$$image" .jpg); \
+		width=$$(identify -ping -format '%w' "$$image"); \
+		for size in 480 960 1440; do \
+			target="images/events/responsive/$$name-$$size.webp"; \
+			if [ "$$width" -ge "$$size" ]; then \
+				if [ ! -f "$$target" ] || [ "$$image" -nt "$$target" ]; then \
+					convert "$$image" -auto-orient -resize "$${size}x" -strip -quality 80 "$$target"; \
+				fi; \
+			else \
+				rm -f "$$target"; \
+			fi; \
+		done; \
+	done
+
 # Setup Python environment for calendar generation
 setup-python: $(VENV)/.requirements-installed
 
@@ -76,5 +96,4 @@ $(VENV)/.requirements-installed: requirements.txt
 	@touch $@
 	@echo "Python environment ready!"
 
-.PHONY: all build lint test check serve serve-livereload serve-windows calendar setup-python run clean install
-
+.PHONY: all build lint test check serve serve-livereload serve-windows calendar event-images setup-python run clean install
