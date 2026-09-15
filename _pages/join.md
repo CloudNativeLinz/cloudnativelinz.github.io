@@ -25,7 +25,7 @@ permalink: /join/
     <div class="card-content">
       <div class="meeting-info">
         <div class="info-highlight">
-          <strong>Usually the 3rd or 4th Tuesday of each month</strong>
+          <strong>Usually the 3rd or 4th Wednesday of each month</strong>
         </div>
         <p>📍 Various locations around Linz</p>
         <p>We rotate between different host companies to give everyone a chance to showcase their workspace and connect with the community.</p>

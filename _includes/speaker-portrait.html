@@ -1,0 +1,12 @@
+{% assign speaker_words = include.talk.speaker | strip | split: ' ' %}
+{% assign speaker_initial = speaker_words | first | slice: 0 | upcase %}
+{% assign speaker_last_initial = speaker_words | last | slice: 0 | upcase %}
+<div class="speaker-portrait{% if include.talk.speaker contains ' & ' %} speaker-portrait--group{% endif %}">
+  <span class="speaker-initials" aria-hidden="true">{{ speaker_initial }}{% if speaker_words.size > 1 %}{{ speaker_last_initial }}{% endif %}</span>
+  {% if include.talk.image and include.talk.image != "" %}
+    <img src="{{ include.talk.image | relative_url | escape }}"
+         alt="{{ include.talk.speaker | escape }}"
+         width="192" height="192" loading="lazy" decoding="async"
+         onerror="this.hidden=true" />
+  {% endif %}
+</div>

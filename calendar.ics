@@ -322,9 +322,9 @@ UID:b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569@cncfl
  inz.at
 DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Scaling Observability - Dynatra
  ce Operator by Christoph Müllner\n- Migration of on-prem payment systems 
- to a Cloud Native Environments by Markus Adelsberger & Georg Mayrhauser\n\
- nEvent link (RSVP): https://ocgroups.dev/cncf/group/cloud-native-linz/even
- t/933xajp
+ to a Cloud Native Environments by Markus Adelsberger & Georg Mayrhauser\n
+ \nEvent link (RSVP): https://ocgroups.dev/cncf/group/cloud-native-linz/eve
+ nt/933xajp
 LOCATION:G+D Netcetera
 URL:https://ocgroups.dev/cncf/group/cloud-native-linz/event/933xajp
 END:VEVENT
@@ -647,5 +647,32 @@ DESCRIPTION:Host: Dynatrace\nTalks:\n- Closing the loop by Christoph Neum
 LOCATION:Dynatrace Austria GmbH - Engineering Headquarter\, Am Fünfundzwa
  nziger Turm 20\, 4020 Linz
 URL:https://www.meetup.com/cloud-native-linz/events/314672208/
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Beyond Engineering & Platform Engineering Right Side Up - CNCF Lin
+ z
+DTSTART;TZID=Europe/Berlin:20260916T173000
+DTEND;TZID=Europe/Berlin:20260916T203000
+UID:1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb@cncfl
+ inz.at
+DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Beyond Engineering: A Product O
+ wner++ in a Sea of Technical Debt by Petra Stepanowsky\n- Turning Platform
+  Engineering Right Side Up: Building Better Paths for Juniors by Katharina
+  Sick\n\nEvent link (RSVP): https://www.meetup.com/cloud-native-linz/event
+ s/316178235
+LOCATION:G+D Netcetera\, Europaplatz 4\, 4020 Linz
+URL:https://www.meetup.com/cloud-native-linz/events/316178235
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Pub Quiz Edition 🥳 - CNCF Linz
+DTSTART;TZID=Europe/Berlin:20261007T193000
+DTEND;TZID=Europe/Berlin:20261007T223000
+UID:031b4af5197ec30a926f48cf40e11a7dbc470048a21e4003b7a3c07c5dab1baa@cncfl
+ inz.at
+DESCRIPTION:Host: Salonschiff Fräulein Florentine\n\nEvent link (RSVP): h
+ ttps://www.meetup.com/cloud-native-linz/events/316178782
+LOCATION:Salonschiff Fräulein Florentine\, Heinrich-Gleißner-Promenade 6
+ \, 4040 Linz
+URL:https://www.meetup.com/cloud-native-linz/events/316178782
 END:VEVENT
 END:VCALENDAR

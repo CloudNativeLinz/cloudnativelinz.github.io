@@ -41,9 +41,9 @@
         <div class="container">
           <div class="header-content">
             <a href="{{ site.baseurl }}/" class="site-logo">
-              <img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" />
+              <img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.name }}" />
               <div class="site-info">
-                <h1 class="site-name">{{ site.name }}</h1>
+                <span class="site-name">{{ site.name }}</span>
                 <p class="site-description">{{ site.description }}</p>
               </div>
             </a>
@@ -58,27 +58,21 @@
             <!-- Navigation -->
             <nav class="site-nav" aria-label="Main navigation">
               <a href="{{ site.baseurl }}/" class="nav-link">
-                <span class="nav-icon">🏠</span>
                 <span class="nav-text">Home</span>
               </a>
               <a href="{{ site.baseurl }}/team" class="nav-link">
-                <span class="nav-icon">👩‍💻</span>
                 <span class="nav-text">Team</span>
               </a>
               <a href="{{ site.baseurl }}/events" class="nav-link">
-                <span class="nav-icon">📅</span>
                 <span class="nav-text">Events</span>
               </a>
               <a href="{{ site.baseurl }}/speaker-info" class="nav-link">
-                <span class="nav-icon">🎤</span>
-                <span class="nav-text">Speaker Info</span>
+                <span class="nav-text">Speakers & Hosts</span>
               </a>
               <a href="{{ site.baseurl }}/statistics" class="nav-link">
-                <span class="nav-icon">📊</span>
                 <span class="nav-text">Statistics</span>
               </a>
               <a href="{{ site.baseurl }}/join" class="nav-link nav-cta">
-                <span class="nav-icon">🤝</span>
                 <span class="nav-text">Join us!</span>
               </a>
               <button class="theme-toggle-btn" id="theme-toggle" aria-label="Switch color theme" title="Switch color theme"></button>

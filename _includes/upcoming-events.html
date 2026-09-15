@@ -19,13 +19,23 @@
  {% assign today = site.time | date: "%Y-%m-%d" %}
   
  {% if event_date >= today %}
+  {% assign teaser_path = '/images/events/' | append: event.id | append: '-teaser.jpg' %}
+  {% assign teaser_file = site.static_files | where: 'path', teaser_path | first %}
+  {% if teaser_file %}
+    {% assign event_image_path = teaser_path %}
+    {% assign event_image_class = 'event-teaser-image' %}
+  {% else %}
+    {% assign event_image_path = '/images/events/' | append: event.id | append: '.jpg' %}
+    {% assign event_image_class = '' %}
+  {% endif %}
   <article class="event-card" data-event-id="{{ event.id }}">
-    <div class="event-banner">
+    <div class="event-banner{% if teaser_file %} event-banner--teaser{% endif %}">
       <a href="{{ "/events/meetup/" | append: event.slug | append: "/" | relative_url }}">
-        <img src="https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/main/artifacts/{{ event.id }}.jpg" 
+        <img class="{{ event_image_class }}"
+             src="{{ event_image_path | relative_url }}"
              alt="{{ event.title }}" 
              loading="lazy"
-             onerror="this.src='https://raw.githubusercontent.com/CloudNativeLinz/go-image-generator/refs/heads/main/assets/backgrounds/meetup-background.jpg'"
+             onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
         />
       </a>
       <div class="event-overlay">
@@ -33,7 +43,7 @@
           {% if event_date == today %}
             <span class="today-badge">TODAY</span>
           {% else %}
-            {{ event.date | date: "%b %d, %Y" }}
+            {{ event.date | date: "%a, %b %d, %Y" }}
           {% endif %}
         </div>
         {% if event.host != nil and event.host != "" %}
@@ -48,39 +58,36 @@
       </h3>
       
       {% if event.talks %}
-        <div class="event-talks">
+        <div class="upcoming-talks">
           {% for talk in event.talks limit:2 %}
             {% assign speaker_upper = talk.speaker | upcase %}
             {% assign title_upper = talk.title | upcase %}
             {% unless speaker_upper == "TBA" or speaker_upper == "TBD" or title_upper == "TBA" or title_upper == "TBD" %}
-            <div class="talk-item">
-              <div class="talk-title">{{ talk.title }}</div>
-              <div class="talk-speaker">
-                <span class="emoji" style="font-style: normal;">👨‍💻</span>
-                <span class="talk-speaker-name">{{ talk.speaker }}</span>
+            <section class="upcoming-talk">
+              {% include speaker-portrait.html talk=talk %}
+              <div class="upcoming-talk-copy">
+                <div class="speaker-byline">
+                  <span class="speaker-name">{{ talk.speaker }}</span>
                 {% if talk.social and talk.social contains "linkedin.com" %}
-                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="Connect on LinkedIn" class="linkedin-icon">
-                    {% include linkedin-icon.html size="14" %}
-                  </a>
-                {% endif %}<br>
-                {% if talk.file %}
-                  <a href="{{ "/events/meetup/" | append: event.slug | append: "/" | relative_url }}">
-                    📎 Get the slides 
+                  <a href="{{ talk.social }}" target="_blank" rel="noopener" title="{{ talk.speaker | escape }} on LinkedIn" aria-label="{{ talk.speaker | escape }} on LinkedIn" class="speaker-social">
+                    {% include linkedin-icon.html size="18" %}
                   </a>
                 {% endif %}
-                 {% if talk.recording %}
-                  <a href="{{ "/events/meetup/" | append: event.slug | append: "/" | relative_url }}">
-                    📺 Watch the recording
+                </div>
+                <h4 class="upcoming-talk-title">
+                  <a href="{{ '/events/meetup/' | append: event.slug | append: '/' | relative_url }}#talk-{{ forloop.index }}">{{ talk.title }}</a>
+                </h4>
+                {% if talk.file or talk.recording %}
+                  <a class="session-resource-link" href="{{ '/events/meetup/' | append: event.slug | append: '/' | relative_url }}#talk-{{ forloop.index }}">
+                    {% if talk.file and talk.recording %}Slides &amp; recording{% elsif talk.file %}Presentation slides{% else %}Watch recording{% endif %}
                   </a>
                 {% endif %}
               </div>
-            </div>
+            </section>
             {% endunless %}
           {% endfor %}
           {% if event.talks.size > 2 %}
-            <div class="talk-item more-talks">
-              <div class="talk-title">+{{ event.talks.size | minus: 2 }} more talk{% if event.talks.size > 3 %}s{% endif %}</div>
-            </div>
+            <a class="upcoming-more-talks" href="{{ '/events/meetup/' | append: event.slug | append: '/' | relative_url }}">+{{ event.talks.size | minus: 2 }} more talk{% if event.talks.size > 3 %}s{% endif %}</a>
           {% endif %}
         </div>
       {% endif %}
@@ -93,23 +100,16 @@
             </svg>
             {{ event.participants }} cloud-natives participated
           </span>
-        {% else %}
-          <span class="meta-item">
-            <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Please don't forget to RSVP :)
-          </span>
         {% endif %}
         
         <a class="meta-link" href="{{ "/events/meetup/" | append: event.slug | append: "/" | relative_url }}">Event details</a>
 
         {% if event.event_link and event.event_link != "" %}
-          <a href="{{ event.event_link }}" class="meta-link" target="_blank" rel="noopener">
+          <a href="{{ event.event_link }}" class="meta-link meta-link-rsvp" target="_blank" rel="noopener">
             <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
               <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
             </svg>
-            RSVP and join this awesome event!
+            RSVP on Meetup
           </a>
         {% else %}
           <span class="meta-item">
@@ -331,6 +331,7 @@ function stopAutoAdvance() {
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(initializeCarousel, 100);
+  window.addEventListener('resize', updateCarouselPosition);
 });
 
 // Also initialize after a short delay in case DOM isn't fully ready
@@ -367,31 +368,6 @@ if ('IntersectionObserver' in window) {
     carouselObserver.observe(carouselContainer);
   }
   
-  // Animate individual cards
-  const upcomingCards = document.querySelectorAll('.events-carousel .event-card');
-  const upcomingObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, index * 100);
-        upcomingObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '50px'
-  });
-  
-  upcomingCards.forEach((card) => {
-    if (!card.style.opacity) {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      upcomingObserver.observe(card);
-    }
-  });
 }
 
 // Pause auto-advance on hover and focus

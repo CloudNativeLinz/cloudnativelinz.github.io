@@ -335,7 +335,7 @@
   - title: 'Supercharge Your Coding with GitHub Copilot and Actions: The AI-Powered
       Productivity Duo'
     speaker: Jürgen Etzlstorfer
-    image: "/assets/speaker-images/jetzlstorfer.jpg"
+    image: "/images/speakers/jetzlstorfer.jpg"
     social: https://www.linkedin.com/in/juergenetzlstorfer/
   slug: hagenberg-edition
 
@@ -572,7 +572,7 @@
   - title: A closer look at Docker BuildKit and Buildx
     speaker: Sophia Zehethofer
     file: "/slides/2025-01/PCG_AT_Talk_CNCF_Docker_Buildkit_Buildx.pdf"
-    image: "/assets/speaker-images/36-1.jpeg"
+    image: "/images/speakers/36-1.jpeg"
   - title: Beesting Can't touch this
     speaker: Patrick Pichler
     file: "/slides/2025-01/beesting_cant_touch_this.pdf"
@@ -685,7 +685,7 @@
   talks:
   - title: Secrets management - from plaintext to hiding keys in the Swiss Alps
     speaker: Georg Mayrhauser
-    image: "/assets/speaker-images/gmh.jpeg"
+    image: "/images/speakers/gmh.jpeg"
   - title: Open Mic - Share your Cloud Native Journey
     speaker: the community
   slug: ctencf-party-celebrating-10-years-of-cncf-and-5-years-of-cloud-native-linz
@@ -725,7 +725,7 @@
   talks:
   - title: 'Hacking the Cloud Bill: Building a Multi-Cloud Cost Pipeline' # with ClickHouse & Python
     speaker: Clemens Kriechbaumer
-    image: "/assets/speaker-images/44-1.png"
+    image: "/images/speakers/44-1.png"
   - title: The Kubernetes and the Bazzar
     speaker: Hubert Ströbitzer
     image: https://sessionize.com/image/1e25-400o400o2-aMovy7BRHym77YN6Aa9yzK.jpg
@@ -770,11 +770,11 @@
   talks:
   - title: 18 Bluetooth Controllers Walk into a Bar
     speaker: Simon Schrottner & Manuel Timelthaler
-    image: "/assets/speaker-images/46-1.png"
+    image: "/images/speakers/46-1.png"
     file: "/slides/2026-02/18-bluetooth-controllers-walk-into-a-bar.pdf"
   - title: Smells Like Clean Telemetry
     speaker: Juliano Costa
-    image: https://media.licdn.com/dms/image/v2/D4D03AQHkOEZG983ylA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712664137969?e=1771459200&v=beta&t=JH-5CyDJG4pt2dkVB4m1idhThiXZa0uciYLkDox_sAA
+    image: "/images/speakers/juliano-costa.jpg"
     social: https://www.linkedin.com/in/julianocosta89/
   slug: february-2026-edition-hosted-by-tractive
   #redirect_from:
@@ -792,11 +792,11 @@
   talks:
   - title: AI-Assisted Legacy Code Migration with Konveyor AI. Here's What We Found.
     speaker: Aleksandar Zivkovic
-    image: "/assets/speaker-images/47-1.jpeg"
+    image: "/images/speakers/47-1.jpeg"
     recording: "https://www.youtube.com/watch?v=zp9O3NDHeXw"
   - title: Monster-Sized Gitops; How to scale Argo CD
     speaker: David Hondl
-    image: "/assets/speaker-images/david-hondl.jpg"
+    image: "/images/speakers/david-hondl.jpg"
     recording: "https://www.youtube.com/watch?v=90KuKdCv0fE"
   slug: march-2026-edition-at-gepardec
   #redirect_from:
@@ -856,10 +856,21 @@
     speaker: "Petra Stepanowsky"
     image: "/images/speakers/50-1.jpg"
     social: ""
+    abstract: |- 
+      I studied bioinformatics, where code was a tool, never the point. From there: backend integration work, then a reluctant detour through Docker, Kubernetes, and AWS that never quite stuck. None of it made me a cloud-native expert — but it taught me to recognize a fight I'd keep seeing: engineering wants time to clean up and stay current, the business wants the next feature, and there's always a deadline in the way.
+      Now I'm a Product Owner++ for a mobile wallet and payments app spanning Android, iOS, and Backend, where that fight happens weekly, and losing it costs more than just a slow, outdated app — told from the perspective of an ex-engineer turned PO.
   - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
     speaker: Katharina Sick
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694361905742?e=1790208000&v=beta&t=G7Et2D_zYsrZU7yWNGZOYliYNBwjUZKDsD_17dcsS9I"
     social: "https://www.linkedin.com/in/katharinasick/"
+    abstract: |-
+      Breaking into platform engineering and DevOps often feels like navigating two extremes. When I started, I bounced between perfect, predictable, and easy to follow sunshine tutorials, and the messy realities of production, where overwhelming systems and uncertainty left me stuck and, at times, spiraling into procrastination. That gap shaped my early years and still shows up when I mentor today.
+
+      It’s a bit like stepping into the Upside Down: confusing, chaotic, and full of unexpected challenges. The real issue isn’t just complexity. Tools are often taught in isolation, and juniors are left figuring out how they connect in practice. With countless combinations, there’s no one-size-fits-all guide.
+
+      This talk explores what I have found useful when mentoring newcomers to the platform engineering space. We’ll look at ways to make connections visible, create safe spaces to apply knowledge, and build community support, so talents can grow without being overwhelmed and teams can onboard more effectively.
+
+      Whether you’re a junior yourself or someone looking to support the next generation, this talk offers actionable ways to turn frustration into meaningful progress.
   slug: september-2026-edition-at-netcetera
 
 - id: 51
@@ -871,4 +882,6 @@
   event_link: 'https://www.meetup.com/cloud-native-linz/events/316178782'
   registrations: ''
   participants: ''
+  abstract: |-
+    Join us for a fun and engaging Pub Quiz edition! Test your knowledge, enjoy some friendly competition, and connect with fellow cloud-native enthusiasts in Linz. Whether you're a quiz master or just looking for a good time, this event promises an evening of entertainment and networking.
   slug: october-2026-pubquiz-edition
