@@ -5,6 +5,7 @@ layout: default
   {% assign event_date = page.date | date: '%Y-%m-%d' %}
   {% assign today = site.time | date: '%Y-%m-%d' %}
   {% assign calendar_url = '/calendar.ics' | absolute_url %}
+  {% assign calendar_subscription_url = calendar_url | replace: 'https://', 'webcal://' | replace: 'http://', 'webcal://' %}
   {% assign teaser_path = '/images/events/' | append: page.id | append: '-teaser.jpg' %}
   {% assign teaser_file = site.static_files | where: 'path', teaser_path | first %}
   {% if teaser_file %}
@@ -54,8 +55,8 @@ layout: default
               <details class="event-calendar">
                 <summary><span aria-hidden="true">&#128197;</span> Add to your calendar</summary>
                 <ul class="event-calendar-links">
-                  <li><a href="{{ calendar_url | replace: 'https://', 'webcal://' | replace: 'http://', 'webcal://' }}">Subscribe in calendar app</a></li>
-                  <li><a href="https://calendar.google.com/calendar/render?cid={{ calendar_url | url_encode }}" target="_blank" rel="noopener">Subscribe in Google Calendar <span aria-hidden="true">&nearr;</span></a></li>
+                  <li><a href="{{ calendar_subscription_url }}">Subscribe in calendar app</a></li>
+                  <li><a href="https://calendar.google.com/calendar/render?cid={{ calendar_subscription_url | url_encode }}" target="_blank" rel="noopener">Subscribe in Google Calendar <span aria-hidden="true">&nearr;</span></a></li>
                   <li><a href="{{ '/calendar.ics' | relative_url }}" download>Download calendar (.ics)</a></li>
                 </ul>
               </details>
