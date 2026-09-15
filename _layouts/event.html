@@ -4,7 +4,7 @@ layout: default
 
   {% assign event_date = page.date | date: '%Y-%m-%d' %}
   {% assign today = site.time | date: '%Y-%m-%d' %}
-  {% assign calendar_url = site.url | append: '/calendar.ics' %}
+  {% assign calendar_url = '/calendar.ics' | absolute_url %}
   {% assign teaser_path = '/images/events/' | append: page.id | append: '-teaser.jpg' %}
   {% assign teaser_file = site.static_files | where: 'path', teaser_path | first %}
   {% if teaser_file %}
