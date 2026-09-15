@@ -85,7 +85,7 @@ layout: default
           {% endif %}
         </dl>
         {% if page.event_link and page.event_link != '' %}
-          <a class="event-action" href="{{ page.event_link }}" target="_blank" rel="noopener">{% if event_date >= today %}RSVP on Meetup{% else %}View event on Meetup{% endif %} <span aria-hidden="true">&nearr;</span></a>
+          <a class="event-action" href="{{ page.event_link }}" target="_blank" rel="noopener">{% if event_date >= today %}{% if page.event_link contains 'meetup.com' %}RSVP on Meetup{% else %}Sign me up!{% endif %}{% else %}View event on Meetup{% endif %} <span aria-hidden="true">&nearr;</span></a>
         {% elsif event_date >= today %}
           <p class="event-fact-note">Registration opening soon</p>
         {% endif %}
