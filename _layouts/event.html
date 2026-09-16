@@ -94,24 +94,24 @@ layout: default
 
     {% assign published_talks = 0 %}
     {% for talk in page.talks %}
-      {% assign speaker_upper = talk.speaker | upcase %}
-      {% assign title_upper = talk.title | upcase %}
-      {% unless speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == 'TBA' or title_upper == 'TBD' %}
+      {% assign speaker_upper = talk.speaker | default: '' | strip | upcase %}
+      {% assign title_upper = talk.title | default: '' | strip | upcase %}
+      {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == '' or title_upper == 'TBA' or title_upper == 'TBD' %}
         {% assign published_talks = published_talks | plus: 1 %}
       {% endunless %}
     {% endfor %}
 
+    {% if published_talks > 0 %}
     <section class="event-programme" aria-labelledby="programme-title">
       <div class="event-section-heading">
         <h2 id="programme-title">{% if event_date >= today %}On the programme{% else %}Talks &amp; resources{% endif %}</h2>
-        {% if published_talks > 0 %}<span>{{ published_talks }} session{% if published_talks != 1 %}s{% endif %}</span>{% endif %}
+        <span>{{ published_talks }} session{% if published_talks != 1 %}s{% endif %}</span>
       </div>
-      {% if published_talks > 0 %}
-        <div class="event-sessions">
+      <div class="event-sessions">
           {% for talk in page.talks %}
-            {% assign speaker_upper = talk.speaker | upcase %}
-            {% assign title_upper = talk.title | upcase %}
-            {% unless speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == 'TBA' or title_upper == 'TBD' %}
+            {% assign speaker_upper = talk.speaker | default: '' | strip | upcase %}
+            {% assign title_upper = talk.title | default: '' | strip | upcase %}
+            {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == '' or title_upper == 'TBA' or title_upper == 'TBD' %}
               <section class="event-session" id="talk-{{ forloop.index }}" aria-labelledby="talk-title-{{ forloop.index }}">
                 <div class="session-speaker">
                   {% include speaker-portrait.html talk=talk %}
@@ -164,11 +164,9 @@ layout: default
               </section>
             {% endunless %}
           {% endfor %}
-        </div>
-      {% else %}
-        <p class="event-programme-pending">Programme to be announced.</p>
-      {% endif %}
+      </div>
     </section>
+    {% endif %}
     </div>
 
     <footer class="event-page-footer">
