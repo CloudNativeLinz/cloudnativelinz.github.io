@@ -4,6 +4,21 @@ title: 📆 Events
 permalink: events/
 ---
 
+{% assign calendar_url = '/calendar.ics' | absolute_url %}
+{% assign calendar_subscription_url = calendar_url | replace: 'https://', 'webcal://' | replace: 'http://', 'webcal://' %}
+
+<aside class="events-calendar-callout" aria-labelledby="events-calendar-title">
+  <div>
+    <h2 id="events-calendar-title">Never miss a meetup</h2>
+    <p>Subscribe to the Cloud Native Linz calendar and get upcoming events in your calendar automatically.</p>
+  </div>
+  <div class="events-calendar-actions">
+    <a href="{{ calendar_subscription_url }}">Subscribe in calendar app</a>
+    <a href="https://calendar.google.com/calendar/render?cid={{ calendar_subscription_url | url_encode }}" target="_blank" rel="noopener">Google Calendar <span aria-hidden="true">&nearr;</span></a>
+    <a href="{{ '/calendar.ics' | relative_url }}" download>Download .ics</a>
+  </div>
+</aside>
+
 {% include upcoming-events.html %}
 
 ## Past Events

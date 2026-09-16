@@ -158,6 +158,51 @@
   transform: none;
 }
 
+.events-calendar-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding: 1.25rem 1.5rem;
+  color: var(--event-ink);
+  background: var(--event-soft);
+  border-left: 4px solid var(--event-accent);
+
+  h2 {
+    margin: 0 0 0.25rem;
+    color: inherit;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin: 0;
+    color: var(--event-muted);
+  }
+}
+
+.events-calendar-actions {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .events-calendar-callout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .events-calendar-actions {
+    flex-direction: column;
+  }
+}
+
 .event-page {
   color: var(--event-ink);
   padding: 1.5rem 0 3rem;
