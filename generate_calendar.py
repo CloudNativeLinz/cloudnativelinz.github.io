@@ -11,75 +11,71 @@ CALENDAR_NAME = "Cloud Native Linz Events"
 CALENDAR_DESCRIPTION = "Meetup events for the Cloud Native Linz community"
 SITE_URL = "https://cloudnativelinz.at"
 
-# Load YAML
-with open("_data/events.yml", "r") as f:
-    data = yaml.safe_load(f)
+def generate_calendar(events):
+    calendar = Calendar()
+    calendar.add("prodid", "-//Cloud Native Linz Calendar//EN")
+    calendar.add("version", "2.0")
+    calendar.add("x-wr-calname", CALENDAR_NAME)
+    calendar.add("x-wr-caldesc", CALENDAR_DESCRIPTION)
+    calendar.add("name", CALENDAR_NAME)
 
-# Prepare calendar
-cal = Calendar()
-cal.add("prodid", "-//Cloud Native Linz Calendar//EN")
-cal.add("version", "2.0")
-cal.add("x-wr-calname", CALENDAR_NAME)  # Calendar name (widely supported)
-cal.add("x-wr-caldesc", CALENDAR_DESCRIPTION)  # Calendar description
-cal.add("name", CALENDAR_NAME)  # Standard property for calendar name
+    timezone = pytz.timezone(TIMEZONE)
 
-tz = pytz.timezone(TIMEZONE)
+    for event_data in events:
+        event = Event()
+        event_url = f"{SITE_URL}/events/meetup/{event_data['slug']}/"
+        event_date = datetime.strptime(event_data["date"], "%Y-%m-%d")
 
-for ev in data:
-    event = Event()
-    event_url = f"{SITE_URL}/events/meetup/{ev['slug']}/"
+        if event_data.get("doors_open"):
+            start_hour, start_minute = map(int, event_data["doors_open"].split(":"))
+        else:
+            start_hour = 18
+            start_minute = 0
 
-    # Parse date
-    event_date = datetime.strptime(ev["date"], "%Y-%m-%d")
-    
-    # Use doors_open time if available, otherwise default to 18:00 (6pm)
-    if ev.get('doors_open'):
-        # Parse the doors_open time (format: 'HH:MM')
-        time_parts = ev['doors_open'].split(':')
-        start_hour = int(time_parts[0])
-        start_minute = int(time_parts[1])
-    else:
-        start_hour = 18
-        start_minute = 0
-    
-    start_dt = tz.localize(event_date.replace(hour=start_hour, minute=start_minute))
-    # End time is 3 hours after start
-    end_dt = tz.localize(event_date.replace(hour=start_hour + 3, minute=start_minute))
+        start_dt = timezone.localize(
+            event_date.replace(hour=start_hour, minute=start_minute)
+        )
+        end_dt = timezone.localize(
+            event_date.replace(hour=start_hour + 3, minute=start_minute)
+        )
 
-    # Append "CNCF Linz" to the event title
-    event_title = f"{ev['title']} - CNCF Linz"
-    event.add("summary", event_title)
-    event.add("dtstart", start_dt)
-    event.add("dtend", end_dt)
-    
-    # Add location information - prefer address field if available, otherwise use host
-    location = ev.get('address') or ev.get('host', 'TBA')
-    if location and location.lower() != 'online':
-        event.add("location", location)
-    elif location and location.lower() == 'online':
-        event.add("location", "Online Event")
+        event.add("summary", f"{event_data['title']} - CNCF Linz")
+        event.add("dtstart", start_dt)
+        event.add("dtend", end_dt)
 
-    event.add("url", event_url)
+        location = event_data.get("address") or event_data.get("host", "TBA")
+        if location and location.lower() != "online":
+            event.add("location", location)
+        elif location and location.lower() == "online":
+            event.add("location", "Online Event")
 
-    # Create description from talks if available
-    description = f"Host: {ev.get('host', 'TBA')}\n"
-    if ev.get('talks'):
-        description += "Talks:\n"
-        for talk in ev['talks']:
-            description += f"- {talk['title']} by {talk['speaker']}\n"
-    description += f"\nEvent details: {event_url}"
-    if 'event_link' in ev:
-        description += f"\nRSVP: {ev['event_link']}"
+        event.add("url", event_url)
 
-    event.add("description", description)
+        description = f"Host: {event_data.get('host', 'TBA')}\n"
+        if event_data.get("talks"):
+            description += "Talks:\n"
+            for talk in event_data["talks"]:
+                description += f"- {talk['title']} by {talk['speaker']}\n"
+        description += f"\nEvent details: {event_url}"
+        if "event_link" in event_data:
+            description += f"\nRSVP: {event_data['event_link']}"
 
-    # Create stable UID by hashing the event id
-    uid_base = f"{ev['id']}"
-    uid_hash = hashlib.sha256(uid_base.encode("utf-8")).hexdigest()
-    event.add("uid", f"{uid_hash}@cncflinz.at")
+        event.add("description", description)
 
-    cal.add_component(event)
+        uid_hash = hashlib.sha256(str(event_data["id"]).encode()).hexdigest()
+        event.add("uid", f"{uid_hash}@cncflinz.at")
+        calendar.add_component(event)
 
-# Save ICS
-with open("calendar.ics", "wb") as f:
-    f.write(cal.to_ical())
+    return calendar
+
+
+def main():
+    with open("_data/events.yml") as events_file:
+        events = yaml.safe_load(events_file)
+
+    with open("calendar.ics", "wb") as calendar_file:
+        calendar_file.write(generate_calendar(events).to_ical())
+
+
+if __name__ == "__main__":
+    main()

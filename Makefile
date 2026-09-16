@@ -26,13 +26,16 @@ build:
 
 # Check source files without generating the site
 lint: setup-python
-	@$(VENV)/bin/ruff check --ignore DTZ007 generate_calendar.py
+	@$(VENV)/bin/ruff check --ignore DTZ007 generate_calendar.py tests
 	@$(VENV)/bin/yamllint _config.yml _data/events.yml .github
 	@ruby -cw manage_redirects.rb
 	@ruby -cw _plugins/datapage_redirect_generator.rb
 
-# Exercise generated content and the complete production build
-test: calendar build
+# Run tests and build the site
+test: test-python build
+
+test-python: setup-python
+	@$(PYTHON) -m unittest discover -s tests -v
 
 # Run all validation used by CI
 check: lint test
@@ -76,5 +79,5 @@ $(VENV)/.requirements-installed: requirements.txt
 	@touch $@
 	@echo "Python environment ready!"
 
-.PHONY: all build lint test check serve serve-livereload serve-windows calendar setup-python run clean install
+.PHONY: all build lint test test-python check serve serve-livereload serve-windows calendar setup-python run clean install
 
