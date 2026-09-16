@@ -9,6 +9,7 @@ from icalendar import Calendar, Event
 TIMEZONE = "Europe/Berlin"  # Change to your time zone, e.g. "America/New_York"
 CALENDAR_NAME = "Cloud Native Linz Events"
 CALENDAR_DESCRIPTION = "Meetup events for the Cloud Native Linz community"
+SITE_URL = "https://cloudnativelinz.at"
 
 # Load YAML
 with open("_data/events.yml", "r") as f:
@@ -26,6 +27,7 @@ tz = pytz.timezone(TIMEZONE)
 
 for ev in data:
     event = Event()
+    event_url = f"{SITE_URL}/events/meetup/{ev['slug']}/"
 
     # Parse date
     event_date = datetime.strptime(ev["date"], "%Y-%m-%d")
@@ -57,9 +59,7 @@ for ev in data:
     elif location and location.lower() == 'online':
         event.add("location", "Online Event")
 
-    # Add the event link as URL
-    if 'event_link' in ev:
-        event.add("url", ev['event_link'])
+    event.add("url", event_url)
 
     # Create description from talks if available
     description = f"Host: {ev.get('host', 'TBA')}\n"
@@ -67,8 +67,9 @@ for ev in data:
         description += "Talks:\n"
         for talk in ev['talks']:
             description += f"- {talk['title']} by {talk['speaker']}\n"
+    description += f"\nEvent details: {event_url}"
     if 'event_link' in ev:
-        description += f"\nEvent link (RSVP): {ev['event_link']}"
+        description += f"\nRSVP: {ev['event_link']}"
 
     event.add("description", description)
 
