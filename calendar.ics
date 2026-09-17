@@ -12,13 +12,11 @@ UID:6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Digital Transformation (from on-premis
  es to the cloud) by Donovan Brown\n- Serverless on the AWS Cloud\, Challen
- ges Beyond the Toy Problems by Matthias Steinbauer\n\nEvent details: https
- ://cloudnativelinz.at/events/meetup/1-cloud-native-computing-linz-meetup/
- \nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/27324554
- 4/
+ ges Beyond the Toy Problems by Matthias Steinbauer\n\nAll information: htt
+ ps://cloudnativelinz.at/events/meetup/1-cloud-native-computing-linz-meetup
+ /\nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/2732455
+ 44/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/1-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:2. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -28,13 +26,11 @@ UID:d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- The challenges of exposing and connect
  ing microservices by Denis Jannot\n- Custom Autoscaling with Prometheus\, 
- Grafana\, and a little bit of code by János Pásztor\n\nEvent details: ht
- tps://cloudnativelinz.at/events/meetup/2-cloud-native-computing-linz-meetu
- p/\nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/273726
- 815/
+ Grafana\, and a little bit of code by János Pásztor\n\nAll information: 
+ https://cloudnativelinz.at/events/meetup/2-cloud-native-computing-linz-mee
+ tup/\nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/2737
+ 26815/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/2-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:3. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -44,12 +40,10 @@ UID:4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- KubeOne for Beginners by Malte Menkhof
  f\n- Kubernetes certifications: How to prepare and get it done by Juliano 
- Costa & Yuri Oliveira\n\nEvent details: https://cloudnativelinz.at/events/
- meetup/3-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetup.com
- /cloud-native-computing-linz/events/274417589/
+ Costa & Yuri Oliveira\n\nAll information: https://cloudnativelinz.at/event
+ s/meetup/3-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetup.c
+ om/cloud-native-computing-linz/events/274417589/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/3-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:4. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -59,12 +53,10 @@ UID:4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Remote debugging challenges in Kuberne
  tes by Oded Keret\n- When the destination is not what you expect to be or 
- MITM in k8s by Dimitrij Klesev\n\nEvent details: https://cloudnativelinz.a
- t/events/meetup/4-cloud-native-computing-linz-meetup/\nRSVP: https://www.m
- eetup.com/cloud-native-computing-linz/events/275600776/
+ MITM in k8s by Dimitrij Klesev\n\nAll information: https://cloudnativelinz
+ .at/events/meetup/4-cloud-native-computing-linz-meetup/\nRSVP: https://www
+ .meetup.com/cloud-native-computing-linz/events/275600776/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/4-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:5. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -74,12 +66,10 @@ UID:ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Observability & Declarative Hypothesis
   in Chaos Engineering by Karthik S\n- Can I write a platform in the cloud 
- as a single person? by Michael Aufreiter\n\nEvent details: https://cloudna
- tivelinz.at/events/meetup/5-cloud-native-computing-linz-meetup/\nRSVP: htt
- ps://www.meetup.com/cloud-native-computing-linz/events/276236712/
+ as a single person? by Michael Aufreiter\n\nAll information: https://cloud
+ nativelinz.at/events/meetup/5-cloud-native-computing-linz-meetup/\nRSVP: h
+ ttps://www.meetup.com/cloud-native-computing-linz/events/276236712/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/5-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:6. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -89,12 +79,10 @@ UID:e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Continuous Security - Building Securit
  y into your Pipelines by Matt Jarvis\n- Cloud Security Beyond Technology b
- y Rainer Stropek\n\nEvent details: https://cloudnativelinz.at/events/meetu
- p/6-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetup.com/clou
- d-native-computing-linz/events/276718585/
+ y Rainer Stropek\n\nAll information: https://cloudnativelinz.at/events/mee
+ tup/6-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetup.com/cl
+ oud-native-computing-linz/events/276718585/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/6-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:7. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -103,12 +91,10 @@ DTEND;TZID=Europe/Berlin:20210427T210000
 UID:7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- All you need to know about OpenTelemet
- ry by Juraci Paixão Kröhling\n\nEvent details: https://cloudnativelinz.a
- t/events/meetup/7-cloud-native-computing-linz-meetup/\nRSVP: https://www.m
- eetup.com/cloud-native-computing-linz/events/277569639/
+ ry by Juraci Paixão Kröhling\n\nAll information: https://cloudnativelinz
+ .at/events/meetup/7-cloud-native-computing-linz-meetup/\nRSVP: https://www
+ .meetup.com/cloud-native-computing-linz/events/277569639/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/7-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:8. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -117,12 +103,10 @@ DTEND;TZID=Europe/Berlin:20210525T210000
 UID:2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Cloud-Native Storage: What it can and 
- can't (yet) do by Moritz Wanzenböck\n\nEvent details: https://cloudnative
- linz.at/events/meetup/8-cloud-native-computing-linz-meetup/\nRSVP: https:/
- /www.meetup.com/cloud-native-computing-linz/events/278104169/
+ can't (yet) do by Moritz Wanzenböck\n\nAll information: https://cloudnati
+ velinz.at/events/meetup/8-cloud-native-computing-linz-meetup/\nRSVP: https
+ ://www.meetup.com/cloud-native-computing-linz/events/278104169/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/8-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:9. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -131,13 +115,11 @@ DTEND;TZID=Europe/Berlin:20210629T210000
 UID:19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Service Mesh Principles: Observability
-  through Telemetry with Linkerd by Charles Pretzer\n\nEvent details: https
- ://cloudnativelinz.at/events/meetup/9-cloud-native-computing-linz-meetup/
- \nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/27891475
- 8/
+  through Telemetry with Linkerd by Charles Pretzer\n\nAll information: htt
+ ps://cloudnativelinz.at/events/meetup/9-cloud-native-computing-linz-meetup
+ /\nRSVP: https://www.meetup.com/cloud-native-computing-linz/events/2789147
+ 58/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/9-cloud-native-computing-linz
- -meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:10. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -146,12 +128,10 @@ DTEND;TZID=Europe/Berlin:20210928T210000
 UID:4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Automatically optimize cloud-native sy
- stems for fun and profit by Lars Wolff\n\nEvent details: https://cloudnati
- velinz.at/events/meetup/10-cloud-native-computing-linz-meetup/\nRSVP: http
- s://www.meetup.com/cloud-native-computing-linz/events/280749046/
+ stems for fun and profit by Lars Wolff\n\nAll information: https://cloudna
+ tivelinz.at/events/meetup/10-cloud-native-computing-linz-meetup/\nRSVP: ht
+ tps://www.meetup.com/cloud-native-computing-linz/events/280749046/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/10-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:11. IN PERSON - Cloud Native Computing Linz Meetup - CNCF Linz
@@ -161,12 +141,10 @@ UID:4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8@cncfl
  inz.at
 DESCRIPTION:Host: Dynatrace\nTalks:\n- The 1001 serverless options of Micr
  osoft Azure by Philipp Weckerle\n- How OpenTelemetry is currently used at 
- my company by Juliano Costa\n\nEvent details: https://cloudnativelinz.at/e
- vents/meetup/11-in-person-cloud-native-computing-linz-meetup/\nRSVP: https
- ://www.meetup.com/cloud-native-computing-linz/events/281064988/
+ my company by Juliano Costa\n\nAll information: https://cloudnativelinz.at
+ /events/meetup/11-in-person-cloud-native-computing-linz-meetup/\nRSVP: htt
+ ps://www.meetup.com/cloud-native-computing-linz/events/281064988/
 LOCATION:Dynatrace
-URL:https://cloudnativelinz.at/events/meetup/11-in-person-cloud-native-com
- puting-linz-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:12. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -175,12 +153,10 @@ DTEND;TZID=Europe/Berlin:20220223T210000
 UID:6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- A Tour of Operator-SDK by Alexandre Me
- nezes & Yuri Oliveira Sá\n\nEvent details: https://cloudnativelinz.at/eve
- nts/meetup/12-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetu
- p.com/cloud-native-computing-linz/events/283691539/
+ nezes & Yuri Oliveira Sá\n\nAll information: https://cloudnativelinz.at/e
+ vents/meetup/12-cloud-native-computing-linz-meetup/\nRSVP: https://www.mee
+ tup.com/cloud-native-computing-linz/events/283691539/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/12-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:13. Cloud Native Computing Linz Meetup (joint meetup with eJUG Lin
@@ -189,13 +165,11 @@ DTSTART;TZID=Europe/Berlin:20220330T180000
 DTEND;TZID=Europe/Berlin:20220330T210000
 UID:3fdba35f04dc8c462986c992bcf875546257113072a909c162f7e470e581e278@cncfl
  inz.at
-DESCRIPTION:Host: smec\nTalks:\n- Java on Azure by Ed Burns\n\nEvent detai
- ls: https://cloudnativelinz.at/events/meetup/13-cloud-native-computing-lin
- z-meetup-joint-meetup-with-ejug-linz/\nRSVP: https://www.meetup.com/cloud-
- native-computing-linz/events/284662219/
+DESCRIPTION:Host: smec\nTalks:\n- Java on Azure by Ed Burns\n\nAll informa
+ tion: https://cloudnativelinz.at/events/meetup/13-cloud-native-computing-l
+ inz-meetup-joint-meetup-with-ejug-linz/\nRSVP: https://www.meetup.com/clou
+ d-native-computing-linz/events/284662219/
 LOCATION:smec
-URL:https://cloudnativelinz.at/events/meetup/13-cloud-native-computing-lin
- z-meetup-joint-meetup-with-ejug-linz/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:14. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -205,12 +179,10 @@ UID:8527a891e224136950ff32ca212b45bc93f69fbb801c3b1ebedac52775f99e61@cncfl
  inz.at
 DESCRIPTION:Host: hello again\nTalks:\n- The art of scaling without scalin
  g your DevOps-Team by Michael Schöndorfer\n- The 7 deadly sins in Kuberne
- tes by Hubert Ströbitzer\n\nEvent details: https://cloudnativelinz.at/eve
- nts/meetup/14-cloud-native-computing-linz-meetup/\nRSVP: https://www.meetu
- p.com/cloud-native-computing-linz/events/284847987/
+ tes by Hubert Ströbitzer\n\nAll information: https://cloudnativelinz.at/e
+ vents/meetup/14-cloud-native-computing-linz-meetup/\nRSVP: https://www.mee
+ tup.com/cloud-native-computing-linz/events/284847987/
 LOCATION:hello again
-URL:https://cloudnativelinz.at/events/meetup/14-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:15. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -221,12 +193,10 @@ UID:e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb@cncfl
 DESCRIPTION:Host: G+D Netcetera\nTalks:\n- How deploying feature branches 
  opened the door to more scalability by Markus Adelsberger\n- From Command 
  Line to GitOps - how we transformed our infrastructure by Thomas Einwaller
- \n\nEvent details: https://cloudnativelinz.at/events/meetup/15-cloud-nativ
- e-computing-linz-meetup/\nRSVP: https://www.meetup.com/cloud-native-comput
- ing-linz/events/285775843/
+ \n\nAll information: https://cloudnativelinz.at/events/meetup/15-cloud-nat
+ ive-computing-linz-meetup/\nRSVP: https://www.meetup.com/cloud-native-comp
+ uting-linz/events/285775843/
 LOCATION:G+D Netcetera
-URL:https://cloudnativelinz.at/events/meetup/15-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:16. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -236,12 +206,10 @@ UID:b17ef6d19c7a5b1ee83b907c595526dcb1eb06db8227d650d5dda0a9f4ce8cd9@cncfl
  inz.at
 DESCRIPTION:Host: Dynatrace\nTalks:\n- Policy as Code - an introduction to
   Open Policy Agent by Anders Eknert\n- ClickOps over GitOps by Laszlo Foga
- s\n\nEvent details: https://cloudnativelinz.at/events/meetup/16-cloud-nati
- ve-computing-linz-meetup/\nRSVP: https://www.meetup.com/cloud-native-compu
- ting-linz/events/286504906/
+ s\n\nAll information: https://cloudnativelinz.at/events/meetup/16-cloud-na
+ tive-computing-linz-meetup/\nRSVP: https://www.meetup.com/cloud-native-com
+ puting-linz/events/286504906/
 LOCATION:Dynatrace
-URL:https://cloudnativelinz.at/events/meetup/16-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:17. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -252,12 +220,10 @@ UID:4523540f1504cd17100c4835e85b7eefd49911580f8efff0599a8f283be6b9e3@cncfl
 DESCRIPTION:Host: Cloudflight\nTalks:\n- Kubernetes\, docker\, cri-o\, con
  tainerd\, OCI\, runC\, container - what they are and how they fit together
   by Martin Strigl\n- Kong's Service Connectivity Platform by Marco Marquez
- \n\nEvent details: https://cloudnativelinz.at/events/meetup/17-cloud-nativ
- e-computing-linz-meetup/\nRSVP: https://ocgroups.dev/cncf/group/cloud-nati
- ve-linz/event/cbxhcc3
+ \n\nAll information: https://cloudnativelinz.at/events/meetup/17-cloud-nat
+ ive-computing-linz-meetup/\nRSVP: https://ocgroups.dev/cncf/group/cloud-na
+ tive-linz/event/cbxhcc3
 LOCATION:Cloudflight
-URL:https://cloudnativelinz.at/events/meetup/17-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:18. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -267,12 +233,10 @@ UID:4ec9599fc203d176a301536c2e091a19bc852759b255bd6818810a42c5fed14a@cncfl
  inz.at
 DESCRIPTION:Host: Tractive\nTalks:\n- How to build fault resistant service
  s with infrastructure automation? by Stefan Burgholzer\n- Secure DevOps En
- vironment by Christian Köberl\n\nEvent details: https://cloudnativelinz.a
- t/events/meetup/18-cloud-native-computing-linz-meetup/\nRSVP: https://ocgr
- oups.dev/cncf/group/cloud-native-linz/event/e84kf5c
+ vironment by Christian Köberl\n\nAll information: https://cloudnativelinz
+ .at/events/meetup/18-cloud-native-computing-linz-meetup/\nRSVP: https://oc
+ groups.dev/cncf/group/cloud-native-linz/event/e84kf5c
 LOCATION:Tractive
-URL:https://cloudnativelinz.at/events/meetup/18-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:19. Cloud Native Computing Linz Meetup - CNCF Linz
@@ -282,13 +246,11 @@ UID:9400f1b21cb527d7fa3d3eabba93557a18ebe7a2ca4e471cfe5e4c5b4ca7f767@cncfl
  inz.at
 DESCRIPTION:Host: Startrampe\nTalks:\n- Instrumenting Tyk API Gateway with
   OpenTelemetry by Sonja Chevre\n- Don't deploy into the DARK! DORA Metrics
- : automatically\, for all your k8s workloads! by Andreas Grabner\n\nEvent 
- details: https://cloudnativelinz.at/events/meetup/19-cloud-native-computin
- g-linz-meetup/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native-linz/ev
- ent/q3btaxu
+ : automatically\, for all your k8s workloads! by Andreas Grabner\n\nAll in
+ formation: https://cloudnativelinz.at/events/meetup/19-cloud-native-comput
+ ing-linz-meetup/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native-linz/
+ event/q3btaxu
 LOCATION:Startrampe
-URL:https://cloudnativelinz.at/events/meetup/19-cloud-native-computing-lin
- z-meetup/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Kubernetes Alternatives - CNCF Linz
@@ -297,11 +259,11 @@ DTEND;TZID=Europe/Berlin:20230221T210000
 UID:f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b@cncfl
  inz.at
 DESCRIPTION:Host: Usersnap\nTalks:\n- Serverless container workloads beyon
- d K8s by Martin Sereinig\n- Kubernetes Alternatives by Martin Ahrer\n\nEve
- nt details: https://cloudnativelinz.at/events/meetup/kubernetes-alternativ
- es/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native-linz/event/jpt7cyb
+ d K8s by Martin Sereinig\n- Kubernetes Alternatives by Martin Ahrer\n\nAll
+  information: https://cloudnativelinz.at/events/meetup/kubernetes-alternat
+ ives/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native-linz/event/jpt7c
+ yb
 LOCATION:Usersnap
-URL:https://cloudnativelinz.at/events/meetup/kubernetes-alternatives/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Crossplane Usecases - CNCF Linz
@@ -311,11 +273,10 @@ UID:6f4b6612125fb3a0daecd2799dfd6c9c299424fd920f9b308110a2c1fbd8f443@cncfl
  inz.at
 DESCRIPTION:Host: Dynatrace\nTalks:\n- Crossplane & GitOps: A perfect matc
  h? by Katharina Sick\n- Kubernetes as a universal controlplane: An Introdu
- ction into Crossplane by David Hondl\n\nEvent details: https://cloudnative
- linz.at/events/meetup/crossplane-usecases/\nRSVP: https://ocgroups.dev/cnc
- f/group/cloud-native-linz/event/r73rm57
+ ction into Crossplane by David Hondl\n\nAll information: https://cloudnati
+ velinz.at/events/meetup/crossplane-usecases/\nRSVP: https://ocgroups.dev/c
+ ncf/group/cloud-native-linz/event/r73rm57
 LOCATION:Dynatrace
-URL:https://cloudnativelinz.at/events/meetup/crossplane-usecases/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hagenberg Edition - CNCF Linz
@@ -326,11 +287,10 @@ UID:785f3ec7eb32f30b90cd0fcf3657d388b5ff4297f2f9716ff66e9b69c05ddd09@cncfl
 DESCRIPTION:Host: Porsche Informatik\nTalks:\n- Let's Turn Off the Databas
  e - Chaos Engineering @ Porsche Informatik by Carolin Schuntermann\n- Supe
  rcharge Your Coding with GitHub Copilot and Actions: The AI-Powered Produc
- tivity Duo by Jürgen Etzlstorfer\n\nEvent details: https://cloudnativelin
- z.at/events/meetup/hagenberg-edition/\nRSVP: https://ocgroups.dev/cncf/gro
- up/cloud-native-linz/event/awhh8mq
+ tivity Duo by Jürgen Etzlstorfer\n\nAll information: https://cloudnativel
+ inz.at/events/meetup/hagenberg-edition/\nRSVP: https://ocgroups.dev/cncf/g
+ roup/cloud-native-linz/event/awhh8mq
 LOCATION:Porsche Informatik
-URL:https://cloudnativelinz.at/events/meetup/hagenberg-edition/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:CertOps and K8sGPT - CNCF Linz
@@ -340,11 +300,10 @@ UID:535fa30d7e25dd8a49f1536779734ec8286108d115da5045d77f3b4185d8f790@cncfl
  inz.at
 DESCRIPTION:Host: Cloudflight\nTalks:\n- CertOps: Certificate Lifecycle Ma
  nagement done Cloud Native by Martin Strigl\n- Leveraging AI to Troublesho
- ot Kubernetes with K8sGPT by Thomas Schuetz\n\nEvent details: https://clou
- dnativelinz.at/events/meetup/certops-and-k8sgpt/\nRSVP: https://ocgroups.d
- ev/cncf/group/cloud-native-linz/event/8n5y9kv
+ ot Kubernetes with K8sGPT by Thomas Schuetz\n\nAll information: https://cl
+ oudnativelinz.at/events/meetup/certops-and-k8sgpt/\nRSVP: https://ocgroups
+ .dev/cncf/group/cloud-native-linz/event/8n5y9kv
 LOCATION:Cloudflight
-URL:https://cloudnativelinz.at/events/meetup/certops-and-k8sgpt/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:GitOps & Terraform and a Guide to OpenTelemetry - CNCF Linz
@@ -353,13 +312,11 @@ DTEND;TZID=Europe/Berlin:20230627T210000
 UID:c2356069e9d1e79ca924378153cfbbfb4d4416b1f99d41a2940bfdb66c5319db@cncfl
  inz.at
 DESCRIPTION:Host: Runtastic\nTalks:\n- GitOps and Terraform by Alexander L
- ackner\n- Distributed Tracing and OpenTelemetry by Daniel Khan\n\nEvent de
- tails: https://cloudnativelinz.at/events/meetup/gitops-terraform-and-a-gui
- de-to-opentelemetry/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native-l
- inz/event/737f8nv
+ ackner\n- Distributed Tracing and OpenTelemetry by Daniel Khan\n\nAll info
+ rmation: https://cloudnativelinz.at/events/meetup/gitops-terraform-and-a-g
+ uide-to-opentelemetry/\nRSVP: https://ocgroups.dev/cncf/group/cloud-native
+ -linz/event/737f8nv
 LOCATION:Runtastic
-URL:https://cloudnativelinz.at/events/meetup/gitops-terraform-and-a-guide-
- to-opentelemetry/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Migration to Cloud Native & The Power of Operators - CNCF Linz
@@ -370,12 +327,10 @@ UID:b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569@cncfl
 DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Scaling Observability - Dynatra
  ce Operator by Christoph Müllner\n- Migration of on-prem payment systems 
  to a Cloud Native Environments by Markus Adelsberger & Georg Mayrhauser\n
- \nEvent details: https://cloudnativelinz.at/events/meetup/migration-to-clo
- ud-native-the-power-of-operators/\nRSVP: https://ocgroups.dev/cncf/group/c
- loud-native-linz/event/933xajp
+ \nAll information: https://cloudnativelinz.at/events/meetup/migration-to-c
+ loud-native-the-power-of-operators/\nRSVP: https://ocgroups.dev/cncf/group
+ /cloud-native-linz/event/933xajp
 LOCATION:G+D Netcetera
-URL:https://cloudnativelinz.at/events/meetup/migration-to-cloud-native-the
- -power-of-operators/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Testing K8s Operators & OpenTelemetry for Logs - CNCF Linz
@@ -385,12 +340,10 @@ UID:5f9c4ab08cac7457e9111a30e4664920607ea2c115a1433d7be98e97e64244ca@cncfl
  inz.at
 DESCRIPTION:Host: eww IT and TEL\nTalks:\n- Test and evolve your Kubernete
  s Operators by Riccardo Capraro\n- OpenTelemetry for Logging by Philipp Kr
- enn\n\nEvent details: https://cloudnativelinz.at/events/meetup/testing-k8s
- -operators-opentelemetry-for-logs/\nRSVP: https://ocgroups.dev/cncf/group/
- cloud-native-linz/event/5kkv26u
+ enn\n\nAll information: https://cloudnativelinz.at/events/meetup/testing-k
+ 8s-operators-opentelemetry-for-logs/\nRSVP: https://ocgroups.dev/cncf/grou
+ p/cloud-native-linz/event/5kkv26u
 LOCATION:eww IT and TEL
-URL:https://cloudnativelinz.at/events/meetup/testing-k8s-operators-opentel
- emetry-for-logs/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:GitOps and Testing Cloud Environments - CNCF Linz
@@ -401,12 +354,10 @@ UID:670671cd97404156226e507973f2ab8330d3022ca96e0c93bdbdb320c41adcaf@cncfl
 DESCRIPTION:Host: MIC\nTalks:\n- Automating Legacy System Management with 
  GitOps: A Journey from On-Premises to Kubernetes by Michael Skledar\n- Tam
  ing and Testing the Cloud Environment from localhost to cncf.io by Anca Gh
- enade\n\nEvent details: https://cloudnativelinz.at/events/meetup/gitops-an
- d-testing-cloud-environments/\nRSVP: https://ocgroups.dev/cncf/group/cloud
- -native-linz/event/9zwgun8
+ enade\n\nAll information: https://cloudnativelinz.at/events/meetup/gitops-
+ and-testing-cloud-environments/\nRSVP: https://ocgroups.dev/cncf/group/clo
+ ud-native-linz/event/9zwgun8
 LOCATION:MIC
-URL:https://cloudnativelinz.at/events/meetup/gitops-and-testing-cloud-envi
- ronments/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cloud Adventure and Cloud Native Sustainability - CNCF Linz
@@ -415,12 +366,10 @@ DTEND;TZID=Europe/Berlin:20240124T210000
 UID:59e19706d51d39f66711c2653cd7eb1291c94d9b55eb14bda74ce4dc636d015a@cncfl
  inz.at
 DESCRIPTION:Host: karriere.at\nTalks:\n- Cloud Adventure by Georg Buchgehe
- r\n- Green Software by Erik Auer\n\nEvent details: https://cloudnativelinz
- .at/events/meetup/cloud-adventure-and-cloud-native-sustainability/\nRSVP: 
- https://ocgroups.dev/cncf/group/cloud-native-linz/event/ptatwve
+ r\n- Green Software by Erik Auer\n\nAll information: https://cloudnativeli
+ nz.at/events/meetup/cloud-adventure-and-cloud-native-sustainability/\nRSVP
+ : https://ocgroups.dev/cncf/group/cloud-native-linz/event/ptatwve
 LOCATION:karriere.at
-URL:https://cloudnativelinz.at/events/meetup/cloud-adventure-and-cloud-nat
- ive-sustainability/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Access Control and Platforms with Devs in Mind - CNCF Linz
@@ -430,13 +379,11 @@ UID:35135aaa6cc23891b40cb3f378c53a17a1127210ce60e125ccf03efcfdaec458@cncfl
  inz.at
 DESCRIPTION:Host: Gepardec\nTalks:\n- Pathways\, Not Pitfalls: Building Pl
  atforms With Developers in Mind by Katharina Sick\n- An Open-Source approa
- ch to Multi-tenant Label-based Access control by Constantin Winkler\n\nEve
- nt details: https://cloudnativelinz.at/events/meetup/access-control-and-pl
- atforms-with-devs-in-mind/\nRSVP: https://ocgroups.dev/cncf/group/cloud-na
- tive-linz/event/9abgy8z
+ ch to Multi-tenant Label-based Access control by Constantin Winkler\n\nAll
+  information: https://cloudnativelinz.at/events/meetup/access-control-and-
+ platforms-with-devs-in-mind/\nRSVP: https://ocgroups.dev/cncf/group/cloud-
+ native-linz/event/9abgy8z
 LOCATION:Gepardec
-URL:https://cloudnativelinz.at/events/meetup/access-control-and-platforms-
- with-devs-in-mind/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:K8s Journey and a Multi-Layer K8s Security System - CNCF Linz
@@ -447,12 +394,10 @@ UID:624b60c58c9d8bfb6ff1886c2fd605d2adeb6ea4da576068201b6c6958ce93f4@cncfl
 DESCRIPTION:Host: Runtastic\nTalks:\n- A Tale of ROSEs and Containers: Our
   Kubernetes Journey by Alexander Lackner & Armin Deliomini\n- Implementing
   a Multi-Layer Kubernetes Security System with SUSE NeuVector by Daniel Dr
- ack\n\nEvent details: https://cloudnativelinz.at/events/meetup/k8s-journey
- -and-a-multi-layer-k8s-security-system/\nRSVP: https://ocgroups.dev/cncf/g
- roup/cloud-native-linz/event/kg4n999
+ ack\n\nAll information: https://cloudnativelinz.at/events/meetup/k8s-journ
+ ey-and-a-multi-layer-k8s-security-system/\nRSVP: https://ocgroups.dev/cncf
+ /group/cloud-native-linz/event/kg4n999
 LOCATION:Runtastic
-URL:https://cloudnativelinz.at/events/meetup/k8s-journey-and-a-multi-layer
- -k8s-security-system/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Secure K8s Deployment and API Management in Azure - CNCF Linz
@@ -463,12 +408,10 @@ UID:eb1e33e8a81b697b75855af6bfcdbcbf7cbbde9f94962ceaec1ed8af21f5a50f@cncfl
 DESCRIPTION:Host: Public Cloud Group\nTalks:\n- How to securely deploy Kub
  ernetes on Azure by Marcel Tober & Andreas Wimmersberger\n- Transforming d
  iverse system landscapes into sustainable API products with Azure API Mana
- gement by Tobias Berei\n\nEvent details: https://cloudnativelinz.at/events
- /meetup/secure-k8s-deployment-and-api-management-in-azure/\nRSVP: https://
- www.meetup.com/cloud-native-linz/events/298076702/
+ gement by Tobias Berei\n\nAll information: https://cloudnativelinz.at/even
+ ts/meetup/secure-k8s-deployment-and-api-management-in-azure/\nRSVP: https:
+ //www.meetup.com/cloud-native-linz/events/298076702/
 LOCATION:Public Cloud Group
-URL:https://cloudnativelinz.at/events/meetup/secure-k8s-deployment-and-api
- -management-in-azure/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Inspecting Running Containers & Observability on the Edge - CNCF L
@@ -479,12 +422,10 @@ UID:e29c9c180c6279b0b02abd6a1801c7c04082cf486ec027aa13515e4f3884bb6b@cncfl
  inz.at
 DESCRIPTION:Host: Cloudflight\nTalks:\n- Inspecting running containers by 
  Martin Strigl\n- Observability at the Edge: Envoy Distributed Tracing with
-  OpenTelemetry by João Grassi\n\nEvent details: https://cloudnativelinz.a
- t/events/meetup/inspecting-running-containers-observability-on-the-edge/\n
- RSVP: https://www.meetup.com/cloud-native-linz/events/300982876/
+  OpenTelemetry by João Grassi\n\nAll information: https://cloudnativelinz
+ .at/events/meetup/inspecting-running-containers-observability-on-the-edge/
+ \nRSVP: https://www.meetup.com/cloud-native-linz/events/300982876/
 LOCATION:Cloudflight
-URL:https://cloudnativelinz.at/events/meetup/inspecting-running-containers
- -observability-on-the-edge/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OpenTelemetry Errors - CNCF Linz
@@ -493,11 +434,10 @@ DTEND;TZID=Europe/Berlin:20240918T210000
 UID:c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894@cncfl
  inz.at
 DESCRIPTION:Host: online\nTalks:\n- Dude\, Where's My Error? How OTel Reco
- rds Errors\, and Why it Does Like That by Adriana Villela & Reese Lee\n\nE
- vent details: https://cloudnativelinz.at/events/meetup/opentelemetry-error
- s/\nRSVP: https://www.meetup.com/cloud-native-linz/events/302570761/
+ rds Errors\, and Why it Does Like That by Adriana Villela & Reese Lee\n\nA
+ ll information: https://cloudnativelinz.at/events/meetup/opentelemetry-err
+ ors/\nRSVP: https://www.meetup.com/cloud-native-linz/events/302570761/
 LOCATION:Online Event
-URL:https://cloudnativelinz.at/events/meetup/opentelemetry-errors/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Beyond k8s and OpenSource Metrics - CNCF Linz
@@ -507,12 +447,10 @@ UID:86e50149658661312a9e0b35558d84f6c6d3da797f552a9657fe0558ca40cdef@cncfl
  inz.at
 DESCRIPTION:Host: Dynatrace\nTalks:\n- Open-Source Metrics Primer by Georg
   Pirklbauer\n- Beyond Kubernetes: Integrating Backstage for a Seamless Dev
- eloper Experience by Philipp Bergsmann\n\nEvent details: https://cloudnati
- velinz.at/events/meetup/beyond-k8s-and-opensource-metrics/\nRSVP: https://
- www.meetup.com/cloud-native-linz/events/303406885/
+ eloper Experience by Philipp Bergsmann\n\nAll information: https://cloudna
+ tivelinz.at/events/meetup/beyond-k8s-and-opensource-metrics/\nRSVP: https:
+ //www.meetup.com/cloud-native-linz/events/303406885/
 LOCATION:Dynatrace
-URL:https://cloudnativelinz.at/events/meetup/beyond-k8s-and-opensource-met
- rics/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cloud-Native Harmony & Backstage Techdocs - CNCF Linz
@@ -522,12 +460,10 @@ UID:9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953@cncfl
  inz.at
 DESCRIPTION:Host: cloudxcelerate\nTalks:\n- From IT Ops to Cloud-Native Ha
  rmony by Alexander Höllwart & Michael “Obi” Obernberger\n- Backstage 
- Techdocs by Sebastian Poxhofer\n\nEvent details: https://cloudnativelinz.a
- t/events/meetup/cloud-native-harmony-backstage-techdocs/\nRSVP: https://ww
- w.meetup.com/cloud-native-computing-linz/events/302568919/
+ Techdocs by Sebastian Poxhofer\n\nAll information: https://cloudnativelinz
+ .at/events/meetup/cloud-native-harmony-backstage-techdocs/\nRSVP: https://
+ www.meetup.com/cloud-native-computing-linz/events/302568919/
 LOCATION:cloudxcelerate
-URL:https://cloudnativelinz.at/events/meetup/cloud-native-harmony-backstag
- e-techdocs/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Containerized Builds & Beesting - CNCF Linz
@@ -537,12 +473,10 @@ UID:76a50887d8f1c2e9301755428990ad81479ee21c25b43215cf524541e0503269@cncfl
  inz.at
 DESCRIPTION:Host: Public Cloud Group\nTalks:\n- A closer look at Docker Bu
  ildKit and Buildx by Sophia Zehethofer\n- Beesting Can't touch this by Pat
- rick Pichler\n\nEvent details: https://cloudnativelinz.at/events/meetup/co
- ntainerized-builds-beesting/\nRSVP: https://www.meetup.com/cloud-native-li
- nz/events/304003701/
+ rick Pichler\n\nAll information: https://cloudnativelinz.at/events/meetup/
+ containerized-builds-beesting/\nRSVP: https://www.meetup.com/cloud-native-
+ linz/events/304003701/
 LOCATION:Public Cloud Group
-URL:https://cloudnativelinz.at/events/meetup/containerized-builds-beesting
- /
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Auto-updates in the CI/CD and Zero Trust Systems - CNCF Linz
@@ -552,12 +486,10 @@ UID:7a61b53701befdae0eeeffaecc73f14e20b537bb0f8b91ad7c2936dc63562b25@cncfl
  inz.at
 DESCRIPTION:Host: Gepardec\nTalks:\n- Designing Zero Trust Systems by Damj
  an Gjurovski\n- Auto-Updates of microservices in your CI/CD pipeline by Ch
- ristoph Ruhsam\n\nEvent details: https://cloudnativelinz.at/events/meetup/
- auto-updates-in-the-cicd-and-zero-trust-systems/\nRSVP: https://www.meetup
- .com/cloud-native-linz/events/304124258/
+ ristoph Ruhsam\n\nAll information: https://cloudnativelinz.at/events/meetu
+ p/auto-updates-in-the-cicd-and-zero-trust-systems/\nRSVP: https://www.meet
+ up.com/cloud-native-linz/events/304124258/
 LOCATION:Gepardec
-URL:https://cloudnativelinz.at/events/meetup/auto-updates-in-the-cicd-and-
- zero-trust-systems/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Laravel in K8s and Shell Scripting - CNCF Linz
@@ -566,12 +498,10 @@ DTEND;TZID=Europe/Berlin:20250318T210000
 UID:aea92132c4cbeb263e6ac2bf6c183b5d81737f179f21efdc5863739672f0f470@cncfl
  inz.at
 DESCRIPTION:Host: karriere.at\nTalks:\n- Laravel in Kubernetes by Sebastia
- n Huber\n- You Suck at Shell Scripting by Florian Arthofer\n\nEvent detail
- s: https://cloudnativelinz.at/events/meetup/laravel-in-k8s-and-shell-scrip
- ting/\nRSVP: https://www.meetup.com/cloud-native-linz/events/306377483/
+ n Huber\n- You Suck at Shell Scripting by Florian Arthofer\n\nAll informat
+ ion: https://cloudnativelinz.at/events/meetup/laravel-in-k8s-and-shell-scr
+ ipting/\nRSVP: https://www.meetup.com/cloud-native-linz/events/306377483/
 LOCATION:karriere.at
-URL:https://cloudnativelinz.at/events/meetup/laravel-in-k8s-and-shell-scri
- pting/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Zero-Downtime Experiences & Event-Driven Microservices at scale - 
@@ -583,12 +513,10 @@ UID:0b918943df0962bc7a1824c0555a389347b4febdc7cf9d1254406d80ce44e3f9@cncfl
 DESCRIPTION:Host: Tractive\nTalks:\n- Deploy Without Disruption: Crafting 
  Zero-Downtime Experiences with Stateless Services by Jan Wiesbauer\n- Buil
  ding Event-Driven Microservices at scale with Azure Cosmos DB by Shahab Ga
- nji\n\nEvent details: https://cloudnativelinz.at/events/meetup/zero-downti
- me-experiences-event-driven-microservices-at-scale/\nRSVP: https://www.mee
- tup.com/cloud-native-linz/events/307219291/
+ nji\n\nAll information: https://cloudnativelinz.at/events/meetup/zero-down
+ time-experiences-event-driven-microservices-at-scale/\nRSVP: https://www.m
+ eetup.com/cloud-native-linz/events/307219291/
 LOCATION:Tractive
-URL:https://cloudnativelinz.at/events/meetup/zero-downtime-experiences-eve
- nt-driven-microservices-at-scale/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:TalosOS and CloudEvents - CNCF Linz
@@ -598,11 +526,10 @@ UID:d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103@cncfl
  inz.at
 DESCRIPTION:Host: Cloudflight\nTalks:\n- TalosOS: The OS Kubernetes Deserv
  es by Siegfried Stumpfer\n- CloudEvents: A Standard for Event-Driven Archi
- tectures by Christian Schabetsberger\n\nEvent details: https://cloudnative
- linz.at/events/meetup/talosos-and-cloudevents/\nRSVP: https://www.meetup.c
- om/cloud-native-linz/events/307676898/
+ tectures by Christian Schabetsberger\n\nAll information: https://cloudnati
+ velinz.at/events/meetup/talosos-and-cloudevents/\nRSVP: https://www.meetup
+ .com/cloud-native-linz/events/307676898/
 LOCATION:Cloudflight
-URL:https://cloudnativelinz.at/events/meetup/talosos-and-cloudevents/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:OpenRewrite & Adversary Emulation for k8s - CNCF Linz
@@ -612,12 +539,10 @@ UID:3d914f9348c9cc0ff8a79716700b9fcd4d2f3e711608004eb8f138bcba7f14d9@cncfl
  inz.at
 DESCRIPTION:Host: Gepardec\nTalks:\n- OpenRewrite in a Nutshell: Scaling U
  pgrades with Practical Insights by Simon Gartner\n- Adversary Emulation fo
- r Kubernetes Environments by Markus Gierlinger\n\nEvent details: https://c
- loudnativelinz.at/events/meetup/openrewrite-adversary-emulation-for-k8s/\n
- RSVP: https://www.meetup.com/cloud-native-linz/events/307975704/
+ r Kubernetes Environments by Markus Gierlinger\n\nAll information: https:/
+ /cloudnativelinz.at/events/meetup/openrewrite-adversary-emulation-for-k8s/
+ \nRSVP: https://www.meetup.com/cloud-native-linz/events/307975704/
 LOCATION:Gepardec
-URL:https://cloudnativelinz.at/events/meetup/openrewrite-adversary-emulati
- on-for-k8s/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:cTENcf Party - celebrating 10 years of CNCF and 5 years of Cloud N
@@ -628,13 +553,11 @@ UID:73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049@cncfl
  inz.at
 DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Secrets management - from plain
  text to hiding keys in the Swiss Alps by Georg Mayrhauser\n- Open Mic - Sh
- are your Cloud Native Journey by the community\n\nEvent details: https://c
- loudnativelinz.at/events/meetup/ctencf-party-celebrating-10-years-of-cncf-
- and-5-years-of-cloud-native-linz/\nRSVP: https://www.meetup.com/cloud-nati
- ve-linz/events/310732711/
+ are your Cloud Native Journey by the community\n\nAll information: https:/
+ /cloudnativelinz.at/events/meetup/ctencf-party-celebrating-10-years-of-cnc
+ f-and-5-years-of-cloud-native-linz/\nRSVP: https://www.meetup.com/cloud-na
+ tive-linz/events/310732711/
 LOCATION:G+D Netcetera\, Europaplatz 4\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/ctencf-party-celebrating-10-y
- ears-of-cncf-and-5-years-of-cloud-native-linz/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:October 2025 edition at .LOUPE - CNCF Linz
@@ -644,12 +567,11 @@ UID:44cb730c420480a0477b505ae68af508fb90f96cf0ec54c6ad16949dd427f13a@cncfl
  inz.at
 DESCRIPTION:Host: .LOUPE\nTalks:\n- Is the Lambdalith the sweet spot in mo
  dern Cloud architecture? by Matthias Steinbauer\n- Catch Hackers with Kone
- y: Automated Honeytokens for Cloud-Native Apps by Mario Kahlhofer\n\nEvent
-  details: https://cloudnativelinz.at/events/meetup/october-2025-edition-at
- -loupe/\nRSVP: https://www.meetup.com/cloud-native-linz/events/310733201/
-LOCATION:fobi solutions gmbh\, Industriezeile 35\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/october-2025-edition-at-loupe
+ y: Automated Honeytokens for Cloud-Native Apps by Mario Kahlhofer\n\nAll i
+ nformation: https://cloudnativelinz.at/events/meetup/october-2025-edition-
+ at-loupe/\nRSVP: https://www.meetup.com/cloud-native-linz/events/310733201
  /
+LOCATION:fobi solutions gmbh\, Industriezeile 35\, 4020 Linz
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cloud Bills and the Bazzar - CNCF Linz
@@ -659,11 +581,10 @@ UID:71ee45a3c0db9a9865f7313dd3372cf60dca6479d46261f3542eb9346e4a04d6@cncfl
  inz.at
 DESCRIPTION:Host: MIC\nTalks:\n- Hacking the Cloud Bill: Building a Multi-
  Cloud Cost Pipeline by Clemens Kriechbaumer\n- The Kubernetes and the Bazz
- ar by Hubert Ströbitzer\n\nEvent details: https://cloudnativelinz.at/even
- ts/meetup/cloud-bills-and-the-bazzar/\nRSVP: https://www.meetup.com/cloud-
- native-linz/events/310733593/
+ ar by Hubert Ströbitzer\n\nAll information: https://cloudnativelinz.at/ev
+ ents/meetup/cloud-bills-and-the-bazzar/\nRSVP: https://www.meetup.com/clou
+ d-native-linz/events/310733593/
 LOCATION:MIC Datenverarbeitung GmbH\, Lederergasse 78\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/cloud-bills-and-the-bazzar/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Container Images and Impact of Agentic DevOps at Microsoft - CNCF 
@@ -674,12 +595,10 @@ UID:811786ad1ae74adfdd20dd0372abaaebc6246e343aebd01da0bfc4c02bf0106c@cncfl
  inz.at
 DESCRIPTION:Host: Public Cloud Group\nTalks:\n- Signing and Verifying Cont
  ainer Images by Andreas Wimmersberger\n- Impact of Agentic DevOps on Micro
- soft engineering practices by Suzanne Daniels\n\nEvent details: https://cl
- oudnativelinz.at/events/meetup/cotainer-images-and-impact-of-agentic-devop
- s/\nRSVP: https://www.meetup.com/cloud-native-linz/events/312772601/
+ soft engineering practices by Suzanne Daniels\n\nAll information: https://
+ cloudnativelinz.at/events/meetup/cotainer-images-and-impact-of-agentic-dev
+ ops/\nRSVP: https://www.meetup.com/cloud-native-linz/events/312772601/
 LOCATION:Startrampe\, Peter-Behrens-Platz 10\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/cotainer-images-and-impact-of
- -agentic-devops/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Observability challenges & clean telemetry - CNCF Linz
@@ -689,12 +608,10 @@ UID:25fc0e7096fc653718202dc30b0c580b8ab87eac11a700cba03a7c021bc35b0c@cncfl
  inz.at
 DESCRIPTION:Host: Tractive\nTalks:\n- 18 Bluetooth Controllers Walk into a
   Bar by Simon Schrottner & Manuel Timelthaler\n- Smells Like Clean Telemet
- ry by Juliano Costa\n\nEvent details: https://cloudnativelinz.at/events/me
- etup/february-2026-edition-hosted-by-tractive/\nRSVP: https://www.meetup.c
- om/cloud-native-linz/events/313186726/
+ ry by Juliano Costa\n\nAll information: https://cloudnativelinz.at/events/
+ meetup/february-2026-edition-hosted-by-tractive/\nRSVP: https://www.meetup
+ .com/cloud-native-linz/events/313186726/
 LOCATION:Poststraße 4\, 4061 Pasching
-URL:https://cloudnativelinz.at/events/meetup/february-2026-edition-hosted-
- by-tractive/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI-Assisted Code Migration & Monster-Sized GitOps - CNCF Linz
@@ -704,12 +621,10 @@ UID:31489056e0916d59fe3add79e63f095af3ffb81604691f21cad442a85c7be617@cncfl
  inz.at
 DESCRIPTION:Host: Gepardec\nTalks:\n- AI-Assisted Legacy Code Migration wi
  th Konveyor AI. Here's What We Found. by Aleksandar Zivkovic\n- Monster-Si
- zed Gitops\; How to scale Argo CD by David Hondl\n\nEvent details: https:/
- /cloudnativelinz.at/events/meetup/march-2026-edition-at-gepardec/\nRSVP: h
- ttps://www.meetup.com/cloud-native-linz/events/313309417/
+ zed Gitops\; How to scale Argo CD by David Hondl\n\nAll information: https
+ ://cloudnativelinz.at/events/meetup/march-2026-edition-at-gepardec/\nRSVP:
+  https://www.meetup.com/cloud-native-linz/events/313309417/
 LOCATION:Gepardec\, Europaplatz 4\, Eingang C\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/march-2026-edition-at-geparde
- c/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Cloud-Native Developer Experience & Building AI Agents - CNCF Linz
@@ -719,13 +634,11 @@ UID:98010bd9270f9b100b6214a21754fd33bdc8d41b2bc9f9dd16ff54d3c34ffd71@cncfl
  inz.at
 DESCRIPTION:Host: karriere.at\nTalks:\n- What Going Cloud Native Taught Us
   About Developer Experience by Thomas Schuetz\n- From Zero to Agent: Creat
- ing Your First AI Agent in Microsoft Foundry by Patrick Wahlmüller\n\nEve
- nt details: https://cloudnativelinz.at/events/meetup/april-2026-edition-at
- -karriereat/\nRSVP: https://www.meetup.com/cloud-native-linz/events/313909
- 845/
+ ing Your First AI Agent in Microsoft Foundry by Patrick Wahlmüller\n\nAll
+  information: https://cloudnativelinz.at/events/meetup/april-2026-edition-
+ at-karriereat/\nRSVP: https://www.meetup.com/cloud-native-linz/events/3139
+ 09845/
 LOCATION:karriere.at\, Donaupromenade 1\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/april-2026-edition-at-karrier
- eat/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Agentic Coding & Software Bill of Behavior - CNCF Linz
@@ -735,13 +648,11 @@ UID:0e17daca5f3e175f448bacace3bc0da47d0655a74c8dd0dc497a3afbdad95f1f@cncfl
  inz.at
 DESCRIPTION:Host: Dynatrace\nTalks:\n- Closing the loop by Christoph Neum
  üller\n- SBOBs or how ship "Intended Behavior" by Constanze B. Roedig\n\n
- Event details: https://cloudnativelinz.at/events/meetup/may-2026-edition-a
- t-dynatrace/\nRSVP: https://www.meetup.com/cloud-native-linz/events/314672
- 208/
+ All information: https://cloudnativelinz.at/events/meetup/may-2026-edition
+ -at-dynatrace/\nRSVP: https://www.meetup.com/cloud-native-linz/events/3146
+ 72208/
 LOCATION:Dynatrace Austria GmbH - Engineering Headquarter\, Am Fünfundzwa
  nziger Turm 20\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/may-2026-edition-at-dynatrace
- /
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Beyond Engineering & Platform Engineering Right Side Up - CNCF Lin
@@ -753,12 +664,10 @@ UID:1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb@cncfl
 DESCRIPTION:Host: G+D Netcetera\nTalks:\n- Beyond Engineering: A Product O
  wner++ in a Sea of Technical Debt by Petra Stepanowsky\n- Turning Platform
   Engineering Right Side Up: Building Better Paths for Juniors by Katharina
-  Sick\n\nEvent details: https://cloudnativelinz.at/events/meetup/september
- -2026-edition-at-netcetera/\nRSVP: https://www.meetup.com/cloud-native-lin
- z/events/316178235
+  Sick\n\nAll information: https://cloudnativelinz.at/events/meetup/septemb
+ er-2026-edition-at-netcetera/\nRSVP: https://www.meetup.com/cloud-native-l
+ inz/events/316178235
 LOCATION:G+D Netcetera\, Europaplatz 4\, 4020 Linz
-URL:https://cloudnativelinz.at/events/meetup/september-2026-edition-at-net
- cetera/
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Pub Quiz Edition 🥳 - CNCF Linz
@@ -766,12 +675,11 @@ DTSTART;TZID=Europe/Berlin:20261007T193000
 DTEND;TZID=Europe/Berlin:20261007T223000
 UID:031b4af5197ec30a926f48cf40e11a7dbc470048a21e4003b7a3c07c5dab1baa@cncfl
  inz.at
-DESCRIPTION:Host: Salonschiff Fräulein Florentine\n\nEvent details: https
- ://cloudnativelinz.at/events/meetup/october-2026-pubquiz-edition/\nRSVP: h
- ttps://docs.google.com/forms/d/e/1FAIpQLSfwtqKqkp7pDSyx28C0mcWyS82x9d4wxg4
- sfFvvl200t0LvzQ/viewform
+DESCRIPTION:Host: Salonschiff Fräulein Florentine\n\nAll information: htt
+ ps://cloudnativelinz.at/events/meetup/october-2026-pubquiz-edition/\nRSVP:
+  https://docs.google.com/forms/d/e/1FAIpQLSfwtqKqkp7pDSyx28C0mcWyS82x9d4wx
+ g4sfFvvl200t0LvzQ/viewform
 LOCATION:Salonschiff Fräulein Florentine\, Heinrich-Gleißner-Promenade 6
  \, 4040 Linz
-URL:https://cloudnativelinz.at/events/meetup/october-2026-pubquiz-edition/
 END:VEVENT
 END:VCALENDAR
