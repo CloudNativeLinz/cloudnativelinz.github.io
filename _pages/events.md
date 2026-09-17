@@ -101,7 +101,7 @@ permalink: events/
           </span>
         {% endif %}
         
-         <a class="meta-link" href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">Event details</a>
+         <a class="meta-link" href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">All event details</a>
 
 
         {% if event.event_link %}
