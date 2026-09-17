@@ -850,7 +850,7 @@
   address: G+D Netcetera, Europaplatz 4, 4020 Linz
   event_link: 'https://www.meetup.com/cloud-native-linz/events/316178235'
   registrations: ''
-  participants: ''
+  participants: '23'
   talks:
   - title: "Beyond Engineering: A Product Owner++ in a Sea of Technical Debt"
     speaker: "Petra Stepanowsky"
