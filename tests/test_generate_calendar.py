@@ -33,14 +33,14 @@ class GenerateCalendarTests(unittest.TestCase):
         expected_uid = hashlib.sha256(b"42").hexdigest() + "@cncflinz.at"
         self.assertEqual(str(event["uid"]), expected_uid)
 
-    def test_event_page_and_rsvp_links_are_included(self):
+    def test_event_page_and_rsvp_links_are_in_description(self):
         event = self.generate_event()
         event_url = (
             "https://cloudnativelinz.at/events/meetup/cloud-native-test-meetup/"
         )
 
-        self.assertEqual(str(event["url"]), event_url)
-        self.assertIn(f"Event details: {event_url}", str(event["description"]))
+        self.assertNotIn("url", event)
+        self.assertIn(f"All information: {event_url}", str(event["description"]))
         self.assertIn("RSVP: https://example.com/rsvp", str(event["description"]))
 
     def test_time_uses_doors_open_and_has_three_hour_duration(self):
