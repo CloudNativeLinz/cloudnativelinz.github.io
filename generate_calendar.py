@@ -56,7 +56,7 @@ def generate_calendar(events):
                 description += f"- {talk['title']} by {talk['speaker']}\n"
         description += f"\nAll information: {event_url}"
         if "event_link" in event_data:
-            description += f"\nRSVP: {event_data['event_link']}"
+            description += f"\n\nRSVP: {event_data['event_link']}"
 
         event.add("description", description)
 
