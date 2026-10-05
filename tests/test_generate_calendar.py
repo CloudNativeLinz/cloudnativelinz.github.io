@@ -1,6 +1,7 @@
 import hashlib
 import unittest
 from datetime import timedelta
+from zoneinfo import ZoneInfo
 
 from generate_calendar import CALENDAR_NAME, generate_calendar
 
@@ -49,7 +50,7 @@ class GenerateCalendarTests(unittest.TestCase):
         end = event.decoded("dtend")
 
         self.assertEqual((start.hour, start.minute), (17, 30))
-        self.assertEqual(start.tzinfo.zone, "Europe/Berlin")
+        self.assertEqual(start.tzinfo, ZoneInfo("Europe/Berlin"))
         self.assertEqual(end - start, timedelta(hours=3))
 
     def test_defaults_to_six_pm_and_online_location(self):

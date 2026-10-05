@@ -1,7 +1,7 @@
 import hashlib
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
-import pytz
 import yaml
 from icalendar import Calendar, Event
 
@@ -19,7 +19,7 @@ def generate_calendar(events):
     calendar.add("x-wr-caldesc", CALENDAR_DESCRIPTION)
     calendar.add("name", CALENDAR_NAME)
 
-    timezone = pytz.timezone(TIMEZONE)
+    timezone = ZoneInfo(TIMEZONE)
 
     for event_data in events:
         event = Event()
@@ -32,11 +32,11 @@ def generate_calendar(events):
             start_hour = 18
             start_minute = 0
 
-        start_dt = timezone.localize(
-            event_date.replace(hour=start_hour, minute=start_minute)
+        start_dt = event_date.replace(
+            hour=start_hour, minute=start_minute, tzinfo=timezone
         )
-        end_dt = timezone.localize(
-            event_date.replace(hour=start_hour + 3, minute=start_minute)
+        end_dt = event_date.replace(
+            hour=start_hour + 3, minute=start_minute, tzinfo=timezone
         )
 
         event.add("summary", f"{event_data['title']} - CNCF Linz")
