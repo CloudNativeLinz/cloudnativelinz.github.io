@@ -881,7 +881,7 @@
   address: Salonschiff Fräulein Florentine, Heinrich-Gleißner-Promenade 6, 4040 Linz
   event_link: 'https://docs.google.com/forms/d/e/1FAIpQLSfwtqKqkp7pDSyx28C0mcWyS82x9d4wxg4sfFvvl200t0LvzQ/viewform'
   registrations: ''
-  participants: ''
+  participants: '15'
   abstract: |-
     Bring your friends and come as a ready-made team, or come alone and we'll build teams on site. Everyone needs to register individually, including friends you're bringing along.
 
@@ -889,3 +889,14 @@
 
     Seats are limited. If your plans change, please edit your response to cancel so someone else can take your spot.
   slug: october-2026-pubquiz-edition
+
+- id: 52
+  title: 'November edition - Save the Date'
+  date: '2026-11-25'
+  doors_open: '17:30'
+  host: Dynatrace
+  address: Dynatrace, Am Fünfundzwanziger Turm 20, 4020 Linz 
+  event_link: ''
+  registrations: ''
+  participants: ''
+  slug: november-2026-save-the-date
