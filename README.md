@@ -128,6 +128,10 @@ make calendar
 
 GitHub Pages builds and serves this site from this repository.
 
+CI explicitly runs `make calendar` before validation and the site build, so
+calendar updates do not depend on regenerating or committing the file locally.
+`make check` also regenerates it for local builds.
+
 To validate locally before pushing:
 
 ```bash
