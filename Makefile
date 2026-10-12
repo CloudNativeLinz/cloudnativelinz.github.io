@@ -31,8 +31,8 @@ lint: setup-python
 	@ruby -cw manage_redirects.rb
 	@ruby -cw _plugins/datapage_redirect_generator.rb
 
-# Run tests and build the site
-test: test-python build
+# Run tests, regenerate the calendar, and build the site
+test: test-python calendar build
 
 test-python: setup-python
 	@$(PYTHON) -m unittest discover -s tests -v

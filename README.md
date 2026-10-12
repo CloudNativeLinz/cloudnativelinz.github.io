@@ -44,7 +44,7 @@ This repository includes common shortcuts in [`makefile`](makefile):
 - `install`: Install Ruby dependencies and run a build
 - `build`: Run a strict production build
 - `lint`: Check Python, YAML, and Ruby sources
-- `test`: Generate the calendar and run a production build
+- `test`: Run Python tests, generate the calendar, and run a production build
 - `check`: Run all lint and test checks
 - `serve`: Run Jekyll server on all interfaces
 - `serve-livereload`: Run server with live reload
