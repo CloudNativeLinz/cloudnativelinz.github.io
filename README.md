@@ -72,6 +72,10 @@ Key locations:
 - Event data: [`_data/events.yml`](_data/events.yml)
 - Event banners: [`images/events`](images/events)
 
+The sticky header uses a translucent brand gradient with backdrop blur so
+scrolling content shows softly behind it. Browsers without backdrop-filter
+support, or users who prefer reduced transparency, get the solid gradient.
+
 ### Event Banners
 
 Store event banners in `images/events/` as `<id>.jpg`, using the numeric `id`
@@ -138,4 +142,3 @@ Contributions are welcome.
 2. Make your changes
 3. Build locally and verify
 4. Open a pull request
-

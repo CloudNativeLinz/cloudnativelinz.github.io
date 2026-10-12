@@ -112,6 +112,18 @@ a:hover {
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  @supports ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.82) 0%, rgba(118, 75, 162, 0.82) 100%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    backdrop-filter: blur(16px) saturate(120%);
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
 
 /* Tablet-specific header adjustments */
