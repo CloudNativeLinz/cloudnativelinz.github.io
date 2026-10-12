@@ -104,14 +104,8 @@ a:hover {
   background: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
 }
 
-/* Header */
-.site-header {
+@mixin navigation-glass {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
   @supports ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
     // Deeper tints offset the white content showing through the glass.
@@ -124,6 +118,25 @@ a:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
+  }
+}
+
+/* Header */
+.site-header {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  // A separate layer lets the dropdown blur the page rather than a filtered parent.
+  &::before {
+    @include navigation-glass;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
   }
 }
 
@@ -346,11 +359,11 @@ a:hover {
 /* Mobile and Tablet Navigation */
 @media (max-width: 1024px) {
   .site-nav {
+    @include navigation-glass;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     flex-direction: column;
     padding: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);

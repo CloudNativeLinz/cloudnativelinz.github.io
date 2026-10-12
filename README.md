@@ -72,9 +72,10 @@ Key locations:
 - Event data: [`_data/events.yml`](_data/events.yml)
 - Event banners: [`images/events`](images/events)
 
-The sticky header uses a translucent brand gradient with backdrop blur so
-scrolling content shows softly behind it. Browsers without backdrop-filter
-support, or users who prefer reduced transparency, get the solid gradient.
+The sticky header and expanded mobile/tablet menu use a translucent brand
+gradient with backdrop blur so content shows softly behind them. Browsers without
+backdrop-filter support, or users who prefer reduced transparency, get the solid
+gradient.
 
 ### Event Banners
 
