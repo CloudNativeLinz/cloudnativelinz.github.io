@@ -114,7 +114,8 @@ a:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
   @supports ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.82) 0%, rgba(118, 75, 162, 0.82) 100%);
+    // Deeper tints offset the white content showing through the glass.
+    background: linear-gradient(135deg, rgba(68, 98, 229, 0.82) 0%, rgba(88, 35, 142, 0.82) 100%);
     -webkit-backdrop-filter: blur(16px) saturate(120%);
     backdrop-filter: blur(16px) saturate(120%);
   }
