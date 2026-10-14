@@ -29,14 +29,24 @@ permalink: events/
  {% assign today = site.time | date: "%Y-%m-%d" %}
   
  {% if event_date < today %}
+  {% assign event_image_path = '/images/events/' | append: event.id | append: '.jpg' %}
+  {% assign event_image_file = site.static_files | where: 'path', event_image_path | first %}
+  {% unless event_image_file %}
+    {% assign event_image_path = '/images/events/placeholder-website.png' %}
+  {% endunless %}
   <article class="event-card" data-event-id="{{ event.id }}">
     <div class="event-banner">
       <a href="{{ site.baseurl }}/events/meetup/{{ event.slug }}/">
-        <img src="{{ '/images/events/' | append: event.id | append: '.jpg' | relative_url }}"
-             alt="{{ event.title }}" 
-             loading="lazy"
-             onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'"
-        />
+        <picture>
+          {% unless event_image_file %}
+            <source media="(max-width: 640px)" srcset="{{ '/images/events/placeholder-mobile.png' | relative_url }}">
+          {% endunless %}
+          <img src="{{ event_image_path | relative_url }}"
+               alt="{{ event.title }}"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='{{ '/images/events/placeholder-website.png' | relative_url }}'"
+          />
+        </picture>
       </a>
       <div class="event-overlay">
         <div class="event-date">

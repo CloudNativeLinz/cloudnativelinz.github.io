@@ -8,10 +8,16 @@ layout: default
   {% assign calendar_subscription_url = calendar_url | replace: 'https://', 'webcal://' | replace: 'http://', 'webcal://' %}
   {% assign teaser_path = '/images/events/' | append: page.id | append: '-teaser.jpg' %}
   {% assign teaser_file = site.static_files | where: 'path', teaser_path | first %}
+  {% assign event_image_path = '/images/events/' | append: page.id | append: '.jpg' %}
+  {% assign event_image_file = site.static_files | where: 'path', event_image_path | first %}
+  {% assign artwork_is_placeholder = false %}
   {% if teaser_file %}
     {% assign artwork_path = teaser_path %}
+  {% elsif event_image_file %}
+    {% assign artwork_path = event_image_path %}
   {% else %}
-    {% assign artwork_path = '/images/events/' | append: page.id | append: '.jpg' %}
+    {% assign artwork_path = '/images/events/placeholder-website.png' %}
+    {% assign artwork_is_placeholder = true %}
   {% endif %}
 
   <article class="event-page">
@@ -22,9 +28,14 @@ layout: default
     </nav>
 
     <div class="event-artwork">
-      <img src="{{ artwork_path | relative_url }}" alt="{{ page.title | escape }}"
-           fetchpriority="high"
-           onerror="this.onerror=null;this.src='{{ '/images/cloudnativelinz-banner.png' | relative_url }}'" />
+      <picture>
+        {% if artwork_is_placeholder %}
+          <source media="(max-width: 640px)" srcset="{{ '/images/events/placeholder-mobile.png' | relative_url }}">
+        {% endif %}
+        <img src="{{ artwork_path | relative_url }}" alt="{{ page.title | escape }}"
+             fetchpriority="high"
+             onerror="this.onerror=null;this.src='{{ '/images/events/placeholder-website.png' | relative_url }}'" />
+      </picture>
     </div>
 
     <div class="event-page-content">
