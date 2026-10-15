@@ -146,6 +146,13 @@ layout: default
                 {% if talk_abstract != '' %}
                   <div class="session-description">{{ talk_abstract | markdownify }}</div>
                 {% endif %}
+                {% assign talk_bio = talk.bio | default: '' | strip %}
+                {% if talk_bio != '' %}
+                  <div class="session-description">
+                    <h4>About {{ talk.speaker | escape }}</h4>
+                    {{ talk_bio | markdownify }}
+                  </div>
+                {% endif %}
                 {% if talk.file and talk.file != '' %}
                   <div class="session-slides">
                     <a class="session-resource-link" href="{{ talk.file | relative_url }}" download>Download slides <span aria-hidden="true">&darr;</span></a>
