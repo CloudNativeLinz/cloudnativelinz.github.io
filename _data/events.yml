@@ -899,4 +899,10 @@
   event_link: ''
   registrations: ''
   participants: ''
+  talks:
+  - title: 'The Hidden Cost of AI Infrastructure'
+    speaker: 'Georg Hennerbichler'
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQGOfiR7ZXcpYg/profile-displayphoto-crop_800_800/B4DaEHVdqpGkAI-/0/1791124431516?e=1793836800&v=beta&t=d3BCcWMXRkXUBkbnLUDg4k54BcrkfH-LMAz-8ZNnhnM"
+    abstract: 'AI workloads introduce cost patterns that are easy to miss: cross-zone traffic, data duplication, checkpoint retention, logging volume, storage tiers, and inefficient orchestration. This talk breaks down where those costs hide and how to reason about them in cloud-native environments.'
+    bio: 'Georg Hennerbichler built his career across Austrian startups before spending more than seven years at Amazon, where he worked on large-scale infrastructure, scaling, and optimization challenges. Today, he is Director of Engineering at Suiteify, leading SaaS products in HR and Payroll. Lizrd grew out of a very personal problem: not having enough transparency into where cloud spend was being wasted, which optimizations actually mattered, and how to prioritize them with confidence.'
   slug: november-2026-save-the-date

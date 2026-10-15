@@ -143,8 +143,17 @@ layout: default
                 {% if talk_abstract == '' %}
                   {% assign talk_abstract = talk.description | default: '' | strip %}
                 {% endif %}
-                {% if talk_abstract != '' %}
-                  <div class="session-description">{{ talk_abstract | markdownify }}</div>
+                {% assign talk_bio = talk.bio | default: '' | strip %}
+                {% if talk_abstract != '' or talk_bio != '' %}
+                  <div class="session-description">
+                    {% if talk_abstract != '' %}
+                      {{ talk_abstract | markdownify }}
+                    {% endif %}
+                    {% if talk_bio != '' %}
+                      <h4>About {{ talk.speaker | escape }}</h4>
+                      {{ talk_bio | markdownify }}
+                    {% endif %}
+                  </div>
                 {% endif %}
                 {% if talk.file and talk.file != '' %}
                   <div class="session-slides">

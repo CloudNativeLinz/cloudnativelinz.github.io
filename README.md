@@ -72,6 +72,9 @@ Key locations:
 - Event data: [`_data/events.yml`](_data/events.yml)
 - Event banners: [`images/events`](images/events)
 
+Talk entries in `_data/events.yml` can include an optional `bio` field.
+Non-empty biographies appear below the talk abstract on the event page and support Markdown.
+
 The sticky header and expanded mobile/tablet menu use a translucent brand
 gradient with backdrop blur so content shows softly behind them. Browsers without
 backdrop-filter support, or users who prefer reduced transparency, get the solid
