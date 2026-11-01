@@ -5,6 +5,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     groups:
       github-actions:
         patterns:
@@ -15,6 +17,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     groups:
       bundler:
         patterns:
@@ -25,6 +29,8 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     groups:
       pip:
         patterns:
@@ -35,6 +41,8 @@ updates:
     directory: "/.devcontainer"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 14
     groups:
       docker:
         patterns:
