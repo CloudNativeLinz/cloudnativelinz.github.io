@@ -11,10 +11,10 @@ layout: default
   {% assign event_image_path = '/images/events/' | append: page.id | append: '.jpg' %}
   {% assign event_image_file = site.static_files | where: 'path', event_image_path | first %}
   {% assign artwork_is_placeholder = false %}
-  {% if teaser_file %}
-    {% assign artwork_path = teaser_path %}
-  {% elsif event_image_file %}
+  {% if event_image_file %}
     {% assign artwork_path = event_image_path %}
+  {% elsif teaser_file %}
+    {% assign artwork_path = teaser_path %}
   {% else %}
     {% assign artwork_path = '/images/events/placeholder-website.png' %}
     {% assign artwork_is_placeholder = true %}

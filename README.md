@@ -84,25 +84,52 @@ gradient with backdrop blur so content shows softly behind them. Browsers withou
 backdrop-filter support, or users who prefer reduced transparency, get the solid
 gradient.
 
-### Event Banners
+### Event Artwork
 
 Store event banners in `images/events/` as `<id>.jpg`, using the numeric `id`
 from `_data/events.yml`. For example, event `51` uses `images/events/51.jpg`.
 Keep filenames lowercase and use the `.jpg` extension. No additional image
 field is needed in the event data.
 
-Upcoming event cards, past event cards, and event detail pages all use the same
-local banner. Separate `-550.jpg` thumbnails are not required. If an image is
-missing, the site displays `images/cloudnativelinz-banner.png` as a fallback.
+Upcoming event cards use `<id>-teaser.jpg` when present, then `<id>.jpg`.
+Event detail pages prefer `<id>.jpg`, then `<id>-teaser.jpg`; both retain the
+existing placeholders when artwork is missing. Separate `-550.jpg` thumbnails
+are not required.
 
 Add new banners directly to `images/events/`, not the generated `_site/`
 directory. Jekyll copies them to the built site automatically. Speaker photos
 are separate from these event banners.
 
-This repository publishes supplied banners; it does not generate them
-automatically. When creating or updating an event, commit the corresponding
-`images/events/<id>.jpg` if a new or updated banner is needed. Changes to event
-data do not regenerate existing banners.
+On each `main` deployment, the workflow compares `_data/events.yml` with the
+last successfully processed version. It generates both the details image
+`<id>.jpg` and teaser `<id>-teaser.jpg` for changed or new upcoming events,
+then builds the site with those files in the same run. Unchanged and past
+events are not regenerated. By default regenerated images replace existing
+artwork; add `generate_images: false` to an event to preserve custom artwork
+and opt it out of automatic generation.
+
+The workflow commits generated files and its event-data baseline to `main` as
+`github-actions[bot]`. The bot commit does not trigger another workflow; its
+images are already part of that run's Pages artifact. Manual runs should be
+started on `main`. A no-op event-data comparison does not create a commit.
+
+The generator is installed from the pinned
+[asset-generator commit](https://github.com/CloudNativeLinz/asset-generator/tree/d03d1db1220365986d550ebd22898c83cd535894).
+The upstream change is currently tracked by
+[asset-generator#40](https://github.com/CloudNativeLinz/asset-generator/pull/40);
+that PR must be merged and the pinned commit kept reachable before merging or
+deploying this website change. Update the full commit pin deliberately when
+upgrading the generator.
+
+Automatic commits require the repository's standard `GITHUB_TOKEN` to have
+`contents: write` and for branch protection/rulesets to permit that token to
+push to `main`. No user secret or repository-setting change is required by
+this workflow. If protection blocks the push, the Pages run fails without
+advancing its baseline or deploying stale output. Review the Actions log,
+allow the bot push under the existing policy, and rerun the workflow on
+`main`. Missing or invalid baseline objects also fail explicitly; restore a
+valid `.github/event-images-baseline` before rerunning rather than replacing it
+with the current event-data hash, which could skip pending image changes.
 
 ## Event URL Redirects
 

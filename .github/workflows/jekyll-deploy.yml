@@ -17,8 +17,6 @@ on:
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -30,11 +28,50 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: read
     steps:
-      - name: Checkout
+      - name: Checkout website
         uses: actions/checkout@v7
+        with:
+          path: website
+          fetch-depth: 0
+
+      - name: Checkout pinned image generator
+        uses: actions/checkout@v7
+        with:
+          repository: CloudNativeLinz/asset-generator
+          ref: d03d1db1220365986d550ebd22898c83cd535894
+          path: generator
+          persist-credentials: false
+
+      - name: Require the production branch
+        working-directory: website
+        run: |
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            echo "::error::Run this workflow on main; event artwork is committed to main."
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install pinned image generator
+        working-directory: generator
+        run: python -m pip install -e .
+
+      - name: Generate and commit changed event images
+        working-directory: website
+        run: |
+          python scripts/update_event_images.py \
+            --generator "$(command -v imagegen)" \
+            --generator-root "$GITHUB_WORKSPACE/generator"
 
       - name: Install build dependencies
+        working-directory: website
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential libffi-dev
@@ -45,26 +82,42 @@ jobs:
           ruby-version: '3.4'
           bundler-cache: true
           cache-version: 2
+          working-directory: website
 
       - name: Install dependencies
+        working-directory: website
         run: bundle install --retry 3
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
-      - name: Set up Python
-        uses: actions/setup-python@v7
-        with:
-          python-version: '3.12'
+
       - name: Generate calendar
+        working-directory: website
         run: make calendar
+
       - name: Validate and build
+        working-directory: website
         run: make check JEKYLL_ARGS='--baseurl "${{ steps.pages.outputs.base_path }}"'
         env:
           JEKYLL_ENV: production
+
+      - name: Verify the build is based on the latest main commit
+        working-directory: website
+        run: |
+          git fetch --no-tags origin refs/heads/main
+          built_sha="$(git rev-parse HEAD)"
+          latest_sha="$(git rev-parse FETCH_HEAD)"
+          if [[ "$built_sha" != "$latest_sha" ]]; then
+            echo "::error::main advanced during the build ($built_sha -> $latest_sha); refusing to deploy stale pages."
+            exit 1
+          fi
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v5
+        with:
+          path: website/_site
 
   # Deployment job
   deploy:
@@ -72,6 +125,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     needs: build
     steps:
       - name: Deploy to GitHub Pages
