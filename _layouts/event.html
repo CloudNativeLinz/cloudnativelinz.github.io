@@ -106,8 +106,7 @@ layout: default
     {% assign published_talks = 0 %}
     {% for talk in page.talks %}
       {% assign speaker_upper = talk.speaker | default: '' | strip | upcase %}
-      {% assign title_upper = talk.title | default: '' | strip | upcase %}
-      {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == '' or title_upper == 'TBA' or title_upper == 'TBD' %}
+      {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' %}
         {% assign published_talks = published_talks | plus: 1 %}
       {% endunless %}
     {% endfor %}
@@ -121,8 +120,7 @@ layout: default
       <div class="event-sessions">
           {% for talk in page.talks %}
             {% assign speaker_upper = talk.speaker | default: '' | strip | upcase %}
-            {% assign title_upper = talk.title | default: '' | strip | upcase %}
-            {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' or title_upper == '' or title_upper == 'TBA' or title_upper == 'TBD' %}
+            {% unless speaker_upper == '' or speaker_upper == 'TBA' or speaker_upper == 'TBD' %}
               <section class="event-session" id="talk-{{ forloop.index }}" aria-labelledby="talk-title-{{ forloop.index }}">
                 <div class="session-speaker">
                   {% include speaker-portrait.html talk=talk %}

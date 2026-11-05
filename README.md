@@ -75,6 +75,10 @@ Key locations:
 Talk entries in `_data/events.yml` can include an optional `bio` field.
 Non-empty biographies appear below the talk abstract on the event page and support Markdown.
 
+Confirmed speakers appear on the homepage and event page even when their talk
+title is blank, `TBA`, or `TBD`. Entries with a blank, `TBA`, or `TBD` speaker
+name remain hidden.
+
 The sticky header and expanded mobile/tablet menu use a translucent brand
 gradient with backdrop blur so content shows softly behind them. Browsers without
 backdrop-filter support, or users who prefer reduced transparency, get the solid
