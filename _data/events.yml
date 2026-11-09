@@ -896,15 +896,19 @@
   doors_open: '17:30'
   host: Dynatrace
   address: Dynatrace, Am Fünfundzwanziger Turm 20, 4020 Linz 
-  event_link: ''
+  event_link: 'https://www.meetup.com/cloud-native-linz/events/317302830'
   registrations: ''
   participants: ''
   talks:
   - speaker: David Hondl
     image: "/images/speakers/david-hondl.jpg"
     bio: "I'm a Cloud Engineer at Dynatrace and passionate about all topics regarding Platform Engineering and the cloud-native community around it. This is includes the tools, processes and software engineering necessary to make it happen. I use (and build) platforms to create better developer experiences and love to share my knowledge as a speaker."
-    title: TBA
-    abstract: TBA
+    title: 'Find your safe Harbor - How to ship images the Cloud Native way'
+    abstract: |
+      These days we have a plethora of great tools at our disposal for every part of the software lifecycle. Locally for our development setup, for everything and anything that's part of the developer platform and of course for running the product and bringing it to the end customer.
+      However, there's one thing that glues all of these tools and processes together: Artifacts. Mostly of the OCI kind.
+      But what makes OCI artifacts so useful? And how do we get them successfully to the place we need them? What about security and trust?
+      In this session, I will talk about all of these questions and dive into a CNCF project that addresses many of them - Harbor, a cloud native registry project that stores, signs, and scans artifacts.
   - title: 'The Hidden Cost of AI Infrastructure'
     speaker: 'Georg Hennerbichler'
     image: "/images/speakers/georg-hennerbichler.jpeg"
