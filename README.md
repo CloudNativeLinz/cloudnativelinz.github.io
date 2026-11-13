@@ -13,6 +13,9 @@ Official website for the Cloud Native Linz community.
 
 💬 Community page: https://ocgroups.dev/cncf/group/cloud-native-linz
 
+## Homepage Preview
+
+![Cloud Native Linz homepage](images/homepage-preview.png)
 
 ## Quick Start
 
