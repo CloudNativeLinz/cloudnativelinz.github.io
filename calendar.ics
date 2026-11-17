@@ -684,13 +684,16 @@ LOCATION:Salonschiff Fräulein Florentine\, Heinrich-Gleißner-Promenade 6
  \, 4040 Linz
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:November edition - Save the Date - CNCF Linz
+SUMMARY:Cloud-Native Trust & AI Economics - CNCF Linz
 DTSTART;TZID=Europe/Berlin:20261125T173000
 DTEND;TZID=Europe/Berlin:20261125T203000
 UID:41cfc0d1f2d127b04555b7246d84019b4d27710a3f3aff6e7764375b1e06e05d@cncfl
  inz.at
-DESCRIPTION:Host: Dynatrace\n\nAll information: https://cloudnativelinz.at
- /events/meetup/november-2026-save-the-date/\n\nRSVP: 
+DESCRIPTION:Host: Dynatrace\nTalks:\n- Find your safe Harbor - How to ship
+  images the Cloud Native way by David Hondl\n- The Hidden Cost of AI Infra
+ structure by Georg Hennerbichler\n\nAll information: https://cloudnativeli
+ nz.at/events/meetup/november-2026-save-the-date/\n\nRSVP: https://www.meet
+ up.com/cloud-native-linz/events/317302830
 LOCATION:Dynatrace\, Am Fünfundzwanziger Turm 20\, 4020 Linz
 END:VEVENT
 END:VCALENDAR
