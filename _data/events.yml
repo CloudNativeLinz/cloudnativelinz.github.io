@@ -861,7 +861,7 @@
       Now I'm a Product Owner++ for a mobile wallet and payments app spanning Android, iOS, and Backend, where that fight happens weekly, and losing it costs more than just a slow, outdated app — told from the perspective of an ex-engineer turned PO.
   - title: "Turning Platform Engineering Right Side Up: Building Better Paths for Juniors"
     speaker: Katharina Sick
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHts0BHHyZCmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1694361905742?e=1790208000&v=beta&t=G7Et2D_zYsrZU7yWNGZOYliYNBwjUZKDsD_17dcsS9I"
+    image: "/images/kathi.jpg"
     social: "https://www.linkedin.com/in/katharinasick/"
     abstract: |-
       Breaking into platform engineering and DevOps often feels like navigating two extremes. When I started, I bounced between perfect, predictable, and easy to follow sunshine tutorials, and the messy realities of production, where overwhelming systems and uncertainty left me stuck and, at times, spiraling into procrastination. That gap shaped my early years and still shows up when I mentor today.
